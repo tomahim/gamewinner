@@ -1,7 +1,7 @@
-import { useState, useEffect } from 'react';
-import { collection, getDocs } from 'firebase/firestore';
-import { signOut } from 'firebase/auth';
-import { db, auth } from './firebase.config';
+import { useState, useEffect } from "react";
+import { collection, getDocs } from "firebase/firestore";
+import { signOut } from "firebase/auth";
+import { db, auth } from "../firebase.config";
 
 const FirestoreData = () => {
   const [data, setData] = useState([]);
@@ -10,8 +10,8 @@ const FirestoreData = () => {
   useEffect(() => {
     const fetchData = async () => {
       if (auth.currentUser) {
-        const querySnapshot = await getDocs(collection(db, "YOUR_COLLECTION"));
-        const dataList = querySnapshot.docs.map(doc => doc.data());
+        const querySnapshot = await getDocs(collection(db, "games"));
+        const dataList = querySnapshot.docs.map((doc) => doc.data());
         setData(dataList);
       }
       setLoading(false);
