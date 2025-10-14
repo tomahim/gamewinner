@@ -1,9 +1,11 @@
 import "./App.scss";
+import FirestoreData from "./components/FirestoreData";
 
 function App() {
   return (
     <>
       <div className="app">
+        <FirestoreData />
         <header>
           <div className="menu-icon material-icons">menu</div>
           <h1>Game Winner </h1>
