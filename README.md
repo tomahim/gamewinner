@@ -1,5 +1,9 @@
 # Game winner
 
-# Resources
+## Local setup
 
-https://www.robinwieruch.de/vite-create-react-app/
+Frontend: `cd frontend && npm start dev`
+
+## Resources
+
+React PWA: https://vite-pwa-org.netlify.app/guide/
