@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+
+$purple-dark: #163e77;
+$purple-mid: #5356dd;
+$orange: #ff9800;
+$gray: #aaa;
+$white: #fff;
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  background-color: $purple-dark;
+  color: $white;
+}
+
+.app {
+  max-width: 420px;
+  margin: auto;
+  position: relative;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: $purple-dark;
+  padding: 16px;
+  font-size: 18px;
+
+  .menu-icon,
+  .filter-icon {
+    font-size: 24px;
+    color: $orange;
+    cursor: pointer;
+  }
+}
+
+.tabs {
+  display: flex;
+  background-color: $purple-mid;
+
+  .tab {
+    flex: 1;
+    text-align: center;
+    padding: 12px 0;
+    color: $gray;
+    font-weight: bold;
+    cursor: pointer;
+
+    &.active {
+      color: $white;
+      border-bottom: 3px solid $orange;
+    }
+  }
+}
+
+.section-title {
+  padding: 12px 16px;
+  font-size: 16px;
+  color: $white;
+  background-color: $purple-dark;
+}
+
+.game-grid {
+  display: flex;
+  justify-content: space-around;
+  padding: 16px;
+
+  .game-card {
+    background-color: $purple-mid;
+    border-radius: 12px;
+    width: 45%;
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+
+    img {
+      width: 100%;
+      border-radius: 12px;
+    }
+
+    .rank-tag {
+      position: absolute;
+      top: 8px;
+      right: 8px;
+      background-color: $orange;
+      padding: 2px 6px;
+      border-radius: 6px;
+      font-size: 12px;
+      font-weight: bold;
+    }
+
+    .game-name {
+      padding: 8px;
+      font-weight: bold;
+      background-color: rgba(0, 0, 0, 0.3);
+    }
+  }
+}
+
+.bottom-nav {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  max-width: 420px;
+  display: flex;
+  justify-content: space-around;
+  background-color: $purple-mid;
+  padding: 12px 0;
+
+  .nav-item {
+    font-size: 24px;
+    color: $gray;
+
+    &.active {
+      color: $orange;
+    }
+  }
+}
+
+.fab {
+  position: fixed;
+  bottom: 70px;
+  right: 24px;
+  background-color: $orange;
+  color: $white;
+  padding: 16px;
+  border-radius: 50%;
+  font-size: 24px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+  cursor: pointer;
+}

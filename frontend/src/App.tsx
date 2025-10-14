@@ -1,35 +1,150 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import "./App.scss";
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
     <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+      <div className="app">
+        <header>
+          <div className="menu-icon material-icons">menu</div>
+          <h1>Game Winner </h1>
+          <div className="filter-icon material-icons">filter_alt</div>
+        </header>
+
+        <div className="tabs">
+          <div className="tab active">Games</div>
+          <div className="tab">Stats</div>
+          <div className="tab">History</div>
+        </div>
+
+        <section className="section-title">Games (2)</section>
+
+        <div className="game-grid">
+          <div className="game-card">
+            <img
+              src="https://cf.geekdo-images.com/yLZJCVLlIx4c7eJEWUNJ7w__itemrep/img/DR7181wU4sHT6gn6Q1XccpPxNHg=/fit-in/246x300/filters:strip_icc()/pic4458123.jpg"
+              alt="Wingspan"
+            />
+            <div className="rank-tag">#38</div>
+            <div className="game-name">Wingspan</div>
+          </div>
+
+          <div className="game-card">
+            <img
+              src="https://cf.geekdo-images.com/MjeJZfulbsM1DSV3DrGJYA__imagepage/img/0ksox22FKLq-Z-rsbBlF2IDG9x0=/fit-in/900x600/filters:no_upscale():strip_icc()/pic5100691.jpg"
+              alt="Cascadia"
+            />
+            <div className="rank-tag">#54</div>
+            <div className="game-name">Cascadia</div>
+          </div>
+        </div>
+
+        <div className="game-grid">
+          <div className="game-card">
+            <img
+              src="https://cf.geekdo-images.com/yLZJCVLlIx4c7eJEWUNJ7w__itemrep/img/DR7181wU4sHT6gn6Q1XccpPxNHg=/fit-in/246x300/filters:strip_icc()/pic4458123.jpg"
+              alt="Wingspan"
+            />
+            <div className="rank-tag">#38</div>
+            <div className="game-name">Wingspan</div>
+          </div>
+
+          <div className="game-card">
+            <img
+              src="https://cf.geekdo-images.com/MjeJZfulbsM1DSV3DrGJYA__imagepage/img/0ksox22FKLq-Z-rsbBlF2IDG9x0=/fit-in/900x600/filters:no_upscale():strip_icc()/pic5100691.jpg"
+              alt="Cascadia"
+            />
+            <div className="rank-tag">#54</div>
+            <div className="game-name">Cascadia</div>
+          </div>
+        </div>
+        <div className="game-grid">
+          <div className="game-card">
+            <img
+              src="https://cf.geekdo-images.com/yLZJCVLlIx4c7eJEWUNJ7w__itemrep/img/DR7181wU4sHT6gn6Q1XccpPxNHg=/fit-in/246x300/filters:strip_icc()/pic4458123.jpg"
+              alt="Wingspan"
+            />
+            <div className="rank-tag">#38</div>
+            <div className="game-name">Wingspan</div>
+          </div>
+
+          <div className="game-card">
+            <img
+              src="https://cf.geekdo-images.com/MjeJZfulbsM1DSV3DrGJYA__imagepage/img/0ksox22FKLq-Z-rsbBlF2IDG9x0=/fit-in/900x600/filters:no_upscale():strip_icc()/pic5100691.jpg"
+              alt="Cascadia"
+            />
+            <div className="rank-tag">#54</div>
+            <div className="game-name">Cascadia</div>
+          </div>
+        </div>
+        <div className="game-grid">
+          <div className="game-card">
+            <img
+              src="https://cf.geekdo-images.com/yLZJCVLlIx4c7eJEWUNJ7w__itemrep/img/DR7181wU4sHT6gn6Q1XccpPxNHg=/fit-in/246x300/filters:strip_icc()/pic4458123.jpg"
+              alt="Wingspan"
+            />
+            <div className="rank-tag">#38</div>
+            <div className="game-name">Wingspan</div>
+          </div>
+
+          <div className="game-card">
+            <img
+              src="https://cf.geekdo-images.com/MjeJZfulbsM1DSV3DrGJYA__imagepage/img/0ksox22FKLq-Z-rsbBlF2IDG9x0=/fit-in/900x600/filters:no_upscale():strip_icc()/pic5100691.jpg"
+              alt="Cascadia"
+            />
+            <div className="rank-tag">#54</div>
+            <div className="game-name">Cascadia</div>
+          </div>
+        </div>
+        <div className="game-grid">
+          <div className="game-card">
+            <img
+              src="https://cf.geekdo-images.com/yLZJCVLlIx4c7eJEWUNJ7w__itemrep/img/DR7181wU4sHT6gn6Q1XccpPxNHg=/fit-in/246x300/filters:strip_icc()/pic4458123.jpg"
+              alt="Wingspan"
+            />
+            <div className="rank-tag">#38</div>
+            <div className="game-name">Wingspan</div>
+          </div>
+
+          <div className="game-card">
+            <img
+              src="https://cf.geekdo-images.com/MjeJZfulbsM1DSV3DrGJYA__imagepage/img/0ksox22FKLq-Z-rsbBlF2IDG9x0=/fit-in/900x600/filters:no_upscale():strip_icc()/pic5100691.jpg"
+              alt="Cascadia"
+            />
+            <div className="rank-tag">#54</div>
+            <div className="game-name">Cascadia</div>
+          </div>
+        </div>
+        <div className="game-grid">
+          <div className="game-card">
+            <img
+              src="https://cf.geekdo-images.com/yLZJCVLlIx4c7eJEWUNJ7w__itemrep/img/DR7181wU4sHT6gn6Q1XccpPxNHg=/fit-in/246x300/filters:strip_icc()/pic4458123.jpg"
+              alt="Wingspan"
+            />
+            <div className="rank-tag">#38</div>
+            <div className="game-name">Wingspan</div>
+          </div>
+
+          <div className="game-card">
+            <img
+              src="https://cf.geekdo-images.com/MjeJZfulbsM1DSV3DrGJYA__imagepage/img/0ksox22FKLq-Z-rsbBlF2IDG9x0=/fit-in/900x600/filters:no_upscale():strip_icc()/pic5100691.jpg"
+              alt="Cascadia"
+            />
+            <div className="rank-tag">#54</div>
+            <div className="game-name">Cascadia</div>
+          </div>
+        </div>
+
+        <div className="bottom-nav">
+          <div className="nav-item active material-icons">grid_view</div>
+          <div className="nav-item material-icons">play_arrow</div>
+          <div className="nav-item material-icons">people</div>
+          <div className="nav-item material-icons">whatshot</div>
+        </div>
+
+        <div className="fab material-icons">search</div>
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
