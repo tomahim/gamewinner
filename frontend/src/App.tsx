@@ -141,7 +141,7 @@ function App() {
           <div className="nav-item material-icons">whatshot</div>
         </div>
 
-        <div className="fab material-icons">search</div>
+        <div className="fab material-icons">add</div>
       </div>
     </>
   );
