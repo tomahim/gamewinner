@@ -4,6 +4,6 @@
 
 Frontend: `cd frontend && npm start dev`
 
-## Resources
+## Resources
 
 React PWA: https://vite-pwa-org.netlify.app/guide/
