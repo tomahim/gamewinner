@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { collection, getDocs } from 'firebase/firestore';
-import { db, auth } from '../firebase.config';
+import { signOut } from 'firebase/auth';
+import { db, auth } from './firebase.config';
 
 const FirestoreData = () => {
   const [data, setData] = useState([]);
@@ -9,7 +10,7 @@ const FirestoreData = () => {
   useEffect(() => {
     const fetchData = async () => {
       if (auth.currentUser) {
-        const querySnapshot = await getDocs(collection(db, "games"));
+        const querySnapshot = await getDocs(collection(db, "YOUR_COLLECTION"));
         const dataList = querySnapshot.docs.map(doc => doc.data());
         setData(dataList);
       }
@@ -19,6 +20,10 @@ const FirestoreData = () => {
     fetchData();
   }, []);
 
+  const handleLogout = () => {
+    signOut(auth);
+  };
+
   if (loading) {
     return <div>Loading...</div>;
   }
@@ -26,6 +31,7 @@ const FirestoreData = () => {
   return (
     <div>
       <h2>Firestore Data</h2>
+      <button onClick={handleLogout}>Logout</button>
       <ul>
         {data.map((item, index) => (
           <li key={index}>{JSON.stringify(item)}</li>
