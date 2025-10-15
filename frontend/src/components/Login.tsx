@@ -1,16 +1,23 @@
 import { useState } from "react";
-import { signInWithEmailAndPassword } from "firebase/auth";
-import { auth } from "../firebase.config";
+import { useAuth } from "../auth/AuthContext";
+import { useNavigate, Navigate } from "react-router-dom";
 
 const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
+  const { user, login } = useAuth();
+  const navigate = useNavigate();
+
+  if (user) {
+    return <Navigate to="/home" replace />;
+  }
 
   const handleLogin = async (e: React.FormEvent) => {
     e.preventDefault();
     try {
-      await signInWithEmailAndPassword(auth, email, password);
+      await login(email, password);
+      navigate("/home", { replace: true });
     } catch (err) {
       setError("Failed to login");
     }
