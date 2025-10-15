@@ -42,24 +42,38 @@ header {
     width: 60px;
   }
 
-  .logo-home-container {
-    width: 100%; /* Adjust to your desired width */
-    height: 350px; /* Set to desired height, e.g., 80% of original to crop */
-    overflow: hidden; /* Hides the overflow to crop the image */
-    
-    img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover; /* Maintains aspect ratio, crops to fill container */
-      object-position: center; /* Centers the image, adjust if needed */
-      border-radius: 10px;
-    }
-  }
+}
 
+.logo-home-container {
+  width: 100%; /* Adjust to your desired width */
+  height: 350px; /* Set to desired height, e.g., 80% of original to crop */
+  overflow: hidden; /* Hides the overflow to crop the image */
+  
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Maintains aspect ratio, crops to fill container */
+    object-position: center; /* Centers the image, adjust if needed */
+
+    border: 2px solid $purple-dark; 
+  }
+}
+
+.game-picture {
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Maintains aspect ratio, crops to fill container */
+    object-position: center; /* Centers the image, adjust if needed */
+
+    border: 2px solid $purple-dark; 
+  }
 }
 
 .section-separator {
   display: flex;
+  justify-content: center; /* Centers horizontally */
+  align-items: center; /* Centers vertically */
   background-color: $purple-mid;
   flex: 1;
   text-align: center;

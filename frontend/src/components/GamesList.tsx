@@ -44,32 +44,20 @@ function GamesList() {
   return (
     <>
       <Header isHome={true} />
-      <div className="section-separator">
-        Current month score: Aurore: 5 - Thomas: 6
-      </div>
 
-      <section className="section-title">Games ({games.length})</section>
+      <div className="section-separator">October: Aurore 5 / Thomas 6</div>
+
+      <section className="section-title">Games ({games.length * 5})</section>
 
       <FirestoreData />
 
-      {/* Single game-grid with map */}
-      <div className="game-grid">
-        {games.map((game) => (
-          <GameCard key={game.id} game={game} />
-        ))}
-      </div>
-
-      <div className="game-grid">
-        {games.map((game) => (
-          <GameCard key={game.id} game={game} />
-        ))}
-      </div>
-
-      <div className="game-grid">
-        {games.map((game) => (
-          <GameCard key={game.id} game={game} />
-        ))}
-      </div>
+      {[1, 2, 3, 4, 5].map(() => (
+        <div className="game-grid">
+          {games.map((game) => (
+            <GameCard key={game.id} game={game} />
+          ))}
+        </div>
+      ))}
 
       <div onClick={() => navigate("/add-game")} className="fab material-icons">
         add
