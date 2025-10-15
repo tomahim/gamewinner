@@ -3,7 +3,7 @@
 $purple-dark: #163e77;
 $purple-mid: #5356dd;
 $orange: #ff9800;
-$gray: #aaa;
+$gray: #dcdbdb;
 $white: #fff;
 
 * {
@@ -37,25 +37,20 @@ header {
     color: $orange;
     cursor: pointer;
   }
+
+  .logo {
+    width: 60px;
+  }
 }
 
-.tabs {
+.section-separator {
   display: flex;
   background-color: $purple-mid;
-
-  .tab {
-    flex: 1;
-    text-align: center;
-    padding: 12px 0;
-    color: $gray;
-    font-weight: bold;
-    cursor: pointer;
-
-    &.active {
-      color: $white;
-      border-bottom: 3px solid $orange;
-    }
-  }
+  flex: 1;
+  text-align: center;
+  padding: 12px;
+  color: $gray;
+  font-weight: bold;
 }
 
 .section-title {

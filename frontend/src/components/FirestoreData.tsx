@@ -9,10 +9,10 @@ const FirestoreData = () => {
   useEffect(() => {
     const fetchData = async () => {
       if (auth.currentUser) {
-        const querySnapshot = await getDocs(collection(db, "games"));
-        const dataList = querySnapshot.docs.map((doc) => doc.data());
-        // @ts-ignore
-        setData(dataList);
+        // const querySnapshot = await getDocs(collection(db, "games"));
+        // const dataList = querySnapshot.docs.map((doc) => doc.data());
+        // // @ts-ignore
+        // setData(dataList);
       }
       setLoading(false);
     };
@@ -26,7 +26,6 @@ const FirestoreData = () => {
 
   return (
     <div>
-      <h2>Firestore Data</h2>
       <ul>
         {data.map((item, index) => (
           <li key={index}>{JSON.stringify(item)}</li>

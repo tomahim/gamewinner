@@ -1,7 +1,8 @@
 import FirestoreData from "./FirestoreData";
 import LogoutButton from "./LogoutButton";
+import logo from "../assets/logo.jpg";
 
-// Sample game data (replace with data from FirestoreData)
+// TODO: Sample game data (replace with data from FirestoreData)
 const games = [
   {
     id: 1,
@@ -21,7 +22,6 @@ const games = [
   },
 ];
 
-// Optional: Create a GameCard component for reusability
 function GameCard(
   // @ts-ignore
   { game }
@@ -37,24 +37,21 @@ function GameCard(
 }
 
 function GamesList() {
-  // If FirestoreData provides the games array, you can replace the static `games` with it
-  // e.g., const games = useContext(FirestoreContext) or passed as props from FirestoreData
-
   return (
     <>
       <header>
-        <div className="menu-icon material-icons">menu</div>
-        <h1>Game Winner</h1>
+        {/* <div className="menu-icon material-icons">menu</div> */}
+        <img alt="logo" src={logo} className="logo" />
+        <h2>Game Winner</h2>
         <LogoutButton />
       </header>
 
-      <div className="tabs">
-        <div className="tab active">Games</div>
-        <div className="tab">Stats</div>
-        <div className="tab">History</div>
+      <div className="section-separator">
+        Current month score: Aurore: 5 - Thomas: 6
       </div>
 
       <section className="section-title">Games ({games.length})</section>
+
       <FirestoreData />
 
       {/* Single game-grid with map */}
