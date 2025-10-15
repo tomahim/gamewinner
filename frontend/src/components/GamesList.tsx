@@ -1,6 +1,7 @@
 import FirestoreData from "./FirestoreData";
-import LogoutButton from "./LogoutButton";
-import logo from "../assets/logo.jpg";
+import FooterNav from "./FooterNav";
+import Header from "./Header";
+import { useNavigate } from "react-router-dom";
 
 // TODO: Sample game data (replace with data from FirestoreData)
 const games = [
@@ -26,9 +27,10 @@ function GameCard(
   // @ts-ignore
   { game }
 ) {
+  const navigate = useNavigate();
   const { image, alt, rank, name } = game;
   return (
-    <div className="game-card">
+    <div onClick={() => navigate("/game")} className="game-card">
       <img src={image} alt={alt} />
       <div className="rank-tag">{rank}</div>
       <div className="game-name">{name}</div>
@@ -37,15 +39,11 @@ function GameCard(
 }
 
 function GamesList() {
+  const navigate = useNavigate();
+
   return (
     <>
-      <header>
-        {/* <div className="menu-icon material-icons">menu</div> */}
-        <img alt="logo" src={logo} className="logo" />
-        <h2>Game Winner</h2>
-        <LogoutButton />
-      </header>
-
+      <Header title="Games" />
       <div className="section-separator">
         Current month score: Aurore: 5 - Thomas: 6
       </div>
@@ -61,14 +59,11 @@ function GamesList() {
         ))}
       </div>
 
-      <div className="fab material-icons">add</div>
-
-      <div className="bottom-nav">
-        <div className="nav-item active material-icons">grid_view</div>
-        <div className="nav-item material-icons">play_arrow</div>
-        <div className="nav-item material-icons">people</div>
-        <div className="nav-item material-icons">whatshot</div>
+      <div onClick={() => navigate("/add-game")} className="fab material-icons">
+        add
       </div>
+
+      <FooterNav />
     </>
   );
 }

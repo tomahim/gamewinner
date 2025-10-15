@@ -9,6 +9,8 @@ import {
 } from "react-router-dom";
 import GamesList from "./components/GamesList";
 import ProtectedRoute from "./auth/ProtectedRoute";
+import AddGame from "./components/AddGame";
+import GameDetail from "./components/GameDetail";
 
 function App() {
   return (
@@ -25,6 +27,24 @@ function App() {
               element={
                 <ProtectedRoute>
                   <GamesList />
+                </ProtectedRoute>
+              }
+            />
+
+            <Route
+              path="/add-game"
+              element={
+                <ProtectedRoute>
+                  <AddGame />
+                </ProtectedRoute>
+              }
+            />
+
+            <Route
+              path="/game"
+              element={
+                <ProtectedRoute>
+                  <GameDetail />
                 </ProtectedRoute>
               }
             />
