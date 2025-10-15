@@ -1,9 +1,9 @@
 import { useState, useEffect } from "react";
-import { collection, getDocs } from "firebase/firestore";
-import { db, auth } from "../firebase.config";
+// import { collection, getDocs } from "firebase/firestore";
+import { /* db, */ auth } from "../firebase.config";
 
 const FirestoreData = () => {
-  const [data, setData] = useState([]);
+  const [data /* setData */] = useState([]);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
