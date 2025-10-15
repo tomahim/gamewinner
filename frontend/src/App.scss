@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/icon?family=Material+Icons');
 
-$purple-dark: #163e77;
+$purple-dark: #08387b;
 $purple-mid: #5356dd;
 $orange: #ff9800;
 $gray: #dcdbdb;
@@ -79,45 +79,55 @@ header {
 }
 
 .section-title {
-  padding: 12px 16px;
+  padding: 0 15px;
   font-size: 16px;
   color: $white;
-  background-color: $purple-dark;
 }
 
+// SCSS Variables (optional, but good practice for magic numbers)
+$gap-size: 20px;
+$stagger-offset: 50px; // How much to vertically offset the second column
+
 .game-grid {
-  display: flex;
-  justify-content: space-around;
-  padding: 16px;
+  
+  // 1. Setup the grid container
+  display: grid;
+  grid-template-columns: 1fr 1fr; // Two equal-width columns
+  gap: $gap-size; // Space between rows and columns
+  
+  margin: 65px 10px 150px 10px;
 
   .game-card {
-    background-color: $purple-mid;
-    border-radius: 12px;
-    width: 45%;
-    position: relative;
+    // 2. Styling for the individual card containers
+    position: relative; // Needed if you want to position text/overlays inside
     overflow: hidden;
-    text-align: center;
-
+    border-radius: 15px; // Rounded corners from the design
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    aspect-ratio: 1; // Define the portrait shape of the cards
+    
+    // Ensure the image covers the container
     img {
+      position: absolute;
       width: 100%;
-      border-radius: 12px;
+      height: 100%;
+      object-fit: cover;
+    }
+    
+    // 3. THE KEY: Apply the stagger to the second column items (2nd, 4th, 6th, etc.)
+    &:nth-child(2n-1) {
+      transform: translateY(-$stagger-offset); 
+      // This lifts the card up, creating the offbeat/staggered effect.
     }
 
     .rank-tag {
       position: absolute;
-      top: 8px;
+      bottom: 8px;
       right: 8px;
       background-color: $orange;
       padding: 2px 6px;
       border-radius: 6px;
       font-size: 12px;
       font-weight: bold;
-    }
-
-    .game-name {
-      padding: 8px;
-      font-weight: bold;
-      background-color: rgba(0, 0, 0, 0.3);
     }
   }
 }
