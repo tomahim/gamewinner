@@ -43,7 +43,7 @@ function GamesList() {
 
   return (
     <>
-      <Header title="Games" />
+      <Header isHome={true} />
       <div className="section-separator">
         Current month score: Aurore: 5 - Thomas: 6
       </div>
@@ -53,6 +53,18 @@ function GamesList() {
       <FirestoreData />
 
       {/* Single game-grid with map */}
+      <div className="game-grid">
+        {games.map((game) => (
+          <GameCard key={game.id} game={game} />
+        ))}
+      </div>
+
+      <div className="game-grid">
+        {games.map((game) => (
+          <GameCard key={game.id} game={game} />
+        ))}
+      </div>
+
       <div className="game-grid">
         {games.map((game) => (
           <GameCard key={game.id} game={game} />
