@@ -1,4 +1,10 @@
-import { createContext, useContext, useEffect, useState } from "react";
+import {
+  createContext,
+  useContext,
+  useEffect,
+  useState,
+  type ReactNode,
+} from "react";
 import { auth } from "../firebase.config";
 import {
   onAuthStateChanged,
@@ -6,11 +12,22 @@ import {
   signOut,
 } from "firebase/auth";
 
-const AuthContext = createContext(null);
+type User = object | null; // TODO: define proper interface for user attributes
+type AuthContextType = {
+  user: User;
+  login: (email: string, password: string) => Promise<void>;
+  logout: () => Promise<void>;
+};
 
-export const AuthProvider = ({ children }) => {
+const AuthContext = createContext<AuthContextType>({
+  user: null,
+  login: async () => {},
+  logout: async () => {},
+});
+
+export const AuthProvider = ({ children }: { children: ReactNode }) => {
   // TODO: define proper interface for user attributes
-  const [user, setUser] = useState<object | null>(null);
+  const [user, setUser] = useState<User>(null);
 
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, (user) => {
@@ -34,4 +51,4 @@ export const AuthProvider = ({ children }) => {
   );
 };
 
-export const useAuth = () => useContext(AuthContext);
+export const useAuth = () => useContext<AuthContextType>(AuthContext);

@@ -22,7 +22,10 @@ const games = [
 ];
 
 // Optional: Create a GameCard component for reusability
-function GameCard({ game }) {
+function GameCard(
+  // @ts-ignore
+  { game }
+) {
   const { image, alt, rank, name } = game;
   return (
     <div className="game-card">

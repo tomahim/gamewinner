@@ -11,6 +11,7 @@ const FirestoreData = () => {
       if (auth.currentUser) {
         const querySnapshot = await getDocs(collection(db, "games"));
         const dataList = querySnapshot.docs.map((doc) => doc.data());
+        // @ts-ignore
         setData(dataList);
       }
       setLoading(false);
