@@ -1,109 +1,28 @@
-import FirestoreData from "./FirestoreData";
+import { useGamesList, type Game } from "../data/GamesListContext";
 import FooterNav from "./FooterNav";
 import Header from "./Header";
 import { useNavigate } from "react-router-dom";
 
-// TODO: Sample game data (replace with data from FirestoreData)
-const games = [
-  {
-    id: 1,
-    image:
-      "https://cf.geekdo-images.com/yLZJCVLlIx4c7eJEWUNJ7w__itemrep/img/DR7181wU4sHT6gn6Q1XccpPxNHg=/fit-in/246x300/filters:strip_icc()/pic4458123.jpg",
-    alt: "Wingspan",
-    rank: 38,
-    name: "Wingspan",
-  },
-  {
-    id: 2,
-    image:
-      "https://cf.geekdo-images.com/MjeJZfulbsM1DSV3DrGJYA__imagepage/img/0ksox22FKLq-Z-rsbBlF2IDG9x0=/fit-in/900x600/filters:no_upscale():strip_icc()/pic5100691.jpg",
-    alt: "Cascadia",
-    rank: 54,
-    name: "Cascadia",
-  },
-  {
-    id: 1,
-    image:
-      "https://cf.geekdo-images.com/yLZJCVLlIx4c7eJEWUNJ7w__itemrep/img/DR7181wU4sHT6gn6Q1XccpPxNHg=/fit-in/246x300/filters:strip_icc()/pic4458123.jpg",
-    alt: "Wingspan",
-    rank: 38,
-    name: "Wingspan",
-  },
-  {
-    id: 2,
-    image:
-      "https://cf.geekdo-images.com/MjeJZfulbsM1DSV3DrGJYA__imagepage/img/0ksox22FKLq-Z-rsbBlF2IDG9x0=/fit-in/900x600/filters:no_upscale():strip_icc()/pic5100691.jpg",
-    alt: "Cascadia",
-    rank: 54,
-    name: "Cascadia",
-  },
-  {
-    id: 1,
-    image:
-      "https://cf.geekdo-images.com/yLZJCVLlIx4c7eJEWUNJ7w__itemrep/img/DR7181wU4sHT6gn6Q1XccpPxNHg=/fit-in/246x300/filters:strip_icc()/pic4458123.jpg",
-    alt: "Wingspan",
-    rank: 38,
-    name: "Wingspan",
-  },
-  {
-    id: 2,
-    image:
-      "https://cf.geekdo-images.com/MjeJZfulbsM1DSV3DrGJYA__imagepage/img/0ksox22FKLq-Z-rsbBlF2IDG9x0=/fit-in/900x600/filters:no_upscale():strip_icc()/pic5100691.jpg",
-    alt: "Cascadia",
-    rank: 54,
-    name: "Cascadia",
-  },
-  {
-    id: 1,
-    image:
-      "https://cf.geekdo-images.com/yLZJCVLlIx4c7eJEWUNJ7w__itemrep/img/DR7181wU4sHT6gn6Q1XccpPxNHg=/fit-in/246x300/filters:strip_icc()/pic4458123.jpg",
-    alt: "Wingspan",
-    rank: 38,
-    name: "Wingspan",
-  },
-  {
-    id: 2,
-    image:
-      "https://cf.geekdo-images.com/MjeJZfulbsM1DSV3DrGJYA__imagepage/img/0ksox22FKLq-Z-rsbBlF2IDG9x0=/fit-in/900x600/filters:no_upscale():strip_icc()/pic5100691.jpg",
-    alt: "Cascadia",
-    rank: 54,
-    name: "Cascadia",
-  },
-  {
-    id: 1,
-    image:
-      "https://cf.geekdo-images.com/yLZJCVLlIx4c7eJEWUNJ7w__itemrep/img/DR7181wU4sHT6gn6Q1XccpPxNHg=/fit-in/246x300/filters:strip_icc()/pic4458123.jpg",
-    alt: "Wingspan",
-    rank: 38,
-    name: "Wingspan",
-  },
-  {
-    id: 2,
-    image:
-      "https://cf.geekdo-images.com/MjeJZfulbsM1DSV3DrGJYA__imagepage/img/0ksox22FKLq-Z-rsbBlF2IDG9x0=/fit-in/900x600/filters:no_upscale():strip_icc()/pic5100691.jpg",
-    alt: "Cascadia",
-    rank: 54,
-    name: "Cascadia",
-  },
-];
-
-function GameCard(
-  // @ts-ignore
-  { game }
-) {
+function GameCard({ game }: { game: Game }) {
   const navigate = useNavigate();
-  const { id, image, alt, rank, name } = game;
+  const { id, imageUrl, name } = game;
   return (
     <div onClick={() => navigate(`/game/${id}`)} className="game-card">
-      <img src={image} alt={alt} />
-      <div className="rank-tag">{rank} games</div>
+      <img src={imageUrl} alt="game" />
+      <div className="rank-tag">15 games</div>
       <div className="game-name">{name}</div>
     </div>
   );
 }
 
 function GamesList() {
+  const { games, loading } = useGamesList();
+
   const navigate = useNavigate();
+
+  if (loading) {
+    return <div>Loading...</div>;
+  }
 
   return (
     <>
@@ -112,8 +31,6 @@ function GamesList() {
       <div className="section-separator">October: Aurore 5 / Thomas 6</div>
 
       <h2 className="section-title">Collection ({games.length})</h2>
-
-      <FirestoreData />
 
       <div className="game-grid">
         {games.map((game) => (

@@ -11,6 +11,7 @@ import GamesList from "./components/GamesList";
 import ProtectedRoute from "./auth/ProtectedRoute";
 import AddGame from "./components/AddGame";
 import GameDetail from "./components/GameDetail";
+import { GamesListProvider } from "./data/GamesListContext";
 
 function App() {
   return (
@@ -26,7 +27,9 @@ function App() {
               path="/home"
               element={
                 <ProtectedRoute>
-                  <GamesList />
+                  <GamesListProvider>
+                    <GamesList />
+                  </GamesListProvider>
                 </ProtectedRoute>
               }
             />
@@ -44,7 +47,9 @@ function App() {
               path="/game/:id"
               element={
                 <ProtectedRoute>
-                  <GameDetail />
+                  <GamesListProvider>
+                    <GameDetail />
+                  </GamesListProvider>
                 </ProtectedRoute>
               }
             />
