@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useAuth } from "../auth/AuthContext";
 import { useNavigate, Navigate } from "react-router-dom";
+import FormButton from "./forms/FormButton";
 
 const Login = () => {
   const [email, setEmail] = useState("");
@@ -24,8 +25,8 @@ const Login = () => {
   };
 
   return (
-    <div>
-      <h2>Login</h2>
+    <div className="form-container v-centered">
+      <h2>Game winner</h2>
       <form onSubmit={handleLogin}>
         <input
           type="email"
@@ -39,7 +40,7 @@ const Login = () => {
           value={password}
           onChange={(e) => setPassword(e.target.value)}
         />
-        <button type="submit">Login</button>
+        <FormButton label="Login" />
         {error && <p>{error}</p>}
       </form>
     </div>
