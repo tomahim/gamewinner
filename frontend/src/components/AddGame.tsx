@@ -1,4 +1,6 @@
 import { useState } from "react";
+import { collection, addDoc } from "firebase/firestore";
+import { db } from "../firebase.config";
 import FooterNav from "./FooterNav";
 import FormButton from "./forms/FormButton";
 import Header from "./Header";
@@ -7,7 +9,21 @@ function AddGame() {
   const [gameName, setGameName] = useState("");
   const [imageUrl, setImageUrl] = useState("");
 
-  const handleSave = () => {};
+  const handleSave = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    try {
+      await addDoc(collection(db, "games"), {
+        name: gameName,
+        imageUrl: imageUrl,
+      });
+      setGameName("");
+      setImageUrl("");
+      alert("Game added successfully!");
+    } catch (error) {
+      console.error("Error adding document: ", error);
+      alert("Error adding game.");
+    }
+  };
 
   return (
     <>
