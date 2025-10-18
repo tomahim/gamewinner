@@ -1,7 +1,11 @@
+import { useParams } from "react-router-dom";
 import FooterNav from "./FooterNav";
 import Header from "./Header";
 
 function GameDetail() {
+  const { id } = useParams();
+  console.log(id);
+
   return (
     <>
       <Header title="Game" />

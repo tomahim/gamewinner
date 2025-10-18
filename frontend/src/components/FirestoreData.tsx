@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-// import { collection, getDocs } from "firebase/firestore";
+// import { collection, getDocs, setDoc } from "firebase/firestore";
 import { /* db, */ auth } from "../firebase.config";
 
 const FirestoreData = () => {

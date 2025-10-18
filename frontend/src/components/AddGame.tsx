@@ -4,21 +4,21 @@ import { db } from "../firebase.config";
 import FooterNav from "./FooterNav";
 import FormButton from "./forms/FormButton";
 import Header from "./Header";
+import { useNavigate } from "react-router-dom";
 
 function AddGame() {
+  const navigate = useNavigate();
   const [gameName, setGameName] = useState("");
   const [imageUrl, setImageUrl] = useState("");
 
   const handleSave = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     try {
-      await addDoc(collection(db, "games"), {
+      const { id } = await addDoc(collection(db, "games"), {
         name: gameName,
         imageUrl: imageUrl,
       });
-      setGameName("");
-      setImageUrl("");
-      alert("Game added successfully!");
+      navigate(`/game/${id}`);
     } catch (error) {
       console.error("Error adding document: ", error);
       alert("Error adding game.");

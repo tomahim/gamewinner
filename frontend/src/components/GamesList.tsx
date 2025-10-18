@@ -92,9 +92,9 @@ function GameCard(
   { game }
 ) {
   const navigate = useNavigate();
-  const { image, alt, rank, name } = game;
+  const { id, image, alt, rank, name } = game;
   return (
-    <div onClick={() => navigate("/game")} className="game-card">
+    <div onClick={() => navigate(`/game/${id}`)} className="game-card">
       <img src={image} alt={alt} />
       <div className="rank-tag">{rank} games</div>
       <div className="game-name">{name}</div>
