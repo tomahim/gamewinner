@@ -2,14 +2,15 @@ import { useGamesList, type Game } from "../data/GamesListContext";
 import FooterNav from "./FooterNav";
 import Header from "./Header";
 import { useNavigate } from "react-router-dom";
+import Loader from "./ui/Loader";
 
 function GameCard({ game }: { game: Game }) {
   const navigate = useNavigate();
-  const { id, imageUrl, name } = game;
+  const { id, imageUrl, name, sessions } = game;
   return (
     <div onClick={() => navigate(`/game/${id}`)} className="game-card">
       <img src={imageUrl} alt="game" />
-      <div className="rank-tag">15 games</div>
+      <div className="rank-tag">{sessions?.length ?? 0} games</div>
       <div className="game-name">{name}</div>
     </div>
   );
@@ -21,7 +22,7 @@ function GamesList() {
   const navigate = useNavigate();
 
   if (loading) {
-    return <div>Loading...</div>;
+    return <Loader />;
   }
 
   return (
