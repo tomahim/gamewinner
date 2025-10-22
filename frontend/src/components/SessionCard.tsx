@@ -27,11 +27,17 @@ function SessionCard({
           />
         )}
       </div>
-      {session.date.toLocaleDateString("fr-FR")} - Score:{" "}
-      {session.winner === "Aurore" ? session.scoreAurore : session.scoreThomas}{" "}
-      -{" "}
-      {session.winner === "Aurore" ? session.scoreThomas : session.scoreAurore}
-      <span
+      <div>
+        {session.date.toLocaleDateString("fr-FR")} - Score:{" "}
+        {session.winner === "Aurore"
+          ? session.scoreAurore
+          : session.scoreThomas}{" "}
+        -{" "}
+        {session.winner === "Aurore"
+          ? session.scoreThomas
+          : session.scoreAurore}
+      </div>
+      <div
         className="edit-icon material-icons"
         onClick={() => {
           refresh();
@@ -39,7 +45,7 @@ function SessionCard({
         }}
       >
         edit
-      </span>
+      </div>
     </div>
   );
 }
