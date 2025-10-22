@@ -118,6 +118,7 @@ function EditSession() {
         <form onSubmit={handleSave}>
           <DatePicker
             placeholderText="Select date"
+            dateFormat="dd/MM/yyyy"
             selected={selectedDate}
             onChange={(date: Date | null) => setSelectedDate(date)}
           />

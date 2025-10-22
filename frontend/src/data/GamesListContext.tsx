@@ -91,11 +91,14 @@ export const GamesListProvider: React.FC<{ children: React.ReactNode }> = ({
           })) as unknown as Game[];
 
           const sessionsQuery = await getDocs(collection(db, "sessions"));
-          const sessionsResults = sessionsQuery.docs.map((doc) => ({
+          let sessionsResults = sessionsQuery.docs.map((doc) => ({
             ...doc.data(),
             id: doc.id,
             date: doc.data().date.toDate(),
           })) as unknown as GameSession[];
+          sessionsResults = sessionsResults.sort(
+            (a, b) => b.date.getTime() - a.date.getTime()
+          );
           gamesResults.forEach((game, index) => {
             gamesResults[index].sessions = sessionsResults.filter(
               (session) => session.game.id === game.id

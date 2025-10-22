@@ -26,6 +26,8 @@ function GameDetail() {
         <img src={imageUrl} alt="game-picture" />
       </div>
 
+      <h2>Last plays</h2>
+
       {game.sessions.map((session) => (
         <SessionCard session={session} refresh={refresh} />
       ))}
