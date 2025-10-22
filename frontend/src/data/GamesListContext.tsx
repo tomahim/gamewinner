@@ -154,16 +154,16 @@ export const GamesListProvider: React.FC<{ children: React.ReactNode }> = ({
             id: doc.id,
             date: doc.data().date.toDate(),
           })) as unknown as GameSession[];
+
+          // order sessions by date descending
           sessionsResults = sessionsResults.sort(
             (a, b) => b.date.getTime() - a.date.getTime()
           );
+
           gamesResults.forEach((game, index) => {
             gamesResults[index].sessions = sessionsResults.filter(
               (session) => session.game.id === game.id
             );
-          });
-
-          gamesResults.forEach((game) => {
             game.stats = computeGameStats(game.sessions);
           });
 

@@ -111,7 +111,7 @@ function EditSession() {
   return (
     <>
       <Header title={game?.name ?? ""} />
-      <h2>Add a result</h2>
+      <h2>{session ? "Edit result" : "Add result"}</h2>
       <br />
       {errorMessage && <div className="error-message">{errorMessage}</div>}
       <div className="form-container">
