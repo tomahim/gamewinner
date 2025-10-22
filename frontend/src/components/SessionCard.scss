@@ -4,12 +4,15 @@
     border: 1px solid #ccc;
     border-radius: 8px;
     padding: 16px;
-    margin: 8px 0;
-    background-color: app.$gray;
-    color: black;
+    margin: 8px 8px;
+    background-color: rgba(116, 204, 255, 0.25);
+    color: white;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
 
     .edit-icon {
-        float: right;
-        cursor: pointer;
+        justify-content: flex-start;
     }
 }

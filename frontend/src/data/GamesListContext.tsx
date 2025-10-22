@@ -12,11 +12,27 @@ export interface GameSession {
   winner: "Thomas" | "Aurore";
 }
 
+export interface ScoreStats {
+  percentageVictories: number;
+  highest: number;
+  lowest: number;
+  mean: number;
+}
+
+export interface GameStats {
+  totalPlays: number;
+  thomasWins: number;
+  auroreWins: number;
+  scoreStatsAurore: ScoreStats;
+  scoreStatsThomas: ScoreStats;
+}
+
 export interface Game {
   id: string;
   name: string;
   imageUrl: string;
   sessions: GameSession[];
+  stats: GameStats;
 }
 
 interface GamesListContextType {
@@ -69,6 +85,48 @@ export const useGameSessionFromParams = () => {
   return { ...returnValues, session, sessionId };
 };
 
+function computeGameStats(sessions: GameSession[]): GameStats {
+  function mean(arr: number[]) {
+    const mean =
+      arr.reduce(function (a, b) {
+        return a + b;
+      }, 0) / arr.length;
+
+    return Math.round(mean * 100) / 100;
+  }
+
+  function percentage(partialValue: number, totalValue: number) {
+    return (100 * partialValue) / totalValue;
+  }
+
+  const scoresAurore = sessions.map((s) => s.scoreAurore);
+  const scoresThomas = sessions.map((s) => s.scoreThomas);
+
+  return {
+    totalPlays: sessions.length,
+    thomasWins: sessions.filter((s) => s.winner === "Thomas").length,
+    auroreWins: sessions.filter((s) => s.winner === "Aurore").length,
+    scoreStatsAurore: {
+      percentageVictories: percentage(
+        sessions.filter((s) => s.winner === "Aurore").length,
+        sessions.length
+      ),
+      highest: Math.max(...scoresAurore, 0),
+      lowest: Math.min(...scoresAurore, 0),
+      mean: mean(scoresAurore),
+    },
+    scoreStatsThomas: {
+      percentageVictories: percentage(
+        sessions.filter((s) => s.winner === "Thomas").length,
+        sessions.length
+      ),
+      highest: Math.max(...scoresThomas, 0),
+      lowest: Math.min(...scoresThomas, 0),
+      mean: mean(scoresThomas),
+    },
+  };
+}
+
 // GamesList Provider component
 export const GamesListProvider: React.FC<{ children: React.ReactNode }> = ({
   children,
@@ -104,6 +162,11 @@ export const GamesListProvider: React.FC<{ children: React.ReactNode }> = ({
               (session) => session.game.id === game.id
             );
           });
+
+          gamesResults.forEach((game) => {
+            game.stats = computeGameStats(game.sessions);
+          });
+
           setGames(gamesResults);
         } catch (error) {
           console.error("Error fetching data:", error);
