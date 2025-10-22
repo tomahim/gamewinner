@@ -24,6 +24,30 @@ function GameDetail() {
 
       <div className="game-picture">
         <img src={imageUrl} alt="game-picture" />
+        <div className="stat-box-container">
+          <div className="stat-box">
+            <span className="number">9</span>
+            <span className="text">Total</span>
+          </div>
+          <div className="stat-box">
+            <div className="image-circle">
+              <img
+                src="https://t4.ftcdn.net/jpg/12/42/71/23/360_F_1242712312_rKSLexYtzbBcMVhVjUSP4MMxuHq6xgmu.jpg"
+                alt="Icon"
+              />
+            </div>
+            <span className="number-bottom">5</span>
+          </div>
+          <div className="stat-box">
+            <div className="image-circle">
+              <img
+                src="https://www.bornfree.org.uk/wp-content/uploads/2023/10/Baby-elephant-c-Diana-Robinson-Getty-Images-1292x1081.jpg"
+                alt="Icon"
+              />
+            </div>
+            <span className="number-bottom">4</span>
+          </div>
+        </div>
       </div>
 
       <h2>Last plays</h2>
