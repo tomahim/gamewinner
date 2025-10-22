@@ -1,6 +1,7 @@
 import { useNavigate } from "react-router-dom";
 import type { GameSession } from "../data/GamesListContext";
 import "./SessionCard.scss";
+import ImageCircle from "./ui/ImageCircle";
 
 function SessionCard({
   session,
@@ -12,21 +13,7 @@ function SessionCard({
   const navigate = useNavigate();
   return (
     <div key={session.id} className="session-card">
-      <div className="image-circle">
-        {session.winner === "Aurore" && (
-          <img
-            src="https://t4.ftcdn.net/jpg/12/42/71/23/360_F_1242712312_rKSLexYtzbBcMVhVjUSP4MMxuHq6xgmu.jpg"
-            alt="Icon"
-          />
-        )}
-
-        {session.winner === "Thomas" && (
-          <img
-            src="https://www.bornfree.org.uk/wp-content/uploads/2023/10/Baby-elephant-c-Diana-Robinson-Getty-Images-1292x1081.jpg"
-            alt="Icon"
-          />
-        )}
-      </div>
+      <ImageCircle player={session.winner} />
       <div>
         {session.date.toLocaleDateString("fr-FR")} - Score:{" "}
         {session.winner === "Aurore"

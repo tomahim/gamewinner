@@ -12,9 +12,22 @@ function FooterNav() {
       >
         grid_view
       </div>
-      <div className="nav-item material-icons">play_arrow</div>
-      <div className="nav-item material-icons">people</div>
-      <div className="nav-item material-icons">whatshot</div>
+      <div
+        className="nav-item material-icons"
+        onClick={() => {
+          navigate("/stats");
+        }}
+      >
+        bar_chart
+      </div>
+      <div
+        className="nav-item material-icons"
+        onClick={() => {
+          navigate("/history");
+        }}
+      >
+        history
+      </div>
     </div>
   );
 }

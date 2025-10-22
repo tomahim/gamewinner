@@ -29,8 +29,6 @@ function GamesList() {
     <>
       <Header isHome={true} />
 
-      <div className="section-separator">October: Aurore 5 / Thomas 6</div>
-
       <h2 className="section-title">Collection ({games.length})</h2>
 
       <div className="game-grid">

@@ -13,6 +13,8 @@ import AddGame from "./components/AddGame";
 import GameDetail from "./components/GameDetail";
 import { GamesListProvider } from "./data/GamesListContext";
 import EditSession from "./components/EditSession";
+import Stats from "./components/Stats";
+import YearHistory from "./components/YearHistory";
 
 function App() {
   return (
@@ -72,6 +74,28 @@ function App() {
                 <ProtectedRoute>
                   <GamesListProvider>
                     <EditSession />
+                  </GamesListProvider>
+                </ProtectedRoute>
+              }
+            />
+
+            <Route
+              path="/stats"
+              element={
+                <ProtectedRoute>
+                  <GamesListProvider>
+                    <Stats />
+                  </GamesListProvider>
+                </ProtectedRoute>
+              }
+            />
+
+            <Route
+              path="/history"
+              element={
+                <ProtectedRoute>
+                  <GamesListProvider>
+                    <YearHistory />
                   </GamesListProvider>
                 </ProtectedRoute>
               }

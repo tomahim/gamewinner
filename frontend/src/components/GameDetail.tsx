@@ -5,6 +5,7 @@ import { useGameFromParams } from "../data/GamesListContext";
 import Loader from "./ui/Loader";
 import PlayingCardIcon from "./ui/PlayingCardIcon";
 import SessionCard from "./SessionCard";
+import StatBox from "./ui/StatBox";
 
 const LIMIT_PLAYS = 10;
 
@@ -28,28 +29,15 @@ function GameDetail() {
       <div className="game-picture">
         <img src={imageUrl} alt="game-picture" />
         <div className="stat-box-container relative-bottom">
-          <div className="stat-box">
-            <span className="number">{totalPlays}</span>
-            <span className="text">Total</span>
-          </div>
-          <div className="stat-box">
-            <div className="image-circle absolute-top">
-              <img
-                src="https://t4.ftcdn.net/jpg/12/42/71/23/360_F_1242712312_rKSLexYtzbBcMVhVjUSP4MMxuHq6xgmu.jpg"
-                alt="Icon"
-              />
-            </div>
-            <span className="number-bottom">{auroreWins}</span>
-          </div>
-          <div className="stat-box">
-            <div className="image-circle absolute-top">
-              <img
-                src="https://www.bornfree.org.uk/wp-content/uploads/2023/10/Baby-elephant-c-Diana-Robinson-Getty-Images-1292x1081.jpg"
-                alt="Icon"
-              />
-            </div>
-            <span className="number-bottom">{thomasWins}</span>
-          </div>
+          <StatBox value={totalPlays} label="Total" />
+          <StatBox
+            value={auroreWins}
+            circle={{ player: "Aurore", absolute: true }}
+          />
+          <StatBox
+            value={thomasWins}
+            circle={{ player: "Thomas", absolute: true }}
+          />
         </div>
       </div>
 
@@ -58,10 +46,6 @@ function GameDetail() {
       {game.sessions.slice(0, LIMIT_PLAYS).map((session) => (
         <SessionCard session={session} refresh={refresh} />
       ))}
-
-      <div onClick={() => navigate(`/game/${id}/add-session`)} className="fab">
-        <PlayingCardIcon />
-      </div>
 
       <h2>Scores Aurore</h2>
 
@@ -107,6 +91,10 @@ function GameDetail() {
           </span>
           <span className="text">Wins</span>
         </div>
+      </div>
+
+      <div onClick={() => navigate(`/game/${id}/add-session`)} className="fab">
+        <PlayingCardIcon />
       </div>
 
       <FooterNav />
