@@ -1,0 +1,18 @@
+@use '../../App' as app;
+
+.delete-button {
+
+    display: flex;
+    justify-content: center; /* Horizontally center */
+    
+    button {
+        padding: 10px 20px;
+        margin-top: 30px;
+        font-size: 16px;
+        background-color: rgb(143, 20, 20);
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+}

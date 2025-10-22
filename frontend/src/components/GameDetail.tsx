@@ -1,18 +1,17 @@
-import { useNavigate, useParams } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import FooterNav from "./FooterNav";
 import Header from "./Header";
-import { useGamesList } from "../data/GamesListContext";
+import { useGameFromParams } from "../data/GamesListContext";
 import Loader from "./ui/Loader";
+import PLayingCardIcon from "./ui/PlayingCardIcon";
+import SessionCard from "./SessionCard";
 
 function GameDetail() {
-  const { games, loading } = useGamesList();
   const navigate = useNavigate();
-  const { id } = useParams();
-  const game = games.find((g) => g.id === id);
 
-  if (loading) {
-    return <Loader />;
-  }
+  const { game, id, loading, refresh } = useGameFromParams();
+
+  if (loading) return <Loader />;
 
   if (!game) {
     return <>Game not found.</>;
@@ -21,17 +20,18 @@ function GameDetail() {
   const { imageUrl } = game;
   return (
     <>
-      <Header title="Game" />
+      <Header title={game.name} />
 
       <div className="game-picture">
         <img src={imageUrl} alt="game-picture" />
       </div>
 
-      <div
-        onClick={() => navigate(`/game/${id}/add-session`)}
-        className="fab material-icons"
-      >
-        add
+      {game.sessions.map((session) => (
+        <SessionCard session={session} refresh={refresh} />
+      ))}
+
+      <div onClick={() => navigate(`/game/${id}/add-session`)} className="fab">
+        <PLayingCardIcon />
       </div>
 
       <FooterNav />

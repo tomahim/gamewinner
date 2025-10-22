@@ -6,7 +6,9 @@ function FooterNav() {
     <div className="bottom-nav">
       <div
         className="nav-item active material-icons"
-        onClick={() => navigate("/home")}
+        onClick={() => {
+          navigate("/home");
+        }}
       >
         grid_view
       </div>
