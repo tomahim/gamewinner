@@ -8,7 +8,7 @@ import SessionCard from "./SessionCard";
 import SummaryStats from "./SummaryStats";
 import Loader from "./ui/Loader";
 
-function getMonthName(monthNumber: number) {
+export function getMonthName(monthNumber: number) {
   // Month number should be 0-11
   const date = new Date(2025, monthNumber, 1); // Year and day are arbitrary
   return date.toLocaleString("en-US", { month: "long" }); // e.g., "January"
@@ -35,7 +35,9 @@ function MonthHistory() {
     <>
       <Header title={getMonthName(month) + " " + year} />
 
-      <SummaryStats aggregatedStats={monthStats} />
+      <div className="summary-stats-container">
+        <SummaryStats aggregatedStats={monthStats} />
+      </div>
 
       {monthStats.sessions.map((session: GameSession) => (
         <SessionCard

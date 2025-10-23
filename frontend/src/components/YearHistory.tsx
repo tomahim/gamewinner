@@ -9,6 +9,7 @@ import FooterNav from "./FooterNav";
 import Header from "./Header";
 import ImageCircle from "./ui/ImageCircle";
 import Loader from "./ui/Loader";
+import { getMonthName } from "./MonthHistory";
 
 function HistoryCard({
   month,
@@ -30,12 +31,6 @@ function HistoryCard({
       </div>
     </div>
   );
-}
-
-function getMonthName(monthNumber: number) {
-  // Month number should be 0-11
-  const date = new Date(2025, monthNumber, 1); // Year and day are arbitrary
-  return date.toLocaleString("en-US", { month: "long" }); // e.g., "January"
 }
 
 function YearHistory() {
@@ -82,6 +77,14 @@ function YearHistory() {
         >
           {hasNextYear && "chevron_right"}
         </div>
+      </div>
+
+      <div
+        className="link-with-icon"
+        onClick={() => navigate(`/history/${year}/stats`)}
+      >
+        <span className="material-icons small-icon">bar_chart</span>
+        See year stats
       </div>
 
       {yearStats.months.map((ms: MonthStats) => (
