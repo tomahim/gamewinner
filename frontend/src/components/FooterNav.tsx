@@ -2,6 +2,7 @@ import { useNavigate } from "react-router-dom";
 
 function FooterNav() {
   const navigate = useNavigate();
+  const currentYear = new Date().getFullYear();
   return (
     <div className="bottom-nav">
       <div
@@ -15,7 +16,7 @@ function FooterNav() {
       <div
         className="nav-item material-icons"
         onClick={() => {
-          navigate("/stats");
+          navigate(`/stats`);
         }}
       >
         bar_chart
@@ -23,7 +24,7 @@ function FooterNav() {
       <div
         className="nav-item material-icons"
         onClick={() => {
-          navigate("/history");
+          navigate(`/history/${currentYear}`);
         }}
       >
         history

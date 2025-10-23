@@ -1,0 +1,16 @@
+.year-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center; /* Vertically centers all items */
+    justify-content: space-between; /* Spreads items: previous to left, year to center, next to right */
+    gap: 1rem; /* Maintains spacing between elements */
+    width: 100%; /* Ensures the container takes full width for proper spacing */
+
+    padding: 0 1rem; 
+
+    .previous-icon,
+    .next-icon {
+        cursor: pointer; /* Optional: Enhances UX for clickable icons */
+    }
+  }
+  

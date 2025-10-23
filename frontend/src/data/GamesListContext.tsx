@@ -19,10 +19,13 @@ export interface ScoreStats {
   mean: number;
 }
 
-export interface GameStats {
+interface AggregatedStats {
   totalPlays: number;
   thomasWins: number;
   auroreWins: number;
+}
+
+export interface GameStats extends AggregatedStats {
   scoreStatsAurore: ScoreStats;
   scoreStatsThomas: ScoreStats;
 }
@@ -35,10 +38,23 @@ export interface Game {
   stats: GameStats;
 }
 
+export interface MonthStats extends AggregatedStats {
+  month: number;
+}
+
+export interface YearStats extends AggregatedStats {
+  year: number;
+  months: MonthStats[];
+}
+
+interface OverallStats extends AggregatedStats {}
+
 interface GamesListContextType {
   games: Game[];
   loading: boolean;
   refresh: () => void;
+  overallStats: OverallStats | undefined;
+  yearsStats: YearStats[];
 }
 
 const GamesListContext = createContext<GamesListContextType | undefined>(
@@ -52,6 +68,27 @@ export const useGamesList = () => {
     throw new Error("useGamesList must be used within a GamesListProvider");
   }
   return context;
+};
+
+export const useYearsWithStats = () => {
+  const { yearsStats, loading, refresh } = useGamesList();
+  const years = yearsStats.map((ys) => ys.year);
+  return { years, loading, refresh };
+};
+
+export const useYearStatsFromParams = () => {
+  const { yearsStats, loading, refresh } = useGamesList();
+
+  const { year: yearStr } = useParams<{ year: string }>();
+  if (!yearStr) {
+    throw new Error("Year parameter is missing");
+  }
+
+  const year = parseInt(yearStr);
+
+  const yearStats = yearsStats.find((ys) => ys.year === year);
+
+  return { yearStats, year, loading, refresh };
 };
 
 export const useGameFromParams = () => {
@@ -127,11 +164,58 @@ function computeGameStats(sessions: GameSession[]): GameStats {
   };
 }
 
+function computeYearsStats(sessions: GameSession[]): YearStats[] {
+  const uniqueYears = [...new Set(sessions.map((s) => s.date.getFullYear()))];
+  const yearsStats: YearStats[] = uniqueYears.map((year) => {
+    const sessionsInYear = sessions.filter(
+      (s) => s.date.getFullYear() === year
+    );
+    const monthsStats: MonthStats[] = [];
+    for (let month = 0; month < 12; month++) {
+      const sessionsInMonth = sessionsInYear.filter(
+        (s) => s.date.getMonth() === month
+      );
+      if (sessionsInMonth.length > 0) {
+        const aggregatedStats: AggregatedStats = {
+          totalPlays: sessionsInMonth.length,
+          thomasWins: sessionsInMonth.filter((s) => s.winner === "Thomas")
+            .length,
+          auroreWins: sessionsInMonth.filter((s) => s.winner === "Aurore")
+            .length,
+        };
+        monthsStats.push({ month, ...aggregatedStats });
+      }
+    }
+    const sortedMonthsStats = monthsStats.sort((a, b) => b.month - a.month);
+    const aggregatedYearStats: AggregatedStats = {
+      totalPlays: sessionsInYear.length,
+      thomasWins: sessionsInYear.filter((s) => s.winner === "Thomas").length,
+      auroreWins: sessionsInYear.filter((s) => s.winner === "Aurore").length,
+    };
+    return { year, months: sortedMonthsStats, ...aggregatedYearStats };
+  });
+  const sortedYearsStats = yearsStats.sort((a, b) => b.year - a.year);
+  return sortedYearsStats;
+}
+
+function computeOverallStats(yearsStats: YearStats[]): OverallStats {
+  const overall: OverallStats = {
+    totalPlays: yearsStats.reduce((sum, ys) => sum + ys.totalPlays, 0),
+    thomasWins: yearsStats.reduce((sum, ys) => sum + ys.thomasWins, 0),
+    auroreWins: yearsStats.reduce((sum, ys) => sum + ys.auroreWins, 0),
+  };
+  return overall;
+}
+
 // GamesList Provider component
 export const GamesListProvider: React.FC<{ children: React.ReactNode }> = ({
   children,
 }) => {
   const [games, setGames] = useState<Game[]>([]);
+  const [overallStats, setOverallStats] = useState<OverallStats | undefined>(
+    undefined
+  );
+  const [yearsStats, setYearsStats] = useState<YearStats[]>([]);
   const [loading, setLoading] = useState(true);
   const [refreshTimestamp, setRefreshTimestamp] = useState(
     new Date().getTime()
@@ -160,6 +244,9 @@ export const GamesListProvider: React.FC<{ children: React.ReactNode }> = ({
             (a, b) => b.date.getTime() - a.date.getTime()
           );
 
+          setYearsStats(computeYearsStats(sessionsResults));
+          setOverallStats(computeOverallStats(yearsStats));
+
           gamesResults.forEach((game, index) => {
             gamesResults[index].sessions = sessionsResults.filter(
               (session) => session.game.id === game.id
@@ -183,6 +270,8 @@ export const GamesListProvider: React.FC<{ children: React.ReactNode }> = ({
       value={{
         games,
         loading,
+        overallStats,
+        yearsStats,
         refresh: () => setRefreshTimestamp(new Date().getTime()),
       }}
     >

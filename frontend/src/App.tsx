@@ -91,7 +91,7 @@ function App() {
             />
 
             <Route
-              path="/history"
+              path="/history/:year"
               element={
                 <ProtectedRoute>
                   <GamesListProvider>

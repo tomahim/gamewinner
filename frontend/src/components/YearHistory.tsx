@@ -1,4 +1,10 @@
-import { useGamesList } from "../data/GamesListContext";
+import { useNavigate } from "react-router-dom";
+import "./YearHistory.scss";
+import {
+  useYearStatsFromParams,
+  useYearsWithStats,
+  type MonthStats,
+} from "../data/GamesListContext";
 import FooterNav from "./FooterNav";
 import Header from "./Header";
 import ImageCircle from "./ui/ImageCircle";
@@ -26,36 +32,73 @@ function HistoryCard({
   );
 }
 
+function getMonthName(monthNumber: number) {
+  // Month number should be 0-11
+  const date = new Date(2025, monthNumber, 1); // Year and day are arbitrary
+  return date.toLocaleString("en-US", { month: "long" }); // e.g., "January"
+}
+
 function YearHistory() {
-  const { games, loading } = useGamesList();
+  const { years } = useYearsWithStats();
+  const { yearStats, loading, year } = useYearStatsFromParams();
+  const navigate = useNavigate();
 
   if (loading) {
     return <Loader />;
   }
 
+  if (!yearStats) {
+    return (
+      <>Cannot find stats for year {year}. Please go back to Stats page.</>
+    );
+  }
+
+  const hasPreviousYear = years.includes(year - 1);
+  const hasNextYear = years.includes(year + 1);
+
+  const goToYear = (targetYear: number) => {
+    navigate(`/history/${targetYear}`);
+  };
+
   return (
     <>
       <Header title="History" />
 
-      <h2>2025</h2>
+      <div className="year-container">
+        <div
+          className="material-icons large-icon previous-icon"
+          onClick={() => goToYear(year - 1)}
+        >
+          {hasPreviousYear && "chevron_left"}
+        </div>
 
-      {games.length}
+        <div>
+          <h2>{year}</h2>
+        </div>
 
-      <HistoryCard month="March" winner="Tie" scoreAurore={2} scoreThomas={2} />
+        <div
+          className="material-icons large-icon next-icon"
+          onClick={() => goToYear(year + 1)}
+        >
+          {hasNextYear && "chevron_right"}
+        </div>
+      </div>
 
-      <HistoryCard
-        month="February"
-        winner="Thomas"
-        scoreAurore={1}
-        scoreThomas={2}
-      />
-
-      <HistoryCard
-        month="January"
-        winner="Aurore"
-        scoreAurore={1}
-        scoreThomas={2}
-      />
+      {yearStats.months.map((ms: MonthStats) => (
+        <HistoryCard
+          key={ms.month}
+          month={getMonthName(ms.month)}
+          winner={
+            ms.auroreWins > ms.thomasWins
+              ? "Aurore"
+              : ms.thomasWins > ms.auroreWins
+              ? "Thomas"
+              : "Tie"
+          }
+          scoreAurore={ms.auroreWins}
+          scoreThomas={ms.thomasWins}
+        />
+      ))}
 
       <FooterNav />
     </>
