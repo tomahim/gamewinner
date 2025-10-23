@@ -34,8 +34,10 @@ function Header({ title, isHome }: { title?: string; isHome?: boolean }) {
       >
         arrow_back
       </div>
-      <img alt="logo" src={logo} className="logo" />
-      <h2 className="page-title">{title ?? "Game Winner"}</h2>
+      <img alt="logo" src={logo} className="logo" tabIndex={-1} />
+      <h2 className="page-title" tabIndex={-1}>
+        {title ?? "Game Winner"}
+      </h2>
     </header>
   );
 }

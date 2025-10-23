@@ -23,7 +23,7 @@ function HistoryCard({
   scoreThomas: number;
 }) {
   return (
-    <div key={month} className="session-card">
+    <div key={month} className="session-card" tabIndex={-1}>
       <ImageCircle player={winner} />
       <div>
         {month} - Score: {winner === "Aurore" ? scoreAurore : scoreThomas} -{" "}
@@ -67,7 +67,7 @@ function YearHistory() {
           {hasPreviousYear && "chevron_left"}
         </div>
 
-        <div>
+        <div tabIndex={-1}>
           <h2>{year}</h2>
         </div>
 

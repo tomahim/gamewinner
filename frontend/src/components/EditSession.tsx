@@ -111,7 +111,7 @@ function EditSession() {
   return (
     <>
       <Header title={game?.name ?? ""} />
-      <h2>{session ? "Edit result" : "Add result"}</h2>
+      <h2 tabIndex={-1}>{session ? "Edit result" : "Add result"}</h2>
       <br />
       {errorMessage && <div className="error-message">{errorMessage}</div>}
       <div className="form-container">

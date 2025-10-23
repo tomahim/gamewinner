@@ -16,7 +16,7 @@ function SessionCard({
   return (
     <div key={session.id} className="session-card">
       <ImageCircle player={session.winner} />
-      <div>
+      <div tabIndex={-1}>
         {session.date.toLocaleDateString("fr-FR")} -{" "}
         {displayGameName && <strong>{session.game.name} - </strong>}
         {session.winner === "Aurore"

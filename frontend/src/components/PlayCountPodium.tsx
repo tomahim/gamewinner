@@ -35,7 +35,9 @@ function PlayCountPodium({ topThree }: PlayCountPodiumProps) {
 
   return (
     <section className="podium-section">
-      <h2 className="section-heading">Most played</h2>
+      <h2 className="section-heading" tabIndex={-1}>
+        Most played
+      </h2>
       <div className="podium">
         {podiumSlots.map(({ rank, className }) => {
           const playCount = topThree.find((_, index) => index === rank - 1);

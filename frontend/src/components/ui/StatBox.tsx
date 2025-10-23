@@ -14,7 +14,7 @@ function StatBox({
   };
 }) {
   return (
-    <div className="stat-box">
+    <div className="stat-box" tabIndex={-1}>
       {label && <span className="number">{value}</span>}
       {label && <span className="text">{label}</span>}
       {circle && (

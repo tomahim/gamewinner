@@ -41,13 +41,13 @@ function GameDetail() {
         </div>
       </div>
 
-      <h2>Last plays</h2>
+      <h2 tabIndex={-1}>Last plays</h2>
 
       {game.sessions.slice(0, LIMIT_PLAYS).map((session) => (
         <SessionCard session={session} refresh={refresh} />
       ))}
 
-      <h2>Scores Aurore</h2>
+      <h2 tabIndex={-1}>Scores Aurore</h2>
 
       <div className="stat-box-container centered" tabIndex={-1}>
         <div className="stat-box">
@@ -70,7 +70,7 @@ function GameDetail() {
         </div>
       </div>
 
-      <h2>Scores Thomas</h2>
+      <h2 tabIndex={-1}>Scores Thomas</h2>
 
       <div
         className="stat-box-container centered margin-bottom-80"

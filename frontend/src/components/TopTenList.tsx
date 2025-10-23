@@ -44,7 +44,9 @@ function TopTenList({
 
   return (
     <section className="top-ten">
-      <h3 className="section-heading">{title}</h3>
+      <h3 className="section-heading" tabIndex={-1}>
+        {title}
+      </h3>
       <ul className="top-ten-list">
         {items.map((playCount, index) => {
           const absoluteRank = startingRank + index;
