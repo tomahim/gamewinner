@@ -30,7 +30,7 @@ export interface PlayCount {
   count: number;
 }
 
-interface AggregatedStats {
+export interface AggregatedStats {
   totalPlays: number;
   thomasWins: number;
   auroreWins: number;

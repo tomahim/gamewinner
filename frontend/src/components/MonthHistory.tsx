@@ -5,6 +5,7 @@ import {
 import FooterNav from "./FooterNav";
 import Header from "./Header";
 import SessionCard from "./SessionCard";
+import SummaryStats from "./SummaryStats";
 import Loader from "./ui/Loader";
 
 function getMonthName(monthNumber: number) {
@@ -34,7 +35,7 @@ function MonthHistory() {
     <>
       <Header title={getMonthName(month) + " " + year} />
 
-      <h2>Plays</h2>
+      <SummaryStats aggregatedStats={monthStats} />
 
       {monthStats.sessions.map((session: GameSession) => (
         <SessionCard
