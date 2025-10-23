@@ -3,10 +3,16 @@ import { db, auth } from "../firebase.config"; // Adjust the import based on you
 import { getDocs, collection } from "firebase/firestore";
 import { useParams } from "react-router-dom";
 
+interface GameAttributes {
+  id: string;
+  name: string;
+  imageUrl: string;
+}
+
 export interface GameSession {
   id: string;
   date: Date;
-  game: { id: string; name: string };
+  game: GameAttributes;
   scoreAurore: number;
   scoreThomas: number;
   winner: "Thomas" | "Aurore";
@@ -19,10 +25,16 @@ export interface ScoreStats {
   mean: number;
 }
 
+export interface PlayCount {
+  game: GameAttributes;
+  count: number;
+}
+
 interface AggregatedStats {
   totalPlays: number;
   thomasWins: number;
   auroreWins: number;
+  playCounts: PlayCount[];
 }
 
 export interface GameStats extends AggregatedStats {
@@ -30,10 +42,7 @@ export interface GameStats extends AggregatedStats {
   scoreStatsThomas: ScoreStats;
 }
 
-export interface Game {
-  id: string;
-  name: string;
-  imageUrl: string;
+export interface Game extends GameAttributes {
   sessions: GameSession[];
   stats: GameStats;
 }
@@ -139,6 +148,11 @@ export const useGameSessionFromParams = () => {
   return { ...returnValues, session, sessionId };
 };
 
+export const useOverallStats = () => {
+  const { overallStats, loading, refresh } = useGamesList();
+  return { overallStats, loading, refresh };
+};
+
 function computeGameStats(sessions: GameSession[]): GameStats {
   function mean(arr: number[]) {
     const mean =
@@ -178,7 +192,22 @@ function computeGameStats(sessions: GameSession[]): GameStats {
       lowest: Math.min(...scoresThomas, 0),
       mean: mean(scoresThomas),
     },
+    // not needed for game stats, but to comply with AggregatedStats
+    playCounts: [],
   };
+}
+
+function getUniqueGamesPlayCount(sessions: GameSession[]): PlayCount[] {
+  const res = sessions.reduce((acc: PlayCount[], session: GameSession) => {
+    const existing = acc.find((a) => a.game.id === session.game.id);
+    if (existing) {
+      existing.count += 1;
+    } else {
+      acc.push({ game: session.game, count: 1 });
+    }
+    return acc;
+  }, []);
+  return res;
 }
 
 function computeYearsStats(sessions: GameSession[]): YearStats[] {
@@ -199,6 +228,9 @@ function computeYearsStats(sessions: GameSession[]): YearStats[] {
             .length,
           auroreWins: sessionsInMonth.filter((s) => s.winner === "Aurore")
             .length,
+          playCounts: getUniqueGamesPlayCount(sessionsInMonth).sort(
+            (a, b) => b.count - a.count
+          ),
         };
         monthsStats.push({
           month,
@@ -212,6 +244,9 @@ function computeYearsStats(sessions: GameSession[]): YearStats[] {
       totalPlays: sessionsInYear.length,
       thomasWins: sessionsInYear.filter((s) => s.winner === "Thomas").length,
       auroreWins: sessionsInYear.filter((s) => s.winner === "Aurore").length,
+      playCounts: getUniqueGamesPlayCount(sessionsInYear).sort(
+        (a, b) => b.count - a.count
+      ),
     };
     return { year, months: sortedMonthsStats, ...aggregatedYearStats };
   });
@@ -224,6 +259,19 @@ function computeOverallStats(yearsStats: YearStats[]): OverallStats {
     totalPlays: yearsStats.reduce((sum, ys) => sum + ys.totalPlays, 0),
     thomasWins: yearsStats.reduce((sum, ys) => sum + ys.thomasWins, 0),
     auroreWins: yearsStats.reduce((sum, ys) => sum + ys.auroreWins, 0),
+    playCounts: yearsStats
+      .reduce((acc: PlayCount[], ys) => {
+        ys.playCounts.forEach((pc) => {
+          const existing = acc.find((a) => a.game.id === pc.game.id);
+          if (existing) {
+            existing.count += pc.count;
+          } else {
+            acc.push({ game: pc.game, count: pc.count });
+          }
+        });
+        return acc;
+      }, [])
+      .sort((a, b) => b.count - a.count),
   };
   return overall;
 }
@@ -258,6 +306,7 @@ export const GamesListProvider: React.FC<{ children: React.ReactNode }> = ({
             ...doc.data(),
             id: doc.id,
             date: doc.data().date.toDate(),
+            game: gamesResults.find((g) => g.id === doc.data().game.id),
           })) as unknown as GameSession[];
 
           // order sessions by date descending
@@ -265,15 +314,13 @@ export const GamesListProvider: React.FC<{ children: React.ReactNode }> = ({
             (a, b) => b.date.getTime() - a.date.getTime()
           );
 
-          setYearsStats(computeYearsStats(sessionsResults));
-          setOverallStats(computeOverallStats(yearsStats));
+          const statsByYears = computeYearsStats(sessionsResults);
+          setYearsStats(statsByYears);
+          setOverallStats(computeOverallStats(statsByYears));
 
           gamesResults.forEach((game, index) => {
             gamesResults[index].sessions = sessionsResults.filter(
               (session) => session.game.id === game.id
-            );
-            gamesResults[index].sessions.map(
-              (session) => (session.game.name = game.name)
             );
             game.stats = computeGameStats(game.sessions);
           });
