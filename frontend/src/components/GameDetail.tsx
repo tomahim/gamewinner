@@ -93,7 +93,12 @@ function GameDetail() {
         </div>
       </div>
 
-      <div onClick={() => navigate(`/game/${id}/add-session`)} className="fab">
+      <div
+        role="button"
+        tabIndex={0}
+        onClick={() => navigate(`/game/${id}/add-session`)}
+        className="fab"
+      >
         <PlayingCardIcon />
       </div>
 

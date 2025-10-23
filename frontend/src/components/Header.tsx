@@ -26,7 +26,12 @@ function Header({ title, isHome }: { title?: string; isHome?: boolean }) {
 
   return (
     <header>
-      <div className="material-icons back-button" onClick={() => navigate(-1)}>
+      <div
+        role="button"
+        tabIndex={0}
+        className="material-icons back-button"
+        onClick={() => navigate(-1)}
+      >
         arrow_back
       </div>
       <img alt="logo" src={logo} className="logo" />
