@@ -26,8 +26,12 @@ function HistoryCard({
     <div key={month} className="session-card" tabIndex={-1}>
       <ImageCircle player={winner} />
       <div>
-        {month} - Score: {winner === "Aurore" ? scoreAurore : scoreThomas} -{" "}
+        <b>{month}</b> - Score:{" "}
+        {winner === "Aurore" ? scoreAurore : scoreThomas} -{" "}
         {winner === "Aurore" ? scoreThomas : scoreAurore}
+      </div>
+      <div tabIndex={-1} className="icon material-icons">
+        arrow_circle_right
       </div>
     </div>
   );
@@ -108,6 +112,8 @@ function YearHistory() {
           />
         </div>
       ))}
+
+      <div className="margin-bottom-80" />
 
       <FooterNav />
     </>

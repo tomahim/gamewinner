@@ -10,7 +10,9 @@ function GameCard({ game }: { game: Game }) {
   return (
     <div onClick={() => navigate(`/game/${id}`)} className="game-card">
       <img src={imageUrl} alt="game" />
-      <div className="rank-tag">{sessions?.length ?? 0} games</div>
+      <div className="rank-tag">
+        {sessions?.length ?? 0} play{sessions?.length > 1 ? "s" : ""}
+      </div>
       <div className="game-name">{name}</div>
     </div>
   );
@@ -18,6 +20,10 @@ function GameCard({ game }: { game: Game }) {
 
 function GamesList() {
   const { games, loading } = useGamesList();
+
+  const sortedGames = games.slice().sort((a, b) => {
+    return (b.sessions?.length ?? 0) - (a.sessions?.length ?? 0);
+  });
 
   const navigate = useNavigate();
 
@@ -29,10 +35,10 @@ function GamesList() {
     <>
       <Header isHome={true} />
 
-      <h2 className="section-title">Collection ({games.length})</h2>
+      <h2 className="section-title">Our games ({games.length})</h2>
 
       <div className="game-grid">
-        {games.map((game) => (
+        {sortedGames.map((game) => (
           <GameCard key={game.id} game={game} />
         ))}
       </div>

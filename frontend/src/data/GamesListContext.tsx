@@ -83,7 +83,7 @@ export const useGamesList = () => {
 export const useYearsWithStats = () => {
   const { yearsStats, loading, refresh } = useGamesList();
   const years = yearsStats.map((ys) => ys.year);
-  return { years, loading, refresh };
+  return { years, loading, refresh, yearsStats };
 };
 
 export const useYearStatsFromParams = () => {
@@ -164,7 +164,7 @@ function computeGameStats(sessions: GameSession[]): GameStats {
   }
 
   function percentage(partialValue: number, totalValue: number) {
-    return (100 * partialValue) / totalValue;
+    return Math.round(((100 * partialValue) / totalValue) * 10) / 10;
   }
 
   const scoresAurore = sessions.map((s) => s.scoreAurore);

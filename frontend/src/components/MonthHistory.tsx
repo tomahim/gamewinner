@@ -48,6 +48,8 @@ function MonthHistory() {
         />
       ))}
 
+      <div className="margin-bottom-80" />
+
       <FooterNav />
     </>
   );
