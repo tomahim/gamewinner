@@ -43,7 +43,9 @@ function App() {
               path="/add-game"
               element={
                 <ProtectedRoute>
-                  <AddGame />
+                  <GamesListProvider>
+                    <AddGame />
+                  </GamesListProvider>
                 </ProtectedRoute>
               }
             />
