@@ -6,7 +6,8 @@ function FooterNav() {
   const { pathname: location } = useLocation();
 
   const currentYear = new Date().getFullYear();
-  const isOnStatsPage = location.includes("/stats");
+  const isOnStatsPage =
+    location.includes("/stats") && !location.includes("/history");
   const isOnHistoryPage = location.includes("/history");
   const isOnHomePage = location.includes("/home") || location.endsWith("/");
 
