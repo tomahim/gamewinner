@@ -36,7 +36,6 @@ function OverallStats() {
             items={remainingTopTen}
             startingRank={4}
             countRange={countRange}
-            maxPlayedGames={topThree[0].count}
           />
         )}
       </main>
