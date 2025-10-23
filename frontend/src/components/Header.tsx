@@ -11,7 +11,7 @@ function Header({ title, isHome }: { title?: string; isHome?: boolean }) {
       currentDate.toLocaleString("default", { month: "short" }) + ".";
     return (
       <>
-        <div className="logo-home-container">
+        <div className="logo-home-container" tabIndex={-1}>
           <img alt="logo" src={homeImage} className="logo-home" />
 
           <div className="stat-box-container relative-bottom">

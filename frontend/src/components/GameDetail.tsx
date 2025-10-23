@@ -49,7 +49,7 @@ function GameDetail() {
 
       <h2>Scores Aurore</h2>
 
-      <div className="stat-box-container centered">
+      <div className="stat-box-container centered" tabIndex={-1}>
         <div className="stat-box">
           <span className="number">{stats.scoreStatsAurore.mean}</span>
           <span className="text">Mean</span>
@@ -72,7 +72,10 @@ function GameDetail() {
 
       <h2>Scores Thomas</h2>
 
-      <div className="stat-box-container centered margin-bottom-80">
+      <div
+        className="stat-box-container centered margin-bottom-80"
+        tabIndex={-1}
+      >
         <div className="stat-box">
           <span className="number">{stats.scoreStatsThomas.mean}</span>
           <span className="text">Mean</span>
