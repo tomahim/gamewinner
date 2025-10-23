@@ -28,7 +28,7 @@ function TopTenList({
       if (max === min) {
         return () => 80;
       }
-      const scale = scaleLinear().domain([min, max]).range([45, 100]);
+      const scale = scaleLinear().domain([min, max]).range([25, 100]);
       return (value: number) => scale(value);
     }
 
@@ -38,7 +38,7 @@ function TopTenList({
     if (max === min) {
       return () => 80;
     }
-    const scale = scaleLinear().domain([min, max]).range([45, 100]);
+    const scale = scaleLinear().domain([min, max]).range([25, 100]);
     return (value: number) => scale(value);
   }, [items, countRange]);
 

@@ -14,13 +14,13 @@ export const useTopPlayCounts = (
     if (!aggregatedStats) {
       return [];
     }
-    return aggregatedStats.playCounts.slice(0, 10);
+    return aggregatedStats.playCounts.slice(0, 100);
   }, [aggregatedStats]);
 
   const topThree = useMemo(() => topPlayCounts.slice(0, 3), [topPlayCounts]);
 
   const remainingTopTen = useMemo(
-    () => topPlayCounts.slice(3, 10),
+    () => topPlayCounts.slice(3, 100),
     [topPlayCounts]
   );
 
