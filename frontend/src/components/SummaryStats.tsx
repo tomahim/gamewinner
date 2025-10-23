@@ -11,16 +11,28 @@ function SummaryStats({
     <>
       <section className="stats-summary">
         <article className="summary-card">
-          <span className="summary-label">Total games played</span>
-          <span className="summary-value">{totalPlays}</span>
+          <span className="summary-label" tabIndex={-1}>
+            Total games played
+          </span>
+          <span className="summary-value" tabIndex={-1}>
+            {totalPlays}
+          </span>
         </article>
         <article className="summary-card">
-          <span className="summary-label">Aurore victories</span>
-          <span className="summary-value">{auroreWins}</span>
+          <span className="summary-label" tabIndex={-1}>
+            Aurore victories
+          </span>
+          <span className="summary-value" tabIndex={-1}>
+            {auroreWins}
+          </span>
         </article>
         <article className="summary-card">
-          <span className="summary-label">Thomas victories</span>
-          <span className="summary-value">{thomasWins}</span>
+          <span className="summary-label" tabIndex={-1}>
+            Thomas victories
+          </span>
+          <span className="summary-value" tabIndex={-1}>
+            {thomasWins}
+          </span>
         </article>
       </section>
     </>
