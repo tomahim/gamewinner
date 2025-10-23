@@ -6,7 +6,7 @@ import { useParams } from "react-router-dom";
 export interface GameSession {
   id: string;
   date: Date;
-  game: { id: string };
+  game: { id: string; name: string };
   scoreAurore: number;
   scoreThomas: number;
   winner: "Thomas" | "Aurore";
@@ -40,6 +40,7 @@ export interface Game {
 
 export interface MonthStats extends AggregatedStats {
   month: number;
+  sessions: GameSession[];
 }
 
 export interface YearStats extends AggregatedStats {
@@ -89,6 +90,22 @@ export const useYearStatsFromParams = () => {
   const yearStats = yearsStats.find((ys) => ys.year === year);
 
   return { yearStats, year, loading, refresh };
+};
+
+export const useMonthStatsFromParams = () => {
+  const { yearStats, year, loading, refresh } = useYearStatsFromParams();
+
+  const { month: monthStr } = useParams<{ month: string }>();
+
+  if (!monthStr) {
+    throw new Error("Month parameter is missing");
+  }
+
+  const month = parseInt(monthStr);
+
+  const monthStats = yearStats?.months.find((ms) => ms.month === month);
+
+  return { monthStats, month, year, loading, refresh };
 };
 
 export const useGameFromParams = () => {
@@ -183,7 +200,11 @@ function computeYearsStats(sessions: GameSession[]): YearStats[] {
           auroreWins: sessionsInMonth.filter((s) => s.winner === "Aurore")
             .length,
         };
-        monthsStats.push({ month, ...aggregatedStats });
+        monthsStats.push({
+          month,
+          ...aggregatedStats,
+          sessions: sessionsInMonth,
+        });
       }
     }
     const sortedMonthsStats = monthsStats.sort((a, b) => b.month - a.month);
@@ -250,6 +271,9 @@ export const GamesListProvider: React.FC<{ children: React.ReactNode }> = ({
           gamesResults.forEach((game, index) => {
             gamesResults[index].sessions = sessionsResults.filter(
               (session) => session.game.id === game.id
+            );
+            gamesResults[index].sessions.map(
+              (session) => (session.game.name = game.name)
             );
             game.stats = computeGameStats(game.sessions);
           });

@@ -85,19 +85,25 @@ function YearHistory() {
       </div>
 
       {yearStats.months.map((ms: MonthStats) => (
-        <HistoryCard
-          key={ms.month}
-          month={getMonthName(ms.month)}
-          winner={
-            ms.auroreWins > ms.thomasWins
-              ? "Aurore"
-              : ms.thomasWins > ms.auroreWins
-              ? "Thomas"
-              : "Tie"
-          }
-          scoreAurore={ms.auroreWins}
-          scoreThomas={ms.thomasWins}
-        />
+        <div
+          onClick={() => {
+            navigate(`/history/${year}/${ms.month}`);
+          }}
+        >
+          <HistoryCard
+            key={ms.month}
+            month={getMonthName(ms.month)}
+            winner={
+              ms.auroreWins > ms.thomasWins
+                ? "Aurore"
+                : ms.thomasWins > ms.auroreWins
+                ? "Thomas"
+                : "Tie"
+            }
+            scoreAurore={ms.auroreWins}
+            scoreThomas={ms.thomasWins}
+          />
+        </div>
       ))}
 
       <FooterNav />

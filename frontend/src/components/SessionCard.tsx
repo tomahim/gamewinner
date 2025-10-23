@@ -5,9 +5,11 @@ import ImageCircle from "./ui/ImageCircle";
 
 function SessionCard({
   session,
+  displayGameName = false,
   refresh,
 }: {
   session: GameSession;
+  displayGameName?: boolean;
   refresh: () => void;
 }) {
   const navigate = useNavigate();
@@ -15,7 +17,8 @@ function SessionCard({
     <div key={session.id} className="session-card">
       <ImageCircle player={session.winner} />
       <div>
-        {session.date.toLocaleDateString("fr-FR")} - Score:{" "}
+        {session.date.toLocaleDateString("fr-FR")} -{" "}
+        {displayGameName && <strong>{session.game.name} - </strong>}
         {session.winner === "Aurore"
           ? session.scoreAurore
           : session.scoreThomas}{" "}

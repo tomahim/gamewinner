@@ -1,9 +1,10 @@
-import LogoutButton from "./LogoutButton";
 import logo from "../assets/logo.jpg";
 import homeImage from "../assets/home-header.gif";
 import StatBox from "./ui/StatBox";
+import { useNavigate } from "react-router-dom";
 
 function Header({ title, isHome }: { title?: string; isHome?: boolean }) {
+  const navigate = useNavigate();
   if (isHome) {
     const currentDate = new Date();
     const shortMonth =
@@ -25,9 +26,11 @@ function Header({ title, isHome }: { title?: string; isHome?: boolean }) {
 
   return (
     <header>
+      <div className="material-icons back-button" onClick={() => navigate(-1)}>
+        arrow_back
+      </div>
       <img alt="logo" src={logo} className="logo" />
-      <h2>{title ?? "Game Winner"}</h2>
-      <LogoutButton />
+      <h2 className="page-title">{title ?? "Game Winner"}</h2>
     </header>
   );
 }

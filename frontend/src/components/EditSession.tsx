@@ -88,7 +88,7 @@ function EditSession() {
           await addDoc(collection(db, "sessions"), params);
         }
         refresh();
-        navigate(`/game/${gameId}`);
+        navigate(-1);
       } catch (error) {
         setErrorMessage("Error saving session. " + (error as Error).message);
       }
@@ -100,7 +100,7 @@ function EditSession() {
       const docRef = doc(db, "sessions", sessionId);
       await deleteDoc(docRef);
       refresh();
-      navigate(`/game/${gameId}`);
+      navigate(-1);
     } catch (error) {
       setErrorMessage("Error deleting session. " + (error as Error).message);
     }

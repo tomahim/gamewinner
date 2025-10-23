@@ -25,11 +25,27 @@ body {
 
 header {
   display: flex;
-  justify-content: space-between;
+  justify-content: start; /* Keeps left items left, right items right */
   align-items: center;
   background-color: $purple-dark;
   padding: 16px;
   font-size: 18px;
+
+  .back-button {
+    display: flex;
+    align-items: center;
+  }
+
+  .logo {
+    width: 60px;
+    height: auto;
+    margin: 0 16px; /* Space between back button and title */
+  }
+
+  .page-title {
+    margin: 0;
+    margin-left: 50px;
+  }
 
   .menu-icon,
   .filter-icon {
@@ -37,11 +53,6 @@ header {
     color: $orange;
     cursor: pointer;
   }
-
-  .logo {
-    width: 60px;
-  }
-
 }
 
 .logo-home-container {

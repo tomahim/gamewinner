@@ -15,6 +15,7 @@ import { GamesListProvider } from "./data/GamesListContext";
 import EditSession from "./components/EditSession";
 import Stats from "./components/Stats";
 import YearHistory from "./components/YearHistory";
+import MonthHistory from "./components/MonthHistory";
 
 function App() {
   return (
@@ -96,6 +97,17 @@ function App() {
                 <ProtectedRoute>
                   <GamesListProvider>
                     <YearHistory />
+                  </GamesListProvider>
+                </ProtectedRoute>
+              }
+            />
+
+            <Route
+              path="/history/:year/:month"
+              element={
+                <ProtectedRoute>
+                  <GamesListProvider>
+                    <MonthHistory />
                   </GamesListProvider>
                 </ProtectedRoute>
               }
