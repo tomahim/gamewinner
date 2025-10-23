@@ -179,8 +179,8 @@ function computeGameStats(sessions: GameSession[]): GameStats {
         sessions.filter((s) => s.winner === "Aurore").length,
         sessions.length
       ),
-      highest: Math.max(...scoresAurore, 0),
-      lowest: Math.min(...scoresAurore, 0),
+      highest: Math.max(...scoresAurore),
+      lowest: Math.min(...scoresAurore),
       mean: mean(scoresAurore),
     },
     scoreStatsThomas: {
@@ -188,8 +188,8 @@ function computeGameStats(sessions: GameSession[]): GameStats {
         sessions.filter((s) => s.winner === "Thomas").length,
         sessions.length
       ),
-      highest: Math.max(...scoresThomas, 0),
-      lowest: Math.min(...scoresThomas, 0),
+      highest: Math.max(...scoresThomas),
+      lowest: Math.min(...scoresThomas),
       mean: mean(scoresThomas),
     },
     // not needed for game stats, but to comply with AggregatedStats
