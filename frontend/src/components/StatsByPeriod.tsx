@@ -4,13 +4,20 @@ import {
   useYearStatsFromParams,
   useYearsWithStats,
 } from "../data/GamesListContext";
+import type {
+  AggregatedStats,
+  MonthStats,
+  YearStats,
+} from "../data/GamesListContext";
 import FooterNav from "./FooterNav";
 import Header from "./Header";
 import Loader from "./ui/Loader";
 import "./StatsByPeriod.scss";
 import PlayCountPodium from "./PlayCountPodium";
 import TopTenList from "./TopTenList";
-import SummaryStats from "./SummaryStats";
+import SummaryStats, {
+  type SummaryStatsPeriodType,
+} from "./SummaryStats";
 import { useTopPlayCounts } from "../data/useTopPlayCounts";
 import { useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
@@ -81,7 +88,7 @@ function StatsByPeriod() {
   const { monthStats } = useMonthStatsFromParams();
   const pageTitle = usePageTitleFromParams();
 
-  const { years } = useYearsWithStats();
+  const { years, yearsStats } = useYearsWithStats();
   const { selectedYear, setSelectedYear, selectedMonth, setSelectedMonth } =
     usePeriodSelection();
 
@@ -104,6 +111,12 @@ function StatsByPeriod() {
   } = useTopPlayCounts(monthStats ?? null);
 
   const definedMonth = selectedMonth != null && selectedMonth !== "";
+
+  const periodType: SummaryStatsPeriodType = definedMonth
+    ? "month"
+    : selectedYear !== ""
+    ? "year"
+    : "overall";
 
   const topThree = definedMonth
     ? topThreeMonth
@@ -130,6 +143,75 @@ function StatsByPeriod() {
     new Date(0, i).toLocaleString("en-US", { month: "long" })
   );
 
+  const getPreviousYearStats = (
+    currentYear: number,
+    stats: YearStats[]
+  ): AggregatedStats | undefined => {
+    const currentIndex = stats.findIndex((ys) => ys.year === currentYear);
+    if (currentIndex === -1) {
+      return undefined;
+    }
+    return stats[currentIndex + 1];
+  };
+
+  const getPreviousMonthStats = (
+    currentYear: number,
+    currentMonth: number,
+    stats: YearStats[]
+  ): AggregatedStats | undefined => {
+    const currentYearStats = stats.find((ys) => ys.year === currentYear);
+    if (!currentYearStats) {
+      return undefined;
+    }
+
+    const monthsDescending: MonthStats[] = [...currentYearStats.months].sort(
+      (a, b) => b.month - a.month
+    );
+
+    const currentMonthIndex = monthsDescending.findIndex(
+      (monthStat) => monthStat.month === currentMonth
+    );
+
+    if (currentMonthIndex === -1) {
+      return undefined;
+    }
+
+    const previousMonthInSameYear = monthsDescending[currentMonthIndex + 1];
+    if (previousMonthInSameYear) {
+      return previousMonthInSameYear;
+    }
+
+    const currentYearIndex = stats.findIndex((ys) => ys.year === currentYear);
+    for (let index = currentYearIndex + 1; index < stats.length; index++) {
+      const candidateYear = stats[index];
+      if (candidateYear && candidateYear.months.length > 0) {
+        return candidateYear.months[0];
+      }
+    }
+
+    return undefined;
+  };
+
+  const comparisonStats: AggregatedStats | undefined = (() => {
+    if (!yearsStats.length) {
+      return undefined;
+    }
+
+    if (periodType === "year" && selectedYear !== "") {
+      return getPreviousYearStats(selectedYear, yearsStats);
+    }
+
+    if (
+      periodType === "month" &&
+      selectedYear !== "" &&
+      selectedMonth !== ""
+    ) {
+      return getPreviousMonthStats(selectedYear, selectedMonth, yearsStats);
+    }
+
+    return undefined;
+  })();
+
   if (loading) {
     return <Loader />;
   }
@@ -151,7 +233,11 @@ function StatsByPeriod() {
           >
             <option value="">All years</option>
             {years.length &&
-              years.map((year) => <option value={year}>{year}</option>)}
+              years.map((year) => (
+                <option key={year} value={year}>
+                  {year}
+                </option>
+              ))}
           </select>
           <select
             name="month"
@@ -167,7 +253,9 @@ function StatsByPeriod() {
             <option value="">All months</option>
             {months.length &&
               months.map((month) => (
-                <option value={getMonthNumber(month)}>{month}</option>
+                <option key={month} value={getMonthNumber(month)}>
+                  {month}
+                </option>
               ))}
           </select>
         </div>
@@ -181,7 +269,11 @@ function StatsByPeriod() {
             />
           </div>
         ) : (
-          <SummaryStats aggregatedStats={aggregatedStats} />
+          <SummaryStats
+            aggregatedStats={aggregatedStats}
+            periodType={periodType}
+            comparisonStats={comparisonStats}
+          />
         )}
 
         {topThree.length > 0 && <PlayCountPodium topThree={topThree} />}

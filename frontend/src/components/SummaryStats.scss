@@ -1,35 +1,80 @@
 .stats-summary {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+
+  .summary-card {
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 16px;
+    padding: 22px 20px;
+    display: flex;
+    flex-direction: column;
     gap: 12px;
-  
-  
-    .summary-card {
-      background: rgba(255, 255, 255, 0.08);
-      border: 1px solid rgba(255, 255, 255, 0.12);
-      border-radius: 16px;
-      padding: 16px 14px;
-      display: flex;
-      flex-direction: column;
-      gap: 6px;
-      backdrop-filter: blur(14px);
-      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
-    }
-  
+    backdrop-filter: blur(14px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+
     .summary-label {
       font-size: 12px;
       text-transform: uppercase;
       letter-spacing: 0.08em;
       color: rgba(255, 255, 255, 0.7);
     }
-  
+
+    .summary-value-row {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
     .summary-value {
-      font-size: 24px;
+      font-size: 28px;
       font-weight: 700;
       color: #fff;
     }
-  }
 
-  .summary-stats-container {
-    padding: 20px;
+    .summary-helper-text {
+      font-size: 13px;
+      color: rgba(255, 255, 255, 0.55);
+    }
+
+    .summary-percentage-row {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 14px;
+    }
+
+    .summary-percentage {
+      font-weight: 600;
+      color: rgba(255, 255, 255, 0.85);
+    }
+
+    .summary-variation {
+      display: inline-flex;
+      align-items: center;
+      gap: 2px;
+      font-weight: 600;
+      font-size: 14px;
+      border-radius: 999px;
+      padding: 3px 12px 3px 8px;
+      background-color: rgba(255, 255, 255, 0.08);
+    }
+
+    .summary-variation-icon {
+      font-size: 22px;
+    }
+
+    .summary-variation-up {
+      color: #2ecc71;
+    }
+
+    .summary-variation-down {
+      color: #e74c3c;
+    }
   }
+}
+
+.summary-stats-container {
+  padding: 20px;
+}
