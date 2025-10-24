@@ -237,7 +237,6 @@ function mergeLatestBadges(existing: BaseBadge[], incoming: BaseBadge[]) {
   });
   return Array.from(map.values());
 }
-
 function computeBadgesForYear(
   year: number,
   context: BadgeComputationContext,
@@ -247,8 +246,8 @@ function computeBadgesForYear(
     (session) => session.date.getFullYear() === year
   );
   const streakSegments = generateStreakSegments(yearSessions);
-  const myBadges: BaseBadge[] = [];
-  const opponentBadges: BaseBadge[] = [];
+  const perYearMy: BaseBadge[] = [];
+  const perYearOpponent: BaseBadge[] = [];
 
   streakSegments.forEach((segment, index) => {
     const badges = computeStreakBadges(
@@ -259,9 +258,9 @@ function computeBadgesForYear(
       paletteOffset + index
     );
     if (segment.player === "my") {
-      badges.forEach((badge) => myBadges.push(badge));
+      badges.forEach((badge) => perYearMy.push(badge));
     } else {
-      badges.forEach((badge) => opponentBadges.push(badge));
+      badges.forEach((badge) => perYearOpponent.push(badge));
     }
   });
 
@@ -281,8 +280,8 @@ function computeBadgesForYear(
       paletteOffset + streakSegments.length + gameIndex + 1
     );
 
-    streakBadgesMy.forEach((badge) => myBadges.push(badge));
-    streakBadgesOpponent.forEach((badge) => opponentBadges.push(badge));
+    streakBadgesMy.forEach((badge) => perYearMy.push(badge));
+    streakBadgesOpponent.forEach((badge) => perYearOpponent.push(badge));
 
     const milestoneBadgesMy = computeMilestoneBadges(
       "my",
@@ -299,13 +298,21 @@ function computeBadgesForYear(
       paletteOffset + streakSegments.length + gameIndex + 3
     );
 
-    milestoneBadgesMy.forEach((badge) => myBadges.push(badge));
-    milestoneBadgesOpponent.forEach((badge) => opponentBadges.push(badge));
+    milestoneBadgesMy.forEach((badge) => perYearMy.push(badge));
+    milestoneBadgesOpponent.forEach((badge) => perYearOpponent.push(badge));
   });
 
+  const filterByYear = (badges: BaseBadge[]) =>
+    badges.filter((badge) =>
+      badge.earnedDateISO.some((iso) => new Date(iso).getFullYear() === year)
+    );
+
+  const uniqueMy = mergeLatestBadges([], filterByYear(perYearMy));
+  const uniqueOpponent = mergeLatestBadges([], filterByYear(perYearOpponent));
+
   return {
-    my: myBadges,
-    opponent: opponentBadges,
+    my: uniqueMy,
+    opponent: uniqueOpponent,
   };
 }
 
@@ -330,28 +337,23 @@ export function computeBadges(context: BadgeComputationContext): BadgeCollection
 
   years.forEach((year, index) => {
     const yearBadges = computeBadgesForYear(year, context, index * 7);
-    const mergedMy = mergeLatestBadges(byYear[year]?.my ?? [], yearBadges.my);
-    const mergedOpponent = mergeLatestBadges(
-      byYear[year]?.opponent ?? [],
-      yearBadges.opponent
-    );
 
     byYear[year] = {
-      my: mergedMy,
-      opponent: mergedOpponent,
+      my: yearBadges.my,
+      opponent: yearBadges.opponent,
     };
 
-    mergedMy.forEach((badge) => {
+    yearBadges.my.forEach((badge) => {
       allBadges[badge.id] = badge;
       totalXp += badge.xpValue;
     });
-    mergedOpponent.forEach((badge) => {
+    yearBadges.opponent.forEach((badge) => {
       allBadges[badge.id] = badge;
       totalXp += badge.xpValue;
     });
 
-    myRecent += countRecentBadges(mergedMy);
-    opponentRecent += countRecentBadges(mergedOpponent);
+    myRecent += countRecentBadges(yearBadges.my);
+    opponentRecent += countRecentBadges(yearBadges.opponent);
   });
 
   return {
