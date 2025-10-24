@@ -9,7 +9,7 @@ import {
 } from "../data/badges.types";
 import { computeBadges } from "../data/badges.compute";
 import { getBadgeTypeLabel } from "../data/badges.helpers";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useSearchParams } from "react-router-dom";
 import "./Badges.scss";
 import ImageCircle from "./ui/ImageCircle";
 
@@ -92,6 +92,7 @@ function BadgeCard({
 
 function Badges() {
   const navigate = useNavigate();
+  const [searchParams, setSearchParams] = useSearchParams();
   const { years } = useYearsWithStats();
   const { games } = useGamesList();
   const sessions = useMemo(() => {
@@ -105,7 +106,8 @@ function Badges() {
     () => computeBadges(computationContext),
     [computationContext]
   );
-  const [activeTab, setActiveTab] = useState<BadgePlayer>("my");
+  const initialTab = searchParams.get("tab") === "opponent" ? "opponent" : "my";
+  const [activeTab, setActiveTab] = useState<BadgePlayer>(initialTab);
   const [selectedYear, setSelectedYear] = useState<number | "all">("all");
   const [selectedMonth, setSelectedMonth] = useState<number | "all">("all");
   const [selectedType, setSelectedType] = useState<string>("all");
@@ -251,7 +253,12 @@ function Badges() {
               key={tab.id}
               role="tab"
               className={`badges-tab ${activeTab === tab.id ? "active" : ""}`}
-              onClick={() => setActiveTab(tab.id)}
+              onClick={() => {
+                setActiveTab(tab.id);
+                const nextParams = new URLSearchParams(searchParams);
+                nextParams.set("tab", tab.id);
+                setSearchParams(nextParams);
+              }}
             >
               <ImageCircle player={tab.icon} />
               {tab.label}
