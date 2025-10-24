@@ -44,6 +44,7 @@ export interface GameStats extends AggregatedStats {
 
 export interface Game extends GameAttributes {
   sessions: GameSession[];
+  lastSession: Date | null;
   stats: GameStats;
 }
 
@@ -322,6 +323,17 @@ export const GamesListProvider: React.FC<{ children: React.ReactNode }> = ({
             gamesResults[index].sessions = sessionsResults.filter(
               (session) => session.game.id === game.id
             );
+            gamesResults[index].lastSession = gamesResults[index].sessions
+              .length
+              ? new Date(
+                  Math.max(
+                    ...gamesResults[index].sessions.map((session) =>
+                      session.date.getTime()
+                    )
+                  )
+                )
+              : null;
+
             game.stats = computeGameStats(game.sessions);
           });
 

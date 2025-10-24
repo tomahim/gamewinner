@@ -3,6 +3,12 @@ import FooterNav from "./FooterNav";
 import Header from "./Header";
 import { useNavigate } from "react-router-dom";
 import Loader from "./ui/Loader";
+import { useEffect, useState } from "react";
+import SearchBar, {
+  sortByMostPlayed,
+  sortByRecentlyPlayed,
+} from "./ui/SearchBar";
+import noGame from "../assets/nogame.jpg";
 
 function GameCard({ game }: { game: Game }) {
   const navigate = useNavigate();
@@ -21,9 +27,30 @@ function GameCard({ game }: { game: Game }) {
 function GamesList() {
   const { games, loading } = useGamesList();
 
-  const sortedGames = games.slice().sort((a, b) => {
-    return (b.sessions?.length ?? 0) - (a.sessions?.length ?? 0);
-  });
+  const [searchQuery, setSearchQuery] = useState("");
+  const sortOptions = ["Recently played", "Most played"];
+  const [sortOption, setSortOption] = useState(sortOptions[0]);
+  const [filteredGames, setFilteredGames] = useState<Game[]>([]);
+
+  useEffect(() => {
+    let sortedGames: Game[] = [];
+    if (sortOption === "Most played") {
+      sortedGames = sortByMostPlayed(games);
+    } else if (sortOption === "Recently played") {
+      sortedGames = sortByRecentlyPlayed(games);
+    }
+
+    if (searchQuery === "") {
+      setFilteredGames(sortedGames);
+      return;
+    }
+
+    setFilteredGames(
+      sortedGames.filter((game) =>
+        game.name.toLowerCase().includes(searchQuery.toLowerCase())
+      )
+    );
+  }, [searchQuery, sortOption, games]);
 
   const navigate = useNavigate();
 
@@ -35,12 +62,23 @@ function GamesList() {
     <>
       <Header isHome={true} />
 
-      <h2 className="section-title">Our games ({games.length})</h2>
+      <h2 className="section-title">Our games ({filteredGames.length})</h2>
+
+      <SearchBar
+        setSearchQuery={setSearchQuery}
+        sortOptions={sortOptions}
+        sortOption={sortOption}
+        setSortOption={setSortOption}
+      />
 
       <div className="game-grid">
-        {sortedGames.map((game) => (
-          <GameCard key={game.id} game={game} />
-        ))}
+        {filteredGames.length ? (
+          filteredGames.map((game) => <GameCard key={game.id} game={game} />)
+        ) : (
+          <div className="no-game-container">
+            <img src={noGame} alt="No game found" className="no-game-image" />
+          </div>
+        )}
       </div>
 
       <div onClick={() => navigate("/add-game")} className="fab material-icons">
