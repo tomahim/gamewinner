@@ -194,7 +194,11 @@ function Badges() {
   }, [yearsToDisplay, selectedYear]);
 
   const badgesByYear = useMemo(() => {
-    const result: Array<{ year: number; badges: BaseBadge[] }> = [];
+    const result: Array<{
+      year: number;
+      badges: BaseBadge[];
+      totalXp: number;
+    }> = [];
 
     filteredYears.forEach((year) => {
       const schedule = collections.byYear[year];
@@ -229,7 +233,12 @@ function Badges() {
       });
 
       if (badges.length > 0) {
-        result.push({ year, badges });
+        const totalXp = badges.reduce(
+          (sum, currentBadge) => sum + currentBadge.xpValue,
+          0
+        );
+
+        result.push({ year, badges, totalXp });
       }
     });
 
@@ -375,9 +384,12 @@ function Badges() {
         </div>
 
         <section className="badges-timeline">
-          {badgesByYear.map(({ year, badges }) => (
+          {badgesByYear.map(({ year, badges, totalXp }) => (
             <div className="badges-year-block" key={year}>
               <div className="badges-year-heading">
+                <span className="badges-year-xp">
+                  {totalXp.toLocaleString()} XP
+                </span>
                 <span className="badges-year-marker">{year}</span>
                 <div className="badges-year-divider">
                   <span className="badges-year-dot" />
