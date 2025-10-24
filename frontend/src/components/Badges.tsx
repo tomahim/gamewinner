@@ -7,6 +7,7 @@ import {
   type BadgePlayer,
   type MockBadge,
   getBadgeTypeLabel,
+  type BadgeType,
 } from "../data/mockBadges";
 import { useNavigate } from "react-router-dom";
 import "./Badges.scss";
@@ -14,6 +15,13 @@ import "./Badges.scss";
 const tabs: { id: BadgePlayer; label: string; icon: string }[] = [
   { id: "my", label: "My badges", icon: "emoji_events" },
   { id: "opponent", label: "Opponent badges", icon: "sports_kabaddi" },
+];
+
+const badgeTypeOptions: { label: string; value: "all" | BadgeType }[] = [
+  { label: "All badge types", value: "all" },
+  { label: "Streak", value: "streak" },
+  { label: "Game streak", value: "game-streak" },
+  { label: "Lifetime wins", value: "milestone" },
 ];
 
 function isBadgeNew(badge: MockBadge) {
@@ -67,6 +75,9 @@ function Badges() {
   const { years } = useYearsWithStats();
   const { games } = useGamesList();
   const [activeTab, setActiveTab] = useState<BadgePlayer>("my");
+  const [selectedYear, setSelectedYear] = useState<number | "all">("all");
+  const [selectedMonth, setSelectedMonth] = useState<number | "all">("all");
+  const [selectedType, setSelectedType] = useState<"all" | BadgeType>("all");
 
   const collections = useMemo(
     () => generateMockBadges(years, games),
@@ -74,6 +85,14 @@ function Badges() {
   );
 
   const yearsToDisplay = useMemo(() => collections.yearsUsed, [collections]);
+
+  const allBadgesForCount = useMemo(() => {
+    return yearsToDisplay.reduce((sum, year) => {
+      const schedule = collections.byYear[year];
+      if (!schedule) return sum;
+      return sum + schedule.my.length + schedule.opponent.length;
+    }, 0);
+  }, [collections, yearsToDisplay]);
 
   const totalXp = useMemo(() => {
     return yearsToDisplay.reduce((sum, year) => {
@@ -86,14 +105,67 @@ function Badges() {
     }, 0);
   }, [collections, yearsToDisplay]);
 
+  const monthsOptions = useMemo(() => {
+    return [
+      { label: "All months", value: "all" as const },
+      ...Array.from({ length: 12 }, (_, index) => {
+        const date = new Date(2025, index, 1);
+        return {
+          label: date.toLocaleString("en", { month: "long" }),
+          value: index,
+        };
+      }),
+    ];
+  }, []);
+
+  const filteredYears = useMemo(() => {
+    if (selectedYear === "all") {
+      return yearsToDisplay;
+    }
+    return yearsToDisplay.filter((year) => year === selectedYear);
+  }, [yearsToDisplay, selectedYear]);
+
+  const badgesByYear = useMemo(() => {
+    const result: Array<{ year: number; badges: MockBadge[] }> = [];
+
+    filteredYears.forEach((year) => {
+      const schedule = collections.byYear[year];
+      if (!schedule) return;
+
+      let badges = schedule[activeTab];
+
+      if (selectedMonth !== "all") {
+        badges = badges.filter((badge) =>
+          badge.earnedDateISO.some((iso) => new Date(iso).getMonth() === selectedMonth)
+        );
+      }
+
+      if (selectedType !== "all") {
+        badges = badges.filter((badge) => badge.type === selectedType);
+      }
+
+      if (badges.length > 0) {
+        result.push({ year, badges });
+      }
+    });
+
+    return result;
+  }, [filteredYears, collections, activeTab, selectedMonth, selectedType]);
+
   return (
     <>
       <Header title="Badges" />
       <main className="badges-page margin-bottom-80">
         <section className="badges-summary">
-          <div className="badges-summary__xp">
-            <span className="badges-summary__label">Total XP</span>
-            <span className="badges-summary__value">{totalXp.toLocaleString()}</span>
+          <div className="badges-summary__totals">
+            <div className="badges-summary__metric">
+              <span className="badges-summary__label">Total XP</span>
+              <span className="badges-summary__value">{totalXp.toLocaleString()}</span>
+            </div>
+            <div className="badges-summary__metric">
+              <span className="badges-summary__label">Badges unlocked</span>
+              <span className="badges-summary__value">{allBadgesForCount}</span>
+            </div>
           </div>
         </section>
 
@@ -111,36 +183,77 @@ function Badges() {
           ))}
         </section>
 
-        <section className="badges-timeline">
-          {yearsToDisplay.map((year) => {
-            const schedule = collections.byYear[year];
-            const badges = schedule?.[activeTab] ?? [];
-            if (!badges.length) {
-              return null;
+        <section className="badges-filters">
+          <select
+            title="Year"
+            value={selectedYear}
+            onChange={(event) =>
+              setSelectedYear(
+                event.target.value === "all" ? "all" : parseInt(event.target.value, 10)
+              )
             }
+          >
+            <option value="all">All years</option>
+            {yearsToDisplay.map((year) => (
+              <option key={year} value={year}>
+                {year}
+              </option>
+            ))}
+          </select>
 
-            return (
-              <div className="badges-year-block" key={year}>
-                <div className="badges-year-heading">
-                  <span className="badges-year-marker">{year}</span>
-                  <div className="badges-year-divider">
-                    <span className="badges-year-dot" />
-                    <span className="badges-year-line" />
-                  </div>
-                </div>
+          <select
+            title="Month"
+            value={selectedMonth}
+            onChange={(event) =>
+              setSelectedMonth(
+                event.target.value === "all" ? "all" : parseInt(event.target.value, 10)
+              )
+            }
+          >
+            {monthsOptions.map((option) => (
+              <option key={option.value} value={option.value}>
+                {option.label}
+              </option>
+            ))}
+          </select>
 
-                <div className="badges-grid">
-                  {badges.map((badge) => (
-                    <BadgeCard
-                      key={badge.id}
-                      badge={badge}
-                      onClick={() => navigate(`/badge/${encodeURIComponent(badge.id)}`)}
-                    />
-                  ))}
+          <select
+            title="Badge type"
+            value={selectedType}
+            onChange={(event) =>
+              setSelectedType(event.target.value as "all" | BadgeType)
+            }
+          >
+            {badgeTypeOptions.map((option) => (
+              <option key={option.value} value={option.value}>
+                {option.label}
+              </option>
+            ))}
+          </select>
+        </section>
+
+        <section className="badges-timeline">
+          {badgesByYear.map(({ year, badges }) => (
+            <div className="badges-year-block" key={year}>
+              <div className="badges-year-heading">
+                <span className="badges-year-marker">{year}</span>
+                <div className="badges-year-divider">
+                  <span className="badges-year-dot" />
+                  <span className="badges-year-line" />
                 </div>
               </div>
-            );
-          })}
+
+              <div className="badges-grid">
+                {badges.map((badge) => (
+                  <BadgeCard
+                    key={badge.id}
+                    badge={badge}
+                    onClick={() => navigate(`/badge/${encodeURIComponent(badge.id)}`)}
+                  />
+                ))}
+              </div>
+            </div>
+          ))}
         </section>
       </main>
       <FooterNav />
