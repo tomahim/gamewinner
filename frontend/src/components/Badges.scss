@@ -1,0 +1,252 @@
+.badges-page {
+  padding: 20px 16px 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+
+  .badges-summary {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.08);
+    border-radius: 18px;
+    padding: 16px 18px;
+    box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.1);
+
+    .badges-summary__xp {
+      display: inline-flex;
+      align-items: baseline;
+      gap: 8px;
+    }
+
+    .badges-summary__label {
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: rgba(255, 255, 255, 0.6);
+    }
+
+    .badges-summary__value {
+      font-size: 24px;
+      font-weight: 700;
+      color: #fff;
+    }
+  }
+
+  .badges-tabs {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    background: rgba(255, 255, 255, 0.08);
+    border-radius: 16px;
+    padding: 6px;
+    gap: 6px;
+    box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.08);
+
+    .badges-tab {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 10px 12px;
+      border: none;
+      border-radius: 12px;
+      font-weight: 600;
+      font-size: 14px;
+      cursor: pointer;
+      background: transparent;
+      color: rgba(255, 255, 255, 0.75);
+      transition: all 0.2s ease;
+
+      &.active {
+        background: rgba(255, 255, 255, 0.18);
+        color: #fff;
+        box-shadow: 0 6px 16px rgba(0, 0, 0, 0.25);
+      }
+    }
+  }
+
+  .badges-timeline {
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+
+    .badges-year-block {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      position: relative;
+
+      .badges-year-heading {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+
+        .badges-year-marker {
+          font-size: 16px;
+          font-weight: 700;
+          letter-spacing: 0.08em;
+          text-transform: uppercase;
+          color: rgba(255, 255, 255, 0.75);
+        }
+
+        .badges-year-divider {
+          display: flex;
+          align-items: center;
+          gap: 6px;
+
+          .badges-year-dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.45);
+          }
+
+          .badges-year-line {
+            height: 1px;
+            width: 64px;
+            background: linear-gradient(90deg, rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0));
+          }
+        }
+      }
+
+      .badges-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        gap: 18px;
+      }
+    }
+  }
+}
+
+.badge-card {
+  position: relative;
+  border-radius: 18px;
+  overflow: visible;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 16px;
+  min-height: 220px;
+  cursor: pointer;
+  box-shadow: 0 14px 32px rgba(0, 0, 0, 0.25);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border 0.2s ease;
+
+  &:hover,
+  &:focus-visible {
+    transform: translateY(-4px);
+    box-shadow: 0 18px 36px rgba(0, 0, 0, 0.35);
+  }
+
+  &.badge-card--new {
+    border: 2px solid rgba(255, 255, 255, 0.25);
+    box-shadow: 0 20px 60px rgba(255, 215, 64, 0.35), 0 0 0 4px rgba(255, 215, 64, 0.12);
+  }
+
+  .badge-card__new-pill {
+    position: absolute;
+    top: -12px;
+    right: 16px;
+    background: linear-gradient(135deg, #ffda6a 0%, #ff9e2c 100%);
+    color: #402300;
+    padding: 6px 12px;
+    border-radius: 999px;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.3);
+    border: 2px solid rgba(255, 255, 255, 0.6);
+  }
+
+  .badge-card__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    opacity: 0.85;
+
+    .badge-card__tier {
+      font-weight: 700;
+    }
+
+    .badge-card__rarity {
+      padding: 4px 8px;
+      border-radius: 999px;
+      font-weight: 600;
+      background: rgba(0, 0, 0, 0.18);
+
+      &--legendary {
+        background: rgba(255, 255, 255, 0.25);
+        color: #fbe07b;
+      }
+
+      &--epic {
+        color: #ffe1ff;
+      }
+
+      &--rare {
+        color: #c9f1ff;
+      }
+    }
+  }
+
+  .badge-card__media {
+    position: relative;
+    border-radius: 14px;
+    overflow: hidden;
+    height: 110px;
+    box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.18);
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .badge-card__type {
+      position: absolute;
+      bottom: 8px;
+      left: 10px;
+      padding: 4px 8px;
+      border-radius: 999px;
+      background: rgba(0, 0, 0, 0.45);
+      color: rgba(255, 255, 255, 0.9);
+      font-weight: 600;
+      font-size: 10px;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+  }
+
+  .badge-card__body {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    .badge-card__title {
+      margin: 0;
+      font-size: 16px;
+      font-weight: 700;
+    }
+
+    .badge-card__subtitle {
+      margin: 0;
+      font-size: 12px;
+      opacity: 0.85;
+      line-height: 1.4;
+    }
+
+    .badge-card__footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 11px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      opacity: 0.9;
+    }
+  }
+}

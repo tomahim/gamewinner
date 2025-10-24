@@ -1,0 +1,202 @@
+.badge-detail-page {
+  padding: 20px 16px 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+
+  .badge-detail-card {
+    border-radius: 22px;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.35);
+
+    .badge-detail-card__media {
+      border-radius: 18px;
+      overflow: hidden;
+      height: 180px;
+      box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.16);
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+
+    .badge-detail-card__labels {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      opacity: 0.85;
+
+      .badge-detail-card__tier {
+        padding: 4px 10px;
+        border-radius: 999px;
+        background: rgba(0, 0, 0, 0.2);
+        font-weight: 600;
+      }
+
+      .badge-detail-card__rarity {
+        padding: 4px 10px;
+        border-radius: 999px;
+        font-weight: 600;
+
+        &--legendary {
+          background: rgba(255, 255, 255, 0.25);
+          color: #fbe07b;
+        }
+
+        &--epic {
+          background: rgba(255, 255, 255, 0.18);
+          color: #ffe1ff;
+        }
+
+        &--rare {
+          background: rgba(255, 255, 255, 0.15);
+          color: #d1f5ff;
+        }
+      }
+
+      .badge-detail-card__type {
+        padding: 4px 10px;
+        border-radius: 999px;
+        background: rgba(0, 0, 0, 0.15);
+        font-weight: 700;
+      }
+    }
+
+    .badge-detail-card__title {
+      margin: 0;
+      font-size: 24px;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+    }
+
+    .badge-detail-card__subtitle {
+      margin: 0;
+      font-size: 15px;
+      line-height: 1.5;
+      opacity: 0.85;
+    }
+
+    .badge-detail-card__description {
+      margin: 0;
+      font-size: 13px;
+      line-height: 1.6;
+      opacity: 0.85;
+    }
+
+    .badge-detail-card__stats {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+      gap: 12px;
+
+      .badge-stat {
+        background: rgba(0, 0, 0, 0.18);
+        border-radius: 12px;
+        padding: 12px;
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+
+        .badge-stat__label {
+          font-size: 11px;
+          text-transform: uppercase;
+          letter-spacing: 0.08em;
+          opacity: 0.7;
+        }
+
+        .badge-stat__value {
+          font-size: 16px;
+          font-weight: 700;
+        }
+      }
+    }
+  }
+
+  .badge-streaks {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+
+    h2 {
+      margin: 0;
+      font-size: 18px;
+      letter-spacing: 0.06em;
+    }
+
+    .badge-streaks__list {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .badge-streak {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 12px;
+      background: rgba(255, 255, 255, 0.05);
+      border-radius: 16px;
+      padding: 16px;
+      position: relative;
+
+      .badge-streak__dates,
+      .badge-streak__length {
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+      }
+
+      .badge-streak__label {
+        font-size: 11px;
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+        opacity: 0.75;
+      }
+
+      .badge-streak__value {
+        font-size: 15px;
+        font-weight: 700;
+      }
+
+      .badge-streak__highlight {
+        grid-column: 1 / -1;
+        margin: 0;
+        font-size: 12px;
+        opacity: 0.8;
+        padding-top: 6px;
+        border-top: 1px solid rgba(255, 255, 255, 0.08);
+      }
+    }
+  }
+
+  .badge-actions {
+    display: flex;
+    justify-content: center;
+
+    .badge-actions__button {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 14px 20px;
+      border-radius: 14px;
+      border: none;
+      background: rgba(255, 255, 255, 0.12);
+      color: #fff;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+      cursor: pointer;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+
+      &:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 12px 18px rgba(0, 0, 0, 0.25);
+      }
+    }
+  }
+}
