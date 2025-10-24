@@ -16,6 +16,9 @@ import EditSession from "./components/EditSession";
 import StatsByPeriod from "./components/StatsByPeriod";
 import YearHistory from "./components/YearHistory";
 import MonthHistory from "./components/MonthHistory";
+import Badges from "./components/Badges";
+import BadgeDetail from "./components/BadgeDetail";
+import BadgeInfos from "./components/BadgeInfos";
 
 function App() {
   return (
@@ -110,6 +113,39 @@ function App() {
                 <ProtectedRoute>
                   <GamesListProvider>
                     <MonthHistory />
+                  </GamesListProvider>
+                </ProtectedRoute>
+              }
+            />
+
+            <Route
+              path="/badges"
+              element={
+                <ProtectedRoute>
+                  <GamesListProvider>
+                    <Badges />
+                  </GamesListProvider>
+                </ProtectedRoute>
+              }
+            />
+
+            <Route
+              path="/badge/:badgeId"
+              element={
+                <ProtectedRoute>
+                  <GamesListProvider>
+                    <BadgeDetail />
+                  </GamesListProvider>
+                </ProtectedRoute>
+              }
+            />
+
+            <Route
+              path="/badges/info"
+              element={
+                <ProtectedRoute>
+                  <GamesListProvider>
+                    <BadgeInfos />
                   </GamesListProvider>
                 </ProtectedRoute>
               }

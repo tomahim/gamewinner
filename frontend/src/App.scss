@@ -170,11 +170,43 @@ $stagger-offset: 50px; // How much to vertically offset the second column
   padding: 12px 0;
 
   .nav-item {
-    font-size: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     color: $gray;
+    position: relative;
 
     &.active {
       color: $orange;
+
+      .nav-item__icon {
+        color: $orange;
+      }
+    }
+
+    .nav-item__icon {
+      font-size: 24px;
+      color: inherit;
+    }
+  }
+
+  .nav-item--badges {
+    .nav-item__notif {
+      position: absolute;
+      top: -6px;
+      right: -10px;
+      min-width: 20px;
+      height: 20px;
+      border-radius: 999px;
+      background: #ff6b6b;
+      color: #fff;
+      font-size: 11px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0 6px;
+      font-weight: 700;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
     }
   }
 }
