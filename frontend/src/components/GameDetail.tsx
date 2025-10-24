@@ -9,6 +9,39 @@ import ScoreEvolutionChart from "./ScoreEvolutionChart";
 import StatBox from "./ui/StatBox";
 
 const LIMIT_PLAYS = 10;
+const MINUTES_PER_GAME = 40;
+
+function humanizeMinutes(totalMinutes: number) {
+  if (!Number.isFinite(totalMinutes) || totalMinutes <= 0) {
+    return "0 min";
+  }
+
+  const minutes = Math.floor(totalMinutes);
+  const hours = Math.floor(minutes / 60);
+  const remainingMinutes = minutes % 60;
+  const days = Math.floor(hours / 24);
+  const remainingHours = hours % 24;
+
+  const parts: string[] = [];
+
+  if (days) {
+    parts.push(`${days}d`);
+  }
+
+  if (remainingHours) {
+    parts.push(`${remainingHours}h`);
+  }
+
+  if (remainingMinutes) {
+    parts.push(`${remainingMinutes}m`);
+  }
+
+  if (!parts.length) {
+    parts.push("0 min");
+  }
+
+  return parts.join(" ");
+}
 
 function GameDetail() {
   const navigate = useNavigate();
@@ -23,6 +56,7 @@ function GameDetail() {
 
   const { imageUrl, stats } = game;
   const { totalPlays, thomasWins, auroreWins } = stats;
+  const approximatePlaytime = humanizeMinutes(totalPlays * MINUTES_PER_GAME);
   return (
     <>
       <Header title={game.name} />
@@ -40,6 +74,12 @@ function GameDetail() {
             circle={{ player: "Thomas", absolute: true }}
           />
         </div>
+      </div>
+
+      <div className="game-meta">
+        <span className="material-icons game-meta-icon">schedule</span>
+        <span className="game-meta-text">Approx. time playing</span>
+        <span className="game-meta-value">{approximatePlaytime}</span>
       </div>
 
       <h2 tabIndex={-1}>Last plays</h2>

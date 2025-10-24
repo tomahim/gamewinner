@@ -79,6 +79,32 @@ header {
   }
 }
 
+.game-meta {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 16px 4px 16px;
+  font-size: 14px;
+  color: rgba($white, 0.85);
+
+  .game-meta-icon {
+    font-size: 18px;
+    color: $orange;
+  }
+
+  .game-meta-text {
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    font-size: 12px;
+    color: rgba($white, 0.6);
+  }
+
+  .game-meta-value {
+    font-weight: 600;
+    color: $white;
+  }
+}
+
 .section-title {
   padding: 0 15px;
   font-size: 16px;
