@@ -28,7 +28,7 @@ function GamesList() {
   const { games, loading } = useGamesList();
 
   const [searchQuery, setSearchQuery] = useState("");
-  const sortOptions = ["Recently played", "Most played"];
+  const sortOptions = ["Recent play", "Most played"];
   const [sortOption, setSortOption] = useState(sortOptions[0]);
   const [filteredGames, setFilteredGames] = useState<Game[]>([]);
 
@@ -36,7 +36,7 @@ function GamesList() {
     let sortedGames: Game[] = [];
     if (sortOption === "Most played") {
       sortedGames = sortByMostPlayed(games);
-    } else if (sortOption === "Recently played") {
+    } else if (sortOption === "Recent play") {
       sortedGames = sortByRecentlyPlayed(games);
     }
 

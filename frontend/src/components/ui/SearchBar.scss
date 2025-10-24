@@ -35,20 +35,20 @@
     .sort-dropdown {
         z-index: 100;
         position: absolute;
-        top: 20px;
+        top: 30px;
 
         ul {
             list-style: none;
             padding: 0;
             margin: 0;
-            width: 200px;
+            width: 110px;
             background-color: white; // Dark, Dune-inspired background
             border-radius: 8px; // Rounded corners
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); // Soft shadow for depth
             font-family: 'Arial', sans-serif; // Clean, modern font
           
             li {
-              padding: 12px 16px;
+              padding: 6px 8px;
               color: black; // Light text for contrast
               cursor: pointer;
               transition: background-color 0.3s ease, color 0.3s ease;
