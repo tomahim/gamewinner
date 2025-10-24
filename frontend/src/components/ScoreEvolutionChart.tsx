@@ -7,6 +7,13 @@ type ScoreEvolutionChartProps = {
   sessions: GameSession[];
 };
 
+type ScoreDatum = {
+  id: string;
+  date: Date;
+  scoreThomas: number;
+  scoreAurore: number;
+};
+
 function ScoreEvolutionChart({ sessions }: ScoreEvolutionChartProps) {
   const svgRef = useRef<SVGSVGElement | null>(null);
   const tooltipRef = useRef<HTMLDivElement | null>(null);
@@ -65,7 +72,7 @@ function ScoreEvolutionChart({ sessions }: ScoreEvolutionChartProps) {
     });
   }, [filteredSessions, selectedPeriod, selectedYear]);
 
-  const data = useMemo(
+  const data: ScoreDatum[] = useMemo(
     () =>
       periodFilteredSessions
         .filter(
@@ -171,14 +178,14 @@ function ScoreEvolutionChart({ sessions }: ScoreEvolutionChartProps) {
     const xAxis = d3
       .axisBottom<Date>(xScale)
       .tickValues(xTickValues)
-      .tickFormat((date) => d3.timeFormat(tickFormat)(date));
+      .tickFormat((date: Date) => d3.timeFormat(tickFormat)(date));
 
     chartArea
       .append("g")
       .attr("class", "x-axis")
       .attr("transform", `translate(0,${innerHeight})`)
       .call(xAxis)
-      .call((g) => {
+      .call((g: d3.Selection<SVGGElement, unknown, null, undefined>) => {
         g.select(".domain").attr("stroke", axisColor);
         g.selectAll("line").attr("stroke", axisColor);
         g.selectAll("text").attr("fill", axisColor).style("font-size", "10px");
@@ -187,20 +194,20 @@ function ScoreEvolutionChart({ sessions }: ScoreEvolutionChartProps) {
     const yAxis = d3
       .axisLeft<number>(yScale)
       .ticks(4)
-      .tickFormat((value) => value.toString());
+      .tickFormat((value: number) => value.toString());
 
     chartArea
       .append("g")
       .attr("class", "y-axis")
       .call(yAxis)
-      .call((g) => {
+      .call((g: d3.Selection<SVGGElement, unknown, null, undefined>) => {
         g.select(".domain").attr("stroke", axisColor);
         g.selectAll("line").attr("stroke", axisColor);
         g.selectAll("text").attr("fill", axisColor).style("font-size", "10px");
       });
 
     const formatTooltip = (
-      session: (typeof data)[number],
+      session: ScoreDatum,
       player: "Thomas" | "Aurore"
     ) => {
       const date = session.date.toLocaleDateString("fr-FR");
@@ -213,18 +220,18 @@ function ScoreEvolutionChart({ sessions }: ScoreEvolutionChartProps) {
 
     const drawDots = (
       className: string,
-      accessor: (session: (typeof data)[number]) => number,
+      accessor: (session: ScoreDatum) => number,
       player: "Thomas" | "Aurore"
     ) => {
       chartArea
         .append("g")
-        .selectAll(`circle.${className}`)
+        .selectAll<SVGCircleElement, ScoreDatum>(`circle.${className}`)
         .data(data)
         .enter()
         .append("circle")
         .attr("class", `dot ${className}`)
-        .attr("cx", (session) => xScale(session.date))
-        .attr("cy", accessor)
+        .attr("cx", (session: ScoreDatum) => xScale(session.date))
+        .attr("cy", (session: ScoreDatum) => accessor(session))
         .attr("r", 3.5)
         .attr(
           "fill",
@@ -240,7 +247,7 @@ function ScoreEvolutionChart({ sessions }: ScoreEvolutionChartProps) {
         )
         .attr("stroke-width", 1)
         .style("cursor", "pointer")
-        .on("click", (event, session) => {
+        .on("click", (event: PointerEvent, session: ScoreDatum) => {
           event.stopPropagation();
 
           const div = tooltipRef.current;
@@ -274,21 +281,21 @@ function ScoreEvolutionChart({ sessions }: ScoreEvolutionChartProps) {
         });
     };
 
-    drawDots("thomas", (session) => yScale(session.scoreThomas), "Thomas");
-    drawDots("aurore", (session) => yScale(session.scoreAurore), "Aurore");
+    drawDots("thomas", (session: ScoreDatum) => yScale(session.scoreThomas), "Thomas");
+    drawDots("aurore", (session: ScoreDatum) => yScale(session.scoreAurore), "Aurore");
 
     chartArea
       .append("g")
       .attr("class", "grid")
-      .selectAll("line.horizontal-grid")
+      .selectAll<SVGLineElement, number>("line.horizontal-grid")
       .data(yScale.ticks(4))
       .enter()
       .append("line")
       .attr("class", "horizontal-grid")
       .attr("x1", 0)
       .attr("x2", innerWidth)
-      .attr("y1", (tick) => yScale(tick))
-      .attr("y2", (tick) => yScale(tick))
+      .attr("y1", (tick: number) => yScale(tick))
+      .attr("y2", (tick: number) => yScale(tick))
       .attr("stroke", "rgba(255, 255, 255, 0.15)")
       .attr("stroke-width", 0.5);
 
