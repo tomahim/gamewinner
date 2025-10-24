@@ -108,8 +108,39 @@ function Badges() {
   const [selectedYear, setSelectedYear] = useState<number | "all">("all");
   const [selectedMonth, setSelectedMonth] = useState<number | "all">("all");
   const [selectedType, setSelectedType] = useState<string>("all");
+  const [selectedGame, setSelectedGame] = useState<string>("all");
+  const [gameQuery, setGameQuery] = useState<string>("");
 
   const yearsToDisplay = useMemo(() => collections.yearsUsed, [collections]);
+
+  const gameOptions = useMemo(() => {
+    const uniqueGames = new Map<string, string>();
+    games.forEach((game) => {
+      if (game.id) {
+        uniqueGames.set(game.id, game.name);
+      }
+    });
+    return Array.from(uniqueGames.entries())
+      .map(([id, name]) => ({ id, name }))
+      .sort((a, b) => a.name.localeCompare(b.name));
+  }, [games]);
+
+  const handleGameSelection = (value: string) => {
+    const trimmed = value.trim();
+    if (!trimmed || trimmed.toLowerCase() === "all games") {
+      setSelectedGame("all");
+      setGameQuery("");
+      return;
+    }
+    const match = gameOptions.find((option) => option.name.toLowerCase() === trimmed.toLowerCase());
+    if (match) {
+      setSelectedGame(match.id);
+      setGameQuery(match.name);
+    } else {
+      setSelectedGame("all");
+      setGameQuery(trimmed);
+    }
+  };
 
   const tabTotals = useMemo(() => {
     const totals: Record<BadgePlayer, { xp: number; count: number }> = {
@@ -178,9 +209,17 @@ function Badges() {
         badges = badges.filter((badge) => badge.type === selectedType);
       }
 
+      if (selectedGame !== "all") {
+        badges = badges.filter((badge) => badge.game?.id === selectedGame);
+      }
+
       badges = [...badges].sort((a, b) => {
-        const dateA = Math.max(...a.earnedDateISO.map((iso) => new Date(iso).getTime()));
-        const dateB = Math.max(...b.earnedDateISO.map((iso) => new Date(iso).getTime()));
+        const dateA = Math.max(
+          ...a.earnedDateISO.map((iso) => new Date(iso).getTime())
+        );
+        const dateB = Math.max(
+          ...b.earnedDateISO.map((iso) => new Date(iso).getTime())
+        );
         return dateB - dateA;
       });
 
@@ -190,7 +229,14 @@ function Badges() {
     });
 
     return result;
-  }, [filteredYears, collections, activeTab, selectedMonth, selectedType]);
+  }, [
+    filteredYears,
+    collections,
+    activeTab,
+    selectedMonth,
+    selectedType,
+    selectedGame,
+  ]);
 
   return (
     <>
@@ -227,55 +273,78 @@ function Badges() {
           </div>
         </section>
 
-        <section className="badges-filters">
-          <select
-            title="Year"
-            value={selectedYear}
-            onChange={(event) =>
-              setSelectedYear(
-                event.target.value === "all"
-                  ? "all"
-                  : parseInt(event.target.value, 10)
-              )
-            }
-          >
-            <option value="all">All years</option>
-            {yearsToDisplay.map((year) => (
-              <option key={year} value={year}>
-                {year}
-              </option>
-            ))}
-          </select>
+        <section className="badges-filters badges-filters--two-column">
+          <div className="badges-filters__column">
+            <select
+              title="Year"
+              value={selectedYear}
+              onChange={(event) =>
+                setSelectedYear(
+                  event.target.value === "all" ? "all" : parseInt(event.target.value, 10)
+                )
+              }
+            >
+              <option value="all">All years</option>
+              {yearsToDisplay.map((year) => (
+                <option key={year} value={year}>
+                  {year}
+                </option>
+              ))}
+            </select>
 
-          <select
-            title="Month"
-            value={selectedMonth}
-            onChange={(event) =>
-              setSelectedMonth(
-                event.target.value === "all"
-                  ? "all"
-                  : parseInt(event.target.value, 10)
-              )
-            }
-          >
-            {monthsOptions.map((option) => (
-              <option key={option.value} value={option.value}>
-                {option.label}
-              </option>
-            ))}
-          </select>
+            <select
+              title="Month"
+              value={selectedMonth}
+              onChange={(event) =>
+                setSelectedMonth(
+                  event.target.value === "all" ? "all" : parseInt(event.target.value, 10)
+                )
+              }
+              disabled={selectedYear === "all"}
+            >
+              {monthsOptions.map((option) => (
+                <option key={option.value} value={option.value}>
+                  {option.label}
+                </option>
+              ))}
+            </select>
+          </div>
 
-          <select
-            title="Badge type"
-            value={selectedType}
-            onChange={(event) => setSelectedType(event.target.value)}
-          >
-            {badgeTypeOptions.map((option) => (
-              <option key={option.value} value={option.value}>
-                {option.label}
-              </option>
-            ))}
-          </select>
+          <div className="badges-filters__column badges-filters__column--horizontal">
+            <select
+              title="Badge type"
+              value={selectedType}
+              onChange={(event) => setSelectedType(event.target.value)}
+            >
+              {badgeTypeOptions.map((option) => (
+                <option key={option.value} value={option.value}>
+                  {option.label}
+                </option>
+              ))}
+            </select>
+
+            <div className="badges-filters__autocomplete">
+              <input
+                type="text"
+                placeholder="Filter by game"
+                value={gameQuery}
+                onChange={(event) => handleGameSelection(event.target.value)}
+                list="badges-games"
+              />
+              <datalist id="badges-games">
+                <option value="" disabled />
+                <option value="All games" />
+                {gameOptions.map((game) => (
+                  <option key={game.id} value={game.name} />
+                ))}
+              </datalist>
+              {selectedGame !== "all" && (
+                <button className="badges-filters__clear" onClick={() => handleGameSelection("")}>
+                  <span className="material-icons">close</span>
+                </button>
+              )}
+            </div>
+          </div>
         </section>
 
         <section className="badges-timeline">

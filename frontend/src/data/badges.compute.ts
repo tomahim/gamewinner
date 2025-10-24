@@ -41,10 +41,23 @@ function generateStreakSegments(sessions: GameSession[]): StreakSegment[] {
 
   sorted.forEach((session) => {
     const player: BadgePlayer = session.winner === "Thomas" ? "my" : "opponent";
-    if (!current || current.player !== player) {
-      current = { player, sessions: [] };
+    if (!current) {
+      current = { player, sessions: [session] };
       segments.push(current);
+      return;
     }
+
+    const lastSession = current.sessions[current.sessions.length - 1];
+    const sameGameDayLossBreak =
+      player !== current.player &&
+      lastSession.date.toDateString() === session.date.toDateString();
+
+    if (player !== current.player || sameGameDayLossBreak) {
+      current = { player, sessions: [session] };
+      segments.push(current);
+      return;
+    }
+
     current.sessions.push(session);
   });
 
@@ -173,49 +186,53 @@ function computeMilestoneBadges(
   player: BadgePlayer,
   game: Game,
   sessions: GameSession[],
-  year: number,
   paletteIndex: number
 ) {
-  const wins = sessions.filter(
-    (session) =>
-      session.game.id === game.id &&
-      (player === "my" ? session.winner === "Thomas" : session.winner === "Aurore")
-  );
+  const wins = sessions
+    .filter(
+      (session) =>
+        session.game.id === game.id &&
+        (player === "my" ? session.winner === "Thomas" : session.winner === "Aurore")
+    )
+    .sort((a, b) => a.date.getTime() - b.date.getTime());
 
   const thresholds = getMilestoneTiers();
-  const totalWins = wins.length;
-  const highest = mapThresholdToHighest(totalWins, thresholds);
-  if (!highest) return [] as BaseBadge[];
+  const badges: BaseBadge[] = [];
 
-  const earnedSession = wins.sort((a, b) => a.date.getTime() - b.date.getTime())[highest - 1];
-  const earned = formatDateLabel(earnedSession.date);
-  const xpValue = getXpForBadge("milestone", highest);
+  thresholds.forEach((milestone, index) => {
+    if (wins.length < milestone) {
+      return;
+    }
+    const earnedSession = wins[milestone - 1];
+    const earned = formatDateLabel(earnedSession.date);
+    const xpValue = getXpForBadge("milestone", milestone);
 
-  const badge: BaseBadge = {
-    id: makeBadgeId(player, year, "milestone", `${game.id}-${highest}`),
-    player,
-    year,
-    type: "milestone",
-    title: `${highest}+ wins on ${game.name}`,
-    subtitle: `Lifetime achievement on ${game.name}`,
-    tierLabel: `${highest} wins`,
-    description: `Celebrates surpassing ${highest} victories on ${game.name}.`,
-    gradient: getBadgeGradient(paletteIndex + 4),
-    accentColor: getBadgeAccent(paletteIndex + 4),
-    textColor: "#10141f",
-    game: {
-      id: game.id,
-      name: game.name,
-      imageUrl: game.imageUrl,
-    },
-    earnedLabels: [earned.label],
-    earnedDateISO: [earned.iso],
-    milestoneCount: highest,
-    xpValue,
-    rarity: getBadgeRarity(xpValue),
-  };
+    badges.push({
+      id: makeBadgeId(player, earnedSession.date.getFullYear(), "milestone", `${game.id}-${milestone}`),
+      player,
+      year: earnedSession.date.getFullYear(),
+      type: "milestone",
+      title: `${milestone}+ wins on ${game.name}`,
+      subtitle: `Lifetime achievement on ${game.name}`,
+      tierLabel: `${milestone} wins`,
+      description: `Celebrates surpassing ${milestone} victories on ${game.name}.`,
+      gradient: getBadgeGradient(paletteIndex + 4 + index),
+      accentColor: getBadgeAccent(paletteIndex + 4 + index),
+      textColor: "#10141f",
+      game: {
+        id: game.id,
+        name: game.name,
+        imageUrl: game.imageUrl,
+      },
+      earnedLabels: [earned.label],
+      earnedDateISO: [earned.iso],
+      milestoneCount: milestone,
+      xpValue,
+      rarity: getBadgeRarity(xpValue),
+    });
+  });
 
-  return [badge];
+  return badges;
 }
 
 function mergeLatestBadges(existing: BaseBadge[], incoming: BaseBadge[]) {
@@ -287,19 +304,25 @@ function computeBadgesForYear(
       "my",
       game,
       context.sessions,
-      year,
       paletteOffset + streakSegments.length + gameIndex + 2
     );
     const milestoneBadgesOpponent = computeMilestoneBadges(
       "opponent",
       game,
       context.sessions,
-      year,
       paletteOffset + streakSegments.length + gameIndex + 3
     );
 
-    milestoneBadgesMy.forEach((badge) => perYearMy.push(badge));
-    milestoneBadgesOpponent.forEach((badge) => perYearOpponent.push(badge));
+    milestoneBadgesMy.forEach((badge) => {
+      if (badge.year === year) {
+        perYearMy.push(badge);
+      }
+    });
+    milestoneBadgesOpponent.forEach((badge) => {
+      if (badge.year === year) {
+        perYearOpponent.push(badge);
+      }
+    });
   });
 
   const filterByYear = (badges: BaseBadge[]) =>

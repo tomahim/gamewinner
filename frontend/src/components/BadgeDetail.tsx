@@ -1,4 +1,4 @@
-import { useMemo } from "react";
+import { useMemo, useCallback } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import Header from "./Header";
 import FooterNav from "./FooterNav";
@@ -29,7 +29,9 @@ function BadgeDetail() {
     return computeBadges(context);
   }, [games, sessions, years]);
 
-  const badge = badgeId ? collections.allBadges[decodeURIComponent(badgeId)] : undefined;
+  const badge = badgeId
+    ? collections.allBadges[decodeURIComponent(badgeId)]
+    : undefined;
 
   if (!badge) {
     return (
@@ -43,15 +45,31 @@ function BadgeDetail() {
     );
   }
 
+  const goToMonth = useCallback(
+    (iso: string) => {
+      const date = new Date(iso);
+      if (Number.isNaN(date.getTime())) return;
+      const year = date.getFullYear();
+      const month = date.getMonth();
+      navigate(`/history/${year}/${month}`);
+    },
+    [navigate]
+  );
+
   return (
     <>
       <Header title={badge.title} />
       <main className="badge-detail-page margin-bottom-80">
-        <section className="badge-detail-card" style={{ background: badge.gradient, color: badge.textColor }}>
+        <section
+          className="badge-detail-card"
+          style={{ background: badge.gradient, color: badge.textColor }}
+        >
           <div className="badge-detail-card__media">
             {badge.type === "streak" ? (
               <div className="badge-detail-card__streak-emblem">
-                <span className="material-icons badge-detail-card__trophy">emoji_events</span>
+                <span className="material-icons badge-detail-card__trophy">
+                  emoji_events
+                </span>
                 <span className="badge-detail-card__streak-value">
                   {badge.tierLabel.replace(/[^0-9]/g, "")}
                   <span className="suffix">x</span>
@@ -65,10 +83,14 @@ function BadgeDetail() {
           </div>
           <div className="badge-detail-card__labels">
             <span className="badge-detail-card__tier">{badge.tierLabel}</span>
-            <span className={`badge-detail-card__rarity badge-detail-card__rarity--${badge.rarity}`}>
+            <span
+              className={`badge-detail-card__rarity badge-detail-card__rarity--${badge.rarity}`}
+            >
               {badge.rarity}
             </span>
-            <span className="badge-detail-card__type">{getBadgeTypeLabel(badge.type)}</span>
+            <span className="badge-detail-card__type">
+              {getBadgeTypeLabel(badge.type)}
+            </span>
           </div>
           <h1 className="badge-detail-card__title">{badge.title}</h1>
           <p className="badge-detail-card__subtitle">{badge.subtitle}</p>
@@ -90,7 +112,9 @@ function BadgeDetail() {
             {badge.milestoneCount != null && (
               <div className="badge-stat">
                 <span className="badge-stat__label">Milestone</span>
-                <span className="badge-stat__value">{badge.milestoneCount} wins</span>
+                <span className="badge-stat__value">
+                  {badge.milestoneCount} wins
+                </span>
               </div>
             )}
           </div>
@@ -104,7 +128,9 @@ function BadgeDetail() {
                 <article className="badge-streak" key={streak.id}>
                   <div className="badge-streak__dates">
                     <span className="badge-streak__label">Start</span>
-                    <span className="badge-streak__value">{streak.startLabel}</span>
+                    <span className="badge-streak__value">
+                      {streak.startLabel}
+                    </span>
                   </div>
                   <div className="badge-streak__length">
                     <span className="badge-streak__value">{streak.length}</span>
@@ -112,10 +138,22 @@ function BadgeDetail() {
                   </div>
                   <div className="badge-streak__dates">
                     <span className="badge-streak__label">End</span>
-                    <span className="badge-streak__value">{streak.endLabel}</span>
+                    <div className="badge-streak__end-row">
+                      <button
+                        className="badge-streak__history"
+                        onClick={() => goToMonth(streak.endISO)}
+                      >
+                        <span className="material-icons">calendar_today</span>
+                      </button>
+                      <span className="badge-streak__value badge-streak__value--end">
+                        {streak.endLabel}
+                      </span>
+                    </div>
                   </div>
                   {streak.highlight && (
-                    <p className="badge-streak__highlight">{streak.highlight}</p>
+                    <p className="badge-streak__highlight">
+                      {streak.highlight}
+                    </p>
                   )}
                 </article>
               ))}
@@ -124,10 +162,22 @@ function BadgeDetail() {
         )}
 
         <section className="badge-actions">
-          <button className="badge-actions__button" onClick={() => navigate(-1)}>
+          <button
+            className="badge-actions__button"
+            onClick={() => navigate(-1)}
+          >
             <span className="material-icons">arrow_back</span>
             Back to badges
           </button>
+          {badge.game?.id && (
+            <button
+              className="badge-actions__button badge-actions__button--secondary"
+              onClick={() => navigate(`/game/${badge.game?.id}`)}
+            >
+              <span className="material-icons">sports_esports</span>
+              Go to game
+            </button>
+          )}
         </section>
       </main>
       <FooterNav />
@@ -136,4 +186,3 @@ function BadgeDetail() {
 }
 
 export default BadgeDetail;
-
