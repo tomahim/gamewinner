@@ -3,10 +3,8 @@ import { useNavigate, useParams } from "react-router-dom";
 import Header from "./Header";
 import FooterNav from "./FooterNav";
 import { useGamesList, useYearsWithStats } from "../data/GamesListContext";
-import {
-  computeBadges,
-  type BadgeComputationContext,
-} from "../data/badges.compute";
+import { computeBadges } from "../data/badges.compute";
+import type { BadgeComputationContext } from "../data/badges.types";
 import { getBadgeTypeLabel } from "../data/badges.helpers";
 import "./BadgeDetail.scss";
 

@@ -1,7 +1,8 @@
 import { useNavigate, useLocation } from "react-router-dom";
 import { useGamesList, useYearsWithStats } from "../data/GamesListContext";
 import { useMemo } from "react";
-import { computeBadges, type BadgeComputationContext } from "../data/badges.compute";
+import { computeBadges } from "../data/badges.compute";
+import type { BadgeComputationContext } from "../data/badges.types";
 
 function FooterNav() {
   const navigate = useNavigate();

@@ -1,15 +1,18 @@
-import { badgeConfig, getGameStreakTiers, getMilestoneTiers, getStreakTiers, getXpForBadge } from "./badges.config";
+import {
+  getGameStreakTiers,
+  getMilestoneTiers,
+  getStreakTiers,
+  getXpForBadge,
+} from "./badges.config";
 import type {
   BadgeCollections,
   BadgeComputationContext,
   BadgeStreakOccurrence,
   BaseBadge,
   BadgePlayer,
-  BadgeType,
 } from "./badges.types";
 import type { Game, GameSession } from "./GamesListContext";
 import {
-  findGameById,
   formatDateLabel,
   getBadgeAccent,
   getBadgeGradient,
@@ -35,7 +38,9 @@ function groupSessionsByYear(sessions: GameSession[]) {
 }
 
 function generateStreakSegments(sessions: GameSession[]): StreakSegment[] {
-  const sorted = [...sessions].sort((a, b) => a.date.getTime() - b.date.getTime());
+  const sorted = [...sessions].sort(
+    (a, b) => a.date.getTime() - b.date.getTime()
+  );
   const segments: StreakSegment[] = [];
   let current: StreakSegment | null = null;
 
@@ -90,7 +95,6 @@ function buildStreakOccurrences(sessions: GameSession[], streakLength: number) {
 function computeStreakBadges(
   player: BadgePlayer,
   streakSegment: StreakSegment,
-  games: Game[],
   year: number,
   paletteIndex: number
 ) {
@@ -101,7 +105,10 @@ function computeStreakBadges(
     return [] as BaseBadge[];
   }
 
-  const occurrence = buildStreakOccurrences(streakSegment.sessions, streakLength);
+  const occurrence = buildStreakOccurrences(
+    streakSegment.sessions,
+    streakLength
+  );
   const xpValue = getXpForBadge("streak", highest);
   const gradient = getBadgeGradient(paletteIndex);
   const accentColor = getBadgeAccent(paletteIndex);
@@ -192,7 +199,9 @@ function computeMilestoneBadges(
     .filter(
       (session) =>
         session.game.id === game.id &&
-        (player === "my" ? session.winner === "Thomas" : session.winner === "Aurore")
+        (player === "my"
+          ? session.winner === "Thomas"
+          : session.winner === "Aurore")
     )
     .sort((a, b) => a.date.getTime() - b.date.getTime());
 
@@ -208,7 +217,12 @@ function computeMilestoneBadges(
     const xpValue = getXpForBadge("milestone", milestone);
 
     badges.push({
-      id: makeBadgeId(player, earnedSession.date.getFullYear(), "milestone", `${game.id}-${milestone}`),
+      id: makeBadgeId(
+        player,
+        earnedSession.date.getFullYear(),
+        "milestone",
+        `${game.id}-${milestone}`
+      ),
       player,
       year: earnedSession.date.getFullYear(),
       type: "milestone",
@@ -270,7 +284,6 @@ function computeBadgesForYear(
     const badges = computeStreakBadges(
       segment.player,
       segment,
-      context.games,
       year,
       paletteOffset + index
     );
@@ -347,7 +360,9 @@ function countRecentBadges(badges: BaseBadge[]) {
   ).length;
 }
 
-export function computeBadges(context: BadgeComputationContext): BadgeCollections {
+export function computeBadges(
+  context: BadgeComputationContext
+): BadgeCollections {
   const byYear: BadgeCollections["byYear"] = {};
   const allBadges: Record<string, BaseBadge> = {};
   let myRecent = 0;

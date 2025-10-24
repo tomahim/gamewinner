@@ -2,11 +2,12 @@ import { useMemo, useState } from "react";
 import Header from "./Header";
 import FooterNav from "./FooterNav";
 import { useGamesList, useYearsWithStats } from "../data/GamesListContext";
-import { type BadgePlayer, type BaseBadge } from "../data/badges.types";
 import {
-  computeBadges,
+  type BadgePlayer,
+  type BaseBadge,
   type BadgeComputationContext,
-} from "../data/badges.compute";
+} from "../data/badges.types";
+import { computeBadges } from "../data/badges.compute";
 import { getBadgeTypeLabel } from "../data/badges.helpers";
 import { useNavigate } from "react-router-dom";
 import "./Badges.scss";
