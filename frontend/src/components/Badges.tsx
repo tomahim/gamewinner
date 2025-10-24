@@ -57,8 +57,18 @@ function BadgeCard({
         </span>
       </div>
       <div className="badge-card__media">
-        {badge.game?.imageUrl && (
-          <img src={badge.game.imageUrl} alt={badge.title} />
+        {badge.type === "streak" ? (
+          <div className="badge-card__streak-emblem">
+            <span className="material-icons trophy">emoji_events</span>
+            <span className="streak-multiplier">
+              {badge.tierLabel.replace(/[^0-9]/g, "")}
+              <span className="suffix">x</span>
+            </span>
+          </div>
+        ) : (
+          badge.game?.imageUrl && (
+            <img src={badge.game.imageUrl} alt={badge.title} />
+          )
         )}
         <span className="badge-card__type">
           {getBadgeTypeLabel(badge.type)}
@@ -66,7 +76,6 @@ function BadgeCard({
       </div>
       <div className="badge-card__body">
         <h3 className="badge-card__title">{badge.title}</h3>
-        <p className="badge-card__subtitle">{badge.subtitle}</p>
         <div className="badge-card__footer">
           <span className="badge-card__xp">{badge.xpValue} XP</span>
           <span className="badge-card__earnings">
@@ -113,8 +122,14 @@ function Badges() {
       if (!schedule) return;
       totals.my.count += schedule.my.length;
       totals.opponent.count += schedule.opponent.length;
-      totals.my.xp += schedule.my.reduce((sum, badge) => sum + badge.xpValue, 0);
-      totals.opponent.xp += schedule.opponent.reduce((sum, badge) => sum + badge.xpValue, 0);
+      totals.my.xp += schedule.my.reduce(
+        (sum, badge) => sum + badge.xpValue,
+        0
+      );
+      totals.opponent.xp += schedule.opponent.reduce(
+        (sum, badge) => sum + badge.xpValue,
+        0
+      );
     });
 
     return totals;
@@ -163,6 +178,12 @@ function Badges() {
         badges = badges.filter((badge) => badge.type === selectedType);
       }
 
+      badges = [...badges].sort((a, b) => {
+        const dateA = Math.max(...a.earnedDateISO.map((iso) => new Date(iso).getTime()));
+        const dateB = Math.max(...b.earnedDateISO.map((iso) => new Date(iso).getTime()));
+        return dateB - dateA;
+      });
+
       if (badges.length > 0) {
         result.push({ year, badges });
       }
@@ -193,11 +214,15 @@ function Badges() {
           <div className="badges-summary__totals">
             <div className="badges-summary__metric">
               <span className="badges-summary__label">Total XP</span>
-              <span className="badges-summary__value">{activeTotals.xp.toLocaleString()}</span>
+              <span className="badges-summary__value">
+                {activeTotals.xp.toLocaleString()}
+              </span>
             </div>
             <div className="badges-summary__metric">
               <span className="badges-summary__label">Badges unlocked</span>
-              <span className="badges-summary__value">{activeTotals.count}</span>
+              <span className="badges-summary__value">
+                {activeTotals.count}
+              </span>
             </div>
           </div>
         </section>

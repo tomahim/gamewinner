@@ -146,7 +146,7 @@
 
       .badges-grid {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        grid-template-columns: repeat(2, minmax(0, 1fr));
         gap: 18px;
       }
     }
@@ -238,6 +238,38 @@
       width: 100%;
       height: 100%;
       object-fit: cover;
+    }
+
+    .badge-card__streak-emblem {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.2);
+      backdrop-filter: blur(12px);
+
+      .material-icons.trophy {
+        font-size: 36px;
+        color: rgba(255, 215, 64, 0.95);
+        text-shadow: 0 8px 16px rgba(0, 0, 0, 0.35);
+      }
+
+      .streak-multiplier {
+        margin-top: 4px;
+        font-size: 24px;
+        font-weight: 800;
+        color: #fff;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        display: flex;
+        align-items: baseline;
+        gap: 2px;
+
+        .suffix {
+          font-size: 14px;
+        }
+      }
     }
 
     .badge-card__type {

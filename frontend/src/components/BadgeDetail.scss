@@ -23,6 +23,37 @@
         height: 100%;
         object-fit: cover;
       }
+
+      .badge-detail-card__streak-emblem {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.2);
+        backdrop-filter: blur(14px);
+
+        .badge-detail-card__trophy {
+          font-size: 72px;
+          color: rgba(255, 215, 64, 0.95);
+          text-shadow: 0 14px 30px rgba(0, 0, 0, 0.4);
+        }
+
+        .badge-detail-card__streak-value {
+          margin-top: 8px;
+          font-size: 42px;
+          font-weight: 800;
+          letter-spacing: 0.12em;
+          text-transform: uppercase;
+          display: flex;
+          align-items: baseline;
+          gap: 4px;
+
+          .suffix {
+            font-size: 24px;
+          }
+        }
+      }
     }
 
     .badge-detail-card__labels {

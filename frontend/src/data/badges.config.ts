@@ -28,6 +28,7 @@ export const badgeConfig: BadgeConfig = {
     { length: 15, xp: 700 },
     { length: 20, xp: 1000 },
     { length: 25, xp: 1400 },
+    { length: 50, xp: 5000 },
   ],
   gameStreak: [
     { length: 5, xp: 200 },
@@ -39,9 +40,11 @@ export const badgeConfig: BadgeConfig = {
     { wins: 10, xp: 120 },
     { wins: 20, xp: 250 },
     { wins: 30, xp: 400 },
+    { wins: 40, xp: 600 },
     { wins: 50, xp: 750 },
     { wins: 75, xp: 1050 },
     { wins: 100, xp: 1500 },
+    { wins: 125, xp: 1750 },
     { wins: 150, xp: 2200 },
   ],
 };
@@ -63,15 +66,21 @@ export function getMilestoneTiers() {
 export function getXpForBadge(type: BadgeType, threshold: number) {
   switch (type) {
     case "streak": {
-      const match = badgeConfig.streak.find((tier) => tier.length === threshold);
+      const match = badgeConfig.streak.find(
+        (tier) => tier.length === threshold
+      );
       return match?.xp ?? 0;
     }
     case "game-streak": {
-      const match = badgeConfig.gameStreak.find((tier) => tier.length === threshold);
+      const match = badgeConfig.gameStreak.find(
+        (tier) => tier.length === threshold
+      );
       return match?.xp ?? 0;
     }
     case "milestone": {
-      const match = badgeConfig.milestone.find((tier) => tier.wins === threshold);
+      const match = badgeConfig.milestone.find(
+        (tier) => tier.wins === threshold
+      );
       return match?.xp ?? 0;
     }
     default:

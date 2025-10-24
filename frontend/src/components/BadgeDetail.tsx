@@ -49,8 +49,18 @@ function BadgeDetail() {
       <main className="badge-detail-page margin-bottom-80">
         <section className="badge-detail-card" style={{ background: badge.gradient, color: badge.textColor }}>
           <div className="badge-detail-card__media">
-            {badge.game?.imageUrl && (
-              <img src={badge.game.imageUrl} alt={badge.title} />
+            {badge.type === "streak" ? (
+              <div className="badge-detail-card__streak-emblem">
+                <span className="material-icons badge-detail-card__trophy">emoji_events</span>
+                <span className="badge-detail-card__streak-value">
+                  {badge.tierLabel.replace(/[^0-9]/g, "")}
+                  <span className="suffix">x</span>
+                </span>
+              </div>
+            ) : (
+              badge.game?.imageUrl && (
+                <img src={badge.game.imageUrl} alt={badge.title} />
+              )
             )}
           </div>
           <div className="badge-detail-card__labels">
