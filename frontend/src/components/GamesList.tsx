@@ -75,8 +75,8 @@ function GamesList() {
         {filteredGames.length ? (
           filteredGames.map((game) => <GameCard key={game.id} game={game} />)
         ) : (
-          <div className="no-game-container">
-            <img src={noGame} alt="No game found" className="no-game-image" />
+          <div className="no-data-container">
+            <img src={noGame} alt="No game found" className="no-data-image" />
           </div>
         )}
       </div>

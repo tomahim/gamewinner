@@ -1,7 +1,7 @@
 import { useMemo } from "react";
 import type { AggregatedStats, PlayCount } from "./GamesListContext";
 
-interface TopPlayCountsResult {
+export interface TopPlayCountsResult {
   topThree: PlayCount[];
   remainingTopTen: PlayCount[];
   countRange: { min: number; max: number };

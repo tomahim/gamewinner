@@ -252,3 +252,11 @@
     width: 94px;
   }
 }
+
+.select-container {
+  display: flex; /* Enable flexbox */
+  flex-direction: row; /* Ensure items are in a row (default, but explicit for clarity) */
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically (optional, if you want vertical centering too) */
+  gap: 15px; /* Space between the select elements */
+}

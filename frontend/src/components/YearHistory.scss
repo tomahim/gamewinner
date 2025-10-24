@@ -1,5 +1,3 @@
-@use '../App' as app;
-
 .year-container {
     display: flex;
     flex-direction: row;
@@ -14,18 +12,6 @@
     .next-icon {
         cursor: pointer; /* Optional: Enhances UX for clickable icons */
     }
-  }
-  
-.link-with-icon {
-    display: flex;
-    flex-direction: row; /* Optional, as row is default */
-    align-items: center; /* Vertically centers items */
-    justify-content: center; /* Horizontally centers items */
-    gap: 8px;
-    padding: 16px;
-    text-align: center; /* Centers text within each flex item, if needed */
-    font-size: 18px;
-    color: app.$orange;
   }
 
 .session-card {

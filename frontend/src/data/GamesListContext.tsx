@@ -58,7 +58,7 @@ export interface YearStats extends AggregatedStats {
   months: MonthStats[];
 }
 
-interface OverallStats extends AggregatedStats {}
+export interface OverallStats extends AggregatedStats {}
 
 interface GamesListContextType {
   games: Game[];
@@ -91,11 +91,8 @@ export const useYearStatsFromParams = () => {
   const { yearsStats, loading, refresh } = useGamesList();
 
   const { year: yearStr } = useParams<{ year: string }>();
-  if (!yearStr) {
-    throw new Error("Year parameter is missing");
-  }
 
-  const year = parseInt(yearStr);
+  const year = parseInt(yearStr as unknown as string);
 
   const yearStats = yearsStats.find((ys) => ys.year === year);
 
@@ -107,11 +104,7 @@ export const useMonthStatsFromParams = () => {
 
   const { month: monthStr } = useParams<{ month: string }>();
 
-  if (!monthStr) {
-    throw new Error("Month parameter is missing");
-  }
-
-  const month = parseInt(monthStr);
+  const month = parseInt(monthStr as unknown as string);
 
   const monthStats = yearStats?.months.find((ms) => ms.month === month);
 

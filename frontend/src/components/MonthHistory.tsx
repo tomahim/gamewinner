@@ -1,3 +1,4 @@
+import { useNavigate } from "react-router-dom";
 import {
   useMonthStatsFromParams,
   type GameSession,
@@ -15,6 +16,7 @@ export function getMonthName(monthNumber: number) {
 }
 
 function MonthHistory() {
+  const navigate = useNavigate();
   const { monthStats, loading, year, month, refresh } =
     useMonthStatsFromParams();
 
@@ -37,6 +39,14 @@ function MonthHistory() {
 
       <div className="summary-stats-container">
         <SummaryStats aggregatedStats={monthStats} />
+      </div>
+
+      <div
+        className="link-with-icon"
+        onClick={() => navigate(`/stats/${year}/${month}`)}
+      >
+        <span className="material-icons small-icon">bar_chart</span>
+        See month stats
       </div>
 
       {monthStats.sessions.map((session: GameSession) => (

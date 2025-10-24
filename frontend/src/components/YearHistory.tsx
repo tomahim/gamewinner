@@ -85,7 +85,7 @@ function YearHistory() {
 
       <div
         className="link-with-icon"
-        onClick={() => navigate(`/history/${year}/stats`)}
+        onClick={() => navigate(`/stats/${year}`)}
       >
         <span className="material-icons small-icon">bar_chart</span>
         See year stats
