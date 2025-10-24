@@ -133,7 +133,9 @@ function Badges() {
       setGameQuery("");
       return;
     }
-    const match = gameOptions.find((option) => option.name.toLowerCase() === trimmed.toLowerCase());
+    const match = gameOptions.find(
+      (option) => option.name.toLowerCase() === trimmed.toLowerCase()
+    );
     if (match) {
       setSelectedGame(match.id);
       setGameQuery(match.name);
@@ -281,7 +283,9 @@ function Badges() {
               value={selectedYear}
               onChange={(event) =>
                 setSelectedYear(
-                  event.target.value === "all" ? "all" : parseInt(event.target.value, 10)
+                  event.target.value === "all"
+                    ? "all"
+                    : parseInt(event.target.value, 10)
                 )
               }
             >
@@ -298,7 +302,9 @@ function Badges() {
               value={selectedMonth}
               onChange={(event) =>
                 setSelectedMonth(
-                  event.target.value === "all" ? "all" : parseInt(event.target.value, 10)
+                  event.target.value === "all"
+                    ? "all"
+                    : parseInt(event.target.value, 10)
                 )
               }
               disabled={selectedYear === "all"}
@@ -340,13 +346,26 @@ function Badges() {
                 ))}
               </datalist>
               {selectedGame !== "all" && (
-                <button className="badges-filters__clear" onClick={() => handleGameSelection("")}>
+                <button
+                  className="badges-filters__clear"
+                  onClick={() => handleGameSelection("")}
+                >
                   <span className="material-icons">close</span>
                 </button>
               )}
             </div>
           </div>
         </section>
+
+        <div className="badges-guide-link">
+          <button
+            className="badges-guide-link__button"
+            onClick={() => navigate("/badges/info")}
+          >
+            <span className="material-icons">info</span>
+            Guide
+          </button>
+        </div>
 
         <section className="badges-timeline">
           {badgesByYear.map(({ year, badges }) => (

@@ -18,6 +18,7 @@ import YearHistory from "./components/YearHistory";
 import MonthHistory from "./components/MonthHistory";
 import Badges from "./components/Badges";
 import BadgeDetail from "./components/BadgeDetail";
+import BadgeInfos from "./components/BadgeInfos";
 
 function App() {
   return (
@@ -134,6 +135,17 @@ function App() {
                 <ProtectedRoute>
                   <GamesListProvider>
                     <BadgeDetail />
+                  </GamesListProvider>
+                </ProtectedRoute>
+              }
+            />
+
+            <Route
+              path="/badges/info"
+              element={
+                <ProtectedRoute>
+                  <GamesListProvider>
+                    <BadgeInfos />
                   </GamesListProvider>
                 </ProtectedRoute>
               }
