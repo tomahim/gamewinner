@@ -5,6 +5,7 @@ import { useGameFromParams } from "../data/GamesListContext";
 import Loader from "./ui/Loader";
 import PlayingCardIcon from "./ui/PlayingCardIcon";
 import SessionCard from "./SessionCard";
+import ScoreEvolutionChart from "./ScoreEvolutionChart";
 import StatBox from "./ui/StatBox";
 
 const LIMIT_PLAYS = 10;
@@ -44,8 +45,12 @@ function GameDetail() {
       <h2 tabIndex={-1}>Last plays</h2>
 
       {game.sessions.slice(0, LIMIT_PLAYS).map((session) => (
-        <SessionCard session={session} refresh={refresh} />
+        <SessionCard key={session.id} session={session} refresh={refresh} />
       ))}
+
+      <h2 tabIndex={-1}>Score evolution</h2>
+
+      <ScoreEvolutionChart sessions={game.sessions} />
 
       <h2 tabIndex={-1}>Scores Aurore</h2>
 

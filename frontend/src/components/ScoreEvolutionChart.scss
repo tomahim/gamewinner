@@ -1,0 +1,94 @@
+.score-evolution-chart {
+  background-color: rgba(8, 56, 123, 0.35);
+  padding: 16px 12px;
+  margin: 24px 16px;
+  border-radius: 16px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+
+  position: relative;
+
+  .chart-controls {
+    display: flex;
+    justify-content: flex-start;
+    gap: 8px;
+    margin-bottom: 12px;
+
+    select {
+      background-color: rgba(8, 56, 123, 0.8);
+      color: white;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      border-radius: 8px;
+      padding: 6px 10px;
+      font-size: 14px;
+
+      &:focus {
+        outline: 2px solid rgba(116, 204, 255, 0.7);
+      }
+    }
+  }
+
+  .sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+  }
+
+  .chart {
+    width: 100%;
+    height: auto;
+  }
+
+  .score-tooltip {
+    position: fixed;
+    display: none;
+    padding: 6px 10px;
+    border-radius: 6px;
+    background-color: rgba(8, 56, 123, 0.95);
+    color: white;
+    font-size: 12px;
+    pointer-events: none;
+    transform: translateX(-50%);
+    z-index: 10;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+  }
+
+  .legend {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    margin-top: 12px;
+
+    .legend-item {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 14px;
+    }
+
+    .legend-swatch {
+      display: inline-block;
+      width: 14px;
+      height: 14px;
+      border-radius: 4px;
+
+      &.thomas {
+        background: linear-gradient(135deg, #ff6f00, #ff9800);
+      }
+
+      &.aurore {
+        background: linear-gradient(135deg, #4db8ff, #74ccff);
+      }
+    }
+  }
+
+  .no-data {
+    text-align: center;
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.7);
+  }
+}
