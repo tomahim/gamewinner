@@ -1,7 +1,7 @@
 import { useNavigate, useLocation } from "react-router-dom";
 import { useGamesList, useYearsWithStats } from "../data/GamesListContext";
 import { useMemo } from "react";
-import { generateMockBadges } from "../data/mockBadges";
+import { computeBadges, type BadgeComputationContext } from "../data/badges.compute";
 
 function FooterNav() {
   const navigate = useNavigate();
@@ -9,8 +9,14 @@ function FooterNav() {
   const { pathname: location } = useLocation();
   const { years } = useYearsWithStats();
   const { games } = useGamesList();
-  const mockCollections = useMemo(() => generateMockBadges(years, games), [years, games]);
-  const computedNewBadges = mockCollections.recentCounts.my + mockCollections.recentCounts.opponent;
+  const sessions = useMemo(() => games.flatMap((game) => game.sessions ?? []), [games]);
+  const computationContext: BadgeComputationContext = useMemo(
+    () => ({ games, sessions, years }),
+    [games, sessions, years]
+  );
+  const badgeCollections = useMemo(() => computeBadges(computationContext), [computationContext]);
+  const computedNewBadges =
+    badgeCollections.recentCounts.my + badgeCollections.recentCounts.opponent;
   const totalNewBadges = computedNewBadges > 0 ? computedNewBadges : 7;
 
   const currentYear = new Date().getFullYear();

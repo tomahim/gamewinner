@@ -4,10 +4,10 @@ import Header from "./Header";
 import FooterNav from "./FooterNav";
 import { useGamesList, useYearsWithStats } from "../data/GamesListContext";
 import {
-  generateMockBadges,
-  getMockBadgeById,
-  getBadgeTypeLabel,
-} from "../data/mockBadges";
+  computeBadges,
+  type BadgeComputationContext,
+} from "../data/badges.compute";
+import { getBadgeTypeLabel } from "../data/badges.helpers";
 import "./BadgeDetail.scss";
 
 function BadgeDetail() {
@@ -16,14 +16,20 @@ function BadgeDetail() {
   const { years } = useYearsWithStats();
   const { games } = useGamesList();
 
-  const mockCollections = useMemo(
-    () => generateMockBadges(years, games),
-    [years, games]
-  );
+  const sessions = useMemo(() => {
+    return games.flatMap((game) => game.sessions ?? []);
+  }, [games]);
 
-  const badge = badgeId
-    ? getMockBadgeById(mockCollections, decodeURIComponent(badgeId))
-    : undefined;
+  const collections = useMemo(() => {
+    const context: BadgeComputationContext = {
+      games,
+      sessions,
+      years,
+    };
+    return computeBadges(context);
+  }, [games, sessions, years]);
+
+  const badge = badgeId ? collections.allBadges[decodeURIComponent(badgeId)] : undefined;
 
   if (!badge) {
     return (
