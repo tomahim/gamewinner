@@ -1,69 +1,111 @@
 @use '../../App' as app;
 
 .search-bar {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  
-    .search-wrapper {
-      position: relative;
-  
-      input {
-        box-sizing: border-box;
-        border: 1px solid #ccc; // Optional: Add border for visibility
-        border-radius: 4px; // Optional: Rounded corners
-        text-indent: 20px; // Shift placeholder text slightly to avoid icon overlap
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  padding: 0 16px;
+  margin-bottom: 20px;
+
+  .search-input {
+    position: relative;
+    flex: 1;
+
+    input {
+      width: 100%;
+      padding: 12px 48px 12px 18px;
+      border-radius: 14px;
+      border: none;
+      background: rgba(255, 255, 255, 0.12);
+      color: #fff;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+      box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.08);
+      backdrop-filter: blur(10px);
+      transition: box-shadow 0.2s ease;
+
+      &::placeholder {
+        color: rgba(255, 255, 255, 0.55);
       }
-  
-      .search-icon {
-        position: absolute;
-        left: 10px; // Position icon inside the input's left padding
-        top: 50%;
-        transform: translateY(-50%);
-        font-size: 18px; // Slightly smaller for better fit; adjust as needed
-        color: dimgray;
-        z-index: 1; // Ensure icon stays above input text
-        pointer-events: none; // Prevent icon from interfering with input focus/click
+
+      &:focus {
+        outline: none;
+        box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.25);
       }
+    }
+
+    .search-input__icon {
+      position: absolute;
+      left: 16px;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 20px;
+      color: rgba(255, 255, 255, 0.7);
+      pointer-events: none;
     }
   }
 
-  .sort-options {
-    margin-left: 15px;
+  .search-sort {
     position: relative;
 
-    .sort-dropdown {
-        z-index: 100;
-        position: absolute;
-        top: 30px;
+    .search-sort__trigger {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 12px 14px;
+      border-radius: 14px;
+      border: none;
+      background: rgba(255, 255, 255, 0.12);
+      color: #fff;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+      box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.08);
+      cursor: pointer;
 
-        ul {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-            width: 110px;
-            background-color: white; // Dark, Dune-inspired background
-            border-radius: 8px; // Rounded corners
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); // Soft shadow for depth
-            font-family: 'Arial', sans-serif; // Clean, modern font
-          
-            li {
-              padding: 6px 8px;
-              color: black; // Light text for contrast
-              cursor: pointer;
-              transition: background-color 0.3s ease, color 0.3s ease;
-          
-              &:hover {
-                background-color: app.$orange; // Dune-inspired golden accent
-              }
-          
-              &:not(:last-child) {
-                border-bottom: 1px solid #4a4a4a; // Subtle separator between items
-              }
-              &.active {
-                font-weight: 800;
-              }
-            }
+      .material-icons {
+        font-size: 20px;
+      }
+
+      .caret {
+        font-size: 18px;
+      }
+    }
+
+    .search-sort__dropdown {
+      z-index: 100;
+      position: absolute;
+      top: calc(100% + 8px);
+      right: 0;
+
+      ul {
+        list-style: none;
+        padding: 6px;
+        margin: 0;
+        width: 140px;
+        background: rgba(10, 16, 32, 0.92);
+        border-radius: 14px;
+        box-shadow: 0 12px 30px rgba(0, 0, 0, 0.35);
+        backdrop-filter: blur(12px);
+
+        li {
+          padding: 8px 10px;
+          color: rgba(255, 255, 255, 0.85);
+          cursor: pointer;
+          transition: background 0.2s ease, color 0.2s ease;
+          border-radius: 10px;
+
+          &:hover {
+            background: rgba(255, 255, 255, 0.16);
           }
+
+          &.active {
+            font-weight: 800;
+            color: #ffd166;
+            background: rgba(255, 209, 102, 0.14);
+          }
+        }
+      }
     }
   }
+}

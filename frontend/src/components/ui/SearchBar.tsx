@@ -4,19 +4,15 @@ import type { Game } from "../../data/GamesListContext";
 
 export function sortByRecentlyPlayed(games: Game[]): Game[] {
   return games.slice().sort((a, b) => {
-    // If both lastSession are null, consider them equal
     if (a.lastSession === null && b.lastSession === null) {
       return 0;
     }
-    // If a.lastSession is null, a goes to the end
     if (a.lastSession === null) {
       return 1;
     }
-    // If b.lastSession is null, b goes to the end
     if (b.lastSession === null) {
       return -1;
     }
-    // Both have valid dates, sort by most recent
     return b.lastSession.getTime() - a.lastSession.getTime();
   });
 }
@@ -42,24 +38,30 @@ function SearchBar({
 
   return (
     <div className="search-bar">
-      <div className="search-wrapper">
+      <div className="search-input">
+        <span className="material-icons search-input__icon">search</span>
         <input
-          placeholder="Search"
+          placeholder="Search a game"
           type="text"
           onChange={(e) => setSearchQuery(e.target.value)}
-        ></input>
-        <span className="material-icons search-icon">search</span>
+        />
       </div>
-      <div className="sort-options" tabIndex={-1}>
-        <div className="material-icons" onClick={() => setOpenSort(!openSort)}>
-          sort
-        </div>
+      <div className="search-sort" tabIndex={-1}>
+        <button
+          className="search-sort__trigger"
+          onClick={() => setOpenSort(!openSort)}
+        >
+          <span className="material-icons">sort</span>
+          {sortOption}
+          <span className="material-icons caret">expand_more</span>
+        </button>
         {openSort && (
-          <div className="sort-dropdown">
+          <div className="search-sort__dropdown">
             <ul>
               {sortOptions &&
                 sortOptions.map((option) => (
                   <li
+                    key={option}
                     onClick={() => {
                       setSortOption(option);
                       setOpenSort(false);
