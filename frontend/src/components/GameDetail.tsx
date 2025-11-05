@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import FooterNav from "./FooterNav";
 import Header from "./Header";
@@ -6,6 +7,7 @@ import Loader from "./ui/Loader";
 import PlayingCardIcon from "./ui/PlayingCardIcon";
 import SessionCard from "./SessionCard";
 import ScoreEvolutionChart from "./ScoreEvolutionChart";
+import WinsEvolutionChart from "./WinsEvolutionChart";
 import StatBox from "./ui/StatBox";
 
 const LIMIT_PLAYS = 10;
@@ -45,6 +47,7 @@ function humanizeMinutes(totalMinutes: number) {
 
 function GameDetail() {
   const navigate = useNavigate();
+  const [chartView, setChartView] = useState<"score" | "wins">("score");
 
   const { game, id, loading, refresh } = useGameFromParams();
 
@@ -57,6 +60,7 @@ function GameDetail() {
   const { imageUrl, stats } = game;
   const { totalPlays, thomasWins, auroreWins } = stats;
   const approximatePlaytime = humanizeMinutes(totalPlays * MINUTES_PER_GAME);
+
   return (
     <>
       <Header title={game.name} />
@@ -88,9 +92,26 @@ function GameDetail() {
         <SessionCard key={session.id} session={session} refresh={refresh} />
       ))}
 
-      <h2 tabIndex={-1}>Score evolution</h2>
+      <div className="chart-section-header">
+        <h2 tabIndex={-1}>
+          {chartView === "score" ? "Score evolution" : "Wins evolution"}
+        </h2>
+        <button
+          type="button"
+          className="chart-toggle-button"
+          onClick={() =>
+            setChartView((current) => (current === "score" ? "wins" : "score"))
+          }
+        >
+          {chartView === "score" ? "Wins evolution" : "Score evolution"}
+        </button>
+      </div>
 
-      <ScoreEvolutionChart sessions={game.sessions} />
+      {chartView === "score" ? (
+        <ScoreEvolutionChart sessions={game.sessions} />
+      ) : (
+        <WinsEvolutionChart sessions={game.sessions} />
+      )}
 
       <h2 tabIndex={-1}>Scores Aurore</h2>
 
@@ -117,10 +138,7 @@ function GameDetail() {
 
       <h2 tabIndex={-1}>Scores Thomas</h2>
 
-      <div
-        className="stat-box-container centered margin-bottom-80"
-        tabIndex={-1}
-      >
+      <div className="stat-box-container centered margin-bottom-80" tabIndex={-1}>
         <div className="stat-box">
           <span className="number">{stats.scoreStatsThomas.mean}</span>
           <span className="text">Mean</span>
