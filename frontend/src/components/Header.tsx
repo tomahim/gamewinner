@@ -1,5 +1,4 @@
 import logo from "../assets/logo.jpg";
-import homeImage from "../assets/home-header.gif";
 import StatBox from "./ui/StatBox";
 import { useNavigate } from "react-router-dom";
 import {
@@ -7,6 +6,7 @@ import {
   type AggregatedStats,
   type YearStats,
 } from "../data/GamesListContext";
+import GallerySlider from "./GallerySlider";
 
 function getCurrentMonthStats(yearsStats: YearStats[]): AggregatedStats {
   const currentDate = new Date();
@@ -37,7 +37,7 @@ function Header({ title, isHome }: { title?: string; isHome?: boolean }) {
     return (
       <>
         <div className="logo-home-container" tabIndex={-1}>
-          <img alt="logo" src={homeImage} className="logo-home" />
+          <GallerySlider />
 
           <div
             className="stat-box-container relative-bottom"
