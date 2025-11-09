@@ -16,6 +16,7 @@ import Loader from "./ui/Loader";
 import { useGameSessionFromParams } from "../data/GamesListContext";
 import DatePicker from "react-datepicker";
 import DeleteButton from "./forms/DeleteButton";
+import CascadiaScoreDetail from "./CascadiaScoreDetail";
 
 type WinnerType = "Thomas" | "Aurore" | "Tie" | "";
 
@@ -106,6 +107,8 @@ function EditSession() {
     }
   };
 
+  const hasScoreDetail = game?.name === "Cascadia";
+
   if (loading) return <Loader />;
 
   return (
@@ -122,22 +125,25 @@ function EditSession() {
             selected={selectedDate}
             onChange={(date: Date | null) => setSelectedDate(date)}
           />
+          {game?.name === "Cascadia" && <CascadiaScoreDetail />}
           <input
             type="number"
-            placeholder="Thomas' score"
-            value={scoreThomas}
+            placeholder="Aurore's score"
+            value={scoreAurore}
+            disabled={hasScoreDetail}
             onChange={(e) =>
-              setScoreThomas(
+              setScoreAurore(
                 e.target.value === "" ? "" : Number(e.target.value)
               )
             }
           />
           <input
             type="number"
-            placeholder="Aurore's score"
-            value={scoreAurore}
+            placeholder="Thomas' score"
+            value={scoreThomas}
+            disabled={hasScoreDetail}
             onChange={(e) =>
-              setScoreAurore(
+              setScoreThomas(
                 e.target.value === "" ? "" : Number(e.target.value)
               )
             }
@@ -151,8 +157,8 @@ function EditSession() {
             <option value="" disabled>
               Select winner
             </option>
-            <option id="Thomas">Thomas</option>
             <option id="Aurore">Aurore</option>
+            <option id="Thomas">Thomas</option>
             <option id="Tie">Tie</option>
           </select>
           <FormButton label={session ? "Edit" : "Add"} />
