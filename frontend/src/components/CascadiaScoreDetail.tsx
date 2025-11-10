@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import bearIcon from "../assets/cascadia-images/bear.png";
 import wapitiIcon from "../assets/cascadia-images/wapiti.png";
 import salmonIcon from "../assets/cascadia-images/salmon.png";
@@ -12,8 +12,16 @@ import waterIcon from "../assets/cascadia-images/water.png";
 import landscapeIcon from "../assets/cascadia-images/landscapes.png";
 import pineconeIcon from "../assets/cascadia-images/pinecone.png";
 
+type HabitatScore = {
+  partial: number | "";
+  bonus: number;
+};
+
 function CascadiaScoreDetail() {
-  const animals = [
+  const animals: {
+    name: string;
+    icon: string;
+  }[] = [
     {
       name: "bear",
       icon: bearIcon,
@@ -59,7 +67,109 @@ function CascadiaScoreDetail() {
     },
   ];
 
-  //   const [animalScoresThomas, set] = useState
+  const initialScores = animals.reduce((acc, a) => {
+    acc[a.name] = "";
+    return acc;
+  }, {} as Record<string, number | "">);
+
+  const [animalScores, setAnimalScores] = useState({
+    aurore: initialScores,
+    thomas: initialScores,
+  });
+
+  const initialHabitatScores = habitats.reduce((acc, a) => {
+    acc[a.name] = { partial: "", bonus: 0 };
+    return acc;
+  }, {} as Record<string, HabitatScore>);
+
+  const [habitatScores, setHabitatScores] = useState({
+    aurore: initialHabitatScores,
+    thomas: initialHabitatScores,
+  });
+
+  const totalAnimals = (player: "aurore" | "thomas") =>
+    Object.values(animalScores[player]).reduce(
+      (acc: number | "", i: number | "") =>
+        (acc === "" ? 0 : acc) + (i === "" ? 0 : i)
+    );
+  const totalHabitats = (player: "aurore" | "thomas"): number => {
+    return Object.values(habitatScores[player]).reduce((total, score) => {
+      const partial = score.partial === "" ? 0 : score.partial;
+      const bonus = score.bonus;
+      return total + partial + bonus;
+    }, 0);
+  };
+
+  const handleAnimalScoreChange = (
+    player: "aurore" | "thomas",
+    animalName: string,
+    rawValue: string
+  ) => {
+    // Convert empty string to null, otherwise to number
+    const numericValue = rawValue === "" ? null : Number(rawValue);
+    setAnimalScores((prev) => ({
+      ...prev,
+      [player]: {
+        ...prev[player],
+        [animalName]: numericValue,
+      },
+    }));
+  };
+
+  const handleHabitatScoreChange = (
+    player: "aurore" | "thomas",
+    habitatName: string,
+    rawValue: string
+  ) => {
+    // Convert empty string to null, otherwise to number
+    const numericValue = rawValue === "" ? null : Number(rawValue);
+    setHabitatScores((prev) => {
+      const otherPlayer = player === "aurore" ? "thomas" : "aurore";
+      const otherPlayerPartial =
+        prev[otherPlayer][habitatName].partial === ""
+          ? 0
+          : prev[otherPlayer][habitatName].partial;
+
+      console.log("otherPlayerPartial", otherPlayerPartial);
+
+      let bonus = 0;
+      if (numericValue !== null) {
+        bonus =
+          numericValue > otherPlayerPartial
+            ? 2
+            : otherPlayerPartial === numericValue
+            ? 1
+            : 0;
+      }
+
+      let otherPlayerBonus = 0;
+      if (otherPlayerPartial !== null && numericValue !== null) {
+        otherPlayerBonus =
+          numericValue > otherPlayerPartial
+            ? 0
+            : otherPlayerPartial === numericValue
+            ? 1
+            : 2;
+      }
+
+      return {
+        ...prev,
+        [player]: {
+          ...prev[player],
+          [habitatName]: {
+            partial: numericValue,
+            bonus,
+          },
+        },
+        [otherPlayer]: {
+          ...prev[otherPlayer],
+          [habitatName]: {
+            bonus: otherPlayerBonus,
+          },
+        },
+      };
+    });
+  };
 
   return (
     <>
@@ -73,12 +183,20 @@ function CascadiaScoreDetail() {
           <input
             className="col"
             title={a.name}
+            value={animalScores.aurore[a.name]}
+            onChange={(e) =>
+              handleAnimalScoreChange("aurore", a.name, e.target.value)
+            }
             type="number"
             placeholder="Aurore"
           />
           <input
             className="col"
             title={a.name}
+            value={animalScores.thomas[a.name]}
+            onChange={(e) =>
+              handleAnimalScoreChange("thomas", a.name, e.target.value)
+            }
             type="number"
             placeholder="Thomas"
           />
@@ -86,8 +204,8 @@ function CascadiaScoreDetail() {
       ))}
       <div className="three-columns-icon text-center margin-bottom-10">
         <div className="icon">Animals</div>
-        <div className="col">3</div>
-        <div className="col">4</div>
+        <div className="col">{totalAnimals("aurore")}</div>
+        <div className="col">{totalAnimals("thomas")}</div>
       </div>
 
       {habitats.map((h) => (
@@ -100,33 +218,31 @@ function CascadiaScoreDetail() {
           <input
             className="col-big"
             title={h.name}
+            value={habitatScores.aurore[h.name].partial}
+            onChange={(e) =>
+              handleHabitatScoreChange("aurore", h.name, e.target.value)
+            }
             type="number"
             placeholder="Aur."
           />
-          <input
-            className="col-small"
-            title={h.name}
-            type="number"
-            disabled={true}
-          />
+          <div>{habitatScores.aurore[h.name].bonus}</div>
           <input
             className="col-big"
             title={h.name}
+            value={habitatScores.thomas[h.name].partial}
+            onChange={(e) =>
+              handleHabitatScoreChange("thomas", h.name, e.target.value)
+            }
             type="number"
             placeholder="Tho."
           />
-          <input
-            className="col-small"
-            title={h.name}
-            type="number"
-            disabled={true}
-          />
+          <div>{habitatScores.thomas[h.name].bonus}</div>
         </div>
       ))}
       <div className="three-columns-icon text-center margin-bottom-10">
         <div className="icon">Habitats</div>
-        <div className="col">3</div>
-        <div className="col">4</div>
+        <div className="col">{totalHabitats("aurore")}</div>
+        <div className="col">{totalHabitats("thomas")}</div>
       </div>
       <div className="three-columns-icon">
         <div className="icon">
