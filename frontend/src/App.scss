@@ -286,10 +286,71 @@ $stagger-offset: 50px; // How much to vertically offset the second column
     align-items: center;     /* Vertically center */
   }
 
-  input, select {
-      margin: 15px 0;
-      display: block;
-      width: 100%;
+  form {
+    width: 80%;
+  }
+
+  input,
+  select,
+  .react-datepicker-wrapper {
+    margin: 15px 0;
+    display: block;
+    width: 100%;
+    max-width: none;
+  }
+
+  input:disabled {
+    background-color: white;
+    color: black;
+    font-weight: 800;;
+  }
+
+  .two-columns {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1em;
+    .col {
+      flex-basis: 99%;
+      box-sizing: border-box;
+    }
+  }
+
+  .three-columns-icon {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+    .icon {
+      flex-basis: 20%;
+      box-sizing: border-box;
+    }
+    .col {
+      flex-basis: 35%;
+      box-sizing: border-box;
+    }
+  }
+
+  .five-columns-icon {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+    .icon {
+      flex-basis: 20%;
+      box-sizing: border-box;
+    }
+    .col-big {
+      flex-basis: 20%;
+      box-sizing: border-box;
+    }
+    .col-small {
+      flex-basis: 10%;
+      box-sizing: border-box;
+    }
+
   }
 
   .react-datepicker-wrapper input {
@@ -360,6 +421,9 @@ h1, h2 {
 .margin-bottom-80 {
   margin-bottom: 80px;
 }
+.margin-bottom-10 {
+  margin-bottom: 10px;
+}
 
 .no-data-container {
   margin-left: 50px;
@@ -379,4 +443,24 @@ h1, h2 {
   text-align: center; /* Centers text within each flex item, if needed */
   font-size: 18px;
   color: $orange;
+}
+
+
+.img-circle {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  overflow: hidden;
+  
+  border: 2px solid $orange;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+.text-center {
+  text-align: center;
 }
