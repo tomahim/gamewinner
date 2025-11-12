@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 import {
   collection,
   addDoc,
@@ -17,6 +17,9 @@ import { useGameSessionFromParams } from "../data/GamesListContext";
 import DatePicker from "react-datepicker";
 import DeleteButton from "./forms/DeleteButton";
 import CascadiaScoreDetail from "./CascadiaScoreDetail";
+import { type CascadiaScoreDetailData } from "../types/cascadia";
+
+type ScoreDetail = CascadiaScoreDetailData;
 
 type WinnerType = "Thomas" | "Aurore" | "Tie" | "";
 
@@ -30,15 +33,21 @@ function EditSession() {
   const [scoreThomas, setScoreThomas] = useState<number | "">("");
   const [scoreAurore, setScoreAurore] = useState<number | "">("");
   const [errorMessage, setErrorMessage] = useState<string>("");
+  const [scoreDetail, setScoreDetail] = useState<ScoreDetail | null>(
+    () => session?.scoreDetail ?? null
+  );
 
   // Fill default value when editing
   useEffect(() => {
     if (session) {
-      const { date, scoreThomas, scoreAurore, winner } = session;
+      const { date, scoreThomas, scoreAurore, winner, scoreDetail } = session;
       setSelectedDate(date);
       setScoreThomas(scoreThomas);
       setScoreAurore(scoreAurore);
       setWinner(winner);
+      setScoreDetail(scoreDetail ?? null);
+    } else {
+      setScoreDetail(null);
     }
   }, [session]);
 
@@ -52,6 +61,12 @@ function EditSession() {
       }
     }
   }, [scoreThomas, scoreAurore]);
+
+  const handleScoreDetailChange = useCallback((detail: ScoreDetail) => {
+    setScoreDetail(detail);
+    setScoreAurore(detail.aurore.total);
+    setScoreThomas(detail.thomas.total);
+  }, []);
 
   const handleSave = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -75,13 +90,23 @@ function EditSession() {
 
     if (valid) {
       try {
-        const params = {
+        const params: {
+          game: { id: string | undefined };
+          date: Date;
+          scoreThomas: number;
+          scoreAurore: number;
+          winner: WinnerType;
+          scoreDetail?: ScoreDetail;
+        } = {
           game: { id: gameId },
-          date: selectedDate,
-          scoreThomas,
-          scoreAurore,
-          winner: winner,
+          date: selectedDate as Date,
+          scoreThomas: scoreThomas as number,
+          scoreAurore: scoreAurore as number,
+          winner,
         };
+        if (hasScoreDetail && scoreDetail) {
+          params.scoreDetail = scoreDetail;
+        }
         if (session) {
           const docRef = doc(db, "sessions", session.id);
           await updateDoc(docRef, params);
@@ -125,29 +150,37 @@ function EditSession() {
             selected={selectedDate}
             onChange={(date: Date | null) => setSelectedDate(date)}
           />
-          {game?.name === "Cascadia" && <CascadiaScoreDetail />}
-          <input
-            type="number"
-            placeholder="Aurore's score"
-            value={scoreAurore}
-            disabled={hasScoreDetail}
-            onChange={(e) =>
-              setScoreAurore(
-                e.target.value === "" ? "" : Number(e.target.value)
-              )
-            }
-          />
-          <input
-            type="number"
-            placeholder="Thomas' score"
-            value={scoreThomas}
-            disabled={hasScoreDetail}
-            onChange={(e) =>
-              setScoreThomas(
-                e.target.value === "" ? "" : Number(e.target.value)
-              )
-            }
-          />
+          {game?.name === "Cascadia" && (
+            <CascadiaScoreDetail
+              initialScoreDetail={session?.scoreDetail ?? null}
+              onChange={handleScoreDetailChange}
+            />
+          )}
+          {!hasScoreDetail && (
+            <input
+              type="number"
+              placeholder="Aurore's score"
+              value={scoreAurore}
+              disabled={hasScoreDetail}
+              onChange={(e) =>
+                setScoreAurore(
+                  e.target.value === "" ? "" : Number(e.target.value)
+                )
+              }
+            />
+          )}
+          {!hasScoreDetail && (
+            <input
+              type="number"
+              placeholder="Thomas' score"
+              value={scoreThomas}
+              onChange={(e) =>
+                setScoreThomas(
+                  e.target.value === "" ? "" : Number(e.target.value)
+                )
+              }
+            />
+          )}
           <select
             title="Winner"
             value={winner}
@@ -162,6 +195,9 @@ function EditSession() {
             <option id="Tie">Tie</option>
           </select>
           <FormButton label={session ? "Edit" : "Add"} />
+          <br />
+          <br />
+          <br />
           {session && <DeleteButton onClick={() => handleDelete(session.id)} />}
         </form>
       </div>
