@@ -11,14 +11,15 @@ import humidMeadowIcon from "../assets/cascadia-images/humidMeadow.png";
 import waterIcon from "../assets/cascadia-images/water.png";
 import landscapeIcon from "../assets/cascadia-images/landscapes.png";
 import pineconeIcon from "../assets/cascadia-images/pinecone.png";
-import { type CascadiaScoreDetailData } from "../types/cascadia";
+import {
+  type CascadiaScoreDetailData,
+  type Player,
+} from "../types/scoreDetail";
 
 type HabitatScore = {
   partial: number | "";
   bonus: number;
 };
-
-type Player = "aurore" | "thomas";
 
 type CascadiaScoreDetailProps = {
   initialScoreDetail?: CascadiaScoreDetailData | null;

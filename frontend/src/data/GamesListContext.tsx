@@ -2,7 +2,10 @@ import React, { createContext, useContext, useState, useEffect } from "react";
 import { db, auth } from "../firebase.config"; // Adjust the import based on your Firebase setup
 import { getDocs, collection } from "firebase/firestore";
 import { useParams } from "react-router-dom";
-import { type CascadiaScoreDetailData } from "../types/cascadia";
+import {
+  type CascadiaScoreDetailData,
+  type WingspanScoreDetailData,
+} from "../types/scoreDetail";
 
 interface GameAttributes {
   id: string;
@@ -17,7 +20,7 @@ export interface GameSession {
   scoreAurore: number;
   scoreThomas: number;
   winner: "Thomas" | "Aurore";
-  scoreDetail?: CascadiaScoreDetailData | null;
+  scoreDetail?: CascadiaScoreDetailData | WingspanScoreDetailData | null;
 }
 
 export interface ScoreStats {

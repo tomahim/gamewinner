@@ -17,9 +17,13 @@ import { useGameSessionFromParams } from "../data/GamesListContext";
 import DatePicker from "react-datepicker";
 import DeleteButton from "./forms/DeleteButton";
 import CascadiaScoreDetail from "./CascadiaScoreDetail";
-import { type CascadiaScoreDetailData } from "../types/cascadia";
+import {
+  type CascadiaScoreDetailData,
+  type WingspanScoreDetailData,
+} from "../types/scoreDetail";
+import WingspanScoreDetail from "./WingspanScoreDetail";
 
-type ScoreDetail = CascadiaScoreDetailData;
+type ScoreDetail = CascadiaScoreDetailData | WingspanScoreDetailData;
 
 type WinnerType = "Thomas" | "Aurore" | "Tie" | "";
 
@@ -132,7 +136,7 @@ function EditSession() {
     }
   };
 
-  const hasScoreDetail = game?.name === "Cascadia";
+  const hasScoreDetail = game?.name === "Cascadia" || game?.name === "Wingspan";
 
   if (loading) return <Loader />;
 
@@ -152,7 +156,19 @@ function EditSession() {
           />
           {game?.name === "Cascadia" && (
             <CascadiaScoreDetail
-              initialScoreDetail={session?.scoreDetail ?? null}
+              initialScoreDetail={
+                (session?.scoreDetail as unknown as CascadiaScoreDetailData) ??
+                null
+              }
+              onChange={handleScoreDetailChange}
+            />
+          )}
+          {game?.name === "Wingspan" && (
+            <WingspanScoreDetail
+              initialScoreDetail={
+                (session?.scoreDetail as unknown as WingspanScoreDetailData) ??
+                null
+              }
               onChange={handleScoreDetailChange}
             />
           )}
