@@ -1,0 +1,24 @@
+{
+  "pCxNCw7f4cKPPxb7YboK": {
+    "animals.bear": "Animals - Bear",
+    "animals.wapiti": "Animals - Wapiti",
+    "animals.salmon": "Animals - Salmon",
+    "animals.hawk": "Animals - Hawk",
+    "animals.fox": "Animals - Fox",
+    "habitats.mountain": "Habitats - Mountain",
+    "habitats.forest": "Habitats - Forest",
+    "habitats.dryMeadow": "Habitats - Dry Meadow",
+    "habitats.humidMeadow": "Habitats - Humid Meadow",
+    "habitats.water": "Habitats - Water",
+    "pinecone": "Pinecones",
+    "landscape": "Landscape"
+  },
+  "jjX3x6PehqgBO7NcLMpy": {
+    "birds": "Birds Played",
+    "bonusCards": "Bonus Cards",
+    "roundObjectives": "Round Objectives",
+    "eggs": "Eggs",
+    "storedFood": "Stored Food",
+    "coveredCards": "Covered Cards"
+  }
+}

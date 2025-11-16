@@ -1,4 +1,5 @@
 import { useEffect, useMemo, useRef, useState } from "react";
+import type { ReactNode } from "react";
 import * as d3 from "d3";
 import type { GameSession } from "../data/GamesListContext";
 import "./ScoreEvolutionChart.scss";
@@ -25,6 +26,7 @@ type EvolutionChartProps = {
   emptyMessage: string;
   yTickFormat?: (value: number) => string;
   controlIdPrefix?: string;
+  extraControls?: ReactNode;
 };
 
 const DEFAULT_TICK_FORMATTER = (value: number) => value.toString();
@@ -37,6 +39,7 @@ function EvolutionChart({
   emptyMessage,
   yTickFormat,
   controlIdPrefix = "evolution",
+  extraControls,
 }: EvolutionChartProps) {
   const svgRef = useRef<SVGSVGElement | null>(null);
   const tooltipRef = useRef<HTMLDivElement | null>(null);
@@ -336,77 +339,78 @@ function EvolutionChart({
     };
   }, [data, selectedYear, tickFormatter, tooltipFormatter]);
 
-  return (
-    <div className="score-evolution-chart">
-      <div
-        ref={tooltipRef}
-        className="score-tooltip"
-        role="status"
-        aria-live="polite"
-      />
-      <div className="chart-controls">
-        <label htmlFor={`${controlIdPrefix}-year-filter`} className="sr-only">
-          Filter sessions by year
-        </label>
-        <select
-          id={`${controlIdPrefix}-year-filter`}
-          value={selectedYear}
-          onChange={(event) => {
-            const value = event.target.value;
-            setSelectedYear(value === "all" ? "all" : parseInt(value, 10));
-          }}
-        >
-          <option value="all">All years</option>
-          {years.map((year) => (
-            <option key={year} value={year}>
-              {year}
-            </option>
-          ))}
-        </select>
+    return (
+      <div className="score-evolution-chart">
+        <div
+          ref={tooltipRef}
+          className="score-tooltip"
+          role="status"
+          aria-live="polite"
+        />
+        <div className="chart-controls">
+          <label htmlFor={`${controlIdPrefix}-year-filter`} className="sr-only">
+            Filter sessions by year
+          </label>
+          <select
+            id={`${controlIdPrefix}-year-filter`}
+            value={selectedYear}
+            onChange={(event) => {
+              const value = event.target.value;
+              setSelectedYear(value === "all" ? "all" : parseInt(value, 10));
+            }}
+          >
+            <option value="all">All years</option>
+            {years.map((year) => (
+              <option key={year} value={year}>
+                {year}
+              </option>
+            ))}
+          </select>
 
-        {selectedYear !== "all" && (
+          {selectedYear !== "all" && (
+            <>
+              <label
+                htmlFor={`${controlIdPrefix}-period-filter`}
+                className="sr-only"
+              >
+                Filter sessions by semester
+              </label>
+              <select
+                id={`${controlIdPrefix}-period-filter`}
+                value={selectedPeriod}
+                onChange={(event) => {
+                  const value = event.target.value as "none" | "first" | "last";
+                  setSelectedPeriod(value);
+                }}
+              >
+                <option value="none">Zoom on period</option>
+                <option value="first">First 6 months</option>
+                <option value="last">Last 6 months</option>
+              </select>
+            </>
+          )}
+          {extraControls}
+        </div>
+
+        {data.length === 0 ? (
+          <div className="no-data">{emptyMessage}</div>
+        ) : (
           <>
-            <label
-              htmlFor={`${controlIdPrefix}-period-filter`}
-              className="sr-only"
-            >
-              Filter sessions by semester
-            </label>
-            <select
-              id={`${controlIdPrefix}-period-filter`}
-              value={selectedPeriod}
-              onChange={(event) => {
-                const value = event.target.value as "none" | "first" | "last";
-                setSelectedPeriod(value);
-              }}
-            >
-              <option value="none">Zoom on period</option>
-              <option value="first">First 6 months</option>
-              <option value="last">Last 6 months</option>
-            </select>
+            <svg ref={svgRef} className="chart" aria-label={ariaLabel} />
+            <div className="legend" aria-hidden>
+              <div className="legend-item">
+                <span className="legend-swatch thomas" />
+                <span>Thomas</span>
+              </div>
+              <div className="legend-item">
+                <span className="legend-swatch aurore" />
+                <span>Aurore</span>
+              </div>
+            </div>
           </>
         )}
       </div>
-
-      {data.length === 0 ? (
-        <div className="no-data">{emptyMessage}</div>
-      ) : (
-        <>
-          <svg ref={svgRef} className="chart" aria-label={ariaLabel} />
-          <div className="legend" aria-hidden>
-            <div className="legend-item">
-              <span className="legend-swatch thomas" />
-              <span>Thomas</span>
-            </div>
-            <div className="legend-item">
-              <span className="legend-swatch aurore" />
-              <span>Aurore</span>
-            </div>
-          </div>
-        </>
-      )}
-    </div>
-  );
+    );
 }
 
 export default EvolutionChart;

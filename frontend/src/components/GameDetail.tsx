@@ -105,13 +105,13 @@ function GameDetail() {
         >
           {chartView === "score" ? "Wins evolution" : "Score evolution"}
         </button>
-      </div>
+        </div>
 
-      {chartView === "score" ? (
-        <ScoreEvolutionChart sessions={game.sessions} />
-      ) : (
-        <WinsEvolutionChart sessions={game.sessions} />
-      )}
+        {chartView === "score" ? (
+          <ScoreEvolutionChart sessions={game.sessions} gameId={id} />
+        ) : (
+          <WinsEvolutionChart sessions={game.sessions} />
+        )}
 
       <h2 tabIndex={-1}>Scores Aurore</h2>
 
