@@ -1,0 +1,5744 @@
+79 % de l'espace de stockage utilisés … Une fois la limite atteinte, vous ne pourrez plus créer, modifier ni importer de fichiers. Profitez de 200 Go pour 2,99 €/mois.
+{
+  "games": {
+    "1NCYPK4DJ1Z5x5ISq2TW": {
+      "imageUrl": "https://cf.geekdo-images.com/u1cwi9BWSKsPxSkVO0BzbA__itemrep@2x/img/VV2_TwOzKj4Cy0v_y7TH6PwzDPs=/fit-in/492x600/filters:strip_icc()/pic7570101.png",
+      "name": "Faraway"
+    },
+    "4XxtQnIpjIljldNJryUx": {
+      "imageUrl": "https://raw.githubusercontent.com/tomahim/gamewinner/refs/heads/master/frontend/src/assets/putz.jpeg",
+      "name": "Putz"
+    },
+    "6DnRt0EXuZYFq81YFZAP": {
+      "name": "Scrabble",
+      "imageUrl": "https://raw.githubusercontent.com/tomahim/gamewinner/refs/heads/master/frontend/src/assets/scrabble.jpeg"
+    },
+    "8CpHoOHXik80Yg93TTOm": {
+      "name": "Dice Forge",
+      "imageUrl": "https://cf.geekdo-images.com/4BTVGQWO0M9ayxyku3FW6Q__itemrep@2x/img/lMwqGXPtIKvdbdG1DaG17jFxFbE=/fit-in/492x600/filters:strip_icc()/pic3477004.jpg"
+    },
+    "AMo9lEANlAFqmhFcRffB": {
+      "imageUrl": "https://cf.geekdo-images.com/RDOwMRBnIb3Ehl6GyXj9xg__itemrep@2x/img/79UbTgzL4k-6DT3MGMA7i5_VVmQ=/fit-in/492x600/filters:strip_icc()/pic8669620.jpg",
+      "name": "Patchwork"
+    },
+    "Fvn5TS23SZKDqClmtJJS": {
+      "imageUrl": "https://assets.2k.com/1a6ngf98576c/4oCqsi6G8MfDjHKhjhBtrP/d43164117e00d78c0cf85dfafeb3b906/NBA23-WEBSITE-ATHLETE_HUB-MODULE1-STD_THUMBNAIL-828x828.jpg",
+      "name": "NBA"
+    },
+    "IDYkWZHmvL9iSF085Oge": {
+      "imageUrl": "https://cf.geekdo-images.com/8SdHEMhje07oT9_AlqmGPg__itemrep@2x/img/C4xtEG-yeWtbwBQdCsqzXu8kxJc=/fit-in/492x600/filters:strip_icc()/pic7963549.jpg",
+      "name": "Looot"
+    },
+    "Ikv3JgNh5evoo2DoqQw3": {
+      "imageUrl": "https://raw.githubusercontent.com/tomahim/gamewinner/refs/heads/master/frontend/src/assets/pingpong.jpeg",
+      "name": "Ping Pong"
+    },
+    "LDquLBhkUIQJn3n4QDPo": {
+      "name": "Cartes retournées",
+      "imageUrl": "https://raw.githubusercontent.com/tomahim/gamewinner/refs/heads/master/frontend/src/assets/carteretournee.jpeg"
+    },
+    "LH9rn42sHWEeyfYk5kWI": {
+      "imageUrl": "https://cf.geekdo-images.com/ECS_IOr5UDpwXRZZO37KMg__itemrep@2x/img/AXh0771bVKzRtV_ElkS3L949WcY=/fit-in/492x600/filters:strip_icc()/pic4093955.jpg",
+      "name": "Kero"
+    },
+    "NDjXY0P8WKkn6sUbiebL": {
+      "name": "Kiwara",
+      "imageUrl": "https://cf.geekdo-images.com/rHf6twEu4dUPaTw2VBhMOw__itemrep@2x/img/mEqKaH4oyNAcFwVs136hc1JzGOA=/fit-in/492x600/filters:strip_icc()/pic3870199.jpg"
+    },
+    "TMyC199vMwoE0U3jnGXy": {
+      "name": "Hiroba",
+      "imageUrl": "https://cf.geekdo-images.com/oNDcvJ-3FephA2GUOPZOvg__itemrep@2x/img/ZaDA9fasJUOBPc_MSeXakkC5nVA=/fit-in/492x600/filters:strip_icc()/pic6698421.jpg"
+    },
+    "TpX9nE0gqwq7HpkfVYYs": {
+      "name": "Billard",
+      "imageUrl": "https://raw.githubusercontent.com/tomahim/gamewinner/refs/heads/master/frontend/src/assets/billard.jpeg"
+    },
+    "aESwYrxGgMpY6ntgUKuj": {
+      "name": "CuBirds",
+      "imageUrl": "https://cf.geekdo-images.com/FDBUwGFBkniyl8q4Alvq8A__itemrep@2x/img/TW5LsqId_pViCbpPNAq_7KeLSAY=/fit-in/492x600/filters:strip_icc()/pic7491534.jpg"
+    },
+    "ety9rnsGuLDSlpVPvErU": {
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/en/0/0a/NHL-23-Cover.jpg",
+      "name": "NHL"
+    },
+    "gieW6aYQBaVLr1XNIv9n": {
+      "imageUrl": "https://cf.geekdo-images.com/mF2cSNRk2O6HtE45Sl9TcA__itemrep@2x/img/dWnVJtUVqMkUpp-NelP0ww1Fit8=/fit-in/492x600/filters:strip_icc()/pic4852372.jpg",
+      "name": "Parks"
+    },
+    "hcliaSURVnnZLOIA21hi": {
+      "name": "Boreal",
+      "imageUrl": "https://cf.geekdo-images.com/OiTPkkZeO5rQ4iykJBQGuQ__itemrep@2x/img/w0aVD_tKZqUc19ySq225lDvzIVQ=/fit-in/492x600/filters:strip_icc()/pic7950668.jpg"
+    },
+    "hnKfFP3Ai1AkpsDcmBYx": {
+      "name": "Mario Kart",
+      "imageUrl": "https://auixaysgjr.cloudimg.io/https://cdn.easycash.fr/img/prod/0/0/2/0/3/0/0/9/5/src/71R2CYY5iiL._AC_SL1500_.jpg?ci_sign=f90f142953bc14fb077bcb68a3b11b8664388ed5"
+    },
+    "jWINVO317Z8Hzxoxz1Jg": {
+      "name": "Schotten Totten",
+      "imageUrl": "https://cf.geekdo-images.com/69mwXe7c6HNYmT6S35Y4zg__itemrep@2x/img/HO0d0QqqL0uIalDbvOU2Hu5G6nE=/fit-in/492x600/filters:strip_icc()/pic2932872.jpg"
+    },
+    "jjX3x6PehqgBO7NcLMpy": {
+      "name": "Wingspan",
+      "imageUrl": "https://cf.geekdo-images.com/yLZJCVLlIx4c7eJEWUNJ7w__itemrep/img/DR7181wU4sHT6gn6Q1XccpPxNHg=/fit-in/246x300/filters:strip_icc()/pic4458123.jpg"
+    },
+    "pCxNCw7f4cKPPxb7YboK": {
+      "imageUrl": "https://cf.geekdo-images.com/MjeJZfulbsM1DSV3DrGJYA__imagepage/img/0ksox22FKLq-Z-rsbBlF2IDG9x0=/fit-in/900x600/filters:no_upscale():strip_icc()/pic5100691.jpg",
+      "name": "Cascadia"
+    },
+    "qkYv2YmspSURUH5KMQon": {
+      "name": "Azul",
+      "imageUrl": "https://cf.geekdo-images.com/aPSHJO0d0XOpQR5X-wJonw__itemrep@2x/img/PH6uta5QGxUHg7aZ609yifJQrhY=/fit-in/492x600/filters:strip_icc()/pic6973671.png"
+    },
+    "uAfauK7goJWgg6Lhn8Mm": {
+      "name": "Living Forest",
+      "imageUrl": "https://cf.geekdo-images.com/fPhdfZX9UTLr4-SVgK0zoQ__itemrep@2x/img/kiV6QoOhk-ae2Nv28OTpWQywbUg=/fit-in/492x600/filters:strip_icc()/pic5899025.jpg"
+    },
+    "y0aNNuR2dZp2HRDHcH2m": {
+      "name": "Skyjo",
+      "imageUrl": "https://cf.geekdo-images.com/NMNeoJY6aU6C2EJz67YEfA__itemrep@2x/img/20BOisNKi9A7FIAUrCO6NyIDJrc=/fit-in/492x600/filters:strip_icc()/pic4559127.jpg"
+    }
+  },
+  "sessions": {
+    "0DMUkP1UlIFQ5JHJzg06": {
+      "game": {
+        "id": "pCxNCw7f4cKPPxb7YboK"
+      },
+      "date": {
+        "type": "firestore/timestamp/1.0",
+        "seconds": 1682460000,
+        "nanoseconds": 0
+      },
+      "winner": "Aurore",
+      "scoreThomas": 90,
+      "scoreAurore": 92
+    },
+    "0N2UyHC7P1ItO6JoQCRx": {
+      "scoreThomas": 2,
+      "date": {
+        "type": "firestore/timestamp/1.0",
+        "seconds": 1700521200,
+        "nanoseconds": 0
+      },
+      "winner": "Aurore",
+      "game": {
+        "id": "aESwYrxGgMpY6ntgUKuj"
+      },
+      "scoreAurore": 7
+    },
+    "0OSl1e1cQfU4AchZsWxU": {
+      "scoreThomas": 70,
+      "date": {
+        "type": "firestore/timestamp/1.0",
+        "seconds": 1709506800,
+        "nanoseconds": 0
+      },
+      "game": {
+        "id": "1NCYPK4DJ1Z5x5ISq2TW"
+      },
+      "scoreAurore": 103,
+      "winner": "Aurore"
+    },
+    "0OTynKPc3UUDM0dl79n2": {
+      "date": {
+        "type": "firestore/timestamp/1.0",
+        "seconds": 1675206000,
+        "nanoseconds": 0
+      },
+      "scoreThomas": 25,
+      "scoreAurore": 30,
+      "winner": "Aurore",
+      "game": {
+        "id": "AMo9lEANlAFqmhFcRffB"
+      }
+    },
+    "0SCp9ZiRcPEUX0NVKHmJ": {
+      "scoreAurore": 106,
+      "game": {
+        "id": "pCxNCw7f4cKPPxb7YboK"
+      },
+      "scoreThomas": 94,
+      "winner": "Aurore",
+      "date": {
+        "type": "firestore/timestamp/1.0",
+        "seconds": 1692050400,
+        "nanoseconds": 0
+      }
+    },
+    "0SwpTgX4oT45WZr0DbHp": {
+      "winner": "Aurore",
+      "scoreThomas": 0,
+      "game": {
+        "id": "uAfauK7goJWgg6Lhn8Mm"
+      },
+      "date": {
+        "type": "firestore/timestamp/1.0",
+        "seconds": 1720994400,
+        "nanoseconds": 0
+      },
+      "scoreAurore": 13
+    },
+    "0WZZ2bipRhbyEMcVbTBi": {
+      "game": {
+        "id": "pCxNCw7f4cKPPxb7YboK"
+      },
+      "scoreAurore": 87,
+      "winner": "Thomas",
+      "scoreThomas": 91,
+      "date": {
+        "type": "firestore/timestamp/1.0",
+        "seconds": 1691445600,
+        "nanoseconds": 0
+      }
+    },
+    "0YJJoe4Xm77iv4PShACi": {
+      "scoreThomas": -3,
+      "winner": "Aurore",
+      "scoreAurore": 31,
+      "game": {
+        "id": "AMo9lEANlAFqmhFcRffB"
+      },
+      "date": {
+        "type": "firestore/timestamp/1.0",
+        "seconds": 1676329200,
+        "nanoseconds": 0
+      }
+    },
+    "0mMsOzd078so8cZzelXj": {
+      "winner": "Aurore",
+      "game": {
+        "id": "y0aNNuR2dZp2HRDHcH2m"
+      },
+      "date": {
+        "type": "firestore/timestamp/1.0",
+        "seconds": 1734649200,
+        "nanoseconds": 0
+      },
+      "scoreThomas": 21,
+      "scoreAurore": 135
+    },
+    "0ud883CUJVH1RyHKUx5y": {
+      "date": {
+        "type": "firestore/timestamp/1.0",
+        "seconds": 1697925600,
+        "nanoseconds": 0
+      },
+      "game": {
+        "id": "pCxNCw7f4cKPPxb7YboK"
+      },
+      "winner": "Thomas",
+      "scoreThomas": 102,
+      "scoreAurore": 99
+    },
+    "1Jrq0XseRgeekePOHLkC": {
+      "date": {
+        "type": "firestore/timestamp/1.0",
+        "seconds": 1689285600,
+        "nanoseconds": 0
+      },
+      "game": {
+        "id": "Fvn5TS23SZKDqClmtJJS"
+      },
+      "winner": "Thomas",
+      "scoreThomas": 92,
+      "scoreAurore": 101
+    },
+    "1YtgPgr304STOOp6BjAU": {
+      "winner": "Aurore",
+      "game": {
+        "id": "pCxNCw7f4cKPPxb7YboK"
+      },
+      "date": {
+        "type": "firestore/timestamp/1.0",
+        "seconds": 1732316400,
+        "nanoseconds": 0
+      },
+      "scoreAurore": 122,
+      "scoreThomas": 110
+    },
+    "1d668fPUWPYgFszg7xxB": {
+      "date": {
+        "type": "firestore/timestamp/1.0",
+        "seconds": 1734303600,
+        "nanoseconds": 0
+      },
+      "scoreThomas": 5,
+      "winner": "Aurore",
+      "game": {
+        "id": "AMo9lEANlAFqmhFcRffB"
+      },
+      "scoreAurore": 24
+    },
+    "1i2rbEBsPYvV4RbXKc7X": {
+      "game": {
+        "id": "pCxNCw7f4cKPPxb7YboK"
+      },
+      "winner": "Aurore",
+      "date": {
+        "type": "firestore/timestamp/1.0",
+        "seconds": 1698879600,
+        "nanoseconds": 0
+      },
+      "scoreAurore": 114,
+      "scoreThomas": 104
+    },
+    "1rivoRYabl9Oes6GmGwD": {
+      "game": {
+        "id": "y0aNNuR2dZp2HRDHcH2m"
+      },
+      "scoreThomas": 106,
+      "scoreAurore": 65,
+      "date": {
+        "type": "firestore/timestamp/1.0",
+        "seconds": 1698706800,
+        "nanoseconds": 0
+      },
+      "winner": "Aurore"
+    },
+    "1xZK6QBzHXbpezltvTxe": {
+      "date": {
+        "type": "firestore/timestamp/1.0",
+        "seconds": 1713045600,
+        "nanoseconds": 0
+      },
+      "winner": "Aurore",
+      "scoreAurore": 111,
+      "scoreThomas": 105,
+      "game": {
+        "id": "1NCYPK4DJ1Z5x5ISq2TW"
+      }
+    },
+    "1xzRsORERHnv9hnoFB3v": {
+      "winner": "Aurore",
+      "date": {
+        "type": "firestore/timestamp/1.0",
+        "seconds": 1707087600,
+        "nanoseconds": 0
+      },
+      "game": {
+        "id": "pCxNCw7f4cKPPxb7YboK"
+      },
+      "scoreAurore": 108,
+      "scoreThomas": 83
+    },
+    "1ysgeQRasInLCfZlCI6K": {
+      "game": {
+        "id": "y0aNNuR2dZp2HRDHcH2m"
+      },
+      "date": {
+        "type": "firestore/timestamp/1.0",
+        "seconds": 1691359200,
+        "nanoseconds": 0
+      },
+      "winner": "Aurore",
+      "scoreThomas": 111,
+      "scoreAurore": 42
+    },
+    "20YCYPsEjdQx7V80Ydk0": {
+      "date": {
+        "type": "firestore/timestamp/1.0",
+        "seconds": 1689717600,
+        "nanoseconds": 0
+      },
+      "scoreThomas": 98,
+      "winner": "Aurore",
+      "scoreAurore": 107,
+      "game": {
+        "id": "pCxNCw7f4cKPPxb7YboK"
+      }
+    },
+    "2EI0lQ0ujx6onXcjFi2f": {
+      "game": {
+        "id": "aESwYrxGgMpY6ntgUKuj"
+      },
+      "winner": "Aurore",
+      "date": {
+        "type": "firestore/timestamp/1.0",
+        "seconds": 1683237600,
+        "nanoseconds": 0
+      },
+      "scoreThomas": 4,
+      "scoreAurore": 6
+    },
+    "2G5de2KpYypT3S0Z4oRO": {
+      "scoreThomas": 129,
+      "scoreAurore": 61,
+      "game": {
+        "id": "y0aNNuR2dZp2HRDHcH2m"
+      },
+      "date": {
+        "type": "firestore/timestamp/1.0",
+        "seconds": 1704582000,
+        "nanoseconds": 0
+      },
+      "winner": "Aurore"
+    },
+    "2VlB3NAi04Cn4IvfwKIc": {
+      "scoreThomas": 106,
+      "date": {
+        "type": "firestore/timestamp/1.0",
+        "seconds": 1699138800,
+        "nanoseconds": 0
+      },
+      "game": {
+        "id": "y0aNNuR2dZp2HRDHcH2m"
+      },
+      "scoreAurore": 26,
+      "winner": "Aurore"
+    },
+    "2b3fDahjLixD6TuwWKJO": {
+      "scoreThomas": 108,
+      "date": {
+        "type": "firestore/timestamp/1.0",
+        "seconds": 1719698400,
+        "nanoseconds": 0
+      },
+      "winner": "Aurore",
+      "game": {
+        "id": "y0aNNuR2dZp2HRDHcH2m"
+      },
+      "scoreAurore": 60
+    },
+    "2sTqlTpGZ1j1IhGt7ExG": {
+      "scoreAurore": 5,
+      "winner": "Aurore",
+      "date": {
+        "type": "firestore/timestamp/1.0",
+        "seconds": 1747432800,
+        "nanoseconds": 0
+      },
+      "game": {
+        "id": "4XxtQnIpjIljldNJryUx"
+      },
+      "scoreThomas": 2
+    },
+    "2t9ZN9qrfb51tEOXL3jE": {
+      "scoreAurore": 42,
+      "winner": "Aurore",
+      "date": {
+        "type": "firestore/timestamp/1.0",
+        "seconds": 1697407200,
+        "nanoseconds": 0
+      },
+      "scoreThomas": 113,
+      "game": {
+        "id": "y0aNNuR2dZp2HRDHcH2m"
+      }
+    },
+    "3KYxSTW0BEeSOrz9dYLU": {
+      "winner": "Aurore",
+      "game": {
+        "id": "y0aNNuR2dZp2HRDHcH2m"
+      },
+      "scoreThomas": 114,
+      "date": {
+        "type": "firestore/timestamp/1.0",
+        "seconds": 1688421600,
+        "nanoseconds": 0
+      },
+      "scoreAurore": 83
+    },
+    "3izqAnZkAUYrNdHhkkXw": {
+      "scoreAurore": 103,
+      "game": {
+        "id": "1NCYPK4DJ1Z5x5ISq2TW"
+      },
+      "date": {
+        "type": "firestore/timestamp/1.0",
+        "seconds": 1717020000,
+        "nanoseconds": 0
+      },
+      "winner": "Aurore",
+      "scoreThomas": 102
+    },
+    "3osiQ5ANYshWgCGioNvT": {
+      "date": {
+        "type": "firestore/timestamp/1.0",
+        "seconds": 1732575600,
+        "nanoseconds": 0
+      },
+      "scoreAurore": 123,
+      "winner": "Aurore",
+      "game": {
+        "id": "pCxNCw7f4cKPPxb7YboK"
+      },
+      "scoreThomas": 99
+    },
+    "3uM1qlUaPJ1ij1xEpcQI": {
+      "scoreAurore": 104,
+      "date": {
+        "type": "firestore/timestamp/1.0",
+        "seconds": 1699052400,
+        "nanoseconds": 0
+      },
+      "scoreThomas": 99,
+      "game": {
+        "id": "pCxNCw7f4cKPPxb7YboK"
+      },
+      "winner": "Aurore"
+    },
+    "3x6RbcMr3A1pGIEdoqNh": {
+      "winner": "Aurore",
+      "date": {
+        "type": "firestore/timestamp/1.0",
+        "seconds": 1684015200,
+        "nanoseconds": 0
+      },
+      "scoreThomas": 97,
+      "scoreAurore": 99,
+      "game": {
+        "id": "pCxNCw7f4cKPPxb7YboK"
+      }
+    },
+    "44gYq1hqJs2ZAnd9KMSg": {
+      "game": {
+        "id": "pCxNCw7f4cKPPxb7YboK"
+      },
+      "scoreAurore": 111,
+      "scoreThomas": 96,
+      "winner": "Thomas",
+      "date": {
+        "type": "firestore/timestamp/1.0",
+        "seconds": 1739055600,
+        "nanoseconds": 0
+      }
+    },
+    "4530BzpRtTh1uXHcYFuS": {
+      "scoreThomas": 98,
+      "date": {
+        "type": "firestore/timestamp/1.0",
+        "seconds": 1718575200,
+        "nanoseconds": 0
+      },
+      "winner": "Aurore",
+      "scoreAurore": 102,
+      "game": {
+        "id": "pCxNCw7f4cKPPxb7YboK"
+      }
+    },
+    "45u6s7tzM4ZUz7MuDnoS": {
+      "winner": "Aurore",
+      "scoreAurore": 25,
+      "date": {
+        "type": "firestore/timestamp/1.0",
+        "seconds": 1757023200,
+        "nanoseconds": 0
+      },
+      "game": {
+        "id": "AMo9lEANlAFqmhFcRffB"
+      },
+      "scoreThomas": 23
+    },
+    "482g5DMV5hoR9w6iLgKt": {
+      "scoreAurore": 5,
+      "game": {
+        "id": "4XxtQnIpjIljldNJryUx"
+      },
+      "date": {
+        "type": "firestore/timestamp/1.0",
+        "seconds": 1747260000,
+        "nanoseconds": 0
+      },
+      "winner": "Aurore",
+      "scoreThomas": 4
+    },
+    "4H8fZ6ynVXq0GlVWrvT4": {
+      "scoreAurore": 93,
+      "winner": "Thomas",
+      "scoreThomas": 96,
+      "date": {
+        "type": "firestore/timestamp/1.0",
+        "seconds": 1718575200,
+        "nanoseconds": 0
+      },
+      "game": {
+        "id": "pCxNCw7f4cKPPxb7YboK"
+      }
+    },
+    "4RM9UoerCYdwC4BVFWRg": {
+      "scoreAurore": 6,
+      "date": {
+        "type": "firestore/timestamp/1.0",
+        "seconds": 1691445600,
+        "nanoseconds": 0
+      },
+      "winner": "Thomas",
+      "scoreThomas": 7,
+      "game": {
+        "id": "aESwYrxGgMpY6ntgUKuj"
+      }
+    },
+    "4SBhKRU9CaWDSybSk0aU": {
+      "scoreThomas": 4,
+      "game": {
+        "id": "aESwYrxGgMpY6ntgUKuj"
+      },
+      "scoreAurore": 8,
+      "date": {
+        "type": "firestore/timestamp/1.0",
+        "seconds": 1678575600,
+        "nanoseconds": 0
+      },
+      "winner": "Aurore"
+    },
+    "4TJ4SouTokDWe0zvclE4": {
+      "game": {
+        "id": "pCxNCw7f4cKPPxb7YboK"
+      },
+      "date": {
+        "type": "firestore/timestamp/1.0",
+        "seconds": 1709852400,
+        "nanoseconds": 0
+      },
+      "scoreAurore": 102,
+      "winner": "Thomas",
+      "scoreThomas": 104
+    },
+    "4lJyjQ2vfWmToAVk2L5y": {
+      "date": {
+        "type": "firestore/timestamp/1.0",
+        "seconds": 1672527600,
+        "nanoseconds": 0
+      },
+      "scoreThomas": 7,
+      "game": {
+        "id": "aESwYrxGgMpY6ntgUKuj"
+      },
+      "scoreAurore": 6,
+      "winner": "Thomas"
+    },
+    "4sE4QZ4loTfNWP067hVC": {
+      "scoreThomas": 36,
+      "scoreAurore": 33,
+      "game": {
+        "id": "hnKfFP3Ai1AkpsDcmBYx"
+      },
+      "date": {
+        "type": "firestore/timestamp/1.0",
+        "seconds": 1700262000,
+        "nanoseconds": 0
+      },
+      "winner": "Thomas"
+    },
+    "4zpxShySuIrmyQ0ao0VP": {
+      "scoreAurore": 41,
+      "winner": "Aurore",
+      "date": {
+        "type": "firestore/timestamp/1.0",
+        "seconds": 1696024800,
+        "nanoseconds": 0
+      },
+      "scoreThomas": 34,
+      "game": {
+        "id": "hnKfFP3Ai1AkpsDcmBYx"
+      }
+    },
+    "57xnA2amzmdJl2MVtkep": {
+      "game": {
+        "id": "pCxNCw7f4cKPPxb7YboK"
+      },
+      "scoreAurore": 106,
+      "date": {
+        "type": "firestore/timestamp/1.0",
+        "seconds": 1726610400,
+        "nanoseconds": 0
+      },
+      "winner": "Aurore",
+      "scoreThomas": 88
+    },
+    "5DpSyW8y9SmCvoYN6pSg": {
+      "game": {
+        "id": "ety9rnsGuLDSlpVPvErU"
+      },
+      "scoreThomas": 1,
+      "date": {
+        "type": "firestore/timestamp/1.0",
+        "seconds": 1734044400,
+        "nanoseconds": 0
+      },
+      "scoreAurore": 3,
+      "winner": "Aurore"
+    },
+    "5Tbze5hY94feQYYDgz1n": {
+      "game": {
+        "id": "uAfauK7goJWgg6Lhn8Mm"
+      },
+      "date": {
+        "type": "firestore/timestamp/1.0",
+        "seconds": 1720994400,
+        "nanoseconds": 0
+      },
+      "scoreThomas": 0,
+      "scoreAurore": 13,
+      "winner": "Aurore"
+    },
+    "5gKNXpgxXqsPb9qNOcni": {
+      "scoreThomas": 6,
+      "winner": "Thomas",
+      "scoreAurore": 5,
+      "date": {
+        "type": "firestore/timestamp/1.0",
+        "seconds": 1678834800,
+        "nanoseconds": 0
+      },
+      "game": {
+        "id": "aESwYrxGgMpY6ntgUKuj"
+      }
+    },
+    "5xYuCXLJf13rAO3DV3vU": {
+      "game": {
+        "id": "TMyC199vMwoE0U3jnGXy"
+      },
+      "scoreThomas": 44,
+      "date": {
+        "type": "firestore/timestamp/1.0",
+        "seconds": 1707519600,
+        "nanoseconds": 0
+      },
+      "winner": "Thomas",
+      "scoreAurore": 37
+    },
+    "5yHa3hMPkvm1RHvuGSH6": {
+      "winner": "Thomas",
+      "scoreAurore": 111,
+      "scoreThomas": 118,
+      "date": {
+        "type": "firestore/timestamp/1.0",
+        "seconds": 1706569200,
+        "nanoseconds": 0
+      },
+      "game": {
+        "id": "1NCYPK4DJ1Z5x5ISq2TW"
+      }
+    },
+    "5zXRLDRdsnBiWxeQtqVA": {
+      "winner": "Aurore",
+      "scoreThomas": 94,
+      "scoreAurore": 105,
+      "game": {
+        "id": "pCxNCw7f4cKPPxb7YboK"
+      },
+      "date": {
+        "type": "firestore/timestamp/1.0",
+        "seconds": 1728943200,
+        "nanoseconds": 0
+      }
+    },
+    "6KXJprwvfpkyr92S91zT": {
+      "scoreAurore": 122,
+      "date": {
+        "type": "firestore/timestamp/1.0",
+        "seconds": 1732143600,
+        "nanoseconds": 0
+      },
+      "scoreThomas": 94,
+      "winner": "Aurore",
+      "game": {
+        "id": "pCxNCw7f4cKPPxb7YboK"
+      }
+    },
+    "6OFsb91RPoFUxk0O56XT": {
+      "scoreAurore": 27,
+      "winner": "Aurore",
+      "scoreThomas": 119,
+      "game": {
+        "id": "y0aNNuR2dZp2HRDHcH2m"
+      },
+      "date": {
+        "type": "firestore/timestamp/1.0",
+        "seconds": 1723327200,
+        "nanoseconds": 0
+      }
+    },
+    "6P5p0m3ELM5TTuuATiQV": {
+      "scoreThomas": 98,
+      "winner": "Thomas",
+      "scoreAurore": 97,
+      "game": {
+        "id": "pCxNCw7f4cKPPxb7YboK"
+      },
+      "date": {
+        "type": "firestore/timestamp/1.0",
+        "seconds": 1704236400,
+        "nanoseconds": 0
+      }
+    },
+    "6dC60r7ZHuOh15PRAuoa": {
+      "game": {
+        "id": "aESwYrxGgMpY6ntgUKuj"
+      },
+      "date": {
+        "type": "firestore/timestamp/1.0",
+        "seconds": 1691704800,
+        "nanoseconds": 0
+      },
+      "winner": "Aurore",
+      "scoreAurore": 7,
+      "scoreThomas": 4
+    },
+    "6hhbmn6HgcBHZVSpiJ0w": {
+      "winner": "Thomas",
+      "game": {
+        "id": "aESwYrxGgMpY6ntgUKuj"
+      },
+      "scoreThomas": 7,
+      "scoreAurore": 5,
+      "date": {
+        "type": "firestore/timestamp/1.0",
+        "seconds": 1674774000,
+        "nanoseconds": 0
+      }
+    },
+    "6pW96yKbT2fXmquOMzFX": {
+      "scoreAurore": 46,
+      "scoreThomas": 40,
+      "game": {
+        "id": "hnKfFP3Ai1AkpsDcmBYx"
+      },
+      "date": {
+        "type": "firestore/timestamp/1.0",
+        "seconds": 1741474800,
+        "nanoseconds": 0
+      },
+      "winner": "Aurore"
+    },
+    "72Cb2Zy6gXJxDW2x10Bs": {
+      "date": {
+        "type": "firestore/timestamp/1.0",
+        "seconds": 1746914400,
+        "nanoseconds": 0
+      },
+      "game": {
+        "id": "uAfauK7goJWgg6Lhn8Mm"
+      },
+      "scoreThomas": 10,
+      "scoreAurore": 13,
+      "winner": "Aurore"
+    },
+    "7O1bULc3fHB16MLY4OZI": {
+      "scoreAurore": 96,
+      "game": {
+        "id": "Fvn5TS23SZKDqClmtJJS"
+      },
+      "date": {
+        "type": "firestore/timestamp/1.0",
+        "seconds": 1690581600,
+        "nanoseconds": 0
+      },
+      "winner": "Aurore",
+      "scoreThomas": 92
+    },
+    "7VuzRji28SeGX9DYMuHI": {
+      "date": {
+        "type": "firestore/timestamp/1.0",
+        "seconds": 1702076400,
+        "nanoseconds": 0
+      },
+      "winner": "Thomas",
+      "game": {
+        "id": "jWINVO317Z8Hzxoxz1Jg"
+      },
+      "scoreThomas": 4,
+      "scoreAurore": 1
+    },
+    "7biS7GFgpTQTOqvjqZME": {
+      "game": {
+        "id": "AMo9lEANlAFqmhFcRffB"
+      },
+      "date": {
+        "type": "firestore/timestamp/1.0",
+        "seconds": 1673132400,
+        "nanoseconds": 0
+      },
+      "scoreThomas": 18,
+      "winner": "Aurore",
+      "scoreAurore": 26
+    },
+    "7fysLc9b61rVodPireT4": {
+      "date": {
+        "type": "firestore/timestamp/1.0",
+        "seconds": 1688767200,
+        "nanoseconds": 0
+      },
+      "scoreAurore": 99,
+      "game": {
+        "id": "pCxNCw7f4cKPPxb7YboK"
+      },
+      "winner": "Aurore",
+      "scoreThomas": 86
+    },
+    "7pirF2BBlReGz84pAYH0": {
+      "winner": "Aurore",
+      "scoreAurore": 103,
+      "scoreThomas": 96,
+      "game": {
+        "id": "pCxNCw7f4cKPPxb7YboK"
+      },
+      "date": {
+        "type": "firestore/timestamp/1.0",
+        "seconds": 1701558000,
+        "nanoseconds": 0
+      }
+    },
+    "873l7R9OTjtqDMCIZqgQ": {
+      "game": {
+        "id": "pCxNCw7f4cKPPxb7YboK"
+      },
+      "scoreAurore": 111,
+      "winner": "Aurore",
+      "date": {
+        "type": "firestore/timestamp/1.0",
+        "seconds": 1716847200,
+        "nanoseconds": 0
+      },
+      "scoreThomas": 100
+    },
+    "8BYbS49Se3fmqZhfF6Tn": {
+      "scoreThomas": 101,
+      "winner": "Aurore",
+      "scoreAurore": 115,
+      "game": {
+        "id": "pCxNCw7f4cKPPxb7YboK"
+      },
+      "date": {
+        "type": "firestore/timestamp/1.0",
+        "seconds": 1737932400,
+        "nanoseconds": 0
+      }
+    },
+    "8G4eMpt0r6HvFee4KvYE": {
+      "scoreThomas": 93,
+      "scoreAurore": 91,
+      "date": {
+        "type": "firestore/timestamp/1.0",
+        "seconds": 1691532000,
+        "nanoseconds": 0
+      },
+      "game": {
+        "id": "pCxNCw7f4cKPPxb7YboK"
+      },
+      "winner": "Thomas"
+    },
+    "8HkWX2xBCHZ76dOEG4Qr": {
+      "scoreAurore": 101,
+      "scoreThomas": 92,
+      "winner": "Aurore",
+      "game": {
+        "id": "pCxNCw7f4cKPPxb7YboK"
+      },
+      "date": {
+        "type": "firestore/timestamp/1.0",
+        "seconds": 1691877600,
+        "nanoseconds": 0
+      }
+    },
+    "8VJb90QNu94OwFMvjaAR": {
+      "scoreAurore": 15,
+      "date": {
+        "type": "firestore/timestamp/1.0",
+        "seconds": 1696716000,
+        "nanoseconds": 0
+      },
+      "winner": "Aurore",
+      "game": {
+        "id": "AMo9lEANlAFqmhFcRffB"
+      },
+      "scoreThomas": -2
+    },
+    "8ZGsCL9raUjBh4EyJbyJ": {
+      "scoreAurore": 43,
+      "scoreThomas": 37,
+      "game": {
+        "id": "hnKfFP3Ai1AkpsDcmBYx"
+      },
+      "date": {
+        "type": "firestore/timestamp/1.0",
+        "seconds": 1739055600,
+        "nanoseconds": 0
+      },
+      "winner": "Aurore"
+    },
+    "8dMTHMd7dLevFKJjfO2v": {
+      "winner": "Thomas",
+      "scoreAurore": 37,
+      "scoreThomas": 49,
+      "game": {
+        "id": "hnKfFP3Ai1AkpsDcmBYx"
+      },
+      "date": {
+        "type": "firestore/timestamp/1.0",
+        "seconds": 1758146400,
+        "nanoseconds": 0
+      }
+    },
+    "8rb7U8MYzJH4LmQiV2eb": {
+      "winner": "Aurore",
+      "scoreAurore": 7,
+      "date": {
+        "type": "firestore/timestamp/1.0",
+        "seconds": 1681768800,
+        "nanoseconds": 0
+      },
+      "game": {
+        "id": "aESwYrxGgMpY6ntgUKuj"
+      },
+      "scoreThomas": 5
+    },
+    "90CdCYSTkoa1OKMUBLqr": {
+      "game": {
+        "id": "aESwYrxGgMpY6ntgUKuj"
+      },
+      "date": {
+        "type": "firestore/timestamp/1.0",
+        "seconds": 1673650800,
+        "nanoseconds": 0
+      },
+      "winner": "Aurore",
+      "scoreThomas": 6,
+      "scoreAurore": 7
+    },
+    "9D7w8TEP6HtHwkOgfqdg": {
+      "game": {
+        "id": "4XxtQnIpjIljldNJryUx"
+      },
+      "scoreAurore": -1,
+      "scoreThomas": 5,
+      "winner": "Thomas",
+      "date": {
+        "type": "firestore/timestamp/1.0",
+        "seconds": 1753912800,
+        "nanoseconds": 0
+      }
+    },
+    "9L65BNkyaupERwskMaEt": {
+      "scoreThomas": 44,
+      "winner": "Thomas",
+      "date": {
+        "type": "firestore/timestamp/1.0",
+        "seconds": 1673737200,
+        "nanoseconds": 0
+      },
+      "game": {
+        "id": "hnKfFP3Ai1AkpsDcmBYx"
+      },
+      "scoreAurore": 33
+    },
+    "9a0uCNuUfOlAOZ0lwJow": {
+      "scoreAurore": 6,
+      "winner": "Aurore",
+      "date": {
+        "type": "firestore/timestamp/1.0",
+        "seconds": 1678834800,
+        "nanoseconds": 0
+      },
+      "game": {
+        "id": "aESwYrxGgMpY6ntgUKuj"
+      },
+      "scoreThomas": 5
+    },
+    "AB88vS7g52TQSZLzVF3Y": {
+      "date": {
+        "type": "firestore/timestamp/1.0",
+        "seconds": 1683237600,
+        "nanoseconds": 0
+      },
+      "winner": "Thomas",
+      "scoreThomas": 4,
+      "scoreAurore": 5,
+      "game": {
+        "id": "jWINVO317Z8Hzxoxz1Jg"
+      }
+    },
+    "ACe1pPYJqmSVXRQqFMPW": {
+      "winner": "Thomas",
+      "game": {
+        "id": "aESwYrxGgMpY6ntgUKuj"
+      },
+      "date": {
+        "type": "firestore/timestamp/1.0",
+        "seconds": 1691704800,
+        "nanoseconds": 0
+      },
+      "scoreThomas": 7,
+      "scoreAurore": 6
+    },
+    "Anil4yeVH7F16c1PMTaT": {
+      "scoreAurore": 6,
+      "scoreThomas": 3,
+      "game": {
+        "id": "aESwYrxGgMpY6ntgUKuj"
+      },
+      "winner": "Aurore",
+      "date": {
+        "type": "firestore/timestamp/1.0",
+        "seconds": 1692223200,
+        "nanoseconds": 0
+      }
+    },
+    "ApLlaoINStnQoVUwtgxe": {
+      "date": {
+        "type": "firestore/timestamp/1.0",
+        "seconds": 1677279600,
+        "nanoseconds": 0
+      },
+      "winner": "Thomas",
+      "scoreAurore": 28,
+      "game": {
+        "id": "hnKfFP3Ai1AkpsDcmBYx"
+      },
+      "scoreThomas": 50
+    },
+    "AtyuZXC18hGoHFqmmS1C": {
+      "winner": "Aurore",
+      "scoreThomas": 95,
+      "game": {
+        "id": "8CpHoOHXik80Yg93TTOm"
+      },
+      "date": {
+        "type": "firestore/timestamp/1.0",
+        "seconds": 1674860400,
+        "nanoseconds": 0
+      },
+      "scoreAurore": 131
+    },
+    "B7e9Rbed0x7nO5UeyPmo": {
+      "winner": "Thomas",
+      "scoreAurore": 3,
+      "scoreThomas": 4,
+      "game": {
+        "id": "Ikv3JgNh5evoo2DoqQw3"
+      },
+      "date": {
+        "type": "firestore/timestamp/1.0",
+        "seconds": 1707606000,
+        "nanoseconds": 0
+      }
+    },
+    "BEBuFApNU0fKpftPxhZv": {
+      "game": {
+        "id": "1NCYPK4DJ1Z5x5ISq2TW"
+      },
+      "winner": "Aurore",
+      "scoreAurore": 114,
+      "date": {
+        "type": "firestore/timestamp/1.0",
+        "seconds": 1704668400,
+        "nanoseconds": 0
+      },
+      "scoreThomas": 35
+    },
+    "BWJZYEYKikkabPxMEJgD": {
+      "date": {
+        "type": "firestore/timestamp/1.0",
+        "seconds": 1689372000,
+        "nanoseconds": 0
+      },
+      "scoreThomas": 91,
+      "winner": "Aurore",
+      "game": {
+        "id": "pCxNCw7f4cKPPxb7YboK"
+      },
+      "scoreAurore": 95
+    },
+    "BeXiW7r4I1FA4eavfPkq": {
+      "scoreThomas": 64,
+      "winner": "Aurore",
+      "game": {
+        "id": "Fvn5TS23SZKDqClmtJJS"
+      },
+      "scoreAurore": 69,
+      "date": {
+        "type": "firestore/timestamp/1.0",
+        "seconds": 1734044400,
+        "nanoseconds": 0
+      }
+    },
+    "Bh5PUjqVOzGXnUqJRS5W": {
+      "winner": "Aurore",
+      "game": {
+        "id": "NDjXY0P8WKkn6sUbiebL"
+      },
+      "date": {
+        "type": "firestore/timestamp/1.0",
+        "seconds": 1674514800,
+        "nanoseconds": 0
+      },
+      "scoreAurore": 51,
+      "scoreThomas": 36
+    },
+    "BkuPfDP8qm6nl3hyNYLO": {
+      "scoreThomas": 99,
+      "date": {
+        "type": "firestore/timestamp/1.0",
+        "seconds": 1705359600,
+        "nanoseconds": 0
+      },
+      "game": {
+        "id": "1NCYPK4DJ1Z5x5ISq2TW"
+      },
+      "winner": "Thomas",
+      "scoreAurore": 71
+    },
+    "BoF02klDycP5DL9mxLDn": {
+      "scoreThomas": 104,
+      "winner": "Aurore",
+      "scoreAurore": 114,
+      "date": {
+        "type": "firestore/timestamp/1.0",
+        "seconds": 1718748000,
+        "nanoseconds": 0
+      },
+      "game": {
+        "id": "1NCYPK4DJ1Z5x5ISq2TW"
+      }
+    },
+    "BqbbmqKuYENCiULAMkZe": {
+      "date": {
+        "type": "firestore/timestamp/1.0",
+        "seconds": 1690408800,
+        "nanoseconds": 0
+      },
+      "scoreAurore": 98,
+      "game": {
+        "id": "Fvn5TS23SZKDqClmtJJS"
+      },
+      "scoreThomas": 95,
+      "winner": "Aurore"
+    },
+    "Bsrm7u3IAQAVofHQP5dC": {
+      "scoreAurore": 105,
+      "date": {
+        "type": "firestore/timestamp/1.0",
+        "seconds": 1713132000,
+        "nanoseconds": 0
+      },
+      "game": {
+        "id": "pCxNCw7f4cKPPxb7YboK"
+      },
+      "winner": "Thomas",
+      "scoreThomas": 114
+    },
+    "CNpGtaJ2ltuAi2Hwfle5": {
+      "game": {
+        "id": "jWINVO317Z8Hzxoxz1Jg"
+      },
+      "scoreThomas": 4,
+      "winner": "Thomas",
+      "date": {
+        "type": "firestore/timestamp/1.0",
+        "seconds": 1686434400,
+        "nanoseconds": 0
+      },
+      "scoreAurore": 2
+    },
+    "CUvQuFXWSLFwRTyo2OWs": {
+      "game": {
+        "id": "Fvn5TS23SZKDqClmtJJS"
+      },
+      "scoreAurore": 61,
+      "date": {
+        "type": "firestore/timestamp/1.0",
+        "seconds": 1724623200,
+        "nanoseconds": 0
+      },
+      "winner": "Aurore",
+      "scoreThomas": 59
+    },
+    "CWR6aUts7MSfDWvYJAOz": {
+      "scoreAurore": 92,
+      "winner": "Thomas",
+      "date": {
+        "type": "firestore/timestamp/1.0",
+        "seconds": 1678575600,
+        "nanoseconds": 0
+      },
+      "scoreThomas": 100,
+      "game": {
+        "id": "pCxNCw7f4cKPPxb7YboK"
+      }
+    },
+    "Cctqww0e0oIR4Nx30i2v": {
+      "winner": "Aurore",
+      "game": {
+        "id": "1NCYPK4DJ1Z5x5ISq2TW"
+      },
+      "date": {
+        "type": "firestore/timestamp/1.0",
+        "seconds": 1740783600,
+        "nanoseconds": 0
+      },
+      "scoreAurore": 115,
+      "scoreThomas": 42
+    },
+    "CuW9MJ6I7Zy4fgKZvqkr": {
+      "date": {
+        "type": "firestore/timestamp/1.0",
+        "seconds": 1754431200,
+        "nanoseconds": 0
+      },
+      "winner": "Thomas",
+      "scoreAurore": 2,
+      "scoreThomas": 3,
+      "game": {
+        "id": "aESwYrxGgMpY6ntgUKuj"
+      }
+    },
+    "CzXrJpg0CY6qOH0cLnbC": {
+      "game": {
+        "id": "pCxNCw7f4cKPPxb7YboK"
+      },
+      "winner": "Aurore",
+      "date": {
+        "type": "firestore/timestamp/1.0",
+        "seconds": 1700348400,
+        "nanoseconds": 0
+      },
+      "scoreAurore": 102,
+      "scoreThomas": 91
+    },
+    "D718AqKzfFY0cwpEehMw": {
+      "scoreThomas": 99,
+      "scoreAurore": 98,
+      "winner": "Thomas",
+      "date": {
+        "type": "firestore/timestamp/1.0",
+        "seconds": 1699138800,
+        "nanoseconds": 0
+      },
+      "game": {
+        "id": "pCxNCw7f4cKPPxb7YboK"
+      }
+    },
+    "D8pwUo0y29aqvRlNDiwk": {
+      "game": {
+        "id": "1NCYPK4DJ1Z5x5ISq2TW"
+      },
+      "scoreAurore": 105,
+      "scoreThomas": 85,
+      "winner": "Aurore",
+      "date": {
+        "type": "firestore/timestamp/1.0",
+        "seconds": 1709852400,
+        "nanoseconds": 0
+      }
+    },
+    "DFx7wGTi5di4tPfZd8Zi": {
+      "scoreAurore": 123,
+      "winner": "Aurore",
+      "date": {
+        "type": "firestore/timestamp/1.0",
+        "seconds": 1740783600,
+        "nanoseconds": 0
+      },
+      "game": {
+        "id": "1NCYPK4DJ1Z5x5ISq2TW"
+      },
+      "scoreThomas": 117
+    },
+    "DPfxCsAcmoC5q6mh5nkk": {
+      "winner": "Aurore",
+      "game": {
+        "id": "aESwYrxGgMpY6ntgUKuj"
+      },
+      "scoreAurore": 7,
+      "date": {
+        "type": "firestore/timestamp/1.0",
+        "seconds": 1673737200,
+        "nanoseconds": 0
+      },
+      "scoreThomas": 6
+    },
+    "DQWeQlXNiGziAQcFhNqC": {
+      "date": {
+        "type": "firestore/timestamp/1.0",
+        "seconds": 1700953200,
+        "nanoseconds": 0
+      },
+      "winner": "Aurore",
+      "scoreAurore": 22,
+      "scoreThomas": 12,
+      "game": {
+        "id": "LH9rn42sHWEeyfYk5kWI"
+      }
+    },
+    "DZrfvRxZ49COBRjfB8H6": {
+      "scoreAurore": 30,
+      "game": {
+        "id": "AMo9lEANlAFqmhFcRffB"
+      },
+      "winner": "Thomas",
+      "scoreThomas": 34,
+      "date": {
+        "type": "firestore/timestamp/1.0",
+        "seconds": 1686693600,
+        "nanoseconds": 0
+      }
+    },
+    "DlOLzytKZW5bxUaUNECo": {
+      "game": {
+        "id": "pCxNCw7f4cKPPxb7YboK"
+      },
+      "scoreThomas": 92,
+      "winner": "Aurore",
+      "scoreAurore": 108,
+      "date": {
+        "type": "firestore/timestamp/1.0",
+        "seconds": 1722117600,
+        "nanoseconds": 0
+      }
+    },
+    "E3QSIozVjpd20XVtYn18": {
+      "game": {
+        "id": "pCxNCw7f4cKPPxb7YboK"
+      },
+      "winner": "Aurore",
+      "scoreAurore": 94,
+      "scoreThomas": 82,
+      "date": {
+        "type": "firestore/timestamp/1.0",
+        "seconds": 1688767200,
+        "nanoseconds": 0
+      }
+    },
+    "E4JvJfApkR7xI9YmlJ6r": {
+      "date": {
+        "type": "firestore/timestamp/1.0",
+        "seconds": 1674860400,
+        "nanoseconds": 0
+      },
+      "winner": "Aurore",
+      "scoreAurore": 5,
+      "game": {
+        "id": "ety9rnsGuLDSlpVPvErU"
+      },
+      "scoreThomas": 2
+    },
+    "E7jdCJkbTXc0ieRNiddp": {
+      "winner": "Aurore",
+      "game": {
+        "id": "pCxNCw7f4cKPPxb7YboK"
+      },
+      "scoreThomas": 98,
+      "date": {
+        "type": "firestore/timestamp/1.0",
+        "seconds": 1760969415,
+        "nanoseconds": 0
+      },
+      "scoreAurore": 116
+    },
+    "E9IJYihqW3c3wr5jectz": {
+      "date": {
+        "type": "firestore/timestamp/1.0",
+        "seconds": 1689199200,
+        "nanoseconds": 0
+      },
+      "game": {
+        "id": "pCxNCw7f4cKPPxb7YboK"
+      },
+      "winner": "Thomas",
+      "scoreAurore": 98,
+      "scoreThomas": 102
+    },
+    "E9zhki6oVaEppMyEikI9": {
+      "winner": "Thomas",
+      "date": {
+        "type": "firestore/timestamp/1.0",
+        "seconds": 1749852000,
+        "nanoseconds": 0
+      },
+      "scoreAurore": 110,
+      "game": {
+        "id": "y0aNNuR2dZp2HRDHcH2m"
+      },
+      "scoreThomas": 68
+    },
+    "EFPn6L9cyGiI1ynhUd8j": {
+      "game": {
+        "id": "hcliaSURVnnZLOIA21hi"
+      },
+      "date": {
+        "type": "firestore/timestamp/1.0",
+        "seconds": 1729461600,
+        "nanoseconds": 0
+      },
+      "scoreAurore": 58,
+      "winner": "Thomas",
+      "scoreThomas": 65
+    },
+    "EXs0l1qGWQiPsz0EgzuB": {
+      "scoreAurore": 5,
+      "game": {
+        "id": "aESwYrxGgMpY6ntgUKuj"
+      },
+      "winner": "Thomas",
+      "scoreThomas": 7,
+      "date": {
+        "type": "firestore/timestamp/1.0",
+        "seconds": 1691964000,
+        "nanoseconds": 0
+      }
+    },
+    "EuMeZ27cgcI9zoyTpPTx": {
+      "winner": "Aurore",
+      "scoreThomas": 113,
+      "game": {
+        "id": "y0aNNuR2dZp2HRDHcH2m"
+      },
+      "date": {
+        "type": "firestore/timestamp/1.0",
+        "seconds": 1699138800,
+        "nanoseconds": 0
+      },
+      "scoreAurore": 88
+    },
+    "F6ICMKwBjDYBd1zOklE0": {
+      "winner": "Aurore",
+      "scoreThomas": 1,
+      "date": {
+        "type": "firestore/timestamp/1.0",
+        "seconds": 1673996400,
+        "nanoseconds": 0
+      },
+      "game": {
+        "id": "jWINVO317Z8Hzxoxz1Jg"
+      },
+      "scoreAurore": 5
+    },
+    "F6cFo8LlQBwTersJH0Ho": {
+      "date": {
+        "type": "firestore/timestamp/1.0",
+        "seconds": 1707433200,
+        "nanoseconds": 0
+      },
+      "winner": "Thomas",
+      "scoreThomas": 105,
+      "game": {
+        "id": "1NCYPK4DJ1Z5x5ISq2TW"
+      },
+      "scoreAurore": 92
+    },
+    "FUatpsa99M4IZgrEr1wd": {
+      "scoreThomas": 103,
+      "scoreAurore": 98,
+      "date": {
+        "type": "firestore/timestamp/1.0",
+        "seconds": 1678489200,
+        "nanoseconds": 0
+      },
+      "winner": "Thomas",
+      "game": {
+        "id": "pCxNCw7f4cKPPxb7YboK"
+      }
+    },
+    "FfMoGKONZ5c98hB3ryo3": {
+      "winner": "Aurore",
+      "scoreAurore": 94,
+      "date": {
+        "type": "firestore/timestamp/1.0",
+        "seconds": 1705186800,
+        "nanoseconds": 0
+      },
+      "scoreThomas": 79,
+      "game": {
+        "id": "pCxNCw7f4cKPPxb7YboK"
+      }
+    },
+    "FfQ1nM1mrsuIadIAAEY3": {
+      "game": {
+        "id": "qkYv2YmspSURUH5KMQon"
+      },
+      "winner": "Thomas",
+      "scoreThomas": 99,
+      "date": {
+        "type": "firestore/timestamp/1.0",
+        "seconds": 1671490800,
+        "nanoseconds": 0
+      },
+      "scoreAurore": 57
+    },
+    "G5MUR5WBJp1ib9vE4cBP": {
+      "winner": "Aurore",
+      "date": {
+        "type": "firestore/timestamp/1.0",
+        "seconds": 1691445600,
+        "nanoseconds": 0
+      },
+      "game": {
+        "id": "aESwYrxGgMpY6ntgUKuj"
+      },
+      "scoreThomas": 5,
+      "scoreAurore": 6
+    },
+    "GIESw4cOKhdVHxvJa3Xf": {
+      "scoreAurore": 3,
+      "winner": "Aurore",
+      "game": {
+        "id": "jWINVO317Z8Hzxoxz1Jg"
+      },
+      "scoreThomas": 1,
+      "date": {
+        "type": "firestore/timestamp/1.0",
+        "seconds": 1678834800,
+        "nanoseconds": 0
+      }
+    },
+    "H1Z6J8Kn21zhuKNR8cti": {
+      "scoreThomas": 94,
+      "scoreAurore": 111,
+      "winner": "Aurore",
+      "game": {
+        "id": "1NCYPK4DJ1Z5x5ISq2TW"
+      },
+      "date": {
+        "type": "firestore/timestamp/1.0",
+        "seconds": 1719612000,
+        "nanoseconds": 0
+      }
+    },
+    "H2c4MjomVRSve8qmaTrJ": {
+      "scoreThomas": 88,
+      "game": {
+        "id": "IDYkWZHmvL9iSF085Oge"
+      },
+      "winner": "Aurore",
+      "scoreAurore": 105,
+      "date": {
+        "type": "firestore/timestamp/1.0",
+        "seconds": 1737673200,
+        "nanoseconds": 0
+      }
+    },
+    "H9RBAMZn9WduBYgFGmUi": {
+      "game": {
+        "id": "pCxNCw7f4cKPPxb7YboK"
+      },
+      "scoreAurore": 100,
+      "date": {
+        "type": "firestore/timestamp/1.0",
+        "seconds": 1696456800,
+        "nanoseconds": 0
+      },
+      "winner": "Thomas",
+      "scoreThomas": 101
+    },
+    "HFaeyzpNh9RB6GGDpSww": {
+      "scoreAurore": 103,
+      "winner": "Aurore",
+      "date": {
+        "type": "firestore/timestamp/1.0",
+        "seconds": 1709766000,
+        "nanoseconds": 0
+      },
+      "scoreThomas": 89,
+      "game": {
+        "id": "1NCYPK4DJ1Z5x5ISq2TW"
+      }
+    },
+    "HGqWjfvG3tLNjMIZA3vZ": {
+      "date": {
+        "type": "firestore/timestamp/1.0",
+        "seconds": 1700348400,
+        "nanoseconds": 0
+      },
+      "scoreAurore": 85,
+      "game": {
+        "id": "pCxNCw7f4cKPPxb7YboK"
+      },
+      "scoreThomas": 86,
+      "winner": "Thomas"
+    },
+    "HMU0sDmdG1xcYfagJJaj": {
+      "game": {
+        "id": "aESwYrxGgMpY6ntgUKuj"
+      },
+      "winner": "Thomas",
+      "date": {
+        "type": "firestore/timestamp/1.0",
+        "seconds": 1672527600,
+        "nanoseconds": 0
+      },
+      "scoreThomas": 7,
+      "scoreAurore": 5
+    },
+    "HS445pheL7GQM9LUAyIt": {
+      "date": {
+        "type": "firestore/timestamp/1.0",
+        "seconds": 1677452400,
+        "nanoseconds": 0
+      },
+      "scoreThomas": 4,
+      "game": {
+        "id": "ety9rnsGuLDSlpVPvErU"
+      },
+      "scoreAurore": 9,
+      "winner": "Aurore"
+    },
+    "HfM3F0v2yJzGRpk3NF8C": {
+      "scoreThomas": 91,
+      "winner": "Aurore",
+      "game": {
+        "id": "pCxNCw7f4cKPPxb7YboK"
+      },
+      "scoreAurore": 93,
+      "date": {
+        "type": "firestore/timestamp/1.0",
+        "seconds": 1690063200,
+        "nanoseconds": 0
+      }
+    },
+    "HkTl52X65kJyr9bmDQ5e": {
+      "game": {
+        "id": "ety9rnsGuLDSlpVPvErU"
+      },
+      "winner": "Thomas",
+      "scoreAurore": 1,
+      "scoreThomas": 5,
+      "date": {
+        "type": "firestore/timestamp/1.0",
+        "seconds": 1673737200,
+        "nanoseconds": 0
+      }
+    },
+    "HnVEa4j961VEqHkL6JLM": {
+      "game": {
+        "id": "Fvn5TS23SZKDqClmtJJS"
+      },
+      "date": {
+        "type": "firestore/timestamp/1.0",
+        "seconds": 1688853600,
+        "nanoseconds": 0
+      },
+      "scoreThomas": 90,
+      "scoreAurore": 81,
+      "winner": "Thomas"
+    },
+    "HoJy6WLc7TTCgok235fb": {
+      "date": {
+        "type": "firestore/timestamp/1.0",
+        "seconds": 1747000800,
+        "nanoseconds": 0
+      },
+      "winner": "Aurore",
+      "scoreThomas": 4,
+      "game": {
+        "id": "4XxtQnIpjIljldNJryUx"
+      },
+      "scoreAurore": 5
+    },
+    "HorVqECL1RcFQv8tWqeK": {
+      "game": {
+        "id": "jWINVO317Z8Hzxoxz1Jg"
+      },
+      "scoreThomas": 2,
+      "scoreAurore": 5,
+      "winner": "Aurore",
+      "date": {
+        "type": "firestore/timestamp/1.0",
+        "seconds": 1676329200,
+        "nanoseconds": 0
+      }
+    },
+    "HyHgGR0RlrywdssyLVUP": {
+      "scoreThomas": 92,
+      "winner": "Aurore",
+      "game": {
+        "id": "y0aNNuR2dZp2HRDHcH2m"
+      },
+      "date": {
+        "type": "firestore/timestamp/1.0",
+        "seconds": 1691964000,
+        "nanoseconds": 0
+      },
+      "scoreAurore": 120
+    },
+    "IHzFymUZXVegoc28s96p": {
+      "scoreAurore": 99,
+      "game": {
+        "id": "pCxNCw7f4cKPPxb7YboK"
+      },
+      "winner": "Thomas",
+      "date": {
+        "type": "firestore/timestamp/1.0",
+        "seconds": 1691877600,
+        "nanoseconds": 0
+      },
+      "scoreThomas": 101
+    },
+    "IWhXaSMgZaEelCtd1u4U": {
+      "game": {
+        "id": "4XxtQnIpjIljldNJryUx"
+      },
+      "winner": "Thomas",
+      "scoreThomas": 5,
+      "date": {
+        "type": "firestore/timestamp/1.0",
+        "seconds": 1746914400,
+        "nanoseconds": 0
+      },
+      "scoreAurore": 4
+    },
+    "Iaw9xalWWWastTAPnNIJ": {
+      "scoreAurore": 2,
+      "date": {
+        "type": "firestore/timestamp/1.0",
+        "seconds": 1673737200,
+        "nanoseconds": 0
+      },
+      "winner": "Aurore",
+      "scoreThomas": 1,
+      "game": {
+        "id": "ety9rnsGuLDSlpVPvErU"
+      }
+    },
+    "IfWAYg9SOvkDXbx5yszD": {
+      "game": {
+        "id": "hnKfFP3Ai1AkpsDcmBYx"
+      },
+      "winner": "Aurore",
+      "date": {
+        "type": "firestore/timestamp/1.0",
+        "seconds": 1690063200,
+        "nanoseconds": 0
+      },
+      "scoreAurore": 42,
+      "scoreThomas": 41
+    },
+    "IghabwKSzIMNAK1VPIV4": {
+      "game": {
+        "id": "TpX9nE0gqwq7HpkfVYYs"
+      },
+      "winner": "Thomas",
+      "scoreAurore": 1,
+      "scoreThomas": 0,
+      "date": {
+        "type": "firestore/timestamp/1.0",
+        "seconds": 1691532000,
+        "nanoseconds": 0
+      }
+    },
+    "IhslHwYdvBdPTCbYe3BM": {
+      "scoreThomas": 91,
+      "date": {
+        "type": "firestore/timestamp/1.0",
+        "seconds": 1685138400,
+        "nanoseconds": 0
+      },
+      "scoreAurore": 92,
+      "game": {
+        "id": "pCxNCw7f4cKPPxb7YboK"
+      },
+      "winner": "Aurore"
+    },
+    "In7qOOL42ORtIewUx32M": {
+      "winner": "Aurore",
+      "date": {
+        "type": "firestore/timestamp/1.0",
+        "seconds": 1677625200,
+        "nanoseconds": 0
+      },
+      "scoreThomas": 95,
+      "game": {
+        "id": "pCxNCw7f4cKPPxb7YboK"
+      },
+      "scoreAurore": 100
+    },
+    "IrSNP4yvNSLb2a46SWhq": {
+      "game": {
+        "id": "ety9rnsGuLDSlpVPvErU"
+      },
+      "scoreThomas": 2,
+      "scoreAurore": 3,
+      "winner": "Aurore",
+      "date": {
+        "type": "firestore/timestamp/1.0",
+        "seconds": 1671577200,
+        "nanoseconds": 0
+      }
+    },
+    "IyrcWx2GEErdcWMZriiv": {
+      "winner": "Aurore",
+      "date": {
+        "type": "firestore/timestamp/1.0",
+        "seconds": 1720389600,
+        "nanoseconds": 0
+      },
+      "game": {
+        "id": "pCxNCw7f4cKPPxb7YboK"
+      },
+      "scoreThomas": 68,
+      "scoreAurore": 111
+    },
+    "J18oLxRFjw4OeJRaiaHX": {
+      "winner": "Aurore",
+      "date": {
+        "type": "firestore/timestamp/1.0",
+        "seconds": 1673996400,
+        "nanoseconds": 0
+      },
+      "scoreThomas": 2,
+      "scoreAurore": 5,
+      "game": {
+        "id": "jWINVO317Z8Hzxoxz1Jg"
+      }
+    },
+    "J9NVfG8e1J947QaLoo0O": {
+      "scoreThomas": 98,
+      "winner": "Aurore",
+      "date": {
+        "type": "firestore/timestamp/1.0",
+        "seconds": 1734390000,
+        "nanoseconds": 0
+      },
+      "game": {
+        "id": "pCxNCw7f4cKPPxb7YboK"
+      },
+      "scoreAurore": 119
+    },
+    "JKghdtliIQVRBz68KPIK": {
+      "winner": "Aurore",
+      "date": {
+        "type": "firestore/timestamp/1.0",
+        "seconds": 1688767200,
+        "nanoseconds": 0
+      },
+      "scoreThomas": 49,
+      "game": {
+        "id": "qkYv2YmspSURUH5KMQon"
+      },
+      "scoreAurore": 68
+    },
+    "JQUgjCBX3FKu1s4PuXG2": {
+      "scoreThomas": 1,
+      "date": {
+        "type": "firestore/timestamp/1.0",
+        "seconds": 1678575600,
+        "nanoseconds": 0
+      },
+      "game": {
+        "id": "jWINVO317Z8Hzxoxz1Jg"
+      },
+      "winner": "Aurore",
+      "scoreAurore": 5
+    },
+    "JQzl4MerG9xVCyEUwOu0": {
+      "winner": "Thomas",
+      "date": {
+        "type": "firestore/timestamp/1.0",
+        "seconds": 1671577200,
+        "nanoseconds": 0
+      },
+      "game": {
+        "id": "ety9rnsGuLDSlpVPvErU"
+      },
+      "scoreThomas": 2,
+      "scoreAurore": 1
+    },
+    "JRBLfGYNJpkUxyrqcisv": {
+      "winner": "Thomas",
+      "scoreAurore": 38,
+      "game": {
+        "id": "hnKfFP3Ai1AkpsDcmBYx"
+      },
+      "date": {
+        "type": "firestore/timestamp/1.0",
+        "seconds": 1700262000,
+        "nanoseconds": 0
+      },
+      "scoreThomas": 48
+    },
+    "JTjd76KnwOoo7Bw3eylf": {
+      "scoreAurore": 0,
+      "game": {
+        "id": "ety9rnsGuLDSlpVPvErU"
+      },
+      "scoreThomas": 1,
+      "winner": "Thomas",
+      "date": {
+        "type": "firestore/timestamp/1.0",
+        "seconds": 1685138400,
+        "nanoseconds": 0
+      }
+    },
+    "JvncAkoMqOHVKp1ojO09": {
+      "winner": "Thomas",
+      "date": {
+        "type": "firestore/timestamp/1.0",
+        "seconds": 1691964000,
+        "nanoseconds": 0
+      },
+      "game": {
+        "id": "aESwYrxGgMpY6ntgUKuj"
+      },
+      "scoreThomas": 7,
+      "scoreAurore": 4
+    },
+    "KEdKUzH1N8stiwlnpvcQ": {
+      "date": {
+        "type": "firestore/timestamp/1.0",
+        "seconds": 1754344800,
+        "nanoseconds": 0
+      },
+      "winner": "Thomas",
+      "scoreThomas": 1036,
+      "scoreAurore": 950,
+      "game": {
+        "id": "LDquLBhkUIQJn3n4QDPo"
+      }
+    },
+    "KJrBnJ0q1y2qV8umw8NH": {
+      "winner": "Thomas",
+      "game": {
+        "id": "aESwYrxGgMpY6ntgUKuj"
+      },
+      "date": {
+        "type": "firestore/timestamp/1.0",
+        "seconds": 1685397600,
+        "nanoseconds": 0
+      },
+      "scoreAurore": 7,
+      "scoreThomas": 5
+    },
+    "KSDb7HmRSut7QIRtVBAu": {
+      "winner": "Aurore",
+      "scoreThomas": 5,
+      "game": {
+        "id": "AMo9lEANlAFqmhFcRffB"
+      },
+      "date": {
+        "type": "firestore/timestamp/1.0",
+        "seconds": 1720216800,
+        "nanoseconds": 0
+      },
+      "scoreAurore": 29
+    },
+    "KTh6NAcRzhHrbTL2OMcT": {
+      "date": {
+        "type": "firestore/timestamp/1.0",
+        "seconds": 1722722400,
+        "nanoseconds": 0
+      },
+      "winner": "Aurore",
+      "game": {
+        "id": "pCxNCw7f4cKPPxb7YboK"
+      },
+      "scoreAurore": 104,
+      "scoreThomas": 103
+    },
+    "KV3J9XyHUa43LKgX9qWY": {
+      "game": {
+        "id": "pCxNCw7f4cKPPxb7YboK"
+      },
+      "winner": "Thomas",
+      "scoreThomas": 104,
+      "scoreAurore": 100,
+      "date": {
+        "type": "firestore/timestamp/1.0",
+        "seconds": 1709852400,
+        "nanoseconds": 0
+      }
+    },
+    "KZtS7Jo3WTaQKFuvY8Og": {
+      "scoreAurore": 98,
+      "date": {
+        "type": "firestore/timestamp/1.0",
+        "seconds": 1700348400,
+        "nanoseconds": 0
+      },
+      "winner": "Aurore",
+      "game": {
+        "id": "pCxNCw7f4cKPPxb7YboK"
+      },
+      "scoreThomas": 86
+    },
+    "KdVrVlAZwsk7vf6TTVsF": {
+      "date": {
+        "type": "firestore/timestamp/1.0",
+        "seconds": 1762284239,
+        "nanoseconds": 563000000
+      },
+      "scoreThomas": 131,
+      "game": {
+        "id": "y0aNNuR2dZp2HRDHcH2m"
+      },
+      "scoreAurore": 95,
+      "winner": "Aurore"
+    },
+    "KuMfIzEecKH3iv47nLFW": {
+      "date": {
+        "type": "firestore/timestamp/1.0",
+        "seconds": 1698706800,
+        "nanoseconds": 0
+      },
+      "scoreThomas": 1,
+      "scoreAurore": 4,
+      "game": {
+        "id": "jWINVO317Z8Hzxoxz1Jg"
+      },
+      "winner": "Aurore"
+    },
+    "L0yIjRuhHCjKuNxpoypr": {
+      "winner": "Aurore",
+      "date": {
+        "type": "firestore/timestamp/1.0",
+        "seconds": 1707087600,
+        "nanoseconds": 0
+      },
+      "scoreAurore": 97,
+      "scoreThomas": 64,
+      "game": {
+        "id": "1NCYPK4DJ1Z5x5ISq2TW"
+      }
+    },
+    "LCAUXMOgNMHlCwstlirn": {
+      "game": {
+        "id": "LDquLBhkUIQJn3n4QDPo"
+      },
+      "date": {
+        "type": "firestore/timestamp/1.0",
+        "seconds": 1754431200,
+        "nanoseconds": 0
+      },
+      "scoreThomas": 1060,
+      "scoreAurore": 1015,
+      "winner": "Thomas"
+    },
+    "LHMnsALZmflMrf2DJCiB": {
+      "game": {
+        "id": "pCxNCw7f4cKPPxb7YboK"
+      },
+      "scoreAurore": 104,
+      "scoreThomas": 95,
+      "date": {
+        "type": "firestore/timestamp/1.0",
+        "seconds": 1678575600,
+        "nanoseconds": 0
+      },
+      "winner": "Aurore"
+    },
+    "LarNmC3Am0aFjEXCGxBw": {
+      "date": {
+        "type": "firestore/timestamp/1.0",
+        "seconds": 1718834400,
+        "nanoseconds": 0
+      },
+      "scoreAurore": 109,
+      "game": {
+        "id": "pCxNCw7f4cKPPxb7YboK"
+      },
+      "winner": "Aurore",
+      "scoreThomas": 94
+    },
+    "LbGMoydORwq0DbZ7aZRg": {
+      "game": {
+        "id": "pCxNCw7f4cKPPxb7YboK"
+      },
+      "date": {
+        "type": "firestore/timestamp/1.0",
+        "seconds": 1731538800,
+        "nanoseconds": 0
+      },
+      "scoreThomas": 116,
+      "scoreAurore": 120,
+      "winner": "Aurore"
+    },
+    "LuiLXUJ4A5RNEUZqX3fW": {
+      "scoreThomas": 91,
+      "date": {
+        "type": "firestore/timestamp/1.0",
+        "seconds": 1726696800,
+        "nanoseconds": 0
+      },
+      "winner": "Aurore",
+      "game": {
+        "id": "pCxNCw7f4cKPPxb7YboK"
+      },
+      "scoreAurore": 106
+    },
+    "M56WyR6IQb91720cVIGa": {
+      "game": {
+        "id": "aESwYrxGgMpY6ntgUKuj"
+      },
+      "winner": "Aurore",
+      "scoreThomas": 6,
+      "date": {
+        "type": "firestore/timestamp/1.0",
+        "seconds": 1689372000,
+        "nanoseconds": 0
+      },
+      "scoreAurore": 7
+    },
+    "MGlmeW4BhymYOwhvB8rk": {
+      "date": {
+        "type": "firestore/timestamp/1.0",
+        "seconds": 1707174000,
+        "nanoseconds": 0
+      },
+      "scoreAurore": 108,
+      "game": {
+        "id": "y0aNNuR2dZp2HRDHcH2m"
+      },
+      "winner": "Aurore",
+      "scoreThomas": 56
+    },
+    "MKkuIxdwHtailgoNVw1j": {
+      "scoreThomas": 66,
+      "scoreAurore": 77,
+      "game": {
+        "id": "jjX3x6PehqgBO7NcLMpy"
+      },
+      "winner": "Aurore",
+      "date": {
+        "type": "firestore/timestamp/1.0",
+        "seconds": 1759096800,
+        "nanoseconds": 0
+      },
+      "scoreDetail": {
+        "thomas": {
+          "eggs": 3,
+          "birds": 40,
+          "roundObjectives": 9,
+          "coveredCards": 8,
+          "total": 66,
+          "bonusCards": 6,
+          "storedFood": 0
+        },
+        "aurore": {
+          "storedFood": 3,
+          "total": 77,
+          "coveredCards": 12,
+          "roundObjectives": 15,
+          "eggs": 19,
+          "birds": 25,
+          "bonusCards": 3
+        }
+      }
+    },
+    "MRfGYigbmTKTKTW6DeHo": {
+      "scoreAurore": 136,
+      "scoreThomas": 134,
+      "date": {
+        "type": "firestore/timestamp/1.0",
+        "seconds": 1736636400,
+        "nanoseconds": 0
+      },
+      "winner": "Aurore",
+      "game": {
+        "id": "pCxNCw7f4cKPPxb7YboK"
+      }
+    },
+    "MZddLeYuCHYE4dKXjAtL": {
+      "date": {
+        "type": "firestore/timestamp/1.0",
+        "seconds": 1690581600,
+        "nanoseconds": 0
+      },
+      "scoreThomas": 104,
+      "winner": "Aurore",
+      "game": {
+        "id": "y0aNNuR2dZp2HRDHcH2m"
+      },
+      "scoreAurore": 50
+    },
+    "MeIWO5ZPworlr645cyD8": {
+      "date": {
+        "type": "firestore/timestamp/1.0",
+        "seconds": 1759701600,
+        "nanoseconds": 0
+      },
+      "scoreDetail": {
+        "aurore": {
+          "birds": 29,
+          "bonusCards": 0,
+          "storedFood": 2,
+          "total": 77,
+          "eggs": 24,
+          "coveredCards": 10,
+          "roundObjectives": 12
+        },
+        "thomas": {
+          "total": 60,
+          "eggs": 7,
+          "roundObjectives": 9,
+          "coveredCards": 10,
+          "birds": 29,
+          "storedFood": 2,
+          "bonusCards": 3
+        }
+      },
+      "winner": "Aurore",
+      "scoreAurore": 77,
+      "game": {
+        "id": "jjX3x6PehqgBO7NcLMpy"
+      },
+      "scoreThomas": 60
+    },
+    "Mpg9eh7rHoWk7Bk4rOlQ": {
+      "game": {
+        "id": "1NCYPK4DJ1Z5x5ISq2TW"
+      },
+      "scoreThomas": 113,
+      "scoreAurore": 102,
+      "winner": "Thomas",
+      "date": {
+        "type": "firestore/timestamp/1.0",
+        "seconds": 1710025200,
+        "nanoseconds": 0
+      }
+    },
+    "MuS17aE3A5XXQ9ZNqgGC": {
+      "game": {
+        "id": "1NCYPK4DJ1Z5x5ISq2TW"
+      },
+      "scoreThomas": 67,
+      "winner": "Aurore",
+      "scoreAurore": 79,
+      "date": {
+        "type": "firestore/timestamp/1.0",
+        "seconds": 1705186800,
+        "nanoseconds": 0
+      }
+    },
+    "MyZVHWR4cnWwYEY1gpjA": {
+      "game": {
+        "id": "ety9rnsGuLDSlpVPvErU"
+      },
+      "scoreThomas": 0,
+      "date": {
+        "type": "firestore/timestamp/1.0",
+        "seconds": 1671577200,
+        "nanoseconds": 0
+      },
+      "winner": "Aurore",
+      "scoreAurore": 2
+    },
+    "NM67xB8FEzUDc1VYa4Aj": {
+      "scoreThomas": 98,
+      "scoreAurore": 97,
+      "game": {
+        "id": "pCxNCw7f4cKPPxb7YboK"
+      },
+      "date": {
+        "type": "firestore/timestamp/1.0",
+        "seconds": 1689717600,
+        "nanoseconds": 0
+      },
+      "winner": "Thomas"
+    },
+    "NW2ou4NaE7XK5QEE9t2g": {
+      "date": {
+        "type": "firestore/timestamp/1.0",
+        "seconds": 1732316400,
+        "nanoseconds": 0
+      },
+      "game": {
+        "id": "1NCYPK4DJ1Z5x5ISq2TW"
+      },
+      "winner": "Aurore",
+      "scoreThomas": 62,
+      "scoreAurore": 129
+    },
+    "NfbSzr2r4kkHDVhF3UHl": {
+      "game": {
+        "id": "pCxNCw7f4cKPPxb7YboK"
+      },
+      "winner": "Aurore",
+      "date": {
+        "type": "firestore/timestamp/1.0",
+        "seconds": 1725660000,
+        "nanoseconds": 0
+      },
+      "scoreThomas": 101,
+      "scoreAurore": 103
+    },
+    "NqidBkv1OuZ95IleMzQ2": {
+      "scoreThomas": 97,
+      "scoreAurore": 92,
+      "date": {
+        "type": "firestore/timestamp/1.0",
+        "seconds": 1701298800,
+        "nanoseconds": 0
+      },
+      "game": {
+        "id": "pCxNCw7f4cKPPxb7YboK"
+      },
+      "winner": "Thomas"
+    },
+    "Nx5HM7Fp9kqJtsbrQA6e": {
+      "scoreThomas": 60,
+      "game": {
+        "id": "1NCYPK4DJ1Z5x5ISq2TW"
+      },
+      "scoreAurore": 110,
+      "date": {
+        "type": "firestore/timestamp/1.0",
+        "seconds": 1705186800,
+        "nanoseconds": 0
+      },
+      "winner": "Aurore"
+    },
+    "Ny6C85qJbPPGyBl30W2a": {
+      "winner": "Thomas",
+      "game": {
+        "id": "hnKfFP3Ai1AkpsDcmBYx"
+      },
+      "scoreThomas": 52,
+      "date": {
+        "type": "firestore/timestamp/1.0",
+        "seconds": 1673737200,
+        "nanoseconds": 0
+      },
+      "scoreAurore": 46
+    },
+    "O5oDO0UciY0GbYZZ6sqH": {
+      "winner": "Aurore",
+      "game": {
+        "id": "AMo9lEANlAFqmhFcRffB"
+      },
+      "scoreAurore": 10,
+      "date": {
+        "type": "firestore/timestamp/1.0",
+        "seconds": 1758146400,
+        "nanoseconds": 0
+      },
+      "scoreThomas": 0
+    },
+    "O9Q1OBFnKNwCFMcoCGx1": {
+      "scoreThomas": 7,
+      "scoreAurore": 6,
+      "game": {
+        "id": "aESwYrxGgMpY6ntgUKuj"
+      },
+      "date": {
+        "type": "firestore/timestamp/1.0",
+        "seconds": 1671577200,
+        "nanoseconds": 0
+      },
+      "winner": "Thomas"
+    },
+    "OaNdRp5Ymti3GPzIupMJ": {
+      "scoreAurore": 46,
+      "winner": "Aurore",
+      "scoreThomas": 39,
+      "date": {
+        "type": "firestore/timestamp/1.0",
+        "seconds": 1762716761,
+        "nanoseconds": 555000000
+      },
+      "game": {
+        "id": "gieW6aYQBaVLr1XNIv9n"
+      }
+    },
+    "OkZ1darJO8nt1CyMC03c": {
+      "winner": "Aurore",
+      "game": {
+        "id": "8CpHoOHXik80Yg93TTOm"
+      },
+      "scoreThomas": 117,
+      "date": {
+        "type": "firestore/timestamp/1.0",
+        "seconds": 1677452400,
+        "nanoseconds": 0
+      },
+      "scoreAurore": 157
+    },
+    "OpocipDEwFWmcyesORkB": {
+      "winner": "Aurore",
+      "scoreThomas": 2,
+      "scoreAurore": 3,
+      "game": {
+        "id": "jWINVO317Z8Hzxoxz1Jg"
+      },
+      "date": {
+        "type": "firestore/timestamp/1.0",
+        "seconds": 1674774000,
+        "nanoseconds": 0
+      }
+    },
+    "OxuCSrWZ7hCyjfyPNuyt": {
+      "game": {
+        "id": "NDjXY0P8WKkn6sUbiebL"
+      },
+      "date": {
+        "type": "firestore/timestamp/1.0",
+        "seconds": 1673737200,
+        "nanoseconds": 0
+      },
+      "scoreThomas": 40,
+      "winner": "Thomas",
+      "scoreAurore": 34
+    },
+    "P03WLT3jsZf7X2shcgpY": {
+      "scoreAurore": 41,
+      "date": {
+        "type": "firestore/timestamp/1.0",
+        "seconds": 1743289200,
+        "nanoseconds": 0
+      },
+      "game": {
+        "id": "NDjXY0P8WKkn6sUbiebL"
+      },
+      "scoreThomas": 33,
+      "winner": "Aurore"
+    },
+    "P0YiltNApX9uDqG9lZV9": {
+      "scoreAurore": 95,
+      "winner": "Thomas",
+      "date": {
+        "type": "firestore/timestamp/1.0",
+        "seconds": 1723413600,
+        "nanoseconds": 0
+      },
+      "game": {
+        "id": "1NCYPK4DJ1Z5x5ISq2TW"
+      },
+      "scoreThomas": 107
+    },
+    "P9SbM5JJ3ydn53HkpeKy": {
+      "scoreAurore": 96,
+      "date": {
+        "type": "firestore/timestamp/1.0",
+        "seconds": 1706482800,
+        "nanoseconds": 0
+      },
+      "scoreThomas": 96,
+      "winner": "Aurore",
+      "game": {
+        "id": "pCxNCw7f4cKPPxb7YboK"
+      }
+    },
+    "PJBSsSU0L72v2i0YXf1x": {
+      "date": {
+        "type": "firestore/timestamp/1.0",
+        "seconds": 1678834800,
+        "nanoseconds": 0
+      },
+      "scoreThomas": 8,
+      "scoreAurore": 45,
+      "winner": "Aurore",
+      "game": {
+        "id": "AMo9lEANlAFqmhFcRffB"
+      }
+    },
+    "PTQZaTBu5lgFbljybGHL": {
+      "date": {
+        "type": "firestore/timestamp/1.0",
+        "seconds": 1734390000,
+        "nanoseconds": 0
+      },
+      "scoreAurore": 107,
+      "game": {
+        "id": "pCxNCw7f4cKPPxb7YboK"
+      },
+      "winner": "Aurore",
+      "scoreThomas": 105
+    },
+    "PXG1Gbm2vnivZD5zLkPX": {
+      "game": {
+        "id": "AMo9lEANlAFqmhFcRffB"
+      },
+      "date": {
+        "type": "firestore/timestamp/1.0",
+        "seconds": 1762109539,
+        "nanoseconds": 472000000
+      },
+      "scoreThomas": -15,
+      "winner": "Aurore",
+      "scoreAurore": 32
+    },
+    "PyOTHLVx3CawiBS21Pwz": {
+      "scoreAurore": 6,
+      "winner": "Aurore",
+      "scoreThomas": 2,
+      "date": {
+        "type": "firestore/timestamp/1.0",
+        "seconds": 1685397600,
+        "nanoseconds": 0
+      },
+      "game": {
+        "id": "aESwYrxGgMpY6ntgUKuj"
+      }
+    },
+    "PzHuPSC0dwLgH7E9X88a": {
+      "game": {
+        "id": "hnKfFP3Ai1AkpsDcmBYx"
+      },
+      "scoreAurore": 39,
+      "winner": "Thomas",
+      "scoreThomas": 47,
+      "date": {
+        "type": "firestore/timestamp/1.0",
+        "seconds": 1758146400,
+        "nanoseconds": 0
+      }
+    },
+    "Q3BZCxiz9DBcwWT5eD1x": {
+      "scoreThomas": 97,
+      "winner": "Aurore",
+      "game": {
+        "id": "pCxNCw7f4cKPPxb7YboK"
+      },
+      "scoreAurore": 105,
+      "date": {
+        "type": "firestore/timestamp/1.0",
+        "seconds": 1686088800,
+        "nanoseconds": 0
+      }
+    },
+    "QHDVMvisn48gOsQfZOvX": {
+      "winner": "Aurore",
+      "scoreAurore": 110,
+      "date": {
+        "type": "firestore/timestamp/1.0",
+        "seconds": 1701298800,
+        "nanoseconds": 0
+      },
+      "game": {
+        "id": "pCxNCw7f4cKPPxb7YboK"
+      },
+      "scoreThomas": 101
+    },
+    "QMs4XVIzRjUl9GkwKcHY": {
+      "game": {
+        "id": "LH9rn42sHWEeyfYk5kWI"
+      },
+      "scoreThomas": 7,
+      "date": {
+        "type": "firestore/timestamp/1.0",
+        "seconds": 1676761200,
+        "nanoseconds": 0
+      },
+      "scoreAurore": 29,
+      "winner": "Aurore"
+    },
+    "QbCabvC4s5F1pQQk6vuv": {
+      "scoreAurore": 95,
+      "date": {
+        "type": "firestore/timestamp/1.0",
+        "seconds": 1681768800,
+        "nanoseconds": 0
+      },
+      "winner": "Aurore",
+      "game": {
+        "id": "pCxNCw7f4cKPPxb7YboK"
+      },
+      "scoreThomas": 94
+    },
+    "QwSYf6RxdX8wGLMcMSbZ": {
+      "scoreThomas": 91,
+      "game": {
+        "id": "1NCYPK4DJ1Z5x5ISq2TW"
+      },
+      "date": {
+        "type": "firestore/timestamp/1.0",
+        "seconds": 1756677600,
+        "nanoseconds": 0
+      },
+      "winner": "Thomas",
+      "scoreAurore": 90
+    },
+    "QyXYEeD0ObJvBK4BjIUf": {
+      "winner": "Aurore",
+      "scoreThomas": 41,
+      "scoreAurore": 47,
+      "game": {
+        "id": "hnKfFP3Ai1AkpsDcmBYx"
+      },
+      "date": {
+        "type": "firestore/timestamp/1.0",
+        "seconds": 1684015200,
+        "nanoseconds": 0
+      }
+    },
+    "RKkPwKCKdeCluElQ0OB7": {
+      "game": {
+        "id": "pCxNCw7f4cKPPxb7YboK"
+      },
+      "scoreAurore": 117,
+      "scoreDetail": {
+        "thomas": {
+          "animals": {
+            "hawk": 16,
+            "salmon": 12,
+            "wapiti": 18,
+            "fox": 8,
+            "bear": 12
+          },
+          "landscape": 11,
+          "pinecone": 2,
+          "total": 112,
+          "habitats": {
+            "forest": 7,
+            "mountain": 10,
+            "humidMeadow": 7,
+            "dryMeadow": 2,
+            "water": 7
+          }
+        },
+        "aurore": {
+          "animals": {
+            "salmon": 19,
+            "fox": 4,
+            "bear": 24,
+            "hawk": 8,
+            "wapiti": 9
+          },
+          "landscape": 16,
+          "total": 117,
+          "habitats": {
+            "forest": 10,
+            "water": 4,
+            "dryMeadow": 11,
+            "humidMeadow": 7,
+            "mountain": 3
+          },
+          "pinecone": 2
+        }
+      },
+      "winner": "Aurore",
+      "scoreThomas": 112,
+      "date": {
+        "type": "firestore/timestamp/1.0",
+        "seconds": 1762542087,
+        "nanoseconds": 633000000
+      }
+    },
+    "RcDlTGfdJ3hBl8ddOAeV": {
+      "winner": "Aurore",
+      "scoreAurore": 123,
+      "game": {
+        "id": "1NCYPK4DJ1Z5x5ISq2TW"
+      },
+      "date": {
+        "type": "firestore/timestamp/1.0",
+        "seconds": 1751148000,
+        "nanoseconds": 0
+      },
+      "scoreThomas": 68
+    },
+    "Rg0nEKBZeL8TvZhoHDla": {
+      "game": {
+        "id": "Fvn5TS23SZKDqClmtJJS"
+      },
+      "winner": "Thomas",
+      "date": {
+        "type": "firestore/timestamp/1.0",
+        "seconds": 1688853600,
+        "nanoseconds": 0
+      },
+      "scoreAurore": 75,
+      "scoreThomas": 94
+    },
+    "Rtb4BgURxumB9nin9uOp": {
+      "scoreAurore": 97,
+      "winner": "Thomas",
+      "date": {
+        "type": "firestore/timestamp/1.0",
+        "seconds": 1725660000,
+        "nanoseconds": 0
+      },
+      "game": {
+        "id": "pCxNCw7f4cKPPxb7YboK"
+      },
+      "scoreThomas": 98
+    },
+    "RxDM0YJ1Dwm0uffGh1QH": {
+      "scoreThomas": 2,
+      "date": {
+        "type": "firestore/timestamp/1.0",
+        "seconds": 1674860400,
+        "nanoseconds": 0
+      },
+      "winner": "Aurore",
+      "scoreAurore": 3,
+      "game": {
+        "id": "ety9rnsGuLDSlpVPvErU"
+      }
+    },
+    "S0PbSXHCUhkEOHVodpg7": {
+      "scoreThomas": 86,
+      "date": {
+        "type": "firestore/timestamp/1.0",
+        "seconds": 1710025200,
+        "nanoseconds": 0
+      },
+      "scoreAurore": 104,
+      "game": {
+        "id": "1NCYPK4DJ1Z5x5ISq2TW"
+      },
+      "winner": "Aurore"
+    },
+    "S3xDII7TkXheBKxNRrA5": {
+      "winner": "Aurore",
+      "date": {
+        "type": "firestore/timestamp/1.0",
+        "seconds": 1708988400,
+        "nanoseconds": 0
+      },
+      "scoreThomas": 66,
+      "game": {
+        "id": "1NCYPK4DJ1Z5x5ISq2TW"
+      },
+      "scoreAurore": 103
+    },
+    "S4eEQtc8IngXIRvpUu8j": {
+      "scoreThomas": 10,
+      "winner": "Thomas",
+      "date": {
+        "type": "firestore/timestamp/1.0",
+        "seconds": 1673132400,
+        "nanoseconds": 0
+      },
+      "game": {
+        "id": "AMo9lEANlAFqmhFcRffB"
+      },
+      "scoreAurore": 12
+    },
+    "SR3deHh4S7XWr1VXf9eG": {
+      "scoreDetail": {
+        "aurore": {
+          "coveredCards": 14,
+          "total": 77,
+          "storedFood": 0,
+          "bonusCards": 0,
+          "roundObjectives": 14,
+          "eggs": 22,
+          "birds": 27
+        },
+        "thomas": {
+          "birds": 21,
+          "storedFood": 0,
+          "bonusCards": 7,
+          "coveredCards": 10,
+          "eggs": 15,
+          "total": 61,
+          "roundObjectives": 8
+        }
+      },
+      "scoreThomas": 61,
+      "date": {
+        "type": "firestore/timestamp/1.0",
+        "seconds": 1760623838,
+        "nanoseconds": 0
+      },
+      "game": {
+        "id": "jjX3x6PehqgBO7NcLMpy"
+      },
+      "winner": "Aurore",
+      "scoreAurore": 77
+    },
+    "STeT6xSMwMIHlR4DdDU4": {
+      "scoreThomas": 4,
+      "date": {
+        "type": "firestore/timestamp/1.0",
+        "seconds": 1683237600,
+        "nanoseconds": 0
+      },
+      "winner": "Aurore",
+      "game": {
+        "id": "aESwYrxGgMpY6ntgUKuj"
+      },
+      "scoreAurore": 6
+    },
+    "SWdF0dNzuO3dSmdv0bn8": {
+      "game": {
+        "id": "hnKfFP3Ai1AkpsDcmBYx"
+      },
+      "winner": "Thomas",
+      "date": {
+        "type": "firestore/timestamp/1.0",
+        "seconds": 1758146400,
+        "nanoseconds": 0
+      },
+      "scoreThomas": 46,
+      "scoreAurore": 35
+    },
+    "SaXVCbk4VN1yrlXS0RbJ": {
+      "date": {
+        "type": "firestore/timestamp/1.0",
+        "seconds": 1693951200,
+        "nanoseconds": 0
+      },
+      "scoreAurore": 105,
+      "scoreThomas": 93,
+      "winner": "Aurore",
+      "game": {
+        "id": "pCxNCw7f4cKPPxb7YboK"
+      }
+    },
+    "Sc4e9J998zjWHwJ5nux5": {
+      "game": {
+        "id": "NDjXY0P8WKkn6sUbiebL"
+      },
+      "scoreThomas": 35,
+      "winner": "Aurore",
+      "date": {
+        "type": "firestore/timestamp/1.0",
+        "seconds": 1685311200,
+        "nanoseconds": 0
+      },
+      "scoreAurore": 50
+    },
+    "SiZUPTp840yNal8kxDVl": {
+      "winner": "Aurore",
+      "game": {
+        "id": "pCxNCw7f4cKPPxb7YboK"
+      },
+      "scoreAurore": 102,
+      "scoreThomas": 99,
+      "date": {
+        "type": "firestore/timestamp/1.0",
+        "seconds": 1694296800,
+        "nanoseconds": 0
+      }
+    },
+    "Sj2SyF5k6rRVrRDA1ohy": {
+      "scoreThomas": 94,
+      "game": {
+        "id": "1NCYPK4DJ1Z5x5ISq2TW"
+      },
+      "winner": "Aurore",
+      "date": {
+        "type": "firestore/timestamp/1.0",
+        "seconds": 1707519600,
+        "nanoseconds": 0
+      },
+      "scoreAurore": 108
+    },
+    "SmYbxddqIdzU1ZqrWMs3": {
+      "date": {
+        "type": "firestore/timestamp/1.0",
+        "seconds": 1679439600,
+        "nanoseconds": 0
+      },
+      "scoreAurore": 1,
+      "game": {
+        "id": "ety9rnsGuLDSlpVPvErU"
+      },
+      "winner": "Thomas",
+      "scoreThomas": 2
+    },
+    "SmkhWIbqnYuPJZvaEbMr": {
+      "game": {
+        "id": "AMo9lEANlAFqmhFcRffB"
+      },
+      "winner": "Aurore",
+      "date": {
+        "type": "firestore/timestamp/1.0",
+        "seconds": 1737759600,
+        "nanoseconds": 0
+      },
+      "scoreAurore": 38,
+      "scoreThomas": 0
+    },
+    "T3pNNUd0qF9inqegMfkd": {
+      "scoreAurore": 100,
+      "game": {
+        "id": "pCxNCw7f4cKPPxb7YboK"
+      },
+      "date": {
+        "type": "firestore/timestamp/1.0",
+        "seconds": 1684879200,
+        "nanoseconds": 0
+      },
+      "winner": "Aurore",
+      "scoreThomas": 88
+    },
+    "T4fNAreYD8KFnqCJ5msr": {
+      "scoreThomas": 32,
+      "date": {
+        "type": "firestore/timestamp/1.0",
+        "seconds": 1675206000,
+        "nanoseconds": 0
+      },
+      "game": {
+        "id": "NDjXY0P8WKkn6sUbiebL"
+      },
+      "scoreAurore": 46,
+      "winner": "Aurore"
+    },
+    "TGWOKfiaVUwd1uaSX8Xl": {
+      "scoreAurore": 122,
+      "game": {
+        "id": "1NCYPK4DJ1Z5x5ISq2TW"
+      },
+      "date": {
+        "type": "firestore/timestamp/1.0",
+        "seconds": 1740783600,
+        "nanoseconds": 0
+      },
+      "winner": "Aurore",
+      "scoreThomas": 104
+    },
+    "TgXEdRmKdTgb3ftQng9X": {
+      "scoreThomas": 91,
+      "winner": "Aurore",
+      "date": {
+        "type": "firestore/timestamp/1.0",
+        "seconds": 1700175600,
+        "nanoseconds": 0
+      },
+      "game": {
+        "id": "pCxNCw7f4cKPPxb7YboK"
+      },
+      "scoreAurore": 99
+    },
+    "TmLcy5XHdQpyvGhWPlxT": {
+      "scoreAurore": 99,
+      "winner": "Thomas",
+      "date": {
+        "type": "firestore/timestamp/1.0",
+        "seconds": 1717020000,
+        "nanoseconds": 0
+      },
+      "game": {
+        "id": "pCxNCw7f4cKPPxb7YboK"
+      },
+      "scoreThomas": 110
+    },
+    "TvwcCrqSkT3dFU8Mxfwl": {
+      "scoreThomas": 102,
+      "winner": "Aurore",
+      "date": {
+        "type": "firestore/timestamp/1.0",
+        "seconds": 1697839200,
+        "nanoseconds": 0
+      },
+      "game": {
+        "id": "pCxNCw7f4cKPPxb7YboK"
+      },
+      "scoreAurore": 111
+    },
+    "UKONH3epwMvpRi9w81Uz": {
+      "game": {
+        "id": "AMo9lEANlAFqmhFcRffB"
+      },
+      "scoreAurore": 39,
+      "date": {
+        "type": "firestore/timestamp/1.0",
+        "seconds": 1683756000,
+        "nanoseconds": 0
+      },
+      "winner": "Aurore",
+      "scoreThomas": -15
+    },
+    "UQU6lJ5d1doZADVs5qG7": {
+      "winner": "Aurore",
+      "game": {
+        "id": "hnKfFP3Ai1AkpsDcmBYx"
+      },
+      "scoreThomas": 37,
+      "scoreAurore": 41,
+      "date": {
+        "type": "firestore/timestamp/1.0",
+        "seconds": 1674860400,
+        "nanoseconds": 0
+      }
+    },
+    "UdOLPMOqV8JEWO0QIHTU": {
+      "scoreAurore": 102,
+      "scoreThomas": 95,
+      "date": {
+        "type": "firestore/timestamp/1.0",
+        "seconds": 1701212400,
+        "nanoseconds": 0
+      },
+      "game": {
+        "id": "pCxNCw7f4cKPPxb7YboK"
+      },
+      "winner": "Aurore"
+    },
+    "UkFIZvNwJGFkRyRuZ6cJ": {
+      "date": {
+        "type": "firestore/timestamp/1.0",
+        "seconds": 1719784800,
+        "nanoseconds": 0
+      },
+      "scoreAurore": 9,
+      "game": {
+        "id": "TpX9nE0gqwq7HpkfVYYs"
+      },
+      "scoreThomas": 8,
+      "winner": "Aurore"
+    },
+    "UkgZb7WsZgl0rv6cIqjj": {
+      "scoreThomas": 86,
+      "game": {
+        "id": "y0aNNuR2dZp2HRDHcH2m"
+      },
+      "winner": "Aurore",
+      "scoreAurore": 114,
+      "date": {
+        "type": "firestore/timestamp/1.0",
+        "seconds": 1691532000,
+        "nanoseconds": 0
+      }
+    },
+    "UnF1ZDLV5k6IYYuFFVdX": {
+      "date": {
+        "type": "firestore/timestamp/1.0",
+        "seconds": 1710198000,
+        "nanoseconds": 0
+      },
+      "scoreAurore": 87,
+      "winner": "Aurore",
+      "game": {
+        "id": "y0aNNuR2dZp2HRDHcH2m"
+      },
+      "scoreThomas": 134
+    },
+    "V6SZXjhxmWHMQRkQyTPz": {
+      "scoreThomas": 74,
+      "winner": "Aurore",
+      "game": {
+        "id": "8CpHoOHXik80Yg93TTOm"
+      },
+      "scoreAurore": 135,
+      "date": {
+        "type": "firestore/timestamp/1.0",
+        "seconds": 1674860400,
+        "nanoseconds": 0
+      }
+    },
+    "V6SvsrlkPK4OlMrUjsIf": {
+      "winner": "Aurore",
+      "game": {
+        "id": "4XxtQnIpjIljldNJryUx"
+      },
+      "scoreAurore": 5,
+      "date": {
+        "type": "firestore/timestamp/1.0",
+        "seconds": 1746914400,
+        "nanoseconds": 0
+      },
+      "scoreThomas": 0
+    },
+    "VVtliNYnjvyj9MBvUhzR": {
+      "scoreAurore": 0,
+      "game": {
+        "id": "TpX9nE0gqwq7HpkfVYYs"
+      },
+      "date": {
+        "type": "firestore/timestamp/1.0",
+        "seconds": 1756677600,
+        "nanoseconds": 0
+      },
+      "scoreThomas": 1,
+      "winner": "Thomas"
+    },
+    "Vg7gC7JPe028qfKmAPwS": {
+      "date": {
+        "type": "firestore/timestamp/1.0",
+        "seconds": 1734044400,
+        "nanoseconds": 0
+      },
+      "winner": "Aurore",
+      "scoreAurore": 117,
+      "game": {
+        "id": "pCxNCw7f4cKPPxb7YboK"
+      },
+      "scoreThomas": 114
+    },
+    "VpGmfPKksJfd0fqSRgVs": {
+      "scoreAurore": 100,
+      "game": {
+        "id": "pCxNCw7f4cKPPxb7YboK"
+      },
+      "scoreThomas": 98,
+      "date": {
+        "type": "firestore/timestamp/1.0",
+        "seconds": 1707606000,
+        "nanoseconds": 0
+      },
+      "winner": "Aurore"
+    },
+    "W2WMsDGImWrnj4oRRySV": {
+      "game": {
+        "id": "IDYkWZHmvL9iSF085Oge"
+      },
+      "scoreAurore": 141,
+      "date": {
+        "type": "firestore/timestamp/1.0",
+        "seconds": 1739228400,
+        "nanoseconds": 0
+      },
+      "winner": "Aurore",
+      "scoreThomas": 107
+    },
+    "W3xEhLJLQln4Ym4KJn43": {
+      "scoreThomas": 96,
+      "scoreAurore": 123,
+      "game": {
+        "id": "1NCYPK4DJ1Z5x5ISq2TW"
+      },
+      "date": {
+        "type": "firestore/timestamp/1.0",
+        "seconds": 1751148000,
+        "nanoseconds": 0
+      },
+      "winner": "Aurore"
+    },
+    "WCk9F9xXEbxi8aWNPwv5": {
+      "game": {
+        "id": "pCxNCw7f4cKPPxb7YboK"
+      },
+      "scoreAurore": 86,
+      "date": {
+        "type": "firestore/timestamp/1.0",
+        "seconds": 1709247600,
+        "nanoseconds": 0
+      },
+      "scoreThomas": 95,
+      "winner": "Thomas"
+    },
+    "WYC3MP2w0WiTsuVzUY1i": {
+      "scoreThomas": 40,
+      "game": {
+        "id": "hnKfFP3Ai1AkpsDcmBYx"
+      },
+      "date": {
+        "type": "firestore/timestamp/1.0",
+        "seconds": 1698098400,
+        "nanoseconds": 0
+      },
+      "scoreAurore": 33,
+      "winner": "Thomas"
+    },
+    "WbDdZU8P1hcA8ec0AQ7E": {
+      "game": {
+        "id": "jWINVO317Z8Hzxoxz1Jg"
+      },
+      "winner": "Thomas",
+      "scoreThomas": 3,
+      "date": {
+        "type": "firestore/timestamp/1.0",
+        "seconds": 1760451123,
+        "nanoseconds": 0
+      },
+      "scoreAurore": 0
+    },
+    "WglQOh9KAverJ1MI8Cd7": {
+      "winner": "Aurore",
+      "game": {
+        "id": "AMo9lEANlAFqmhFcRffB"
+      },
+      "scoreThomas": 20,
+      "date": {
+        "type": "firestore/timestamp/1.0",
+        "seconds": 1704063600,
+        "nanoseconds": 0
+      },
+      "scoreAurore": 34
+    },
+    "X9d11hKAN4dEXVyr3L91": {
+      "winner": "Thomas",
+      "game": {
+        "id": "pCxNCw7f4cKPPxb7YboK"
+      },
+      "scoreAurore": 99,
+      "date": {
+        "type": "firestore/timestamp/1.0",
+        "seconds": 1691877600,
+        "nanoseconds": 0
+      },
+      "scoreThomas": 100
+    },
+    "Xan74kNDBkG6XTuNyOsn": {
+      "scoreAurore": 97,
+      "scoreThomas": 102,
+      "winner": "Thomas",
+      "date": {
+        "type": "firestore/timestamp/1.0",
+        "seconds": 1696456800,
+        "nanoseconds": 0
+      },
+      "game": {
+        "id": "pCxNCw7f4cKPPxb7YboK"
+      }
+    },
+    "XtFBtvmDNBsqTNYFvS7u": {
+      "game": {
+        "id": "aESwYrxGgMpY6ntgUKuj"
+      },
+      "scoreThomas": 7,
+      "scoreAurore": 5,
+      "winner": "Thomas",
+      "date": {
+        "type": "firestore/timestamp/1.0",
+        "seconds": 1676674800,
+        "nanoseconds": 0
+      }
+    },
+    "XtvSwppLaAnFWRho0xUM": {
+      "scoreAurore": 48,
+      "game": {
+        "id": "hnKfFP3Ai1AkpsDcmBYx"
+      },
+      "date": {
+        "type": "firestore/timestamp/1.0",
+        "seconds": 1684879200,
+        "nanoseconds": 0
+      },
+      "winner": "Thomas",
+      "scoreThomas": 49
+    },
+    "XxlQS8ArzG4BrOeCtWLP": {
+      "date": {
+        "type": "firestore/timestamp/1.0",
+        "seconds": 1677279600,
+        "nanoseconds": 0
+      },
+      "game": {
+        "id": "jWINVO317Z8Hzxoxz1Jg"
+      },
+      "scoreThomas": 2,
+      "scoreAurore": 4,
+      "winner": "Aurore"
+    },
+    "Y1LVpKnZwqC4dC9DwsUm": {
+      "scoreThomas": 32,
+      "winner": "Aurore",
+      "scoreAurore": 46,
+      "game": {
+        "id": "hnKfFP3Ai1AkpsDcmBYx"
+      },
+      "date": {
+        "type": "firestore/timestamp/1.0",
+        "seconds": 1741906800,
+        "nanoseconds": 0
+      }
+    },
+    "Y3Gy2dI9s01L5TBeETQ5": {
+      "game": {
+        "id": "Fvn5TS23SZKDqClmtJJS"
+      },
+      "date": {
+        "type": "firestore/timestamp/1.0",
+        "seconds": 1676674800,
+        "nanoseconds": 0
+      },
+      "scoreAurore": 29,
+      "scoreThomas": 76,
+      "winner": "Thomas"
+    },
+    "Y4ADYlJRHHKrbi71d1l2": {
+      "game": {
+        "id": "NDjXY0P8WKkn6sUbiebL"
+      },
+      "scoreThomas": 36,
+      "date": {
+        "type": "firestore/timestamp/1.0",
+        "seconds": 1672354800,
+        "nanoseconds": 0
+      },
+      "scoreAurore": 44,
+      "winner": "Aurore"
+    },
+    "YGvWWxzIOo2MbJT6ouet": {
+      "scoreAurore": 0,
+      "scoreThomas": 1,
+      "game": {
+        "id": "TpX9nE0gqwq7HpkfVYYs"
+      },
+      "winner": "Thomas",
+      "date": {
+        "type": "firestore/timestamp/1.0",
+        "seconds": 1756677600,
+        "nanoseconds": 0
+      }
+    },
+    "Yh1sqICUPILDst98d73i": {
+      "winner": "Thomas",
+      "date": {
+        "type": "firestore/timestamp/1.0",
+        "seconds": 1700953200,
+        "nanoseconds": 0
+      },
+      "scoreThomas": 18,
+      "scoreAurore": 4,
+      "game": {
+        "id": "LH9rn42sHWEeyfYk5kWI"
+      }
+    },
+    "YlCvOsxXNsJULoJk7f8e": {
+      "scoreAurore": 100,
+      "game": {
+        "id": "pCxNCw7f4cKPPxb7YboK"
+      },
+      "date": {
+        "type": "firestore/timestamp/1.0",
+        "seconds": 1689372000,
+        "nanoseconds": 0
+      },
+      "scoreThomas": 103,
+      "winner": "Thomas"
+    },
+    "Yn82o4wExI8mAGNXQ4lp": {
+      "scoreAurore": 35,
+      "date": {
+        "type": "firestore/timestamp/1.0",
+        "seconds": 1700866800,
+        "nanoseconds": 0
+      },
+      "winner": "Thomas",
+      "scoreThomas": 36,
+      "game": {
+        "id": "hnKfFP3Ai1AkpsDcmBYx"
+      }
+    },
+    "YvicOtqSQmIOeUMWzRWB": {
+      "game": {
+        "id": "TpX9nE0gqwq7HpkfVYYs"
+      },
+      "date": {
+        "type": "firestore/timestamp/1.0",
+        "seconds": 1756677600,
+        "nanoseconds": 0
+      },
+      "scoreAurore": 1,
+      "scoreThomas": 0,
+      "winner": "Aurore"
+    },
+    "Z63OneR4OPwXgdZiicia": {
+      "game": {
+        "id": "jWINVO317Z8Hzxoxz1Jg"
+      },
+      "scoreThomas": 1,
+      "date": {
+        "type": "firestore/timestamp/1.0",
+        "seconds": 1678575600,
+        "nanoseconds": 0
+      },
+      "scoreAurore": 3,
+      "winner": "Aurore"
+    },
+    "ZXojrdo92bPaXdcs5VDN": {
+      "scoreThomas": 4,
+      "scoreAurore": 2,
+      "date": {
+        "type": "firestore/timestamp/1.0",
+        "seconds": 1679439600,
+        "nanoseconds": 0
+      },
+      "game": {
+        "id": "ety9rnsGuLDSlpVPvErU"
+      },
+      "winner": "Thomas"
+    },
+    "ZgJFlm7v6XLCzaWqyFwf": {
+      "scoreAurore": 106,
+      "winner": "Aurore",
+      "scoreThomas": 93,
+      "game": {
+        "id": "pCxNCw7f4cKPPxb7YboK"
+      },
+      "date": {
+        "type": "firestore/timestamp/1.0",
+        "seconds": 1708902000,
+        "nanoseconds": 0
+      }
+    },
+    "Zy1UXzDKNOhXJLvZuMWK": {
+      "scoreAurore": 54,
+      "game": {
+        "id": "hcliaSURVnnZLOIA21hi"
+      },
+      "date": {
+        "type": "firestore/timestamp/1.0",
+        "seconds": 1737673200,
+        "nanoseconds": 0
+      },
+      "winner": "Aurore",
+      "scoreThomas": 51
+    },
+    "a9iKs7yHlExRRY6eRAE2": {
+      "scoreThomas": 7,
+      "game": {
+        "id": "aESwYrxGgMpY6ntgUKuj"
+      },
+      "winner": "Thomas",
+      "date": {
+        "type": "firestore/timestamp/1.0",
+        "seconds": 1707606000,
+        "nanoseconds": 0
+      },
+      "scoreAurore": 5
+    },
+    "aAj3QUM78Kh5oCW5QaUS": {
+      "winner": "Aurore",
+      "scoreAurore": 96,
+      "game": {
+        "id": "pCxNCw7f4cKPPxb7YboK"
+      },
+      "date": {
+        "type": "firestore/timestamp/1.0",
+        "seconds": 1686088800,
+        "nanoseconds": 0
+      },
+      "scoreThomas": 96
+    },
+    "aFTkzyz2gHxzOJEbvsG5": {
+      "date": {
+        "type": "firestore/timestamp/1.0",
+        "seconds": 1763147723,
+        "nanoseconds": 704000000
+      },
+      "game": {
+        "id": "pCxNCw7f4cKPPxb7YboK"
+      },
+      "scoreDetail": {
+        "thomas": {
+          "animals": {
+            "fox": 14,
+            "bear": 13,
+            "wapiti": 7,
+            "salmon": 6,
+            "hawk": 21
+          },
+          "pinecone": 1,
+          "habitats": {
+            "water": 7,
+            "dryMeadow": 10,
+            "forest": 6,
+            "humidMeadow": 10,
+            "mountain": 2
+          },
+          "landscape": 9,
+          "total": 106
+        },
+        "aurore": {
+          "habitats": {
+            "forest": 12,
+            "dryMeadow": 7,
+            "humidMeadow": 7,
+            "mountain": 8,
+            "water": 7
+          },
+          "total": 121,
+          "animals": {
+            "hawk": 21,
+            "bear": 10,
+            "wapiti": 13,
+            "fox": 11,
+            "salmon": 17
+          },
+          "pinecone": 2,
+          "landscape": 6
+        }
+      },
+      "scoreThomas": 106,
+      "scoreAurore": 121,
+      "winner": "Aurore"
+    },
+    "aJ6CXO5T164Ln18ktmaR": {
+      "game": {
+        "id": "pCxNCw7f4cKPPxb7YboK"
+      },
+      "winner": "Aurore",
+      "date": {
+        "type": "firestore/timestamp/1.0",
+        "seconds": 1720389600,
+        "nanoseconds": 0
+      },
+      "scoreAurore": 102,
+      "scoreThomas": 99
+    },
+    "aa2VCMZ1J8uB96lmqKX9": {
+      "scoreThomas": 3,
+      "game": {
+        "id": "ety9rnsGuLDSlpVPvErU"
+      },
+      "date": {
+        "type": "firestore/timestamp/1.0",
+        "seconds": 1673132400,
+        "nanoseconds": 0
+      },
+      "scoreAurore": 2,
+      "winner": "Thomas"
+    },
+    "afnsrwb6jDnI1oIFnG1X": {
+      "date": {
+        "type": "firestore/timestamp/1.0",
+        "seconds": 1679439600,
+        "nanoseconds": 0
+      },
+      "winner": "Aurore",
+      "scoreAurore": 108,
+      "game": {
+        "id": "pCxNCw7f4cKPPxb7YboK"
+      },
+      "scoreThomas": 94
+    },
+    "alTunMgUKLGrJAEJmjqG": {
+      "date": {
+        "type": "firestore/timestamp/1.0",
+        "seconds": 1686088800,
+        "nanoseconds": 0
+      },
+      "game": {
+        "id": "aESwYrxGgMpY6ntgUKuj"
+      },
+      "winner": "Aurore",
+      "scoreThomas": 6,
+      "scoreAurore": 7
+    },
+    "asHYY2ZTNeRmooOqIPI1": {
+      "scoreAurore": 5,
+      "scoreThomas": 3,
+      "date": {
+        "type": "firestore/timestamp/1.0",
+        "seconds": 1718748000,
+        "nanoseconds": 0
+      },
+      "winner": "Aurore",
+      "game": {
+        "id": "jWINVO317Z8Hzxoxz1Jg"
+      }
+    },
+    "atRjTkWm62NxhXJRkRhp": {
+      "date": {
+        "type": "firestore/timestamp/1.0",
+        "seconds": 1686434400,
+        "nanoseconds": 0
+      },
+      "game": {
+        "id": "pCxNCw7f4cKPPxb7YboK"
+      },
+      "scoreAurore": 92,
+      "winner": "Aurore",
+      "scoreThomas": 91
+    },
+    "atTDpLniYIMrwSjgQNyo": {
+      "scoreThomas": 93,
+      "game": {
+        "id": "pCxNCw7f4cKPPxb7YboK"
+      },
+      "winner": "Aurore",
+      "scoreAurore": 97,
+      "date": {
+        "type": "firestore/timestamp/1.0",
+        "seconds": 1690408800,
+        "nanoseconds": 0
+      }
+    },
+    "azIIynXfJo4ipn21I2KF": {
+      "scoreAurore": 88,
+      "date": {
+        "type": "firestore/timestamp/1.0",
+        "seconds": 1684015200,
+        "nanoseconds": 0
+      },
+      "winner": "Thomas",
+      "scoreThomas": 98,
+      "game": {
+        "id": "pCxNCw7f4cKPPxb7YboK"
+      }
+    },
+    "bDsw70OZsDrpjbpk6pCu": {
+      "winner": "Aurore",
+      "scoreAurore": 7,
+      "date": {
+        "type": "firestore/timestamp/1.0",
+        "seconds": 1683237600,
+        "nanoseconds": 0
+      },
+      "scoreThomas": 6,
+      "game": {
+        "id": "aESwYrxGgMpY6ntgUKuj"
+      }
+    },
+    "bIBEq5KdqPt8QMsu6NbK": {
+      "winner": "Thomas",
+      "scoreAurore": -1,
+      "game": {
+        "id": "4XxtQnIpjIljldNJryUx"
+      },
+      "date": {
+        "type": "firestore/timestamp/1.0",
+        "seconds": 1753912800,
+        "nanoseconds": 0
+      },
+      "scoreThomas": 5
+    },
+    "bL3ova0WL8qJKtz3uZVk": {
+      "scoreThomas": 108,
+      "game": {
+        "id": "pCxNCw7f4cKPPxb7YboK"
+      },
+      "date": {
+        "type": "firestore/timestamp/1.0",
+        "seconds": 1731366000,
+        "nanoseconds": 0
+      },
+      "scoreAurore": 110,
+      "winner": "Aurore"
+    },
+    "bNtVEvr13XvMrK8UjyHh": {
+      "date": {
+        "type": "firestore/timestamp/1.0",
+        "seconds": 1714860000,
+        "nanoseconds": 0
+      },
+      "scoreThomas": 95,
+      "game": {
+        "id": "pCxNCw7f4cKPPxb7YboK"
+      },
+      "scoreAurore": 100,
+      "winner": "Aurore"
+    },
+    "bh7dh4MSNu1EG4DtJuxx": {
+      "scoreAurore": 38,
+      "date": {
+        "type": "firestore/timestamp/1.0",
+        "seconds": 1696629600,
+        "nanoseconds": 0
+      },
+      "game": {
+        "id": "y0aNNuR2dZp2HRDHcH2m"
+      },
+      "scoreThomas": 110,
+      "winner": "Aurore"
+    },
+    "brtJRWfHC6u8Ce4QcqSl": {
+      "scoreThomas": 2,
+      "game": {
+        "id": "ety9rnsGuLDSlpVPvErU"
+      },
+      "scoreAurore": 3,
+      "winner": "Aurore",
+      "date": {
+        "type": "firestore/timestamp/1.0",
+        "seconds": 1685138400,
+        "nanoseconds": 0
+      }
+    },
+    "bxHfcZiUI3UoNvgmct5K": {
+      "winner": "Thomas",
+      "date": {
+        "type": "firestore/timestamp/1.0",
+        "seconds": 1699138800,
+        "nanoseconds": 0
+      },
+      "scoreAurore": 97,
+      "game": {
+        "id": "pCxNCw7f4cKPPxb7YboK"
+      },
+      "scoreThomas": 99
+    },
+    "bzpDtgDkHjqkYsnjRNG4": {
+      "date": {
+        "type": "firestore/timestamp/1.0",
+        "seconds": 1759010400,
+        "nanoseconds": 0
+      },
+      "game": {
+        "id": "jjX3x6PehqgBO7NcLMpy"
+      },
+      "scoreDetail": {
+        "thomas": {
+          "bonusCards": 7,
+          "eggs": 10,
+          "storedFood": 2,
+          "birds": 31,
+          "coveredCards": 1,
+          "total": 70,
+          "roundObjectives": 19
+        },
+        "aurore": {
+          "eggs": 11,
+          "birds": 27,
+          "storedFood": 0,
+          "total": 61,
+          "bonusCards": 3,
+          "coveredCards": 10,
+          "roundObjectives": 10
+        }
+      },
+      "winner": "Thomas",
+      "scoreAurore": 61,
+      "scoreThomas": 70
+    },
+    "cB4JefrMtnBXQCznZBoN": {
+      "scoreThomas": 101,
+      "game": {
+        "id": "pCxNCw7f4cKPPxb7YboK"
+      },
+      "date": {
+        "type": "firestore/timestamp/1.0",
+        "seconds": 1756764000,
+        "nanoseconds": 0
+      },
+      "winner": "Aurore",
+      "scoreAurore": 111
+    },
+    "cHqd0F0HFojXg0COLCIy": {
+      "scoreThomas": 35,
+      "game": {
+        "id": "NDjXY0P8WKkn6sUbiebL"
+      },
+      "date": {
+        "type": "firestore/timestamp/1.0",
+        "seconds": 1743289200,
+        "nanoseconds": 0
+      },
+      "winner": "Aurore",
+      "scoreAurore": 46
+    },
+    "cIq10jerHKZy72h9ilMC": {
+      "date": {
+        "type": "firestore/timestamp/1.0",
+        "seconds": 1679180400,
+        "nanoseconds": 0
+      },
+      "winner": "Thomas",
+      "scoreThomas": 139,
+      "game": {
+        "id": "8CpHoOHXik80Yg93TTOm"
+      },
+      "scoreAurore": 128
+    },
+    "ckGsNXlqxEp2nXw8Bky3": {
+      "scoreThomas": 32,
+      "scoreAurore": 48,
+      "game": {
+        "id": "NDjXY0P8WKkn6sUbiebL"
+      },
+      "winner": "Aurore",
+      "date": {
+        "type": "firestore/timestamp/1.0",
+        "seconds": 1685311200,
+        "nanoseconds": 0
+      }
+    },
+    "coTLlxlCFihPMBAtrokE": {
+      "game": {
+        "id": "aESwYrxGgMpY6ntgUKuj"
+      },
+      "scoreAurore": 4,
+      "winner": "Thomas",
+      "date": {
+        "type": "firestore/timestamp/1.0",
+        "seconds": 1684879200,
+        "nanoseconds": 0
+      },
+      "scoreThomas": 7
+    },
+    "coquTpJ8fWaqnKGIXaYQ": {
+      "winner": "Thomas",
+      "date": {
+        "type": "firestore/timestamp/1.0",
+        "seconds": 1673996400,
+        "nanoseconds": 0
+      },
+      "game": {
+        "id": "jWINVO317Z8Hzxoxz1Jg"
+      },
+      "scoreThomas": 3,
+      "scoreAurore": 1
+    },
+    "dBC5ckkv3dOwPXtWVAjH": {
+      "winner": "Aurore",
+      "scoreThomas": 112,
+      "game": {
+        "id": "y0aNNuR2dZp2HRDHcH2m"
+      },
+      "date": {
+        "type": "firestore/timestamp/1.0",
+        "seconds": 1698357600,
+        "nanoseconds": 0
+      },
+      "scoreAurore": 74
+    },
+    "dBHh8tCM7o7h10hYC7LJ": {
+      "winner": "Thomas",
+      "game": {
+        "id": "pCxNCw7f4cKPPxb7YboK"
+      },
+      "scoreAurore": 101,
+      "scoreThomas": 103,
+      "date": {
+        "type": "firestore/timestamp/1.0",
+        "seconds": 1700780400,
+        "nanoseconds": 0
+      }
+    },
+    "df2Rhd03oawukhxxXykc": {
+      "date": {
+        "type": "firestore/timestamp/1.0",
+        "seconds": 1759356000,
+        "nanoseconds": 0
+      },
+      "scoreDetail": {
+        "aurore": {
+          "roundObjectives": 19,
+          "eggs": 27,
+          "coveredCards": 18,
+          "storedFood": 0,
+          "birds": 39,
+          "total": 107,
+          "bonusCards": 4
+        },
+        "thomas": {
+          "eggs": 21,
+          "birds": 26,
+          "bonusCards": 7,
+          "roundObjectives": 6,
+          "total": 64,
+          "coveredCards": 0,
+          "storedFood": 4
+        }
+      },
+      "scoreAurore": 107,
+      "winner": "Aurore",
+      "game": {
+        "id": "jjX3x6PehqgBO7NcLMpy"
+      },
+      "scoreThomas": 64
+    },
+    "drW51kCbbJua5DhK5tbT": {
+      "scoreAurore": 7,
+      "date": {
+        "type": "firestore/timestamp/1.0",
+        "seconds": 1673737200,
+        "nanoseconds": 0
+      },
+      "winner": "Aurore",
+      "scoreThomas": 6,
+      "game": {
+        "id": "aESwYrxGgMpY6ntgUKuj"
+      }
+    },
+    "dz4flgDt5DVW2NVd1JdU": {
+      "game": {
+        "id": "pCxNCw7f4cKPPxb7YboK"
+      },
+      "scoreAurore": 91,
+      "scoreThomas": 100,
+      "winner": "Thomas",
+      "date": {
+        "type": "firestore/timestamp/1.0",
+        "seconds": 1718575200,
+        "nanoseconds": 0
+      }
+    },
+    "e4238qV9M4rr6ND3b4A5": {
+      "scoreThomas": 31,
+      "game": {
+        "id": "AMo9lEANlAFqmhFcRffB"
+      },
+      "scoreAurore": 33,
+      "date": {
+        "type": "firestore/timestamp/1.0",
+        "seconds": 1698444000,
+        "nanoseconds": 0
+      },
+      "winner": "Aurore"
+    },
+    "e5ttH2G8eIQ3i6Kja4PV": {
+      "winner": "Thomas",
+      "date": {
+        "type": "firestore/timestamp/1.0",
+        "seconds": 1698706800,
+        "nanoseconds": 0
+      },
+      "scoreThomas": 3,
+      "scoreAurore": 0,
+      "game": {
+        "id": "jWINVO317Z8Hzxoxz1Jg"
+      }
+    },
+    "ebVQouh6I8osUYHMGbBl": {
+      "winner": "Aurore",
+      "scoreThomas": 88,
+      "game": {
+        "id": "pCxNCw7f4cKPPxb7YboK"
+      },
+      "scoreAurore": 98,
+      "date": {
+        "type": "firestore/timestamp/1.0",
+        "seconds": 1689285600,
+        "nanoseconds": 0
+      }
+    },
+    "ecpDHIf8uCBdlUhHOXhY": {
+      "scoreAurore": 123,
+      "scoreThomas": 110,
+      "game": {
+        "id": "1NCYPK4DJ1Z5x5ISq2TW"
+      },
+      "date": {
+        "type": "firestore/timestamp/1.0",
+        "seconds": 1716328800,
+        "nanoseconds": 0
+      },
+      "winner": "Aurore"
+    },
+    "efYp4xFXWq2PKGJS104I": {
+      "scoreThomas": 69,
+      "game": {
+        "id": "Fvn5TS23SZKDqClmtJJS"
+      },
+      "winner": "Thomas",
+      "date": {
+        "type": "firestore/timestamp/1.0",
+        "seconds": 1724623200,
+        "nanoseconds": 0
+      },
+      "scoreAurore": 62
+    },
+    "ehmYZ0YLkvNRhqoq0Ktp": {
+      "scoreAurore": 28,
+      "date": {
+        "type": "firestore/timestamp/1.0",
+        "seconds": 1678575600,
+        "nanoseconds": 0
+      },
+      "scoreThomas": 51,
+      "winner": "Thomas",
+      "game": {
+        "id": "hnKfFP3Ai1AkpsDcmBYx"
+      }
+    },
+    "em50m9NMruQxKxyArs1Z": {
+      "scoreAurore": 97,
+      "scoreThomas": 81,
+      "winner": "Aurore",
+      "date": {
+        "type": "firestore/timestamp/1.0",
+        "seconds": 1709938800,
+        "nanoseconds": 0
+      },
+      "game": {
+        "id": "pCxNCw7f4cKPPxb7YboK"
+      }
+    },
+    "evHx5AM0XtqwxFGhuFdK": {
+      "scoreThomas": 241,
+      "date": {
+        "type": "firestore/timestamp/1.0",
+        "seconds": 1715032800,
+        "nanoseconds": 0
+      },
+      "winner": "Aurore",
+      "game": {
+        "id": "6DnRt0EXuZYFq81YFZAP"
+      },
+      "scoreAurore": 327
+    },
+    "fVlIRDs79DxHJbAKCPsc": {
+      "scoreAurore": 73,
+      "scoreThomas": 88,
+      "date": {
+        "type": "firestore/timestamp/1.0",
+        "seconds": 1706482800,
+        "nanoseconds": 0
+      },
+      "winner": "Thomas",
+      "game": {
+        "id": "1NCYPK4DJ1Z5x5ISq2TW"
+      }
+    },
+    "fdwobvRNMlhHdsqoJS0j": {
+      "scoreAurore": 12,
+      "winner": "Aurore",
+      "game": {
+        "id": "uAfauK7goJWgg6Lhn8Mm"
+      },
+      "scoreThomas": 0,
+      "date": {
+        "type": "firestore/timestamp/1.0",
+        "seconds": 1720735200,
+        "nanoseconds": 0
+      }
+    },
+    "gCl0ZD6RNuT8aIB9ddec": {
+      "game": {
+        "id": "pCxNCw7f4cKPPxb7YboK"
+      },
+      "winner": "Aurore",
+      "scoreAurore": 103,
+      "scoreThomas": 96,
+      "date": {
+        "type": "firestore/timestamp/1.0",
+        "seconds": 1701126000,
+        "nanoseconds": 0
+      }
+    },
+    "gVPMidOstw8eUO0AjPBN": {
+      "date": {
+        "type": "firestore/timestamp/1.0",
+        "seconds": 1678575600,
+        "nanoseconds": 0
+      },
+      "winner": "Thomas",
+      "scoreThomas": 98,
+      "game": {
+        "id": "pCxNCw7f4cKPPxb7YboK"
+      },
+      "scoreAurore": 95
+    },
+    "grPg66MKDDKH3mdDOFnM": {
+      "winner": "Thomas",
+      "date": {
+        "type": "firestore/timestamp/1.0",
+        "seconds": 1710716400,
+        "nanoseconds": 0
+      },
+      "scoreAurore": 2,
+      "game": {
+        "id": "jWINVO317Z8Hzxoxz1Jg"
+      },
+      "scoreThomas": 4
+    },
+    "h0esiCdFtb1Q3zZafln3": {
+      "date": {
+        "type": "firestore/timestamp/1.0",
+        "seconds": 1678575600,
+        "nanoseconds": 0
+      },
+      "game": {
+        "id": "hnKfFP3Ai1AkpsDcmBYx"
+      },
+      "winner": "Thomas",
+      "scoreThomas": 41,
+      "scoreAurore": 39
+    },
+    "hBvQ66JbdzeXOTMSBvL5": {
+      "scoreAurore": 86,
+      "winner": "Thomas",
+      "scoreThomas": 116,
+      "date": {
+        "type": "firestore/timestamp/1.0",
+        "seconds": 1707433200,
+        "nanoseconds": 0
+      },
+      "game": {
+        "id": "1NCYPK4DJ1Z5x5ISq2TW"
+      }
+    },
+    "hKu7DTXbAtf7ESPNJSnK": {
+      "scoreAurore": 114,
+      "winner": "Aurore",
+      "scoreThomas": 88,
+      "date": {
+        "type": "firestore/timestamp/1.0",
+        "seconds": 1689285600,
+        "nanoseconds": 0
+      },
+      "game": {
+        "id": "pCxNCw7f4cKPPxb7YboK"
+      }
+    },
+    "hMBGLFVnx4qT6RVbsWEG": {
+      "winner": "Thomas",
+      "scoreAurore": 55,
+      "date": {
+        "type": "firestore/timestamp/1.0",
+        "seconds": 1673737200,
+        "nanoseconds": 0
+      },
+      "game": {
+        "id": "NDjXY0P8WKkn6sUbiebL"
+      },
+      "scoreThomas": 39
+    },
+    "hX7qlKEQidYh9Vfg6UHK": {
+      "game": {
+        "id": "hnKfFP3Ai1AkpsDcmBYx"
+      },
+      "scoreThomas": 36,
+      "winner": "Thomas",
+      "scoreAurore": 25,
+      "date": {
+        "type": "firestore/timestamp/1.0",
+        "seconds": 1699052400,
+        "nanoseconds": 0
+      }
+    },
+    "ibfv4F1Uwx5pbW6gicnA": {
+      "game": {
+        "id": "hnKfFP3Ai1AkpsDcmBYx"
+      },
+      "scoreAurore": 43,
+      "date": {
+        "type": "firestore/timestamp/1.0",
+        "seconds": 1698098400,
+        "nanoseconds": 0
+      },
+      "winner": "Thomas",
+      "scoreThomas": 51
+    },
+    "jH2OnXQiAekWobcv6GlL": {
+      "scoreThomas": 25,
+      "date": {
+        "type": "firestore/timestamp/1.0",
+        "seconds": 1720735200,
+        "nanoseconds": 0
+      },
+      "winner": "Aurore",
+      "scoreAurore": 26,
+      "game": {
+        "id": "uAfauK7goJWgg6Lhn8Mm"
+      }
+    },
+    "jHXW4h3FxhwjU5q2U7zw": {
+      "date": {
+        "type": "firestore/timestamp/1.0",
+        "seconds": 1683324000,
+        "nanoseconds": 0
+      },
+      "winner": "Aurore",
+      "scoreThomas": 113,
+      "game": {
+        "id": "y0aNNuR2dZp2HRDHcH2m"
+      },
+      "scoreAurore": 86
+    },
+    "jIk0wuYTl1wpevcBw2ro": {
+      "game": {
+        "id": "pCxNCw7f4cKPPxb7YboK"
+      },
+      "scoreThomas": 98,
+      "scoreAurore": 106,
+      "date": {
+        "type": "firestore/timestamp/1.0",
+        "seconds": 1690668000,
+        "nanoseconds": 0
+      },
+      "winner": "Aurore"
+    },
+    "jj9OMbhy6ahonlYx3bOL": {
+      "scoreAurore": 40,
+      "scoreThomas": 36,
+      "date": {
+        "type": "firestore/timestamp/1.0",
+        "seconds": 1677193200,
+        "nanoseconds": 0
+      },
+      "game": {
+        "id": "NDjXY0P8WKkn6sUbiebL"
+      },
+      "winner": "Aurore"
+    },
+    "jkLiiuUyjdVf8MErhMVo": {
+      "scoreThomas": 0,
+      "game": {
+        "id": "ety9rnsGuLDSlpVPvErU"
+      },
+      "date": {
+        "type": "firestore/timestamp/1.0",
+        "seconds": 1696629600,
+        "nanoseconds": 0
+      },
+      "scoreAurore": 2,
+      "winner": "Aurore"
+    },
+    "kCDgb4eM43qXieOSZnT9": {
+      "game": {
+        "id": "4XxtQnIpjIljldNJryUx"
+      },
+      "scoreAurore": 4,
+      "scoreThomas": 5,
+      "winner": "Thomas",
+      "date": {
+        "type": "firestore/timestamp/1.0",
+        "seconds": 1746828000,
+        "nanoseconds": 0
+      }
+    },
+    "kGhAiLElnyYQvdtNrqqu": {
+      "scoreAurore": 101,
+      "winner": "Aurore",
+      "game": {
+        "id": "pCxNCw7f4cKPPxb7YboK"
+      },
+      "date": {
+        "type": "firestore/timestamp/1.0",
+        "seconds": 1677625200,
+        "nanoseconds": 0
+      },
+      "scoreThomas": 92
+    },
+    "kKidd9DWcEbgXuzsBieu": {
+      "winner": "Aurore",
+      "date": {
+        "type": "firestore/timestamp/1.0",
+        "seconds": 1705532400,
+        "nanoseconds": 0
+      },
+      "scoreAurore": 83,
+      "scoreThomas": 101,
+      "game": {
+        "id": "y0aNNuR2dZp2HRDHcH2m"
+      }
+    },
+    "kPOX7AixTiD1HmVdLpuF": {
+      "game": {
+        "id": "pCxNCw7f4cKPPxb7YboK"
+      },
+      "date": {
+        "type": "firestore/timestamp/1.0",
+        "seconds": 1722636000,
+        "nanoseconds": 0
+      },
+      "winner": "Aurore",
+      "scoreThomas": 34,
+      "scoreAurore": 103
+    },
+    "kbPLcOyAYyMq5gHH7uNa": {
+      "scoreThomas": 33,
+      "date": {
+        "type": "firestore/timestamp/1.0",
+        "seconds": 1682114400,
+        "nanoseconds": 0
+      },
+      "game": {
+        "id": "TMyC199vMwoE0U3jnGXy"
+      },
+      "scoreAurore": 30,
+      "winner": "Thomas"
+    },
+    "kbjzlZAoQyYXAg5stzEY": {
+      "date": {
+        "type": "firestore/timestamp/1.0",
+        "seconds": 1684879200,
+        "nanoseconds": 0
+      },
+      "scoreAurore": 10,
+      "winner": "Aurore",
+      "game": {
+        "id": "aESwYrxGgMpY6ntgUKuj"
+      },
+      "scoreThomas": 2
+    },
+    "kcE1M8w0jYKVaCKbFsm0": {
+      "winner": "Aurore",
+      "scoreThomas": 98,
+      "game": {
+        "id": "pCxNCw7f4cKPPxb7YboK"
+      },
+      "scoreAurore": 114,
+      "date": {
+        "type": "firestore/timestamp/1.0",
+        "seconds": 1746050400,
+        "nanoseconds": 0
+      }
+    },
+    "kwYl7WwTWoCLq0pDOrPQ": {
+      "game": {
+        "id": "y0aNNuR2dZp2HRDHcH2m"
+      },
+      "scoreThomas": 102,
+      "date": {
+        "type": "firestore/timestamp/1.0",
+        "seconds": 1699138800,
+        "nanoseconds": 0
+      },
+      "scoreAurore": 104,
+      "winner": "Thomas"
+    },
+    "kyXTA9hhzFnMeXnx8nNt": {
+      "scoreAurore": 5,
+      "game": {
+        "id": "aESwYrxGgMpY6ntgUKuj"
+      },
+      "date": {
+        "type": "firestore/timestamp/1.0",
+        "seconds": 1674946800,
+        "nanoseconds": 0
+      },
+      "winner": "Thomas",
+      "scoreThomas": 7
+    },
+    "lHAo8tL66IXVEDBJzQI6": {
+      "game": {
+        "id": "y0aNNuR2dZp2HRDHcH2m"
+      },
+      "date": {
+        "type": "firestore/timestamp/1.0",
+        "seconds": 1691964000,
+        "nanoseconds": 0
+      },
+      "winner": "Aurore",
+      "scoreThomas": 65,
+      "scoreAurore": 132
+    },
+    "lQ0wdamW1VzYQrDetU15": {
+      "scoreThomas": 94,
+      "winner": "Aurore",
+      "game": {
+        "id": "1NCYPK4DJ1Z5x5ISq2TW"
+      },
+      "scoreAurore": 102,
+      "date": {
+        "type": "firestore/timestamp/1.0",
+        "seconds": 1707519600,
+        "nanoseconds": 0
+      }
+    },
+    "lQ7Mgp2A7eEZTwoJAb9E": {
+      "game": {
+        "id": "hnKfFP3Ai1AkpsDcmBYx"
+      },
+      "scoreAurore": 40,
+      "winner": "Aurore",
+      "date": {
+        "type": "firestore/timestamp/1.0",
+        "seconds": 1684015200,
+        "nanoseconds": 0
+      },
+      "scoreThomas": 38
+    },
+    "lVzmCfBQepmd0ZzsVdVV": {
+      "game": {
+        "id": "hnKfFP3Ai1AkpsDcmBYx"
+      },
+      "scoreAurore": 45,
+      "date": {
+        "type": "firestore/timestamp/1.0",
+        "seconds": 1741906800,
+        "nanoseconds": 0
+      },
+      "winner": "Aurore",
+      "scoreThomas": 38
+    },
+    "ltAYXLLiHWaN6iTaAZsp": {
+      "scoreThomas": 71,
+      "game": {
+        "id": "jjX3x6PehqgBO7NcLMpy"
+      },
+      "scoreDetail": {
+        "thomas": {
+          "storedFood": 0,
+          "bonusCards": 2,
+          "eggs": 17,
+          "roundObjectives": 11,
+          "total": 71,
+          "birds": 37,
+          "coveredCards": 4
+        },
+        "aurore": {
+          "roundObjectives": 14,
+          "bonusCards": 3,
+          "storedFood": 0,
+          "eggs": 22,
+          "birds": 24,
+          "total": 87,
+          "coveredCards": 24
+        }
+      },
+      "date": {
+        "type": "firestore/timestamp/1.0",
+        "seconds": 1760364652,
+        "nanoseconds": 0
+      },
+      "scoreAurore": 87,
+      "winner": "Aurore"
+    },
+    "m3t8Tfsh0UtjeH38Tjq9": {
+      "scoreThomas": 99,
+      "winner": "Aurore",
+      "scoreAurore": 100,
+      "game": {
+        "id": "pCxNCw7f4cKPPxb7YboK"
+      },
+      "date": {
+        "type": "firestore/timestamp/1.0",
+        "seconds": 1679439600,
+        "nanoseconds": 0
+      }
+    },
+    "m5XklHzYWsCAsytY0C5y": {
+      "scoreThomas": 97,
+      "date": {
+        "type": "firestore/timestamp/1.0",
+        "seconds": 1678489200,
+        "nanoseconds": 0
+      },
+      "winner": "Thomas",
+      "game": {
+        "id": "pCxNCw7f4cKPPxb7YboK"
+      },
+      "scoreAurore": 96
+    },
+    "m5YiF4oHI7Gm3nXM5R2a": {
+      "scoreThomas": 3,
+      "date": {
+        "type": "firestore/timestamp/1.0",
+        "seconds": 1690581600,
+        "nanoseconds": 0
+      },
+      "game": {
+        "id": "jWINVO317Z8Hzxoxz1Jg"
+      },
+      "winner": "Aurore",
+      "scoreAurore": 5
+    },
+    "mEm1lrFl4LJomy9iUzgh": {
+      "winner": "Thomas",
+      "date": {
+        "type": "firestore/timestamp/1.0",
+        "seconds": 1686434400,
+        "nanoseconds": 0
+      },
+      "scoreAurore": 5,
+      "scoreThomas": 7,
+      "game": {
+        "id": "aESwYrxGgMpY6ntgUKuj"
+      }
+    },
+    "mWc5t43IKZTlM0DXPNgL": {
+      "winner": "Aurore",
+      "date": {
+        "type": "firestore/timestamp/1.0",
+        "seconds": 1700866800,
+        "nanoseconds": 0
+      },
+      "scoreAurore": 122,
+      "scoreThomas": 61,
+      "game": {
+        "id": "y0aNNuR2dZp2HRDHcH2m"
+      }
+    },
+    "mmiY3RVrs9AafsodcVYS": {
+      "date": {
+        "type": "firestore/timestamp/1.0",
+        "seconds": 1731279600,
+        "nanoseconds": 0
+      },
+      "winner": "Aurore",
+      "scoreAurore": 116,
+      "game": {
+        "id": "pCxNCw7f4cKPPxb7YboK"
+      },
+      "scoreThomas": 93
+    },
+    "mvMN0inbwnO4IVWNBpcF": {
+      "game": {
+        "id": "NDjXY0P8WKkn6sUbiebL"
+      },
+      "winner": "Thomas",
+      "scoreAurore": 29,
+      "scoreThomas": 49,
+      "date": {
+        "type": "firestore/timestamp/1.0",
+        "seconds": 1674514800,
+        "nanoseconds": 0
+      }
+    },
+    "nCeC5q2U99bTlHGs8cD1": {
+      "scoreAurore": 2,
+      "game": {
+        "id": "jWINVO317Z8Hzxoxz1Jg"
+      },
+      "date": {
+        "type": "firestore/timestamp/1.0",
+        "seconds": 1718661600,
+        "nanoseconds": 0
+      },
+      "scoreThomas": 3,
+      "winner": "Thomas"
+    },
+    "nGB5hQDFHrDkTGWaqyhe": {
+      "date": {
+        "type": "firestore/timestamp/1.0",
+        "seconds": 1672354800,
+        "nanoseconds": 0
+      },
+      "game": {
+        "id": "NDjXY0P8WKkn6sUbiebL"
+      },
+      "scoreAurore": 42,
+      "scoreThomas": 32,
+      "winner": "Aurore"
+    },
+    "nOacXS5lYVr6ubBiRGjn": {
+      "scoreThomas": 2,
+      "winner": "Aurore",
+      "date": {
+        "type": "firestore/timestamp/1.0",
+        "seconds": 1676674800,
+        "nanoseconds": 0
+      },
+      "game": {
+        "id": "jWINVO317Z8Hzxoxz1Jg"
+      },
+      "scoreAurore": 3
+    },
+    "nboqSFsGy4Dbmwpo9GfX": {
+      "scoreAurore": 36,
+      "winner": "Thomas",
+      "scoreThomas": 44,
+      "date": {
+        "type": "firestore/timestamp/1.0",
+        "seconds": 1739055600,
+        "nanoseconds": 0
+      },
+      "game": {
+        "id": "hnKfFP3Ai1AkpsDcmBYx"
+      }
+    },
+    "oBzhp6frcuUuev4fgqnx": {
+      "scoreThomas": 31,
+      "scoreAurore": 36,
+      "game": {
+        "id": "hnKfFP3Ai1AkpsDcmBYx"
+      },
+      "winner": "Aurore",
+      "date": {
+        "type": "firestore/timestamp/1.0",
+        "seconds": 1739055600,
+        "nanoseconds": 0
+      }
+    },
+    "oEr6iQTz6tgFhfJaAwKv": {
+      "scoreThomas": 48,
+      "winner": "Thomas",
+      "date": {
+        "type": "firestore/timestamp/1.0",
+        "seconds": 1695938400,
+        "nanoseconds": 0
+      },
+      "game": {
+        "id": "NDjXY0P8WKkn6sUbiebL"
+      },
+      "scoreAurore": 40
+    },
+    "oKqFgsrhd2ZHdQP0Ejch": {
+      "scoreThomas": 3,
+      "date": {
+        "type": "firestore/timestamp/1.0",
+        "seconds": 1746482400,
+        "nanoseconds": 0
+      },
+      "winner": "Aurore",
+      "scoreAurore": 5,
+      "game": {
+        "id": "4XxtQnIpjIljldNJryUx"
+      }
+    },
+    "od9hlcEX6pCcrCoT1XYq": {
+      "winner": "Aurore",
+      "scoreAurore": 5,
+      "date": {
+        "type": "firestore/timestamp/1.0",
+        "seconds": 1685138400,
+        "nanoseconds": 0
+      },
+      "game": {
+        "id": "jWINVO317Z8Hzxoxz1Jg"
+      },
+      "scoreThomas": 3
+    },
+    "ofQ2R29F6UfaZ3sFRJtg": {
+      "scoreThomas": 59,
+      "winner": "Aurore",
+      "date": {
+        "type": "firestore/timestamp/1.0",
+        "seconds": 1676588400,
+        "nanoseconds": 0
+      },
+      "scoreAurore": 70,
+      "game": {
+        "id": "qkYv2YmspSURUH5KMQon"
+      }
+    },
+    "pDzs6ElN8plptqXYWycY": {
+      "date": {
+        "type": "firestore/timestamp/1.0",
+        "seconds": 1694124000,
+        "nanoseconds": 0
+      },
+      "winner": "Aurore",
+      "scoreAurore": 7,
+      "game": {
+        "id": "aESwYrxGgMpY6ntgUKuj"
+      },
+      "scoreThomas": 3
+    },
+    "pHCoLmMfoVhhyTVdVCC5": {
+      "winner": "Thomas",
+      "scoreAurore": 1,
+      "date": {
+        "type": "firestore/timestamp/1.0",
+        "seconds": 1679094000,
+        "nanoseconds": 0
+      },
+      "game": {
+        "id": "jWINVO317Z8Hzxoxz1Jg"
+      },
+      "scoreThomas": 3
+    },
+    "pPTPr0DnQkpTx3YPzmAE": {
+      "game": {
+        "id": "hnKfFP3Ai1AkpsDcmBYx"
+      },
+      "winner": "Aurore",
+      "scoreThomas": 37,
+      "scoreAurore": 39,
+      "date": {
+        "type": "firestore/timestamp/1.0",
+        "seconds": 1674860400,
+        "nanoseconds": 0
+      }
+    },
+    "pV4nEuCApe8sOYjUTNjm": {
+      "scoreAurore": 40,
+      "scoreThomas": 50,
+      "date": {
+        "type": "firestore/timestamp/1.0",
+        "seconds": 1684879200,
+        "nanoseconds": 0
+      },
+      "game": {
+        "id": "hnKfFP3Ai1AkpsDcmBYx"
+      },
+      "winner": "Thomas"
+    },
+    "phho3LclGf7df8ueICWh": {
+      "scoreAurore": 92,
+      "game": {
+        "id": "pCxNCw7f4cKPPxb7YboK"
+      },
+      "winner": "Thomas",
+      "scoreThomas": 101,
+      "date": {
+        "type": "firestore/timestamp/1.0",
+        "seconds": 1692050400,
+        "nanoseconds": 0
+      }
+    },
+    "pjuLianE0DFpuGEEJ7h5": {
+      "game": {
+        "id": "aESwYrxGgMpY6ntgUKuj"
+      },
+      "scoreThomas": 6,
+      "winner": "Aurore",
+      "scoreAurore": 7,
+      "date": {
+        "type": "firestore/timestamp/1.0",
+        "seconds": 1683410400,
+        "nanoseconds": 0
+      }
+    },
+    "q8rZln9rFFcpbDmZvnc8": {
+      "scoreAurore": 5,
+      "scoreThomas": 7,
+      "winner": "Thomas",
+      "game": {
+        "id": "aESwYrxGgMpY6ntgUKuj"
+      },
+      "date": {
+        "type": "firestore/timestamp/1.0",
+        "seconds": 1685397600,
+        "nanoseconds": 0
+      }
+    },
+    "qAAIjJ2J7OUySaN97xR7": {
+      "winner": "Thomas",
+      "game": {
+        "id": "Fvn5TS23SZKDqClmtJJS"
+      },
+      "date": {
+        "type": "firestore/timestamp/1.0",
+        "seconds": 1734044400,
+        "nanoseconds": 0
+      },
+      "scoreAurore": 57,
+      "scoreThomas": 59
+    },
+    "qKDxnjzWVZcHMBFozZCF": {
+      "scoreThomas": 5,
+      "scoreAurore": 6,
+      "game": {
+        "id": "aESwYrxGgMpY6ntgUKuj"
+      },
+      "date": {
+        "type": "firestore/timestamp/1.0",
+        "seconds": 1754431200,
+        "nanoseconds": 0
+      },
+      "winner": "Aurore"
+    },
+    "qYI9r8VhnuX3yoMx9KEA": {
+      "game": {
+        "id": "1NCYPK4DJ1Z5x5ISq2TW"
+      },
+      "scoreAurore": 110,
+      "date": {
+        "type": "firestore/timestamp/1.0",
+        "seconds": 1760451074,
+        "nanoseconds": 0
+      },
+      "winner": "Aurore",
+      "scoreThomas": 83
+    },
+    "qadTheFQHJ2GFTjJGfGw": {
+      "game": {
+        "id": "jWINVO317Z8Hzxoxz1Jg"
+      },
+      "date": {
+        "type": "firestore/timestamp/1.0",
+        "seconds": 1682028000,
+        "nanoseconds": 0
+      },
+      "scoreAurore": 2,
+      "scoreThomas": 5,
+      "winner": "Thomas"
+    },
+    "qcqa0yy4JA8VO2SPsxV1": {
+      "scoreThomas": 97,
+      "winner": "Aurore",
+      "game": {
+        "id": "pCxNCw7f4cKPPxb7YboK"
+      },
+      "date": {
+        "type": "firestore/timestamp/1.0",
+        "seconds": 1682200800,
+        "nanoseconds": 0
+      },
+      "scoreAurore": 107
+    },
+    "qsJLxiy1iRW8QlUDzj8F": {
+      "winner": "Aurore",
+      "game": {
+        "id": "jWINVO317Z8Hzxoxz1Jg"
+      },
+      "date": {
+        "type": "firestore/timestamp/1.0",
+        "seconds": 1673046000,
+        "nanoseconds": 0
+      },
+      "scoreThomas": 2,
+      "scoreAurore": 3
+    },
+    "qscLL4jBDQ8tEXYQstG8": {
+      "winner": "Aurore",
+      "scoreThomas": 33,
+      "scoreAurore": 42,
+      "date": {
+        "type": "firestore/timestamp/1.0",
+        "seconds": 1699052400,
+        "nanoseconds": 0
+      },
+      "game": {
+        "id": "hnKfFP3Ai1AkpsDcmBYx"
+      }
+    },
+    "qt8pEdPDMgcwzIQVPWAp": {
+      "scoreAurore": 27,
+      "game": {
+        "id": "AMo9lEANlAFqmhFcRffB"
+      },
+      "winner": "Aurore",
+      "date": {
+        "type": "firestore/timestamp/1.0",
+        "seconds": 1728943200,
+        "nanoseconds": 0
+      },
+      "scoreThomas": 10
+    },
+    "qtyQv0W3YocbuESKcm7n": {
+      "game": {
+        "id": "IDYkWZHmvL9iSF085Oge"
+      },
+      "scoreThomas": 103,
+      "scoreAurore": 94,
+      "winner": "Thomas",
+      "date": {
+        "type": "firestore/timestamp/1.0",
+        "seconds": 1737414000,
+        "nanoseconds": 0
+      }
+    },
+    "r0Lj3uT9ClLhIDUEX6Nt": {
+      "game": {
+        "id": "qkYv2YmspSURUH5KMQon"
+      },
+      "date": {
+        "type": "firestore/timestamp/1.0",
+        "seconds": 1682460000,
+        "nanoseconds": 0
+      },
+      "scoreAurore": 110,
+      "scoreThomas": 76,
+      "winner": "Aurore"
+    },
+    "r141pfSPzAB57wt658qA": {
+      "date": {
+        "type": "firestore/timestamp/1.0",
+        "seconds": 1706482800,
+        "nanoseconds": 0
+      },
+      "scoreAurore": 96,
+      "scoreThomas": 64,
+      "game": {
+        "id": "1NCYPK4DJ1Z5x5ISq2TW"
+      },
+      "winner": "Aurore"
+    },
+    "rEIi60YYUpuKH25fMYfN": {
+      "scoreThomas": 1,
+      "winner": "Aurore",
+      "game": {
+        "id": "jWINVO317Z8Hzxoxz1Jg"
+      },
+      "date": {
+        "type": "firestore/timestamp/1.0",
+        "seconds": 1673046000,
+        "nanoseconds": 0
+      },
+      "scoreAurore": 3
+    },
+    "rOdZXI3YwrMPWpuaJHRF": {
+      "date": {
+        "type": "firestore/timestamp/1.0",
+        "seconds": 1754431200,
+        "nanoseconds": 0
+      },
+      "scoreThomas": 7,
+      "game": {
+        "id": "aESwYrxGgMpY6ntgUKuj"
+      },
+      "scoreAurore": 5,
+      "winner": "Thomas"
+    },
+    "ri3qzZulxPNS3WRlMctC": {
+      "winner": "Thomas",
+      "game": {
+        "id": "pCxNCw7f4cKPPxb7YboK"
+      },
+      "scoreThomas": 112,
+      "scoreAurore": 109,
+      "date": {
+        "type": "firestore/timestamp/1.0",
+        "seconds": 1760278163,
+        "nanoseconds": 0
+      }
+    },
+    "rpuyNWTIXPCM9MFUskXD": {
+      "date": {
+        "type": "firestore/timestamp/1.0",
+        "seconds": 1729375200,
+        "nanoseconds": 0
+      },
+      "winner": "Thomas",
+      "scoreAurore": 53,
+      "scoreThomas": 68,
+      "game": {
+        "id": "hcliaSURVnnZLOIA21hi"
+      }
+    },
+    "rre6VE4EtkQSztOZO3Yu": {
+      "scoreAurore": 109,
+      "scoreThomas": 102,
+      "game": {
+        "id": "1NCYPK4DJ1Z5x5ISq2TW"
+      },
+      "date": {
+        "type": "firestore/timestamp/1.0",
+        "seconds": 1741302000,
+        "nanoseconds": 0
+      },
+      "winner": "Aurore"
+    },
+    "rrkSP4neKL33y1atDPQa": {
+      "scoreAurore": 130,
+      "winner": "Aurore",
+      "game": {
+        "id": "ety9rnsGuLDSlpVPvErU"
+      },
+      "date": {
+        "type": "firestore/timestamp/1.0",
+        "seconds": 1700089200,
+        "nanoseconds": 0
+      },
+      "scoreThomas": 83
+    },
+    "rvaqf2v76pirMEDCENyx": {
+      "game": {
+        "id": "pCxNCw7f4cKPPxb7YboK"
+      },
+      "scoreAurore": 95,
+      "scoreThomas": 87,
+      "winner": "Aurore",
+      "date": {
+        "type": "firestore/timestamp/1.0",
+        "seconds": 1689199200,
+        "nanoseconds": 0
+      }
+    },
+    "rxBskbimc5qn8oeAO7OI": {
+      "scoreAurore": 32,
+      "game": {
+        "id": "hnKfFP3Ai1AkpsDcmBYx"
+      },
+      "date": {
+        "type": "firestore/timestamp/1.0",
+        "seconds": 1685829600,
+        "nanoseconds": 0
+      },
+      "scoreThomas": 52,
+      "winner": "Thomas"
+    },
+    "s1JoEQxt2lZ4eLs5FzHY": {
+      "scoreThomas": 0,
+      "date": {
+        "type": "firestore/timestamp/1.0",
+        "seconds": 1734044400,
+        "nanoseconds": 0
+      },
+      "game": {
+        "id": "ety9rnsGuLDSlpVPvErU"
+      },
+      "winner": "Aurore",
+      "scoreAurore": 3
+    },
+    "s3rvrJQWXarXT14vuaSy": {
+      "scoreThomas": 45,
+      "game": {
+        "id": "hnKfFP3Ai1AkpsDcmBYx"
+      },
+      "scoreAurore": 29,
+      "date": {
+        "type": "firestore/timestamp/1.0",
+        "seconds": 1696024800,
+        "nanoseconds": 0
+      },
+      "winner": "Thomas"
+    },
+    "s5dOlounI65tisGiM1KJ": {
+      "game": {
+        "id": "aESwYrxGgMpY6ntgUKuj"
+      },
+      "scoreAurore": 6,
+      "date": {
+        "type": "firestore/timestamp/1.0",
+        "seconds": 1692223200,
+        "nanoseconds": 0
+      },
+      "winner": "Aurore",
+      "scoreThomas": 3
+    },
+    "sh3RoxFrqjH5NauVuyZU": {
+      "scoreAurore": 98,
+      "scoreThomas": 98,
+      "date": {
+        "type": "firestore/timestamp/1.0",
+        "seconds": 1746741600,
+        "nanoseconds": 0
+      },
+      "winner": "Aurore",
+      "game": {
+        "id": "1NCYPK4DJ1Z5x5ISq2TW"
+      }
+    },
+    "snDwHjnoYhKLPJ7obT8T": {
+      "scoreAurore": 23,
+      "date": {
+        "type": "firestore/timestamp/1.0",
+        "seconds": 1762882468,
+        "nanoseconds": 371000000
+      },
+      "scoreThomas": 24,
+      "winner": "Thomas",
+      "game": {
+        "id": "uAfauK7goJWgg6Lhn8Mm"
+      }
+    },
+    "sqpR3x1Bl0Oo5HvtneEJ": {
+      "winner": "Thomas",
+      "scoreAurore": 6,
+      "game": {
+        "id": "aESwYrxGgMpY6ntgUKuj"
+      },
+      "scoreThomas": 7,
+      "date": {
+        "type": "firestore/timestamp/1.0",
+        "seconds": 1690668000,
+        "nanoseconds": 0
+      }
+    },
+    "t2TfvfB2kyCDp6kCUdwU": {
+      "date": {
+        "type": "firestore/timestamp/1.0",
+        "seconds": 1751925600,
+        "nanoseconds": 0
+      },
+      "scoreAurore": 5,
+      "game": {
+        "id": "4XxtQnIpjIljldNJryUx"
+      },
+      "winner": "Aurore",
+      "scoreThomas": 4
+    },
+    "tAG1lMmBao30q3KxxPkF": {
+      "winner": "Aurore",
+      "date": {
+        "type": "firestore/timestamp/1.0",
+        "seconds": 1706569200,
+        "nanoseconds": 0
+      },
+      "scoreThomas": 83,
+      "game": {
+        "id": "1NCYPK4DJ1Z5x5ISq2TW"
+      },
+      "scoreAurore": 104
+    },
+    "tFA3D1oPAeAkGwLzPLYt": {
+      "game": {
+        "id": "aESwYrxGgMpY6ntgUKuj"
+      },
+      "scoreAurore": 6,
+      "winner": "Thomas",
+      "date": {
+        "type": "firestore/timestamp/1.0",
+        "seconds": 1671577200,
+        "nanoseconds": 0
+      },
+      "scoreThomas": 7
+    },
+    "tG9uWXeFLE19ORwUguwk": {
+      "date": {
+        "type": "firestore/timestamp/1.0",
+        "seconds": 1677452400,
+        "nanoseconds": 0
+      },
+      "scoreThomas": 4,
+      "winner": "Thomas",
+      "game": {
+        "id": "ety9rnsGuLDSlpVPvErU"
+      },
+      "scoreAurore": 3
+    },
+    "tKGFyTjTDKOMpcAg82g6": {
+      "game": {
+        "id": "pCxNCw7f4cKPPxb7YboK"
+      },
+      "scoreAurore": 112,
+      "date": {
+        "type": "firestore/timestamp/1.0",
+        "seconds": 1718834400,
+        "nanoseconds": 0
+      },
+      "winner": "Aurore",
+      "scoreThomas": 107
+    },
+    "tPkVc6CLrCv73MPDYMDN": {
+      "winner": "Thomas",
+      "scoreThomas": 97,
+      "scoreAurore": 97,
+      "date": {
+        "type": "firestore/timestamp/1.0",
+        "seconds": 1690408800,
+        "nanoseconds": 0
+      },
+      "game": {
+        "id": "pCxNCw7f4cKPPxb7YboK"
+      }
+    },
+    "u8utBrh0AmCY61wVBMb4": {
+      "scoreAurore": 86,
+      "scoreThomas": 87,
+      "scoreDetail": {
+        "thomas": {
+          "eggs": 22,
+          "bonusCards": 10,
+          "storedFood": 4,
+          "coveredCards": 0,
+          "total": 87,
+          "birds": 43,
+          "roundObjectives": 8
+        },
+        "aurore": {
+          "coveredCards": 26,
+          "roundObjectives": 8,
+          "total": 86,
+          "bonusCards": 3,
+          "birds": 25,
+          "storedFood": 0,
+          "eggs": 24
+        }
+      },
+      "winner": "Thomas",
+      "date": {
+        "type": "firestore/timestamp/1.0",
+        "seconds": 1762630112,
+        "nanoseconds": 353000000
+      },
+      "game": {
+        "id": "jjX3x6PehqgBO7NcLMpy"
+      }
+    },
+    "u9vGcQoUO3Ja6v6WbEkh": {
+      "scoreAurore": 6,
+      "scoreThomas": 1,
+      "date": {
+        "type": "firestore/timestamp/1.0",
+        "seconds": 1704150000,
+        "nanoseconds": 0
+      },
+      "game": {
+        "id": "aESwYrxGgMpY6ntgUKuj"
+      },
+      "winner": "Aurore"
+    },
+    "uFPInvNlbrtTN2GocKrN": {
+      "game": {
+        "id": "pCxNCw7f4cKPPxb7YboK"
+      },
+      "winner": "Aurore",
+      "scoreThomas": 98,
+      "date": {
+        "type": "firestore/timestamp/1.0",
+        "seconds": 1679094000,
+        "nanoseconds": 0
+      },
+      "scoreAurore": 101
+    },
+    "uJz28S7MqRoQNMddNmU8": {
+      "date": {
+        "type": "firestore/timestamp/1.0",
+        "seconds": 1749852000,
+        "nanoseconds": 0
+      },
+      "scoreAurore": 80,
+      "game": {
+        "id": "y0aNNuR2dZp2HRDHcH2m"
+      },
+      "winner": "Aurore",
+      "scoreThomas": 108
+    },
+    "uNVq81K0aNe78rjsLQ5w": {
+      "date": {
+        "type": "firestore/timestamp/1.0",
+        "seconds": 1760451105,
+        "nanoseconds": 0
+      },
+      "winner": "Aurore",
+      "scoreAurore": 3,
+      "scoreThomas": 0,
+      "game": {
+        "id": "jWINVO317Z8Hzxoxz1Jg"
+      }
+    },
+    "uRWVxZNdXImPLIm7DKFP": {
+      "scoreAurore": 7,
+      "scoreThomas": 2,
+      "winner": "Aurore",
+      "game": {
+        "id": "aESwYrxGgMpY6ntgUKuj"
+      },
+      "date": {
+        "type": "firestore/timestamp/1.0",
+        "seconds": 1688421600,
+        "nanoseconds": 0
+      }
+    },
+    "uRwmUzqUU2HmDFinEe9b": {
+      "winner": "Thomas",
+      "date": {
+        "type": "firestore/timestamp/1.0",
+        "seconds": 1688767200,
+        "nanoseconds": 0
+      },
+      "game": {
+        "id": "pCxNCw7f4cKPPxb7YboK"
+      },
+      "scoreAurore": 101,
+      "scoreThomas": 104
+    },
+    "uVauF47H4ygVBAdzR4qT": {
+      "winner": "Thomas",
+      "game": {
+        "id": "pCxNCw7f4cKPPxb7YboK"
+      },
+      "scoreThomas": 100,
+      "date": {
+        "type": "firestore/timestamp/1.0",
+        "seconds": 1700780400,
+        "nanoseconds": 0
+      },
+      "scoreAurore": 91
+    },
+    "ukPrJlNvyF150lP21TbZ": {
+      "scoreAurore": 109,
+      "date": {
+        "type": "firestore/timestamp/1.0",
+        "seconds": 1704150000,
+        "nanoseconds": 0
+      },
+      "scoreThomas": 105,
+      "winner": "Aurore",
+      "game": {
+        "id": "1NCYPK4DJ1Z5x5ISq2TW"
+      }
+    },
+    "uoU7PsE1QIkJVP74PRUO": {
+      "scoreAurore": 101,
+      "winner": "Thomas",
+      "scoreThomas": 103,
+      "game": {
+        "id": "pCxNCw7f4cKPPxb7YboK"
+      },
+      "date": {
+        "type": "firestore/timestamp/1.0",
+        "seconds": 1700175600,
+        "nanoseconds": 0
+      }
+    },
+    "vLbcd3bXaPR5ISY7kPXV": {
+      "game": {
+        "id": "1NCYPK4DJ1Z5x5ISq2TW"
+      },
+      "scoreThomas": 73,
+      "scoreAurore": 100,
+      "winner": "Aurore",
+      "date": {
+        "type": "firestore/timestamp/1.0",
+        "seconds": 1712008800,
+        "nanoseconds": 0
+      }
+    },
+    "vLl9ttlORBSHm5esm8jr": {
+      "scoreThomas": 0,
+      "scoreAurore": 5,
+      "date": {
+        "type": "firestore/timestamp/1.0",
+        "seconds": 1746914400,
+        "nanoseconds": 0
+      },
+      "winner": "Aurore",
+      "game": {
+        "id": "4XxtQnIpjIljldNJryUx"
+      }
+    },
+    "vU828JHQONPRlZ0HGbnW": {
+      "winner": "Tie",
+      "scoreAurore": 41,
+      "date": {
+        "type": "firestore/timestamp/1.0",
+        "seconds": 1700866800,
+        "nanoseconds": 0
+      },
+      "scoreThomas": 41,
+      "game": {
+        "id": "hnKfFP3Ai1AkpsDcmBYx"
+      }
+    },
+    "vXOhR97w2UaLzDZtPvQt": {
+      "winner": "Thomas",
+      "game": {
+        "id": "pCxNCw7f4cKPPxb7YboK"
+      },
+      "scoreThomas": 95,
+      "date": {
+        "type": "firestore/timestamp/1.0",
+        "seconds": 1728943200,
+        "nanoseconds": 0
+      },
+      "scoreAurore": 91
+    },
+    "vbbRAn54ihDjr5fq55jf": {
+      "winner": "Thomas",
+      "date": {
+        "type": "firestore/timestamp/1.0",
+        "seconds": 1673737200,
+        "nanoseconds": 0
+      },
+      "scoreThomas": 2,
+      "game": {
+        "id": "ety9rnsGuLDSlpVPvErU"
+      },
+      "scoreAurore": 0
+    },
+    "vrKrtPk3dVS2l8skoo04": {
+      "scoreAurore": 3,
+      "date": {
+        "type": "firestore/timestamp/1.0",
+        "seconds": 1746741600,
+        "nanoseconds": 0
+      },
+      "winner": "Aurore",
+      "scoreThomas": 0,
+      "game": {
+        "id": "4XxtQnIpjIljldNJryUx"
+      }
+    },
+    "w2Dt6QcZEYWJVrV4xUz7": {
+      "scoreAurore": 26,
+      "winner": "Aurore",
+      "scoreThomas": -2,
+      "game": {
+        "id": "AMo9lEANlAFqmhFcRffB"
+      },
+      "date": {
+        "type": "firestore/timestamp/1.0",
+        "seconds": 1673737200,
+        "nanoseconds": 0
+      }
+    },
+    "w6sRABATFrP8qnkfnREF": {
+      "winner": "Thomas",
+      "date": {
+        "type": "firestore/timestamp/1.0",
+        "seconds": 1699052400,
+        "nanoseconds": 0
+      },
+      "game": {
+        "id": "hnKfFP3Ai1AkpsDcmBYx"
+      },
+      "scoreAurore": 41,
+      "scoreThomas": 45
+    },
+    "w7miQxMgsfNbcZiSoj54": {
+      "winner": "Aurore",
+      "date": {
+        "type": "firestore/timestamp/1.0",
+        "seconds": 1705100400,
+        "nanoseconds": 0
+      },
+      "scoreAurore": 101,
+      "game": {
+        "id": "pCxNCw7f4cKPPxb7YboK"
+      },
+      "scoreThomas": 84
+    },
+    "wHtvns0TMAlPxD8wIYa2": {
+      "game": {
+        "id": "1NCYPK4DJ1Z5x5ISq2TW"
+      },
+      "scoreAurore": 94,
+      "scoreThomas": 68,
+      "date": {
+        "type": "firestore/timestamp/1.0",
+        "seconds": 1720303200,
+        "nanoseconds": 0
+      },
+      "winner": "Aurore"
+    },
+    "wUFoiIulyf41lRI0QBsJ": {
+      "scoreAurore": 103,
+      "winner": "Aurore",
+      "game": {
+        "id": "pCxNCw7f4cKPPxb7YboK"
+      },
+      "scoreThomas": 91,
+      "date": {
+        "type": "firestore/timestamp/1.0",
+        "seconds": 1709938800,
+        "nanoseconds": 0
+      }
+    },
+    "wVXzxjEyEOFzCEx6Z7IZ": {
+      "scoreThomas": 5,
+      "winner": "Aurore",
+      "date": {
+        "type": "firestore/timestamp/1.0",
+        "seconds": 1676674800,
+        "nanoseconds": 0
+      },
+      "game": {
+        "id": "aESwYrxGgMpY6ntgUKuj"
+      },
+      "scoreAurore": 6
+    },
+    "whg6hSPTT4I0Xyu2YGpz": {
+      "scoreAurore": 115,
+      "game": {
+        "id": "1NCYPK4DJ1Z5x5ISq2TW"
+      },
+      "date": {
+        "type": "firestore/timestamp/1.0",
+        "seconds": 1707087600,
+        "nanoseconds": 0
+      },
+      "scoreThomas": 100,
+      "winner": "Aurore"
+    },
+    "wlNKQN1YPHrsJUFQuBpR": {
+      "date": {
+        "type": "firestore/timestamp/1.0",
+        "seconds": 1683237600,
+        "nanoseconds": 0
+      },
+      "game": {
+        "id": "y0aNNuR2dZp2HRDHcH2m"
+      },
+      "scoreAurore": 102,
+      "scoreThomas": 61,
+      "winner": "Aurore"
+    },
+    "x2hP9Jd9iSHT6ycb6SVK": {
+      "winner": "Aurore",
+      "date": {
+        "type": "firestore/timestamp/1.0",
+        "seconds": 1679180400,
+        "nanoseconds": 0
+      },
+      "game": {
+        "id": "pCxNCw7f4cKPPxb7YboK"
+      },
+      "scoreAurore": 99,
+      "scoreThomas": 91
+    },
+    "x9Of70foPvAmAdb50pMB": {
+      "winner": "Aurore",
+      "scoreAurore": 82,
+      "game": {
+        "id": "qkYv2YmspSURUH5KMQon"
+      },
+      "date": {
+        "type": "firestore/timestamp/1.0",
+        "seconds": 1688767200,
+        "nanoseconds": 0
+      },
+      "scoreThomas": 36
+    },
+    "xJLccY8m7UoonWlFfTuW": {
+      "date": {
+        "type": "firestore/timestamp/1.0",
+        "seconds": 1691532000,
+        "nanoseconds": 0
+      },
+      "winner": "Aurore",
+      "scoreThomas": 87,
+      "game": {
+        "id": "pCxNCw7f4cKPPxb7YboK"
+      },
+      "scoreAurore": 103
+    },
+    "xoArOAm7Odi5iisLEamr": {
+      "date": {
+        "type": "firestore/timestamp/1.0",
+        "seconds": 1694124000,
+        "nanoseconds": 0
+      },
+      "scoreAurore": 105,
+      "game": {
+        "id": "pCxNCw7f4cKPPxb7YboK"
+      },
+      "scoreThomas": 59,
+      "winner": "Aurore"
+    },
+    "xsco1qq06XEN1Ui7xNHA": {
+      "winner": "Aurore",
+      "date": {
+        "type": "firestore/timestamp/1.0",
+        "seconds": 1705532400,
+        "nanoseconds": 0
+      },
+      "scoreAurore": 107,
+      "scoreThomas": 101,
+      "game": {
+        "id": "1NCYPK4DJ1Z5x5ISq2TW"
+      }
+    },
+    "xvRNehlE7C6JbZ4xmHYA": {
+      "winner": "Thomas",
+      "scoreThomas": 133,
+      "date": {
+        "type": "firestore/timestamp/1.0",
+        "seconds": 1689199200,
+        "nanoseconds": 0
+      },
+      "scoreAurore": 127,
+      "game": {
+        "id": "Fvn5TS23SZKDqClmtJJS"
+      }
+    },
+    "xxtoQ1fiAqdPsWBYAaAR": {
+      "scoreThomas": 1,
+      "winner": "Aurore",
+      "scoreAurore": 2,
+      "date": {
+        "type": "firestore/timestamp/1.0",
+        "seconds": 1673132400,
+        "nanoseconds": 0
+      },
+      "game": {
+        "id": "ety9rnsGuLDSlpVPvErU"
+      }
+    },
+    "y69vZCMd71SlfTDhjz28": {
+      "scoreAurore": 121,
+      "date": {
+        "type": "firestore/timestamp/1.0",
+        "seconds": 1689285600,
+        "nanoseconds": 0
+      },
+      "game": {
+        "id": "Fvn5TS23SZKDqClmtJJS"
+      },
+      "winner": "Aurore",
+      "scoreThomas": 108
+    },
+    "yUiTRq60fjodbVKGKGmI": {
+      "date": {
+        "type": "firestore/timestamp/1.0",
+        "seconds": 1709766000,
+        "nanoseconds": 0
+      },
+      "game": {
+        "id": "pCxNCw7f4cKPPxb7YboK"
+      },
+      "scoreThomas": 106,
+      "winner": "Aurore",
+      "scoreAurore": 107
+    },
+    "yaevrAyShbWtLUpBpL4G": {
+      "date": {
+        "type": "firestore/timestamp/1.0",
+        "seconds": 1685829600,
+        "nanoseconds": 0
+      },
+      "scoreAurore": 37,
+      "winner": "Thomas",
+      "game": {
+        "id": "hnKfFP3Ai1AkpsDcmBYx"
+      },
+      "scoreThomas": 43
+    },
+    "ycAbATVinrfueQjt96pa": {
+      "game": {
+        "id": "AMo9lEANlAFqmhFcRffB"
+      },
+      "scoreAurore": 26,
+      "winner": "Aurore",
+      "scoreThomas": 23,
+      "date": {
+        "type": "firestore/timestamp/1.0",
+        "seconds": 1734303600,
+        "nanoseconds": 0
+      }
+    },
+    "ydM4c19weldfgq5CQB7J": {
+      "winner": "Aurore",
+      "scoreAurore": 133,
+      "game": {
+        "id": "1NCYPK4DJ1Z5x5ISq2TW"
+      },
+      "date": {
+        "type": "firestore/timestamp/1.0",
+        "seconds": 1726696800,
+        "nanoseconds": 0
+      },
+      "scoreThomas": 75
+    },
+    "ykQGBNZ2P3hjz8V4ox7f": {
+      "date": {
+        "type": "firestore/timestamp/1.0",
+        "seconds": 1743116400,
+        "nanoseconds": 0
+      },
+      "scoreThomas": 40,
+      "winner": "Aurore",
+      "game": {
+        "id": "gieW6aYQBaVLr1XNIv9n"
+      },
+      "scoreAurore": 46
+    },
+    "z4gnafebaZ7acBc8s0BK": {
+      "game": {
+        "id": "pCxNCw7f4cKPPxb7YboK"
+      },
+      "winner": "Aurore",
+      "scoreThomas": 101,
+      "date": {
+        "type": "firestore/timestamp/1.0",
+        "seconds": 1710457200,
+        "nanoseconds": 0
+      },
+      "scoreAurore": 105
+    },
+    "z79roc6wQD0AbokLgA2J": {
+      "date": {
+        "type": "firestore/timestamp/1.0",
+        "seconds": 1740697200,
+        "nanoseconds": 0
+      },
+      "game": {
+        "id": "pCxNCw7f4cKPPxb7YboK"
+      },
+      "scoreAurore": 116,
+      "scoreThomas": 101,
+      "winner": "Aurore"
+    },
+    "z7FwFDWYrGVH447oIGka": {
+      "winner": "Aurore",
+      "scoreThomas": 0,
+      "scoreAurore": 3,
+      "game": {
+        "id": "jWINVO317Z8Hzxoxz1Jg"
+      },
+      "date": {
+        "type": "firestore/timestamp/1.0",
+        "seconds": 1671577200,
+        "nanoseconds": 0
+      }
+    },
+    "zCLZElF5mo499JB2yZxV": {
+      "scoreAurore": 25,
+      "winner": "Aurore",
+      "game": {
+        "id": "AMo9lEANlAFqmhFcRffB"
+      },
+      "scoreThomas": 11,
+      "date": {
+        "type": "firestore/timestamp/1.0",
+        "seconds": 1753653600,
+        "nanoseconds": 0
+      }
+    },
+    "zGcQBm0OJSbZpUlKaKWS": {
+      "scoreThomas": 74,
+      "game": {
+        "id": "pCxNCw7f4cKPPxb7YboK"
+      },
+      "scoreAurore": 86,
+      "winner": "Aurore",
+      "date": {
+        "type": "firestore/timestamp/1.0",
+        "seconds": 1705186800,
+        "nanoseconds": 0
+      }
+    },
+    "zedHjRJYm46oMaXEBvxK": {
+      "date": {
+        "type": "firestore/timestamp/1.0",
+        "seconds": 1685829600,
+        "nanoseconds": 0
+      },
+      "winner": "Aurore",
+      "scoreAurore": 105,
+      "scoreThomas": 88,
+      "game": {
+        "id": "pCxNCw7f4cKPPxb7YboK"
+      }
+    },
+    "zv5UxYCNP013jXjGs29d": {
+      "winner": "Aurore",
+      "date": {
+        "type": "firestore/timestamp/1.0",
+        "seconds": 1682114400,
+        "nanoseconds": 0
+      },
+      "game": {
+        "id": "TMyC199vMwoE0U3jnGXy"
+      },
+      "scoreThomas": 28,
+      "scoreAurore": 36
+    },
+    "zzNmMGTfEMpPSB2hiudr": {
+      "date": {
+        "type": "firestore/timestamp/1.0",
+        "seconds": 1704150000,
+        "nanoseconds": 0
+      },
+      "scoreThomas": 70,
+      "scoreAurore": 108,
+      "winner": "Aurore",
+      "game": {
+        "id": "1NCYPK4DJ1Z5x5ISq2TW"
+      }
+    }
+  }
+}
