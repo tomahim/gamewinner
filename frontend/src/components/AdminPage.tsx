@@ -1,12 +1,22 @@
-import { getFunctions, httpsCallable } from 'firebase/functions';
+import { getFirestore, collection, getDocs } from 'firebase/firestore';
 
 const AdminPage = () => {
+  // Replace this with a list of your actual collection names
+  const collectionNames = ['users', 'products', 'orders'];
+
   const triggerBackup = async () => {
-    const functions = getFunctions();
-    const backupFirestore = httpsCallable(functions, 'backupFirestore');
     try {
-      const result = await backupFirestore();
-      const backupData = result.data.backupData;
+      const db = getFirestore();
+      const backupData = {};
+
+      for (const collectionName of collectionNames) {
+        backupData[collectionName] = {};
+        const querySnapshot = await getDocs(collection(db, collectionName));
+        for (const doc of querySnapshot.docs) {
+          backupData[collectionName][doc.id] = doc.data();
+        }
+      }
+
       const json = JSON.stringify(backupData, null, 2);
       const blob = new Blob([json], { type: 'application/json' });
       const url = URL.createObjectURL(blob);
