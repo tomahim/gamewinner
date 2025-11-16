@@ -3,9 +3,12 @@ import { useGamesList, useYearsWithStats } from "../data/GamesListContext";
 import { useMemo } from "react";
 import { computeBadges } from "../data/badges.compute";
 import type { BadgeComputationContext } from "../data/badges.types";
+import { useAuth } from "../auth/AuthContext";
 
 function FooterNav() {
   const navigate = useNavigate();
+  const { user } = useAuth();
+  const isAdmin = user?.email === "thimblot@gmail.com";
 
   const { pathname: location } = useLocation();
   const { years } = useYearsWithStats();
@@ -26,6 +29,7 @@ function FooterNav() {
   const isOnHistoryPage = location.includes("/history");
   const isOnHomePage = location.includes("/home") || location.endsWith("/");
   const isOnBadgesPage = location.includes("/badges") || location.includes("/badge/");
+  const isOnAdminPage = location.includes("/admin");
 
   return (
     <div className="bottom-nav">
@@ -72,6 +76,18 @@ function FooterNav() {
           <span className="nav-item__notif">{totalNewBadges}</span>
         )}
       </div>
+      {isAdmin && (
+        <div
+          className={`nav-item ${isOnAdminPage ? "active" : ""}`}
+          role="button"
+          tabIndex={0}
+          onClick={() => {
+            navigate(`/admin`);
+          }}
+        >
+          <span className="material-icons nav-item__icon">admin_panel_settings</span>
+        </div>
+      )}
     </div>
   );
 }
