@@ -10,7 +10,7 @@ import {
   onAuthStateChanged,
   signInWithEmailAndPassword,
   signOut,
-  User as FirebaseUser,
+  type User as FirebaseUser,
 } from "firebase/auth";
 
 type User = FirebaseUser | null;
