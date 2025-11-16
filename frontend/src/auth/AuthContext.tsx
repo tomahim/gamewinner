@@ -10,9 +10,10 @@ import {
   onAuthStateChanged,
   signInWithEmailAndPassword,
   signOut,
+  type User as FirebaseUser,
 } from "firebase/auth";
 
-type User = object | null; // TODO: define proper interface for user attributes
+type User = FirebaseUser | null;
 type AuthContextType = {
   user: User;
   loading: boolean;
@@ -28,7 +29,6 @@ const AuthContext = createContext<AuthContextType>({
 });
 
 export const AuthProvider = ({ children }: { children: ReactNode }) => {
-  // TODO: define proper interface for user attributes
   const [user, setUser] = useState<User>(null);
   const [loading, setLoading] = useState(true);
 
