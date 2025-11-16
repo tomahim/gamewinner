@@ -6,7 +6,18 @@ const AdminPage = () => {
     const backupFirestore = httpsCallable(functions, 'backupFirestore');
     try {
       const result = await backupFirestore();
-      console.log(result.data.message);
+      const backupData = result.data.backupData;
+      const json = JSON.stringify(backupData, null, 2);
+      const blob = new Blob([json], { type: 'application/json' });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = `firestore-backup-${new Date().toISOString()}.json`;
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
+      URL.revokeObjectURL(url);
+
       alert('Backup successful!');
     } catch (error) {
       console.error(error);
