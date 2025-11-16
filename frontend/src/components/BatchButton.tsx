@@ -1,48 +1,44 @@
-import {
-  collection,
-  doc,
-  writeBatch,
-  getFirestore,
-  getDoc,
-} from "firebase/firestore";
+import { doc, writeBatch, getFirestore, getDoc } from "firebase/firestore";
 import React, { useState } from "react";
 
 // Helper function for deep object comparison
 const deepEqual = (a: any, b: any): boolean => {
-    if (a === b) return true;
+  if (a === b) return true;
 
-    if (a instanceof Date && b instanceof Date) {
-        return a.getTime() === b.getTime();
+  if (a instanceof Date && b instanceof Date) {
+    return a.getTime() === b.getTime();
+  }
+
+  if (!a || !b || (typeof a !== "object" && typeof b !== "object")) {
+    return a === b;
+  }
+
+  if (a === null || a === undefined || b === null || b === undefined) {
+    return a === b;
+  }
+
+  if (a.prototype !== b.prototype) return false;
+
+  const keysA = Object.keys(a);
+  const keysB = Object.keys(b);
+
+  if (keysA.length !== keysB.length) return false;
+
+  for (let i = 0; i < keysA.length; i++) {
+    const key = keysA[i];
+    if (!keysB.includes(key) || !deepEqual(a[key], b[key])) {
+      return false;
     }
+  }
 
-    if (!a || !b || (typeof a !== 'object' && typeof b !== 'object')) {
-        return a === b;
-    }
-
-    if (a === null || a === undefined || b === null || b === undefined) {
-        return a === b;
-    }
-
-    if (a.prototype !== b.prototype) return false;
-
-    const keysA = Object.keys(a);
-    const keysB = Object.keys(b);
-
-    if (keysA.length !== keysB.length) return false;
-
-    for (let i = 0; i < keysA.length; i++) {
-        const key = keysA[i];
-        if (!keysB.includes(key) || !deepEqual(a[key], b[key])) {
-            return false;
-        }
-    }
-
-    return true;
+  return true;
 };
 
-
 function BatchButton() {
-  const [jsonData, setJsonData] = useState<Record<string, Record<string, any>> | null>(null);
+  const [jsonData, setJsonData] = useState<Record<
+    string,
+    Record<string, any>
+  > | null>(null);
   const [fileName, setFileName] = useState<string>("");
 
   const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -53,14 +49,16 @@ function BatchButton() {
       reader.onload = (event) => {
         try {
           const content = event.target?.result;
-          if (typeof content === 'string') {
+          if (typeof content === "string") {
             const parsedData = JSON.parse(content);
             setJsonData(parsedData);
           } else {
             throw new Error("File content could not be read as text.");
           }
         } catch (error) {
-          alert("Error parsing JSON file. Please ensure it is a valid JSON file.");
+          alert(
+            "Error parsing JSON file. Please ensure it is a valid JSON file."
+          );
           console.error(error);
           setJsonData(null);
           setFileName("");
@@ -75,7 +73,9 @@ function BatchButton() {
 
   const handleImport = async (e: React.MouseEvent) => {
     e.preventDefault();
-    const fileInput = document.getElementById('file-input') as HTMLInputElement | null;
+    const fileInput = document.getElementById(
+      "file-input"
+    ) as HTMLInputElement | null;
 
     if (!jsonData) {
       alert("Please select a valid JSON file to import.");
@@ -90,8 +90,11 @@ function BatchButton() {
       let summaryMessage = `File: ${fileName}\n\nThis operation will cause the following changes:\n\n`;
       const stats: Record<string, { new: number; update: number }> = {};
       let totalChanges = 0;
-      const docsToWrite: { collectionName: string; docId: string; docData: any; }[] = [];
-
+      const docsToWrite: {
+        collectionName: string;
+        docId: string;
+        docData: any;
+      }[] = [];
 
       for (const collectionName in dataToImport) {
         stats[collectionName] = { new: 0, update: 0 };
@@ -110,31 +113,45 @@ function BatchButton() {
           const docDataFromFile = { ...dataToImport[collectionName][docId] };
 
           // Convert date fields from string or Firestore timestamp to Date object
-          if (docDataFromFile.date && typeof docDataFromFile.date === 'string') {
+          if (
+            docDataFromFile.date &&
+            typeof docDataFromFile.date === "string"
+          ) {
             docDataFromFile.date = new Date(docDataFromFile.date);
           } else if (docDataFromFile.date && docDataFromFile.date.seconds) {
-            docDataFromFile.date = new Date(docDataFromFile.date.seconds * 1000);
+            docDataFromFile.date = new Date(
+              docDataFromFile.date.seconds * 1000
+            );
           }
-          
+
           if (docSnap.exists()) {
             const existingDocData = docSnap.data();
-            
+
             // Also convert date fields from existing data to Date objects for comparison
             if (existingDocData.date && existingDocData.date.toDate) {
-                existingDocData.date = existingDocData.date.toDate();
+              existingDocData.date = existingDocData.date.toDate();
             }
 
             if (!deepEqual(docDataFromFile, existingDocData)) {
-                stats[collectionName].update++;
-                docsToWrite.push({ collectionName, docId, docData: docDataFromFile });
+              stats[collectionName].update++;
+              docsToWrite.push({
+                collectionName,
+                docId,
+                docData: docDataFromFile,
+              });
             }
           } else {
             stats[collectionName].new++;
-            docsToWrite.push({ collectionName, docId, docData: docDataFromFile });
+            docsToWrite.push({
+              collectionName,
+              docId,
+              docData: docDataFromFile,
+            });
           }
         });
 
-        totalChanges += stats[collectionName].new + stats[collectionName].update;
+        totalChanges +=
+          stats[collectionName].new + stats[collectionName].update;
 
         if (stats[collectionName].new > 0 || stats[collectionName].update > 0) {
           summaryMessage += `Collection '${collectionName}':\n`;
@@ -144,7 +161,9 @@ function BatchButton() {
       }
 
       if (totalChanges === 0) {
-        alert("The selected file contains no new or modified documents to import.");
+        alert(
+          "The selected file contains no new or modified documents to import."
+        );
         return;
       }
 
@@ -175,10 +194,14 @@ function BatchButton() {
         await batch.commit();
       }
 
-      alert(`Import complete! Processed ${docsToWrite.length} documents from ${fileName}.`);
+      alert(
+        `Import complete! Processed ${docsToWrite.length} documents from ${fileName}.`
+      );
     } catch (error) {
       console.error("Batch import failed:", error);
-      alert("An error occurred during the batch import. Check the console for details.");
+      alert(
+        "An error occurred during the batch import. Check the console for details."
+      );
     } finally {
       setJsonData(null);
       setFileName("");
@@ -187,10 +210,25 @@ function BatchButton() {
   };
 
   return (
-    <div style={{ marginTop: '20px', borderTop: '1px solid #ccc', paddingTop: '20px' }}>
+    <div
+      style={{
+        marginTop: "20px",
+        borderTop: "1px solid #ccc",
+        paddingTop: "20px",
+      }}
+    >
       <h3>Import from Backup File</h3>
-      <input type="file" id="file-input" accept=".json" onChange={handleFileChange} />
-      <button onClick={handleImport} disabled={!jsonData} style={{ marginLeft: '10px' }}>
+      <input
+        type="file"
+        id="file-input"
+        accept=".json"
+        onChange={handleFileChange}
+      />
+      <button
+        onClick={handleImport}
+        disabled={!jsonData}
+        style={{ marginLeft: "10px" }}
+      >
         Import Data
       </button>
     </div>
