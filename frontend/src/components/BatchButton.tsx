@@ -7,6 +7,40 @@ import {
 } from "firebase/firestore";
 import React, { useState } from "react";
 
+// Helper function for deep object comparison
+const deepEqual = (a: any, b: any): boolean => {
+    if (a === b) return true;
+
+    if (a instanceof Date && b instanceof Date) {
+        return a.getTime() === b.getTime();
+    }
+
+    if (!a || !b || (typeof a !== 'object' && typeof b !== 'object')) {
+        return a === b;
+    }
+
+    if (a === null || a === undefined || b === null || b === undefined) {
+        return a === b;
+    }
+
+    if (a.prototype !== b.prototype) return false;
+
+    const keysA = Object.keys(a);
+    const keysB = Object.keys(b);
+
+    if (keysA.length !== keysB.length) return false;
+
+    for (let i = 0; i < keysA.length; i++) {
+        const key = keysA[i];
+        if (!keysB.includes(key) || !deepEqual(a[key], b[key])) {
+            return false;
+        }
+    }
+
+    return true;
+};
+
+
 function BatchButton() {
   const [jsonData, setJsonData] = useState<Record<string, Record<string, any>> | null>(null);
   const [fileName, setFileName] = useState<string>("");
@@ -56,6 +90,8 @@ function BatchButton() {
       let summaryMessage = `File: ${fileName}\n\nThis operation will cause the following changes:\n\n`;
       const stats: Record<string, { new: number; update: number }> = {};
       let totalChanges = 0;
+      const docsToWrite: { collectionName: string; docId: string; docData: any; }[] = [];
+
 
       for (const collectionName in dataToImport) {
         stats[collectionName] = { new: 0, update: 0 };
@@ -69,15 +105,37 @@ function BatchButton() {
         );
         const docSnapshots = await Promise.all(docExistencePromises);
 
-        docSnapshots.forEach((docSnap) => {
+        docSnapshots.forEach((docSnap, index) => {
+          const docId = docIds[index];
+          const docDataFromFile = { ...dataToImport[collectionName][docId] };
+
+          // Convert date fields from string or Firestore timestamp to Date object
+          if (docDataFromFile.date && typeof docDataFromFile.date === 'string') {
+            docDataFromFile.date = new Date(docDataFromFile.date);
+          } else if (docDataFromFile.date && docDataFromFile.date.seconds) {
+            docDataFromFile.date = new Date(docDataFromFile.date.seconds * 1000);
+          }
+          
           if (docSnap.exists()) {
-            stats[collectionName].update++;
+            const existingDocData = docSnap.data();
+            
+            // Also convert date fields from existing data to Date objects for comparison
+            if (existingDocData.date && existingDocData.date.toDate) {
+                existingDocData.date = existingDocData.date.toDate();
+            }
+
+            if (!deepEqual(docDataFromFile, existingDocData)) {
+                stats[collectionName].update++;
+                docsToWrite.push({ collectionName, docId, docData: docDataFromFile });
+            }
           } else {
             stats[collectionName].new++;
+            docsToWrite.push({ collectionName, docId, docData: docDataFromFile });
           }
         });
 
-        totalChanges += docIds.length;
+        totalChanges += stats[collectionName].new + stats[collectionName].update;
+
         if (stats[collectionName].new > 0 || stats[collectionName].update > 0) {
           summaryMessage += `Collection '${collectionName}':\n`;
           summaryMessage += `  - ${stats[collectionName].new} documents to be created\n`;
@@ -86,7 +144,7 @@ function BatchButton() {
       }
 
       if (totalChanges === 0) {
-        alert("The selected file contains no documents to import.");
+        alert("The selected file contains no new or modified documents to import.");
         return;
       }
 
@@ -100,31 +158,16 @@ function BatchButton() {
 
       let batch = writeBatch(db);
       let writesInBatch = 0;
-      let importedCount = 0;
 
-      for (const collectionName in dataToImport) {
-        const collectionData = dataToImport[collectionName];
-        const collectionRef = collection(db, collectionName);
+      for (const { collectionName, docId, docData } of docsToWrite) {
+        const docRef = doc(db, collectionName, docId);
+        batch.set(docRef, docData, { merge: true }); // Use merge:true for upsert
+        writesInBatch++;
 
-        for (const docId in collectionData) {
-          const docData = collectionData[docId];
-
-          if (docData.date && typeof docData.date === 'string') {
-            docData.date = new Date(docData.date);
-          } else if (docData.date && docData.date.seconds) {
-            docData.date = new Date(docData.date.seconds * 1000);
-          }
-
-          const docRef = doc(collectionRef, docId);
-          batch.set(docRef, docData, { merge: true }); // Use merge:true for upsert
-          writesInBatch++;
-          importedCount++;
-
-          if (writesInBatch >= BATCH_LIMIT) {
-            await batch.commit();
-            batch = writeBatch(db);
-            writesInBatch = 0;
-          }
+        if (writesInBatch >= BATCH_LIMIT) {
+          await batch.commit();
+          batch = writeBatch(db);
+          writesInBatch = 0;
         }
       }
 
@@ -132,7 +175,7 @@ function BatchButton() {
         await batch.commit();
       }
 
-      alert(`Import complete! Processed ${importedCount} documents from ${fileName}.`);
+      alert(`Import complete! Processed ${docsToWrite.length} documents from ${fileName}.`);
     } catch (error) {
       console.error("Batch import failed:", error);
       alert("An error occurred during the batch import. Check the console for details.");
