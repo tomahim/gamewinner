@@ -1,6 +1,8 @@
-import { getFirestore, collection, getDocs } from "firebase/firestore";
+import { getFirestore, collection, getDocs } from 'firebase/firestore';
+import BatchButton from './BatchButton'; // Import the new component
 
 const AdminPage = () => {
+  // Replace this with a list of your actual collection names  
   const collectionNames = ["games", "sessions"];
 
   const triggerBackup = async () => {
@@ -17,9 +19,9 @@ const AdminPage = () => {
       }
 
       const json = JSON.stringify(backupData, null, 2);
-      const blob = new Blob([json], { type: "application/json" });
+      const blob = new Blob([json], { type: 'application/json' });
       const url = URL.createObjectURL(blob);
-      const a = document.createElement("a");
+      const a = document.createElement('a');
       a.href = url;
       a.download = `firestore-backup-${new Date().toISOString()}.json`;
       document.body.appendChild(a);
@@ -27,19 +29,27 @@ const AdminPage = () => {
       document.body.removeChild(a);
       URL.revokeObjectURL(url);
 
-      alert("Backup successful!");
+      alert('Backup successful!');
     } catch (error) {
       console.error(error);
-      alert("Backup failed. See console for details.");
+      alert('Backup failed. See console for details.');
     }
   };
 
   return (
-    <>
+    <div>
       <h1>Admin Page</h1>
       <p>Only visible to thimblot@gmail.com</p>
-      <button onClick={triggerBackup}>Backup Firestore</button>
-    </>
+      
+      {/* Backup Section */}
+      <div style={{ marginBottom: '20px' }}>
+        <h3>Export to Backup File</h3>
+        <button onClick={triggerBackup}>Backup Firestore</button>
+      </div>
+
+      {/* Import Section */}
+      <BatchButton />
+    </div>
   );
 };
 
