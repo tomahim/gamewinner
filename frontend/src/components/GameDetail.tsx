@@ -9,6 +9,8 @@ import SessionCard from "./SessionCard";
 import ScoreEvolutionChart from "./ScoreEvolutionChart";
 import WinsEvolutionChart from "./WinsEvolutionChart";
 import StatBox from "./ui/StatBox";
+import CascadiaAnimalsTotals from "./CascadiaAnimalsTotals";
+import WingspanScoreTotals from "./WingspanScoreTotals";
 
 const LIMIT_PLAYS = 10;
 const MINUTES_PER_GAME = 40;
@@ -58,6 +60,9 @@ function GameDetail() {
   }
 
   const { imageUrl, stats } = game;
+  const isCascadiaGame = game.name === "Cascadia";
+  const isWingspanGame = game.name === "Wingspan";
+  const hasScoreBreakdown = isCascadiaGame || isWingspanGame;
   const { totalPlays, thomasWins, auroreWins } = stats;
   const approximatePlaytime = humanizeMinutes(totalPlays * MINUTES_PER_GAME);
 
@@ -113,60 +118,84 @@ function GameDetail() {
           <WinsEvolutionChart sessions={game.sessions} />
         )}
 
-      <h2 tabIndex={-1}>Scores Aurore</h2>
+        <div className="scores-wrapper">
+          <section className="score-section">
+            <h2 tabIndex={-1}>Scores Aurore</h2>
 
-      <div className="stat-box-container centered" tabIndex={-1}>
-        <div className="stat-box">
-          <span className="number">{stats.scoreStatsAurore.mean}</span>
-          <span className="text">Mean</span>
-        </div>
-        <div className="stat-box">
-          <span className="number">{stats.scoreStatsAurore.highest}</span>
-          <span className="text">Highest</span>
-        </div>
-        <div className="stat-box">
-          <span className="number">{stats.scoreStatsAurore.lowest}</span>
-          <span className="text">Lowest</span>
-        </div>
-        <div className="stat-box">
-          <span className="number">
-            {stats.scoreStatsAurore.percentageVictories}%
-          </span>
-          <span className="text">Wins</span>
-        </div>
-      </div>
+            <div className="stat-box-container centered" tabIndex={-1}>
+              <div className="stat-box">
+                <span className="number">{stats.scoreStatsAurore.mean}</span>
+                <span className="text">Mean</span>
+              </div>
+              <div className="stat-box">
+                <span className="number">{stats.scoreStatsAurore.highest}</span>
+                <span className="text">Highest</span>
+              </div>
+              <div className="stat-box">
+                <span className="number">{stats.scoreStatsAurore.lowest}</span>
+                <span className="text">Lowest</span>
+              </div>
+              <div className="stat-box">
+                <span className="number">
+                  {stats.scoreStatsAurore.percentageVictories}%
+                </span>
+                <span className="text">Wins</span>
+              </div>
+            </div>
+            {hasScoreBreakdown && (
+              <div className="score-section-divider" aria-hidden="true" />
+            )}
+            {isCascadiaGame && (
+              <CascadiaAnimalsTotals sessions={game.sessions} player="aurore" />
+            )}
+            {isWingspanGame && (
+              <WingspanScoreTotals sessions={game.sessions} player="aurore" />
+            )}
+          </section>
 
-      <h2 tabIndex={-1}>Scores Thomas</h2>
+          <section className="score-section">
+            <h2 tabIndex={-1}>Scores Thomas</h2>
 
-      <div className="stat-box-container centered margin-bottom-80" tabIndex={-1}>
-        <div className="stat-box">
-          <span className="number">{stats.scoreStatsThomas.mean}</span>
-          <span className="text">Mean</span>
+            <div className="stat-box-container centered" tabIndex={-1}>
+              <div className="stat-box">
+                <span className="number">{stats.scoreStatsThomas.mean}</span>
+                <span className="text">Mean</span>
+              </div>
+              <div className="stat-box">
+                <span className="number">{stats.scoreStatsThomas.highest}</span>
+                <span className="text">Highest</span>
+              </div>
+              <div className="stat-box">
+                <span className="number">{stats.scoreStatsThomas.lowest}</span>
+                <span className="text">Lowest</span>
+              </div>
+              <div className="stat-box">
+                <span className="number">
+                  {stats.scoreStatsThomas.percentageVictories}%
+                </span>
+                <span className="text">Wins</span>
+              </div>
+            </div>
+            {hasScoreBreakdown && (
+              <div className="score-section-divider" aria-hidden="true" />
+            )}
+            {isCascadiaGame && (
+              <CascadiaAnimalsTotals sessions={game.sessions} player="thomas" />
+            )}
+            {isWingspanGame && (
+              <WingspanScoreTotals sessions={game.sessions} player="thomas" />
+            )}
+          </section>
         </div>
-        <div className="stat-box">
-          <span className="number">{stats.scoreStatsThomas.highest}</span>
-          <span className="text">Highest</span>
-        </div>
-        <div className="stat-box">
-          <span className="number">{stats.scoreStatsThomas.lowest}</span>
-          <span className="text">Lowest</span>
-        </div>
-        <div className="stat-box">
-          <span className="number">
-            {stats.scoreStatsThomas.percentageVictories}%
-          </span>
-          <span className="text">Wins</span>
-        </div>
-      </div>
 
-      <div
-        role="button"
-        tabIndex={0}
-        onClick={() => navigate(`/game/${id}/add-session`)}
-        className="fab"
-      >
-        <PlayingCardIcon />
-      </div>
+        <div
+          role="button"
+          tabIndex={0}
+          onClick={() => navigate(`/game/${id}/add-session`)}
+          className="fab"
+        >
+          <PlayingCardIcon />
+        </div>
 
       <FooterNav />
     </>

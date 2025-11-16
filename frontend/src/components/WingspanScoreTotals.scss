@@ -1,0 +1,62 @@
+.wingspan-score-totals {
+  margin-top: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+
+  .wingspan-score-total-label {
+    text-align: center;
+    font-size: 14px;
+    font-weight: 600;
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+
+    .wingspan-score-total-value {
+      margin-left: 4px;
+      font-size: 18px;
+      font-weight: 700;
+      color: #a6dfd0;
+    }
+
+    .wingspan-score-total-average {
+      font-size: 12px;
+      font-weight: 500;
+      color: rgba(255, 255, 255, 0.7);
+    }
+  }
+
+  .wingspan-score-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+  }
+
+  .wingspan-score-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+    min-width: 72px;
+
+    .wingspan-score-item-label {
+      font-size: 12px;
+      text-align: center;
+      color: #ffffff;
+    }
+
+    .wingspan-score-item-score {
+      font-size: 16px;
+      font-weight: 700;
+      color: #ffffff;
+    }
+
+    .wingspan-score-item-average {
+      font-size: 11px;
+      font-weight: 500;
+      color: rgba(255, 255, 255, 0.7);
+    }
+  }
+}
