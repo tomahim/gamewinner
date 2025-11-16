@@ -6,7 +6,7 @@ const deepEqual = (a: any, b: any): boolean => {
   if (a === b) return true;
 
   if (a instanceof Date && b instanceof Date) {
-    return a.getTime() === b.getTime();
+    return Math.floor(a.getTime() / 1000) === Math.floor(b.getTime() / 1000);
   }
 
   if (!a || !b || (typeof a !== "object" && typeof b !== "object")) {
